@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller 
 public class RootController {
 
-    @GetMapping("/")
+    @GetMapping("/front")
     public String front() { 
         return "front"; 
     }
