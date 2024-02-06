@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller 
 public class RootController {
 
-    @GetMapping("/front")
+    @GetMapping("/")
     public String front() { 
         return "front"; 
     }
@@ -16,5 +16,4 @@ public class RootController {
         return "matchHistory"; 
     }
 
-    //hola
 }
