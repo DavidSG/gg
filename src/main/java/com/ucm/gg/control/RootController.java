@@ -8,7 +8,7 @@ public class RootController {
 
     @GetMapping("/")
     public String front() { 
-        return "front"; 
+        return "main"; 
     }
 
     @GetMapping("/matchHistory")
