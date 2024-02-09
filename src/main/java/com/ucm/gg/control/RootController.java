@@ -11,6 +11,11 @@ public class RootController {
         return "main"; 
     }
 
+    @GetMapping("/ajustes.html")
+    public String ajustes() { 
+        return "ajustes"; 
+    }
+
     @GetMapping("/matchHistory")
     public String matchHistory() { 
         return "matchHistory"; 
