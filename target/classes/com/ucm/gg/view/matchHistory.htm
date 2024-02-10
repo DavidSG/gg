@@ -4,7 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Two Columns Layout</title>
-    <link rel="stylesheet" href="matchHistory.css">
+    <style>
+        .match-history {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .match-history-header {
+            width: 915px;
+            height: 40px; 
+			margin: 0 auto;
+            background-color: #020202;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+		.partida {
+            width: 915px;
+            height: 105px;
+			padding: 20px;
+			border-radius: 10px;
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			margin: 0 auto;
+            margin-bottom: 5px;
+			background-color: #333173;
+        }
+		.textoCentral {
+			font-family: Arial, sans-serif;
+            font-size: 16px;
+			color: white;
+			text-align: center;
+        }
+		.textoResultado {
+            font-family: Arial, sans-serif;
+            font-size: 30px;
+			color: #0800FF;
+			text-align: center;
+        }
+		.resumenPartida {
+		    width: 150px;
+            height: 105px;
+			display: grid;
+			grid-template-rows: 1fr 1fr 2fr 1fr;
+			grid-gap: 5px; 
+        }
+        .campeon {
+		    width: 205px;
+            height: 105px;
+			display: grid;
+			grid-template-columns: 2fr 1fr 1fr; /* Define three columns where the first column is twice as large */
+			grid-gap: 2px; /* Add gap between grid items */
+        }
+		.hechizosInvocador {
+		    width: 40px;
+            height: 100px;
+			display: grid;
+			grid-template-rows: 1fr 1fr;
+			grid-gap: 2px;
+        }
+		.runas {
+		    width: 40px;
+            height: 100px;
+			display: grid;
+			grid-template-rows: 1fr 1fr; /* Define three columns where the first column is twice as large */
+			grid-gap: 2px; /* Add gap between grid items */
+        }
+		.items {
+		    width: 155px;
+            height: 105px;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr; /* Define three columns where the first column is twice as large */
+			grid-gap: 2px; /* Add gap between grid items */
+        }
+		.kda {
+		    width: 150px;
+            height: 100px;
+			display: grid;
+			grid-template-rows: 2fr 1fr 1fr; 
+			grid-gap: 2px; /* Add gap between grid items */
+        }
+		.kdaTexto {
+            font-family: Arial, sans-serif;
+            font-size: 30px;
+			color: white;
+			text-align: center;
+        }
+		.jugadores {
+		    width: 205px;
+            height: 105px;
+			display: grid;
+			grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+			grid-template-columns: 1fr 1fr; 
+			grid-gap: 1px; /* Add gap between grid items */
+        }
+		.jugador {
+		    width: 80px;
+            height: 20px;
+			display: grid;
+			grid-template-columns: 1fr 4fr;
+			grid-gap: 2px; 
+        }
+		.square {
+            padding: 20px;
+            width: 300px;
+            height: 100px; 
+            background-color: #336CF9;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="match-history">

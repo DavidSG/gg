@@ -12,7 +12,7 @@
 			left: 0px;
 			width:100%;
 			height: 100px;
-			background-color: #000033;
+			background-color: #1c1c1c;
 			display:grid;
 			grid-template-columns: 1fr 1fr 1fr;
 			
@@ -99,7 +99,7 @@
 			width: 30px;
 			
 			
-			background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic-00.iconduck.com%2Fassets.00%2Fsettings-icon-1964x2048-8nigtrtt.png&f=1&nofb=1&ipt=af73964aa58dc5b801a0121c3d6adbd756339c37e99fde636b2c063a0f5a0313&ipo=images");
+			background-image: url("Images/img_general/settings-icon.png");
 			background-size: contain; 
 			background-repeat: no-repeat; 
 			background-position: center; 
@@ -125,40 +125,62 @@
 		}
 		/* HEADER END */
 		
-		
-		/* ITEMS BEGIN */
-		.itemGrid {
+		/* CHAMPION BEGIN */
+		.campeonGrid {
 			position: absolute;
 			top: 20%;
 			left: 50%;
-			width: 1200px;
-			height: 2000px;
+			width: 1000px;
+			height: 10500px;
 			transform: translate(-50%, 0%);
 			display:grid;
-			grid-template-columns: repeat(15, 1fr);
-			grid-template-rows: repeat(25, 1fr);
-			/*background-color: #000033;*/ 
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: repeat(42, 1fr);
+			/*background-color: #000033;*/
 			
 		}
-		.item {
+		.campeon {
 			position:relative;
-			width: 75px;
-			height: 75px;
-			background-color: #000033;
-
+			top: 15px;
+			left: 15px;
+			width: 220px;
+			height: 220px;
+			background-color: #1c1c1c;
+			border-radius: 15px;
+			display:grid;
+			grid-template-rows: 4fr 1fr;
+			border: 3px solid transparent;
+			
 			transition-duration: 250ms;	
 		}
-		.item:hover {
+		.campeon:hover {
 			 transform: scale(1.1);
 			 border-color: yellow;
 		}
 		
-		.item img {
+		.campeonImagen {
 			position:relative;
-			width: 75px;
-			height: 75px;
+			top: 30px;
+			left: 50%;
+			transform: translate(-50%, -0%);
+			width: 120px;
+			height: 120px;
+			
 		}
-		/* ITEMS END */
+		.campeonImagen img {
+			width: 91%;
+			height: 91%; 
+			object-fit: cover; 
+			border-radius: 50%; 
+			border: 5px solid yellow; 
+		}
+		.campeonTexto {
+			text-align: center;
+			font-family: "Monaco", "Times New Roman", serif;
+			font-size: 25px;;
+			color: yellow;
+		}
+		/* CHAMPION END */
 		
 
     </style>
@@ -167,12 +189,14 @@
     <main>
 		<!-- HEADER -->
 		<div class="headerContainer">
-			<div class="ggHead">GG</div>
+			<div class="ggHead">
+				<img width="75px" height="75px" src="Images/img_general/gglogo.png">
+			</div>
 			<div class="searchContainer">
 				<input type="text" placeholder="Search Player or a Champion">
 				<div class="botonBusqueda">
 					<a href="https://example.com">
-						<img width="50px" height="50px" src="https://cdn1.iconfinder.com/data/icons/basic-ui-elements-color/700/09_search-1024.png">
+						<img width="50px" height="50px" src="Images/img_general/lupa_icon.webp">
 					</a>
 				</div>
 			</div>
@@ -189,10 +213,10 @@
 		</div>
 		<!-- HEADER -->
 		
-		<!-- ITEMS -->
-        <div class="itemGrid"></div>
-		<script src="items.js"></script>
-		<!-- ITEMS -->
+		<!-- CAMPEONES -->
+        <div class="campeonGrid"></div>
+		<script src="campeones.js"></script>
+		<!-- CAMPEONES -->
     </main>
 </body>
 </html>
