@@ -25,14 +25,13 @@
 		
 		.barra {
 			position: absolute;
-			top: 20px;
-			left: 20px;
+			top: 0px;
+			left: 0px;
 			height: 100%;
-			width: 120px;
-			/*background-color: black*/
+			width: 110px;
+			background-color: #000033;
 			display: grid;
-			grid-template-rows: repeat(10, 1fr);
-			grid-gap: 5px;
+			grid-template-rows: repeat(14, 1fr);
 			z-index: 5;	
 			
 			overflow: hidden; 
@@ -41,38 +40,38 @@
 		}
 		
 		.barra:hover {
-			width: 450px; 
+			width: 330px; 
 		}
 		.ggHead {
 			position: relative;
-			top: 10px;
-			left: 10px;
+			top: 20px;
+			left: 20px;
 			text-align: left;
 			font-family: "CopperPlate", Fantasy;
-			font-size: 80px;
+			font-size: 60px;
 			color: #ffff00;
 		}
 		.linkPagina {
 			position: relative;
 			top: 10px;
-			left: 10px;
-			height: 75px;
-			width: 370px;
-			padding: 20px;
+			left: 20px;
+			height: 50px;
+			width: 270px;
+			padding: 10px;
 			display: grid;
-			grid-gap: 20px;
+			grid-gap: 30px;
 			border-radius: 15px;
 			grid-template-columns: 1fr 5fr;
 			transition-property: background;
 		}
 		
 		.linkPagina:hover {
-			background: black;
+			background: #00001a;
 		}
 		
 		.nombrePaginas {
 			font-family: "CopperPlate", Fantasy;
-			font-size: 50px; 
+			font-size: 30px; 
 			color: #cccccc;
 		}
 		
@@ -96,6 +95,8 @@
 		}
 		.searchContainer {
 			position: relative;
+			/*top: 50%;*/
+			/*left: 50%;*/
 			height: 70px;
 			width: 650px;
 			display: grid;
@@ -188,21 +189,21 @@
 			<div class="barra">
 				<div class="ggHead">GG</div>
 				<div class="nombrePaginas">____________________</div>
-				<a href="https://example.com" style="text-decoration: none;">
+				<a href="guides.htm" style="text-decoration: none;">
 					<div class = "linkPagina">
-						<img alt="" width="75px" height="75px" src = "https://clipart-library.com/2023/scroll-paper-11547058432lmrqybh7tc.png">
+						<img alt="" width="50px" height="50px" src = "https://cdn.icon-icons.com/icons2/3695/PNG/512/point_navigation_direction_compass_travel_expanded_guide_icon_229682.png">
 						<div class="nombrePaginas">Guias</div>
 					</div>
 				</a>
-				<a href="https://example.com" style="text-decoration: none;">
+				<a href="campeones.html" style="text-decoration: none;">
 					<div class = "linkPagina">
-						<img alt="" width="75px" height="75px" src = "https://img3.wikia.nocookie.net/__cb20140807163610/leagueoflegends/images/2/2d/Nunu_Render.png">
+						<img alt="" width="50px" height="50px" src = "https://img3.wikia.nocookie.net/__cb20140807163610/leagueoflegends/images/2/2d/Nunu_Render.png">
 						<div class="nombrePaginas">Campeones</div>
 					</div>
 				</a>
-				<a href="https://example.com" style="text-decoration: none;">
+				<a href="items.htm" style="text-decoration: none;">
 					<div class = "linkPagina">
-						<img alt="" width="75px" height="75px" src = "https://clipart-library.com/images/pcqKkdyRi.png">
+						<img alt="" width="50px" height="50px" src = "https://clipart-library.com/images/pcqKkdyRi.png">
 						<div class="nombrePaginas">Items</div>
 					</div>
 				</a>
