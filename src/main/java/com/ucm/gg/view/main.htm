@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <style>
+        .fondo{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: black;
+			z-index: -2;
+
+		}
+		.fondoImagen {
+			width: 100%;
+			height: 100%;
+			filter: contrast(100%);
+			opacity: 0.5;
+			z-index: -1;
+		}
+		
+		.barra {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			height: 100%;
+			width: 110px;
+			background-color: #161616;
+			display: grid;
+			grid-template-rows: repeat(14, 1fr);
+			z-index: 5;	
+			
+			overflow: hidden; 
+			transition-duration: 250ms;	
+			transition-property: width;
+		}
+		
+		.barra:hover {
+			width: 330px; 
+		}
+		.ggHead {
+			position: relative;
+			top: 20px;
+			left: 20px;
+		}
+		.linkPagina {
+			position: relative;
+			top: 10px;
+			left: 20px;
+			height: 50px;
+			width: 270px;
+			padding: 10px;
+			display: grid;
+			grid-gap: 30px;
+			border-radius: 15px;
+			grid-template-columns: 1fr 5fr;
+			transition-property: background;
+		}
+		
+		.linkPagina:hover {
+			background: #1c1c1c;
+		}
+		
+		.nombrePaginas {
+			font-family: "CopperPlate", Fantasy;
+			font-size: 30px; 
+			color: #cccccc;
+		}
+		
+		.centroContainer {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			height: 150px;
+			width: 700px;
+			display: grid;
+			grid-template-rows: 3fr 5fr;
+			grid-gap: 2px;
+			z-index: 5;			
+		}
+		.ggLogo {
+			text-align: left;
+			font-family: "CopperPlate", Fantasy;
+			font-size: 60px;
+			color: #ffff00;
+		}
+		.searchContainer {
+			position: relative;
+			/*top: 50%;
+			left: 50%;*/
+			height: 70px;
+			width: 650px;
+			display: grid;
+			grid-template-columns: 6fr 1fr;
+			grid-gap: 2px;
+			z-index: 5;			
+		}
+		input[type="text"] {
+			height: 60px;
+			width: 550px;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			margin-right: 5px;
+			font-size: 20px;
+		}
+		
+		.botonBusqueda {
+			position: relative;
+			top: 15px;
+			left: -70px;
+			width: 50px; 
+			height: 50px;
+		}
+		
+		.botones {
+			position: absolute;
+			top: 10px;
+			left: 90%;
+			height: 50px;
+			width: 150px;
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+		}
+		
+		.ajustesContainer {
+			position: relative;
+			top: 6px;
+			height: 40px;
+			width: 40px;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color;
+		
+		}
+		.ajustesContainer:hover {
+			background-color: black;
+		}
+		
+		.ajustes {
+			position: relative;
+			top: 5px;
+			left: 5px;
+			height: 30px;
+			width: 30px;
+			
+			
+			background-image: url('Images/img_general/settings-icon.png');
+			background-size: contain; 
+			background-repeat: no-repeat; 
+			background-position: center; 
+		}
+		
+		.login {
+			height: 50px;
+			width: 100px;
+			padding: 10px;
+			font-size: 16px;
+			background-color: #007bff;
+			color: #ffffff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color;
+		}
+
+		.login:hover {
+			background-color: #0056b3;
+		}
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="fondo">	
+			<!-- <img alt="" class="fondoGif" src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.tenor.com%2FVylDPpQBiW8AAAAd%2Fleague-of-legends.gif&f=1&nofb=1&ipt=d171c27a5d7aa9dfd0fa58f2da354a03073ed6795a736dc8b5547720503091de&ipo=images"> -->
+			<!-- <img alt="" class="fondoImagen" src = "https://www.wallpapertip.com/wmimgs/55-555031_league-of-legends-god-king-garen-login-screen.jpg"> -->
+			<!-- <img alt="" class="fondoImagen" src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fz7gBMAkRtZ0%2Fmaxresdefault.jpg&f=1&nofb=1&ipt=6c34b70b3738a1fde2eb5ab1d41c69ea6cbfff6c69c6c49e33f4e99717bd9836&ipo=images"> -->
+			<img alt="" class="fondoImagen" src = "Images/img_general/fondo_irelia.png">
+			<div class="barra">
+				<div class="ggHead">
+					<img width="75px" height="75px" src="Images/img_general/gglogo.png">
+				</div>
+				<div class="nombrePaginas">____________________</div>
+				<a href="https://example.com" style="text-decoration: none;">
+					<div class = "linkPagina">
+						<img alt="" width="50px" height="50px" src = "Images/img_general/perro_nerd.png">
+						<div class="nombrePaginas">Guias</div>
+					</div>
+				</a>
+				<a href="https://example.com" style="text-decoration: none;">
+					<div class = "linkPagina">
+						<img alt="" width="50px" height="50px" src = "Images/img_general/Nunu_Render.webp">
+						<div class="nombrePaginas">Campeones</div>
+					</div>
+				</a>
+				<a href="https://example.com" style="text-decoration: none;">
+					<div class = "linkPagina">
+						<img alt="" width="50px" height="50px" src = "Images/img_general/item_fondo.png">
+						<div class="nombrePaginas">Items</div>
+					</div>
+				</a>
+			</div>
+			
+			<div class="centroContainer">
+				<div class="ggLogo">
+					<img width="75px" height="75px" src="Images/img_general/gglogo.png">
+				</div>
+				<div class="searchContainer">
+					<input type="text" placeholder="Search Player or a Champion">
+					<div class="botonBusqueda">
+						<a href="https://example.com">
+							<img width="50px" height="50px" src="Images/img_general/lupa_icon.webp">
+						</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="botones">
+				<a href="https://example.com">
+					<div class = "ajustesContainer">
+						<div class="ajustes"></div>
+					</div>
+				</a>
+				<a href="https://example.com">
+					<button class="login">Log In</button>
+				</a>
+			</div>
+		</div>
+    </main>
+</body>
+</html>
