@@ -22,7 +22,7 @@
     left: 0px;
     height: 100%;
     width: 110px;
-    background-color: #000033;
+    background-color: #001a2b;
     display: grid;
     grid-template-rows: repeat(14, 1fr);
     z-index: 5;	
