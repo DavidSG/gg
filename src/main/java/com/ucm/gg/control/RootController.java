@@ -31,7 +31,7 @@ public class RootController {
         return "ajustes"; 
     }
 
-    @GetMapping("/matchHistory")
+    @GetMapping("/matchHistory.html")
     public String matchHistory() { 
         return "matchHistory"; 
     }
