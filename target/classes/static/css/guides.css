@@ -113,19 +113,17 @@ input[type="text"] {
 
 .login {
     position: relative;
-    height: 3vw; /* Altura relativa al ancho de la ventana */
-    margin-top: 1vw;
-    max-width: 200px; /* Ancho máximo */
-    min-width: 100px; /* Ancho mínimo */
-    padding: 0.5em 1em; /* Relleno relativo a la altura de la fuente */
-    margin-right: 1vw; /* Margen derecho relativo al ancho de la ventana */
-    font-size: 1em; /* Tamaño de fuente relativo a la altura de la fuente */
+    height: 50px;
+    width: 100px;
+    top: 14px;
+    padding: 10px;
+    font-size: 16px;
     background-color: #007bff;
     color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color;
 }
 
 .login:hover {
@@ -172,4 +170,3 @@ main {
     margin-top: 5px;
     color: #666666;
 }
-

@@ -8,7 +8,7 @@ public class RootController {
 
     @GetMapping("/")
     public String main() { 
-        return "main"; 
+        return "index"; 
     }
 
     @GetMapping("/campeones.html")
