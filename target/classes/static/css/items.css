@@ -105,7 +105,7 @@ input[type="text"] {
     width: 30px;
     
     
-    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic-00.iconduck.com%2Fassets.00%2Fsettings-icon-1964x2048-8nigtrtt.png&f=1&nofb=1&ipt=af73964aa58dc5b801a0121c3d6adbd756339c37e99fde636b2c063a0f5a0313&ipo=images");
+    background-image: url("/img/img_general/settings-icon.png");
     background-size: contain; 
     background-repeat: no-repeat; 
     background-position: center; 
