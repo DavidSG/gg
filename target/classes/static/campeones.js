@@ -178,7 +178,7 @@ for (let i = 0; i < 167; i++) {
 	campeonImagen.classList.add('campeonImagen');
 	
 	const image = document.createElement('img');
-	image.src = "https://cdn.mobalytics.gg/assets/lol/images/dd/champions/icons/" + campeonNombre[i] + ".png?V3";
+	image.src = "/img/campeones/" + campeonNombre[i] + ".png";
 	
 	const campeonTexto = document.createElement('div');
 	campeonTexto.classList.add('campeonTexto');
