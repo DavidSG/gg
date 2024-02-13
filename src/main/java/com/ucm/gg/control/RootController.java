@@ -26,9 +26,9 @@ public class RootController {
         return "items"; 
     }
 
-    @GetMapping("/ajustes.html")
-    public String ajustes() { 
-        return "ajustes"; 
+    @GetMapping("/miperfil.html")
+    public String miperfil() { 
+        return "miperfil"; 
     }
 
     @GetMapping("/matchHistory.html")
