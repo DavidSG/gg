@@ -3,37 +3,37 @@ package com.ucm.gg.control;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller 
+@Controller
 public class RootController {
 
     @GetMapping("/")
-    public String main() { 
-        return "index"; 
+    public String main() {
+        return "index";
     }
 
-    @GetMapping("/campeones.html")
-    public String campeones() { 
-        return "campeones"; 
+    @GetMapping("/campeones")
+    public String campeones() {
+        return "campeones";
     }
 
-    @GetMapping("/guides.html")
-    public String guides() { 
-        return "guides"; 
+    @GetMapping("/guides")
+    public String guides() {
+        return "guides";
     }
 
-    @GetMapping("/items.html")
-    public String items() { 
-        return "items"; 
+    @GetMapping("/items")
+    public String items() {
+        return "items";
     }
 
-    @GetMapping("/miperfil.html")
-    public String miperfil() { 
-        return "miperfil"; 
+    @GetMapping("/miperfil")
+    public String miperfil() {
+        return "miperfil";
     }
 
-    @GetMapping("/matchHistory.html")
-    public String matchHistory() { 
-        return "matchHistory"; 
+    @GetMapping("/matchHistory")
+    public String matchHistory() {
+        return "matchHistory";
     }
 
 }
