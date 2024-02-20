@@ -160,6 +160,32 @@ main {
     padding: 20px;
     margin-top: 1vw;
     margin-bottom: 1vw;
+	display: grid;
+	grid-template-columns: 1fr 1fr 5fr;
+}
+
+.guia {
+	position:relative;
+	left: 50%;
+	height: 100px;
+	width: 80%;
+	transform: translate(-50%, 0%);
+	
+	background-color: #FFD700;
+    border-radius: 1vw;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+	padding: 25px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 5fr;
+}
+
+.guia h1 {
+	position: relative;
+	top: 5px;
+	left: 50px;
+	font-size: 35px;
 }
 
 .guia h2 {
@@ -169,4 +195,19 @@ main {
 .guia p {
     margin-top: 5px;
     color: #666666;
+}
+
+.guia img {
+	position: relative;
+	top: -25px;
+	font-size: 35px;
+}
+
+.tituloGuia {
+	position:relative;
+	height: 100%;
+	width: 100%;
+
+	display: grid;
+	grid-template-rows: 1fr 1fr;
 }
