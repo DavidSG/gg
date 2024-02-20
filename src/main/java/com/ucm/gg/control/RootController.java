@@ -1,10 +1,16 @@
 package com.ucm.gg.control;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import com.ucm.gg.ChampionRepository;
+import com.ucm.gg.model.Champion;
 
 @Controller
 public class RootController {
+
+    private final ChampionRepository championRepository = null;
 
     @GetMapping("/")
     public String main() {
@@ -12,7 +18,9 @@ public class RootController {
     }
 
     @GetMapping("/campeones")
-    public String campeones() {
+    public String campeones(Model model) {
+        Champion queryResult = championRepository.searchChampions();
+        model.addAttribute("result", queryResult);
         return "campeones";
     }
 
@@ -35,5 +43,7 @@ public class RootController {
     public String matchHistory() {
         return "matchHistory";
     }
+
+    
 
 }

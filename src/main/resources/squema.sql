@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS champions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    champName VARCHAR(50),
+);
