@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" th:href="@{/css/campeones.css}">
+    <title>Champions</title>
+</head>
+<body>
+	<header>
+		<div th:include="./fragments/header"></div>
+	</header>
+    <main>		
+
+		<!-- SIDEBAR -->
+		<div th:insert="./fragments/sidebar"></div>
+		<!-- SIDEBAR -->
+
+		<!-- CAMPEONES -->
+        <div class="campeonGrid"></div>
+		<script src="campeones.js"></script>
+		<!-- CAMPEONES -->
+    </main>
+</body>
+</html>

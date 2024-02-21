@@ -1,0 +1,55 @@
+/* CHAMPION BEGIN */
+.campeonGrid {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 1000px;
+    height: 10500px;
+    transform: translate(-50%, 0%);
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(42, 1fr);
+    /*background-color: #000033;*/
+    
+}
+.campeon {
+    position:relative;
+    top: 15px;
+    left: 15px;
+    width: 220px;
+    height: 220px;
+    background-color: #000033;
+    border-radius: 15px;
+    display:grid;
+    grid-template-rows: 4fr 1fr;
+    border: 3px solid transparent;
+    
+    transition-duration: 250ms;	
+}
+.campeon:hover {
+     transform: scale(1.1);
+     border-color: yellow;
+}
+
+.campeonImagen {
+    position:relative;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    width: 120px;
+    height: 120px;
+    
+}
+.campeonImagen img {
+    width: 91%;
+    height: 91%; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 5px solid yellow; 
+}
+.campeonTexto {
+    text-align: center;
+    font-family: "Monaco", "Times New Roman", serif;
+    font-size: 25px;;
+    color: yellow;
+}
