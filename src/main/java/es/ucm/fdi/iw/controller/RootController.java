@@ -21,7 +21,7 @@ public class RootController {
 
     @GetMapping("/")
     public String index(Model model) {
-        return "old_index";
+        return "index";
     }
 
     /*
