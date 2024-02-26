@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/guides.css}">
+    <title>Guías</title>
+</head>
+<body>
+    <main>
+        <!-- HEADER -->
+		<div th:insert="./fragments/header"></div>
+		<!-- HEADER -->
+
+		<!-- SIDEBAR -->
+		<div th:insert="./fragments/sidebar"></div>
+		<!-- SIDEBAR -->
+		<a href="https://example.com">
+			<div class="guia">
+				<h1>9.8</h1>
+				<img width="150px" height="150px" src="https://cdn.mobalytics.gg/assets/lol/images/dd/champions/icons/aatrox.png?V3">
+				<h1>Guia suspicaz [13.5]</h1>
+				<p>Escrita por David Starry 13/02</p>
+			</div>
+		</a>
+		<a href="https://example.com">
+			<div class="guia">
+			</div>
+		</a>
+		<a href="https://example.com">
+			<div class="guia">
+			</div>
+		</a>
+    </main>
+</body>
+</html>
