@@ -32,11 +32,15 @@ Debes buscar todos los lugares donde aparece la palabra "plantilla" (incluido es
   
     - **js/stomp.js** - necesario para usar STOMP sobre websockets (que es lo que usaremos para enviar y recibir mensajes)
     - **js/iw.js** - configura websockets, y contiene funciones de utilidad para gestionar AJAX y previsualización de imágenes
+    - **js/campeones.js genera todos los campeones que esten en la bd
+    - **js/items.js genera todos los items que esten en la bd
     - **js/ajax-demo.js** - ejemplos (usados desde [user.html](https://github.com/manuel-freire/iw/blob/main/plantilla/src/main/resources/templates/user.html)) de AJAX, envío y recepción de mensajes por websockets, y previsualización de imágenes
 
   * **templates/** - contiene vistas, y fragmentos de vista (en `templates/fragments`)
   
-    - **fragments/head.html** - para incluir en el `<head>` de tus páginas. Incluída desde  
+    - **fragments/head.html** - para incluir en el `<head>` de tus páginas. Incluída desde
+    - **fragments/header.html** - para incluir al comienzo del `<body>`, contiene una header
+    - **fragments/sidebar.html** - para incluir al comienzo del `<body>`, contiene una sidebar
     - **fragments/nav.html** - para incluir al comienzo del `<body>`, contiene una navbar. *Cambia los contenidos* para que tengan sentido para tu aplicación.    
     - **fragments/footer.html** - para incluir al final del `<body>`, con un footer. *Cambia su contenido visual*, pero ten en cuenta que es donde se cargan los .js de bootstrap, además de `stomp.js` e `iw.js`.
     - **error.html** - usada cuando se producen errores. Tiene un comportamiento muy distinto cuando la aplicación está en modo `debug` y cuando no lo está. 
