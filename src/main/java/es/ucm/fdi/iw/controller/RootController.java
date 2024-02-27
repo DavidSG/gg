@@ -1,10 +1,17 @@
 package es.ucm.fdi.iw.controller;
 
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import es.ucm.fdi.iw.model.Campeon;
 
 /**
  * Non-authenticated requests only.
@@ -13,6 +20,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class RootController {
 
     private static final Logger log = LogManager.getLogger(RootController.class);
+
+    @Autowired
+    private EntityManager entityManager;
 
     @GetMapping("/login")
     public String login(Model model) {
@@ -32,7 +42,9 @@ public class RootController {
      */
 
     @GetMapping("/header")
-    public String header() {
+    public String header(Model model) {
+        List<Campeon> cs = entityManager.createQuery("select c from Campeon c").getResultList();
+        model.addAttribute("result", cs);
         return "header";
     }
 

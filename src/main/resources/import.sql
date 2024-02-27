@@ -1,3 +1,4 @@
+
 -- insert admin (username a, password aa)
 INSERT INTO IWUser (id, enabled, roles, username, password)
 VALUES (1, TRUE, 'ADMIN,USER', 'a',
@@ -8,3 +9,10 @@ VALUES (2, TRUE, 'USER', 'b',
 
 -- start id numbering from a value that is larger than any assigned above
 ALTER SEQUENCE "PUBLIC"."GEN" RESTART WITH 1024;
+
+INSERT INTO Campeon (name, posiciones) VALUES 
+('Aatrox', 'top'),
+('Ahri', 'top'),
+('Garen', 'top'),
+('Swain', 'top'),
+('Master yi', 'top');

@@ -45,7 +45,7 @@ a {
     z-index: 5;			
 }
 
-input[type="text"] {
+.busqueda[type="text"] {
     height: 40px;
     width: 550px;
     padding: 10px;
