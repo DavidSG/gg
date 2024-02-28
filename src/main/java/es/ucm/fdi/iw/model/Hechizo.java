@@ -4,9 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Campeon {
+public class Hechizo {
     private String nombre;
-    private String posiciones;
 
     @Id
     public String getNombre() {
@@ -17,11 +16,4 @@ public class Campeon {
         this.nombre = nombre;
     }
 
-    public String getPosiciones() {
-        return posiciones;
-    }
-
-    public void setPosiciones(String posiciones) {
-        this.posiciones = posiciones;
-    }
 }

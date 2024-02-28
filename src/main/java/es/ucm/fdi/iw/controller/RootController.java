@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import es.ucm.fdi.iw.model.Campeon;
+import es.ucm.fdi.iw.model.Item;
 
 /**
  * Non-authenticated requests only.
@@ -41,11 +42,13 @@ public class RootController {
      * }
      */
 
-    @GetMapping("/header")
+    @GetMapping("/db")
     public String header(Model model) {
         List<Campeon> cs = entityManager.createQuery("select c from Campeon c").getResultList();
-        model.addAttribute("result", cs);
-        return "header";
+        model.addAttribute("campeones", cs);
+        List<Item> is = entityManager.createQuery("select i from Item i").getResultList();
+        model.addAttribute("items", is);
+        return "db";
     }
 
     @GetMapping("/campeones")

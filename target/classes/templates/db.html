@@ -10,9 +10,15 @@
     <main>
 		<div>
 			<ul>
-				<li th:each="c: ${result}" th:text="${c.name}">Arturo</li>
+				<li th:each="c : ${campeones}" th:text="${c.nombre}">Arturo</li>
 			</ul>
 		</div>
+		<div>
+			<ul>
+				<li th:each="i : ${items}" th:text="${i.id}">Arturo</li>
+			</ul>
+		</div>
+		
     </main>
 </body>
 </html>

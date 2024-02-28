@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/bootstrap-5.1.3.css}" href="css/bootstrap-5.1.3.css" type="text/css" />
 	<link rel="stylesheet" th:href="@{/css/fragments/header.css}">
 </head>
 <body>
-    <header th:fragment="header">
+    <main>
 		<div class="headerContainer">
 			<a href="/">
 				<div class="ggHead">GG</div>
@@ -30,6 +31,6 @@
 				</a>
 			</div>
 		</div>
-    </header>
+    </main>
 </body>
 </html>
