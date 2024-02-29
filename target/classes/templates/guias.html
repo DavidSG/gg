@@ -16,18 +16,20 @@
 		<div th:insert="./fragments/sidebar"></div>
 		<!-- SIDEBAR -->
 
-		<div th:each="guia : ${guias}" class="guia">
+		<div th:each="guia : ${guias}">
 			<!-- Generate link to the guide -->
-			<!-- <a th:href="${guide.link}"> -->
-				<!-- Display guide details -->
-				<h2 th:text="${guia.puntuacion}"></h2>
-				<img th:src="@{/img/campeones/__${guia.campeon}__.png}" width="150px" height="150px"/>
-				<div class="tituloGuia">
-					<h1 th:text="${guia.titulo}"></h1>
-					<!-- Corrected author field name -->
-					<p th:text="${'Escrita por ' + guia.autor + ' ' + guia.fecha}"></p>
+			<a th:href="@{/guia/__${guia.id}__}">
+				<div class="guia">
+					<!-- Display guide details -->
+					<h2 th:text="${guia.puntuacion}"></h2>
+					<img th:src="@{/img/campeones/__${guia.campeon}__.png}" width="150px" height="150px"/>
+					<div class="tituloGuia">
+						<h1 th:text="${guia.titulo}"></h1>
+						<!-- Corrected author field name -->
+						<p th:text="${'Escrita por ' + guia.autor + ' ' + guia.fecha}"></p>
+					</div>
 				</div>
-			<!-- </a> -->
+			</a>
 		</div>
 		
     </main>

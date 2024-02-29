@@ -3,6 +3,7 @@ package es.ucm.fdi.iw.controller;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.servlet.http.HttpSession;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,12 +11,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import es.ucm.fdi.iw.model.Campeon;
 import es.ucm.fdi.iw.model.Guia;
 import es.ucm.fdi.iw.model.Item;
+import es.ucm.fdi.iw.model.User;
 
 /**
  * Non-authenticated requests only.
@@ -28,11 +31,6 @@ public class RootController {
     @Autowired
     private EntityManager entityManager;
 
-    @GetMapping("/login")
-    public String login(Model model) {
-        return "login";
-    }
-
     @GetMapping("/")
     public String index(Model model) {
         return "index";
@@ -44,17 +42,15 @@ public class RootController {
      * return "index";
      * }
      */
+
+    @GetMapping("/login")
+    public String login(Model model) {
+        return "login";
+    }
         
     @GetMapping("/db")
     public String header(Model model) {
         return "db";
-    }
-
-    @GetMapping("/campeones")
-    public String campeones(Model model) {
-        List<Campeon> cs = entityManager.createQuery("SELECT c FROM Campeon c").getResultList();
-        model.addAttribute("campeones", cs);
-        return "campeones";
     }
 
     @GetMapping("/guias")
@@ -62,6 +58,20 @@ public class RootController {
         List<Guia> gs = entityManager.createQuery("SELECT g FROM Guia g").getResultList();
         model.addAttribute("guias", gs);
         return "guias";
+    }
+    
+    @GetMapping("/{id}")
+    public String index(@PathVariable long id, Model model, HttpSession session) {
+        Guia g = entityManager.find(Guia.class, id);
+        model.addAttribute("guia", g);
+        return "guia";
+    }
+
+    @GetMapping("/campeones")
+    public String campeones(Model model) {
+        List<Campeon> cs = entityManager.createQuery("SELECT c FROM Campeon c").getResultList();
+        model.addAttribute("campeones", cs);
+        return "campeones";
     }
 
     @GetMapping("/items")
