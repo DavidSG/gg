@@ -17,8 +17,14 @@
 		<!-- SIDEBAR -->
 		
 		<!-- CAMPEONES -->
-        <div class="campeonGrid"></div>
-		<script src="campeones.js"></script>
+        <div class="campeonGrid">
+			<div th:each="campeon : ${campeones}" class="campeon">
+				<div class="campeonImagen">
+					<img th:src="@{/img/campeones/__${campeon.nombre}__.png}" />
+				</div>
+				<div class="campeonTexto" th:text="${#strings.capitalize(campeon.nombre)}">Campeon Name</div>
+			</div>
+		</div>
 		<!-- CAMPEONES -->
     </main>
 </body>
