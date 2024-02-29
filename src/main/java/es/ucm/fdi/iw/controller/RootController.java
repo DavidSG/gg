@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import es.ucm.fdi.iw.model.Campeon;
+import es.ucm.fdi.iw.model.Guia;
 import es.ucm.fdi.iw.model.Item;
 
 /**
@@ -57,7 +58,9 @@ public class RootController {
     }
 
     @GetMapping("/guias")
-    public String guides() {
+    public String guides(Model model) {
+        List<Guia> gs = entityManager.createQuery("SELECT g FROM Guia g").getResultList();
+        model.addAttribute("guias", gs);
         return "guias";
     }
 

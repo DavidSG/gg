@@ -10,6 +10,18 @@ VALUES (2, TRUE, 'USER', 'b',
 -- start id numbering from a value that is larger than any assigned above
 ALTER SEQUENCE 'PUBLIC'.'GEN' RESTART WITH 1024;
 
+
+INSERT INTO Guia (id, puntuacion, titulo, fecha, texto, autor, elo, campeon, items, hechizos) VALUES 
+(1, 9.8, 'Guia suspicaz', '13/02', 'texto generico', 'David Alfonso', 'diamante', 'aatrox', 'fefe', 'flash'),
+(2, 9.0, 'Guia excelente', '15/02', 'texto generico', 'Laura Lopez', 'platino', 'jhin', 'bf sword', 'ignite'),
+(3, 8.5, 'Guia versátil', '17/02', 'texto generico', 'Carlos Rodriguez', 'oro', 'leona', 'sunfire cape', 'teleport'),
+(4, 8.7, 'Guía táctica para principiantes', '2024-02-28', 'Consejos y estrategias esenciales para jugadores novatos.', 'Ana Martínez', 'plata', 'Annie', 'Dorans Ring, Boots of Speed', 'Teleport, Flash'),
+(5, 9.5, 'Dominando el juego con Jinx', '2024-02-26', 'Aprende a jugar como un profesional con la campeona Jinx.', 'Pablo González', 'diamante', 'Jinx', 'Infinity Edge, Rapid Firecannon', 'Flash, Heal'),
+(6, 9.8, 'Guia suspicaz', '13/02', 'texto generico', 'David Alfonso', 'diamante', 'aatrox', 'fefe', 'flash'),
+(7, 9.0, 'Guia excelente', '15/02', 'texto generico', 'Laura Lopez', 'platino', 'jhin', 'bf sword', 'ignite'),
+(8, 8.5, 'Guia versátil', '17/02', 'texto generico', 'Carlos Rodriguez', 'oro', 'leona', 'sunfire cape', 'teleport');
+
+
 INSERT INTO Campeon (nombre, posiciones) VALUES 
 ('aatrox', 'top'),
 ('ahri', 'top'),

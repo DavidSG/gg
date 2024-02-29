@@ -15,22 +15,21 @@
 		<!-- SIDEBAR -->
 		<div th:insert="./fragments/sidebar"></div>
 		<!-- SIDEBAR -->
-		<a href="https://example.com">
-			<div class="guia">
-				<h1>9.8</h1>
-				<img width="150px" height="150px" src="https://cdn.mobalytics.gg/assets/lol/images/dd/champions/icons/aatrox.png?V3">
-				<h1>Guia suspicaz [13.5]</h1>
-				<p>Escrita por David Starry 13/02</p>
-			</div>
-		</a>
-		<a href="https://example.com">
-			<div class="guia">
-			</div>
-		</a>
-		<a href="https://example.com">
-			<div class="guia">
-			</div>
-		</a>
+
+		<div th:each="guia : ${guias}" class="guia">
+			<!-- Generate link to the guide -->
+			<!-- <a th:href="${guide.link}"> -->
+				<!-- Display guide details -->
+				<h2 th:text="${guia.puntuacion}"></h2>
+				<img th:src="@{/img/campeones/__${guia.campeon}__.png}" width="150px" height="150px"/>
+				<div class="tituloGuia">
+					<h1 th:text="${guia.titulo}"></h1>
+					<!-- Corrected author field name -->
+					<p th:text="${'Escrita por ' + guia.autor + ' ' + guia.fecha}"></p>
+				</div>
+			<!-- </a> -->
+		</div>
+		
     </main>
 </body>
 </html>
