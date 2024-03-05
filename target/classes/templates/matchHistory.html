@@ -7,7 +7,15 @@
     <title>match-history</title>
 </head>
 <body>
-    <div class="match-history">
+	<!-- HEADER -->
+	<div th:insert="./fragments/header"></div>
+	<!-- HEADER -->
+
+	<!-- SIDEBAR -->
+	<div th:insert="./fragments/sidebar"></div>
+	<!-- SIDEBAR -->
+
+	<div class="match-history">
         <div class="match-history-header"></div>
 		<div class="partida">
 			<div class="resumenPartida">
@@ -84,10 +92,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="partida"> </div>
-		<div class="partida"></div>
-		<div class="partida"></div>
-		<div class="partida"></div>
+		<h2 th:text="${summoner}"></h2>
+		<h2 th:text="${history}"></h2>
+		<h2 th:text="${match}"></h2>
     </div>
 </body>
 </html>
