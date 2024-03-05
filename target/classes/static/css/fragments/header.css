@@ -46,12 +46,14 @@ a {
 
 input[type="text"] {
     height: 40px;
+    box-sizing: content-box;
     width: 550px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-right: 5px;
     font-size: 20px;
+    z-index: -5;
 }
 
 .botonBusqueda {

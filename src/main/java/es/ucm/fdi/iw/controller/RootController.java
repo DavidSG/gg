@@ -13,15 +13,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import es.ucm.fdi.iw.model.Campeon;
 import es.ucm.fdi.iw.model.Guia;
 import es.ucm.fdi.iw.model.Item;
-import es.ucm.fdi.iw.model.User;
 
 /**
  * Non-authenticated requests only.
@@ -66,8 +63,8 @@ public class RootController {
     @GetMapping("/search")
     public String index(@RequestParam String query, Model model, HttpSession session) {
         List<Campeon> cs = entityManager.createQuery(
-                "SELECT c FROM Campeon c WHERE c.nombre LIKE :nombre", Campeon.class)
-                .setParameter("nombre", "%" + query)
+                "SELECT c FROM Campeon c WHERE c.nombre LIKE LOWER(:nombre)", Campeon.class)
+                .setParameter("nombre", "%" + query + "%")
                 .getResultList();
         model.addAttribute("campeones", cs);
         return "campeones";
