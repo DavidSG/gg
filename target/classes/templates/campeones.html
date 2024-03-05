@@ -16,7 +16,14 @@
 		<div th:insert="./fragments/sidebar"></div>
 		<!-- SIDEBAR -->
 		
-		<!-- CAMPEONES -->
+		<div class = "searchBar">
+			<form th:action="@{/search}" method="get">
+				<input type="text" name="query" placeholder="Search..."/>
+				<button type="submit">Search</button>
+			</form>	
+		</div>
+
+		<!-- CAMPEONES -->	
         <div class="campeonGrid">
 			<div th:each="campeon : ${campeones}" class="campeon">
 				<div class="campeonImagen">

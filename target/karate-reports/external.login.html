@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <title>external.login</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="karate-summary.html">
+      <img src="karate-logo.svg" alt="Karate"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">4</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2024-03-05 01:36:33 p. m.</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:6]"><span>[1:6]</span> <span>login malo en github</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2:14]"><span>[2:14]</span> <span>login malo en plantilla</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[3:22]"><span>[3:22]</span> <span>login correcto como b</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[4:30]"><span>[4:30]</span> <span>login correcto como a</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[5:37]"><span>[5:37]</span> <span>logout after login</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">external/login.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">login en servidor</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:6]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:6]</span>
+                <span class="scenario-name">login malo en github</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>1803</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref passed">7</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>driver &#39;https://github.com/login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1258</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.7">13:36:24.806 karate.env system property was: null 
+13:36:25.422 request:
+1 &gt; GET http://localhost:9222/json
+1 &gt; Host: localhost:9222
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.3.1)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+13:36:25.424 response time in milliseconds: 1
+1 &lt; 200
+1 &lt; Content-Security-Policy: frame-ancestors &#39;none&#39;
+1 &lt; Content-Length: 1725
+1 &lt; Content-Type: application/json; charset=UTF-8
+[ {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:9222/devtools/page/925077B0D32179B367F0779160E5DAF9&quot;,
+   &quot;id&quot;: &quot;925077B0D32179B367F0779160E5DAF9&quot;,
+   &quot;title&quot;: &quot;Google Network Speech&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://neajdppkdcdipfabeoofebfddakdcjhd/_generated_background_page.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:9222/devtools/page/925077B0D32179B367F0779160E5DAF9&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:9222/devtools/page/9557CA4E0E888B2F83FA59852EA02F1E&quot;,
+   &quot;id&quot;: &quot;9557CA4E0E888B2F83FA59852EA02F1E&quot;,
+   &quot;title&quot;: &quot;Google Hangouts&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:9222/devtools/page/9557CA4E0E888B2F83FA59852EA02F1E&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:9222/devtools/page/D54D76AD1AFA751B2CF394DD041BED26&quot;,
+   &quot;id&quot;: &quot;D54D76AD1AFA751B2CF394DD041BED26&quot;,
+   &quot;title&quot;: &quot;Google Hangouts&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:9222/devtools/page/D54D76AD1AFA751B2CF394DD041BED26&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:9222/devtools/page/42EDF2F50B37E77D2B3C45BE1B1734BC&quot;,
+   &quot;id&quot;: &quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;,
+   &quot;title&quot;: &quot;Nueva pestaña de Incógnito&quot;,
+   &quot;type&quot;: &quot;page&quot;,
+   &quot;url&quot;: &quot;chrome://newtab/&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:9222/devtools/page/42EDF2F50B37E77D2B3C45BE1B1734BC&quot;
+} ]
+
+13:36:25.427 root frame id: 42EDF2F50B37E77D2B3C45BE1B1734BC
+13:36:25.650 &gt;&gt; {&quot;id&quot;:1,&quot;method&quot;:&quot;Target.attachToTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;,&quot;flatten&quot;:true}}
+13:36:25.670 &lt;&lt; {&quot;method&quot;:&quot;Target.attachedToTarget&quot;,&quot;params&quot;:{&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;targetInfo&quot;:{&quot;targetId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;,&quot;type&quot;:&quot;page&quot;,&quot;title&quot;:&quot;Nueva pesta\u00f1a de Inc\u00f3gnito&quot;,&quot;url&quot;:&quot;chrome://newtab/&quot;,&quot;attached&quot;:true,&quot;canAccessOpener&quot;:false,&quot;browserContextId&quot;:&quot;6CD7FFF1612A29C4FCF42F7B67A4F03B&quot;},&quot;waitingForDebugger&quot;:false}}
+13:36:25.671 &lt;&lt; {&quot;id&quot;:1,&quot;result&quot;:{&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}}
+13:36:25.671 &gt;&gt; {&quot;id&quot;:2,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Target.activateTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;}}
+13:36:25.673 &lt;&lt; {&quot;id&quot;:2,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:25.706 &gt;&gt; {&quot;id&quot;:3,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Page.enable&quot;}
+13:36:25.706 &lt;&lt; {&quot;id&quot;:3,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:25.706 &gt;&gt; {&quot;id&quot;:4,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Runtime.enable&quot;}
+13:36:25.716 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:1,&quot;origin&quot;:&quot;chrome://newtab&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;-7550086343625427580.8956909660543774147&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;}}},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:25.716 &lt;&lt; {&quot;id&quot;:4,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:25.716 &gt;&gt; {&quot;id&quot;:5,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Browser.getWindowForTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;}}
+13:36:25.716 &lt;&lt; {&quot;id&quot;:5,&quot;result&quot;:{&quot;windowId&quot;:1498792273,&quot;bounds&quot;:{&quot;left&quot;:10,&quot;top&quot;:10,&quot;width&quot;:945,&quot;height&quot;:1020,&quot;windowState&quot;:&quot;normal&quot;}},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:25.773 &gt;&gt; {&quot;id&quot;:6,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Page.navigate&quot;,&quot;params&quot;:{&quot;url&quot;:&quot;https:\/\/github.com\/login&quot;}}
+13:36:25.788 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:25.893 &lt;&lt; {&quot;id&quot;:6,&quot;result&quot;:{&quot;frameId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;,&quot;loaderId&quot;:&quot;D02A529ACA8CBDF76904D285C69798DF&quot;},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:25.893 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:25.905 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:25.905 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;,&quot;loaderId&quot;:&quot;D02A529ACA8CBDF76904D285C69798DF&quot;,&quot;url&quot;:&quot;https://github.com/login&quot;,&quot;domainAndRegistry&quot;:&quot;github.com&quot;,&quot;securityOrigin&quot;:&quot;https://github.com&quot;,&quot;mimeType&quot;:&quot;text/html&quot;,&quot;adFrameStatus&quot;:{&quot;adFrameType&quot;:&quot;none&quot;},&quot;secureContextType&quot;:&quot;Secure&quot;,&quot;crossOriginIsolatedContextType&quot;:&quot;NotIsolated&quot;,&quot;gatedAPIFeatures&quot;:[]},&quot;type&quot;:&quot;Navigation&quot;},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:25.906 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:1,&quot;origin&quot;:&quot;https://github.com&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;4516070526604123014.6298205548300821151&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;}}},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.050 &lt;&lt; {&quot;method&quot;:&quot;Page.navigatedWithinDocument&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;,&quot;url&quot;:&quot;https://github.com/login&quot;},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.091 &lt;&lt; {&quot;method&quot;:&quot;Page.domContentEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21883.82182},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref passed">8</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>input(&#39;#login_field&#39;, &#39;dummy&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">72</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.8">13:36:26.103 &gt;&gt; {&quot;id&quot;:7,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;var e = document.querySelector(\&quot;#login_field\&quot;); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}&quot;,&quot;returnByValue&quot;:true}}
+13:36:26.105 &lt;&lt; {&quot;method&quot;:&quot;Page.navigatedWithinDocument&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;,&quot;url&quot;:&quot;https://github.com/login&quot;},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.107 &lt;&lt; {&quot;id&quot;:7,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;number&quot;,&quot;value&quot;:0,&quot;description&quot;:&quot;0&quot;}},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.109 &gt;&gt; {&quot;id&quot;:8,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;d&quot;,&quot;windowsVirtualKeyCode&quot;:68}}
+13:36:26.114 &lt;&lt; {&quot;id&quot;:8,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.115 &gt;&gt; {&quot;id&quot;:9,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;d&quot;,&quot;windowsVirtualKeyCode&quot;:68}}
+13:36:26.118 &lt;&lt; {&quot;id&quot;:9,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.118 &gt;&gt; {&quot;id&quot;:10,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;d&quot;,&quot;windowsVirtualKeyCode&quot;:68}}
+13:36:26.124 &lt;&lt; {&quot;id&quot;:10,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.125 &gt;&gt; {&quot;id&quot;:11,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;u&quot;,&quot;windowsVirtualKeyCode&quot;:85}}
+13:36:26.129 &lt;&lt; {&quot;method&quot;:&quot;Page.navigatedWithinDocument&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;,&quot;url&quot;:&quot;https://github.com/login&quot;},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.129 &lt;&lt; {&quot;method&quot;:&quot;Page.loadEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21883.86022},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.130 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.130 &lt;&lt; {&quot;id&quot;:11,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.131 &gt;&gt; {&quot;id&quot;:12,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;u&quot;,&quot;windowsVirtualKeyCode&quot;:85}}
+13:36:26.140 &lt;&lt; {&quot;id&quot;:12,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.141 &gt;&gt; {&quot;id&quot;:13,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;u&quot;,&quot;windowsVirtualKeyCode&quot;:85}}
+13:36:26.143 &lt;&lt; {&quot;id&quot;:13,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.144 &gt;&gt; {&quot;id&quot;:14,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;m&quot;,&quot;windowsVirtualKeyCode&quot;:77}}
+13:36:26.145 &lt;&lt; {&quot;id&quot;:14,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.146 &gt;&gt; {&quot;id&quot;:15,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;m&quot;,&quot;windowsVirtualKeyCode&quot;:77}}
+13:36:26.148 &lt;&lt; {&quot;id&quot;:15,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.148 &gt;&gt; {&quot;id&quot;:16,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;m&quot;,&quot;windowsVirtualKeyCode&quot;:77}}
+13:36:26.149 &lt;&lt; {&quot;id&quot;:16,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.150 &gt;&gt; {&quot;id&quot;:17,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;m&quot;,&quot;windowsVirtualKeyCode&quot;:77}}
+13:36:26.151 &lt;&lt; {&quot;id&quot;:17,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.151 &gt;&gt; {&quot;id&quot;:18,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;m&quot;,&quot;windowsVirtualKeyCode&quot;:77}}
+13:36:26.153 &lt;&lt; {&quot;id&quot;:18,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.153 &gt;&gt; {&quot;id&quot;:19,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;m&quot;,&quot;windowsVirtualKeyCode&quot;:77}}
+13:36:26.154 &lt;&lt; {&quot;id&quot;:19,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.155 &gt;&gt; {&quot;id&quot;:20,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;y&quot;,&quot;windowsVirtualKeyCode&quot;:89}}
+13:36:26.157 &lt;&lt; {&quot;id&quot;:20,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.157 &gt;&gt; {&quot;id&quot;:21,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;y&quot;,&quot;windowsVirtualKeyCode&quot;:89}}
+13:36:26.159 &lt;&lt; {&quot;id&quot;:21,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.160 &gt;&gt; {&quot;id&quot;:22,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;y&quot;,&quot;windowsVirtualKeyCode&quot;:89}}
+13:36:26.163 &lt;&lt; {&quot;id&quot;:22,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref passed">9</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>input(&#39;#password&#39;, &#39;world&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">63</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9">13:36:26.165 &gt;&gt; {&quot;id&quot;:23,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;var e = document.querySelector(\&quot;#password\&quot;); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}&quot;,&quot;returnByValue&quot;:true}}
+13:36:26.167 &lt;&lt; {&quot;id&quot;:23,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;number&quot;,&quot;value&quot;:0,&quot;description&quot;:&quot;0&quot;}},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.168 &gt;&gt; {&quot;id&quot;:24,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;w&quot;,&quot;windowsVirtualKeyCode&quot;:87}}
+13:36:26.169 &lt;&lt; {&quot;id&quot;:24,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.203 &gt;&gt; {&quot;id&quot;:25,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;w&quot;,&quot;windowsVirtualKeyCode&quot;:87}}
+13:36:26.205 &lt;&lt; {&quot;id&quot;:25,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.205 &gt;&gt; {&quot;id&quot;:26,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;w&quot;,&quot;windowsVirtualKeyCode&quot;:87}}
+13:36:26.207 &lt;&lt; {&quot;id&quot;:26,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.208 &gt;&gt; {&quot;id&quot;:27,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;o&quot;,&quot;windowsVirtualKeyCode&quot;:79}}
+13:36:26.209 &lt;&lt; {&quot;id&quot;:27,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.209 &gt;&gt; {&quot;id&quot;:28,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;o&quot;,&quot;windowsVirtualKeyCode&quot;:79}}
+13:36:26.211 &lt;&lt; {&quot;id&quot;:28,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.211 &gt;&gt; {&quot;id&quot;:29,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;o&quot;,&quot;windowsVirtualKeyCode&quot;:79}}
+13:36:26.212 &lt;&lt; {&quot;id&quot;:29,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.212 &gt;&gt; {&quot;id&quot;:30,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;r&quot;,&quot;windowsVirtualKeyCode&quot;:82}}
+13:36:26.213 &lt;&lt; {&quot;id&quot;:30,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.214 &gt;&gt; {&quot;id&quot;:31,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;r&quot;,&quot;windowsVirtualKeyCode&quot;:82}}
+13:36:26.215 &lt;&lt; {&quot;id&quot;:31,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.215 &gt;&gt; {&quot;id&quot;:32,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;r&quot;,&quot;windowsVirtualKeyCode&quot;:82}}
+13:36:26.216 &lt;&lt; {&quot;id&quot;:32,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.217 &gt;&gt; {&quot;id&quot;:33,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;l&quot;,&quot;windowsVirtualKeyCode&quot;:76}}
+13:36:26.218 &lt;&lt; {&quot;id&quot;:33,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.218 &gt;&gt; {&quot;id&quot;:34,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;l&quot;,&quot;windowsVirtualKeyCode&quot;:76}}
+13:36:26.219 &lt;&lt; {&quot;id&quot;:34,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.220 &gt;&gt; {&quot;id&quot;:35,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;l&quot;,&quot;windowsVirtualKeyCode&quot;:76}}
+13:36:26.221 &lt;&lt; {&quot;id&quot;:35,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.221 &gt;&gt; {&quot;id&quot;:36,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;d&quot;,&quot;windowsVirtualKeyCode&quot;:68}}
+13:36:26.223 &lt;&lt; {&quot;id&quot;:36,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.224 &gt;&gt; {&quot;id&quot;:37,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;d&quot;,&quot;windowsVirtualKeyCode&quot;:68}}
+13:36:26.225 &lt;&lt; {&quot;id&quot;:37,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.226 &gt;&gt; {&quot;id&quot;:38,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;d&quot;,&quot;windowsVirtualKeyCode&quot;:68}}
+13:36:26.227 &lt;&lt; {&quot;id&quot;:38,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>submit().click(&quot;input[name=commit]&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">389</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.10">13:36:26.229 &gt;&gt; {&quot;id&quot;:39,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.querySelector(\&quot;input[name=commit]\&quot;).click()&quot;,&quot;returnByValue&quot;:true}}
+13:36:26.232 &lt;&lt; {&quot;id&quot;:39,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;undefined&quot;}},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.232 &lt;&lt; {&quot;method&quot;:&quot;Page.frameScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;,&quot;delay&quot;:0,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;https://github.com/session&quot;},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.233 &lt;&lt; {&quot;method&quot;:&quot;Page.frameRequestedNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;https://github.com/session&quot;,&quot;disposition&quot;:&quot;currentTab&quot;},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.234 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.234 &lt;&lt; {&quot;method&quot;:&quot;Page.frameClearedScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.548 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.548 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;,&quot;loaderId&quot;:&quot;B37AA151676DB63CC15A17E12FDC4F35&quot;,&quot;url&quot;:&quot;https://github.com/session&quot;,&quot;domainAndRegistry&quot;:&quot;github.com&quot;,&quot;securityOrigin&quot;:&quot;https://github.com&quot;,&quot;mimeType&quot;:&quot;text/html&quot;,&quot;adFrameStatus&quot;:{&quot;adFrameType&quot;:&quot;none&quot;},&quot;secureContextType&quot;:&quot;Secure&quot;,&quot;crossOriginIsolatedContextType&quot;:&quot;NotIsolated&quot;,&quot;gatedAPIFeatures&quot;:[]},&quot;type&quot;:&quot;Navigation&quot;},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.549 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:2,&quot;origin&quot;:&quot;https://github.com&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;4473291163171128514.6488378339175950167&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;}}},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.615 &lt;&lt; {&quot;method&quot;:&quot;Page.navigatedWithinDocument&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;,&quot;url&quot;:&quot;https://github.com/session&quot;},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.616 &lt;&lt; {&quot;method&quot;:&quot;Page.domContentEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21884.346583},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>match html(&#39;.flash-error&#39;) contains &#39;Incorrect username or password.&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">22</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11">13:36:26.619 &gt;&gt; {&quot;id&quot;:40,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.querySelector(\&quot;.flash-error\&quot;)[&#39;outerHTML&#39;]&quot;,&quot;returnByValue&quot;:true}}
+13:36:26.624 &lt;&lt; {&quot;method&quot;:&quot;Page.navigatedWithinDocument&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;,&quot;url&quot;:&quot;https://github.com/session&quot;},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.629 &lt;&lt; {&quot;id&quot;:40,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;&lt;div class=\&quot;flash flash-full flash-error  \&quot;&gt;\n  &lt;div class=\&quot;px-2\&quot;&gt;\n    &lt;button autofocus=\&quot;\&quot; class=\&quot;flash-close js-flash-close\&quot; type=\&quot;button\&quot; aria-label=\&quot;Dismiss this message\&quot;&gt;\n      &lt;svg aria-hidden=\&quot;true\&quot; height=\&quot;16\&quot; viewBox=\&quot;0 0 16 16\&quot; version=\&quot;1.1\&quot; width=\&quot;16\&quot; data-view-component=\&quot;true\&quot; class=\&quot;octicon octicon-x\&quot;&gt;\n    &lt;path d=\&quot;M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z\&quot;&gt;&lt;/path&gt;\n&lt;/svg&gt;\n    &lt;/button&gt;\n    &lt;div aria-atomic=\&quot;true\&quot; role=\&quot;alert\&quot; class=\&quot;js-flash-alert\&quot;&gt;\n      \n      Incorrect username or password.\n\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;&quot;}},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.635 &lt;&lt; {&quot;method&quot;:&quot;Page.navigatedWithinDocument&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;,&quot;url&quot;:&quot;https://github.com/session&quot;},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.636 &lt;&lt; {&quot;method&quot;:&quot;Page.loadEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21884.36732},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.636 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+13:36:26.639 &gt;&gt; {&quot;id&quot;:41,&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;,&quot;method&quot;:&quot;Target.closeTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;42EDF2F50B37E77D2B3C45BE1B1734BC&quot;}}
+13:36:26.641 &lt;&lt; {&quot;id&quot;:41,&quot;result&quot;:{&quot;success&quot;:true},&quot;sessionId&quot;:&quot;AF1E68C686FB6286B16C8E413DFBFAD0&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:14]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:14]</span>
+                <span class="scenario-name">login malo en plantilla</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>3955</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref passed">15</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>driver baseUrl + &#39;/user/2&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">654</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.15">13:36:26.662 karate.env system property was: null 
+13:36:26.669 preferred port 9222 not available, will use: 52410
+13:36:26.944 request:
+1 &gt; GET http://localhost:52410/json
+1 &gt; Host: localhost:52410
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.3.1)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+13:36:26.972 response time in milliseconds: 3
+1 &lt; 200
+1 &lt; Content-Security-Policy: frame-ancestors &#39;none&#39;
+1 &lt; Content-Length: 1733
+1 &lt; Content-Type: application/json; charset=UTF-8
+[ {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:52410/devtools/page/018BA8F261452F20D087EF35A936B4E7&quot;,
+   &quot;id&quot;: &quot;018BA8F261452F20D087EF35A936B4E7&quot;,
+   &quot;title&quot;: &quot;Google Network Speech&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://neajdppkdcdipfabeoofebfddakdcjhd/_generated_background_page.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:52410/devtools/page/018BA8F261452F20D087EF35A936B4E7&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:52410/devtools/page/8AA0A375891BE7783DB8ADFE5C6A3242&quot;,
+   &quot;id&quot;: &quot;8AA0A375891BE7783DB8ADFE5C6A3242&quot;,
+   &quot;title&quot;: &quot;Google Hangouts&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:52410/devtools/page/8AA0A375891BE7783DB8ADFE5C6A3242&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:52410/devtools/page/118E2B9716C16B8BCB3BBA37A222AB5B&quot;,
+   &quot;id&quot;: &quot;118E2B9716C16B8BCB3BBA37A222AB5B&quot;,
+   &quot;title&quot;: &quot;Google Hangouts&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:52410/devtools/page/118E2B9716C16B8BCB3BBA37A222AB5B&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:52410/devtools/page/2C1036476E599C45DAF2006A1F1F945F&quot;,
+   &quot;id&quot;: &quot;2C1036476E599C45DAF2006A1F1F945F&quot;,
+   &quot;title&quot;: &quot;Nueva pestaña de Incógnito&quot;,
+   &quot;type&quot;: &quot;page&quot;,
+   &quot;url&quot;: &quot;chrome://newtab/&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:52410/devtools/page/2C1036476E599C45DAF2006A1F1F945F&quot;
+} ]
+
+13:36:26.974 root frame id: 2C1036476E599C45DAF2006A1F1F945F
+13:36:26.994 &gt;&gt; {&quot;id&quot;:1,&quot;method&quot;:&quot;Target.attachToTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;,&quot;flatten&quot;:true}}
+13:36:26.994 &lt;&lt; {&quot;method&quot;:&quot;Target.attachedToTarget&quot;,&quot;params&quot;:{&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;targetInfo&quot;:{&quot;targetId&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;,&quot;type&quot;:&quot;page&quot;,&quot;title&quot;:&quot;Nueva pesta\u00f1a de Inc\u00f3gnito&quot;,&quot;url&quot;:&quot;chrome://newtab/&quot;,&quot;attached&quot;:true,&quot;canAccessOpener&quot;:false,&quot;browserContextId&quot;:&quot;ACB6E54C19DCEBC503C6F3B9AE0822C8&quot;},&quot;waitingForDebugger&quot;:false}}
+13:36:26.994 &lt;&lt; {&quot;id&quot;:1,&quot;result&quot;:{&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}}
+13:36:26.994 &gt;&gt; {&quot;id&quot;:2,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Target.activateTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;}}
+13:36:26.994 &lt;&lt; {&quot;id&quot;:2,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:26.994 &gt;&gt; {&quot;id&quot;:3,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Page.enable&quot;}
+13:36:27.005 &lt;&lt; {&quot;id&quot;:3,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.006 &gt;&gt; {&quot;id&quot;:4,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Runtime.enable&quot;}
+13:36:27.007 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:1,&quot;origin&quot;:&quot;chrome://newtab&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;8678218779798108692.-8528979372334136250&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;}}},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.007 &lt;&lt; {&quot;id&quot;:4,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.007 &gt;&gt; {&quot;id&quot;:5,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Browser.getWindowForTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;}}
+13:36:27.009 &lt;&lt; {&quot;id&quot;:5,&quot;result&quot;:{&quot;windowId&quot;:471665354,&quot;bounds&quot;:{&quot;left&quot;:10,&quot;top&quot;:10,&quot;width&quot;:945,&quot;height&quot;:1020,&quot;windowState&quot;:&quot;normal&quot;}},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.057 &gt;&gt; {&quot;id&quot;:6,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Page.navigate&quot;,&quot;params&quot;:{&quot;url&quot;:&quot;http:\/\/localhost:8080\/user\/2&quot;}}
+13:36:27.062 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.188 &lt;&lt; {&quot;id&quot;:6,&quot;result&quot;:{&quot;frameId&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;,&quot;loaderId&quot;:&quot;B92D106AEC08EF3852BDF434FB99F5F0&quot;},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.189 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.198 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.198 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;,&quot;loaderId&quot;:&quot;B92D106AEC08EF3852BDF434FB99F5F0&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;,&quot;domainAndRegistry&quot;:&quot;&quot;,&quot;securityOrigin&quot;:&quot;http://localhost:8080&quot;,&quot;mimeType&quot;:&quot;text/html&quot;,&quot;adFrameStatus&quot;:{&quot;adFrameType&quot;:&quot;none&quot;},&quot;secureContextType&quot;:&quot;SecureLocalhost&quot;,&quot;crossOriginIsolatedContextType&quot;:&quot;NotIsolated&quot;,&quot;gatedAPIFeatures&quot;:[]},&quot;type&quot;:&quot;Navigation&quot;},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.199 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:1,&quot;origin&quot;:&quot;http://localhost:8080&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;-7156463944647591527.-4935853874668211242&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;}}},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.316 &lt;&lt; {&quot;method&quot;:&quot;Page.domContentEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21884.940049},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref passed">16</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>input(&#39;#username&#39;, &#39;dummy&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">32</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.16">13:36:27.318 &gt;&gt; {&quot;id&quot;:7,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;var e = document.querySelector(\&quot;#username\&quot;); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}&quot;,&quot;returnByValue&quot;:true}}
+13:36:27.320 &lt;&lt; {&quot;method&quot;:&quot;Page.loadEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21885.052441},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.320 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.320 &lt;&lt; {&quot;id&quot;:7,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;number&quot;,&quot;value&quot;:0,&quot;description&quot;:&quot;0&quot;}},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.321 &gt;&gt; {&quot;id&quot;:8,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;d&quot;,&quot;windowsVirtualKeyCode&quot;:68}}
+13:36:27.323 &lt;&lt; {&quot;id&quot;:8,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.323 &gt;&gt; {&quot;id&quot;:9,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;d&quot;,&quot;windowsVirtualKeyCode&quot;:68}}
+13:36:27.325 &lt;&lt; {&quot;id&quot;:9,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.326 &gt;&gt; {&quot;id&quot;:10,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;d&quot;,&quot;windowsVirtualKeyCode&quot;:68}}
+13:36:27.327 &lt;&lt; {&quot;id&quot;:10,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.327 &gt;&gt; {&quot;id&quot;:11,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;u&quot;,&quot;windowsVirtualKeyCode&quot;:85}}
+13:36:27.328 &lt;&lt; {&quot;id&quot;:11,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.329 &gt;&gt; {&quot;id&quot;:12,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;u&quot;,&quot;windowsVirtualKeyCode&quot;:85}}
+13:36:27.331 &lt;&lt; {&quot;id&quot;:12,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.331 &gt;&gt; {&quot;id&quot;:13,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;u&quot;,&quot;windowsVirtualKeyCode&quot;:85}}
+13:36:27.333 &lt;&lt; {&quot;id&quot;:13,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.333 &gt;&gt; {&quot;id&quot;:14,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;m&quot;,&quot;windowsVirtualKeyCode&quot;:77}}
+13:36:27.334 &lt;&lt; {&quot;id&quot;:14,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.335 &gt;&gt; {&quot;id&quot;:15,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;m&quot;,&quot;windowsVirtualKeyCode&quot;:77}}
+13:36:27.336 &lt;&lt; {&quot;id&quot;:15,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.337 &gt;&gt; {&quot;id&quot;:16,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;m&quot;,&quot;windowsVirtualKeyCode&quot;:77}}
+13:36:27.338 &lt;&lt; {&quot;id&quot;:16,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.338 &gt;&gt; {&quot;id&quot;:17,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;m&quot;,&quot;windowsVirtualKeyCode&quot;:77}}
+13:36:27.340 &lt;&lt; {&quot;id&quot;:17,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.340 &gt;&gt; {&quot;id&quot;:18,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;m&quot;,&quot;windowsVirtualKeyCode&quot;:77}}
+13:36:27.342 &lt;&lt; {&quot;id&quot;:18,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.343 &gt;&gt; {&quot;id&quot;:19,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;m&quot;,&quot;windowsVirtualKeyCode&quot;:77}}
+13:36:27.343 &lt;&lt; {&quot;id&quot;:19,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.344 &gt;&gt; {&quot;id&quot;:20,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;y&quot;,&quot;windowsVirtualKeyCode&quot;:89}}
+13:36:27.345 &lt;&lt; {&quot;id&quot;:20,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.345 &gt;&gt; {&quot;id&quot;:21,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;y&quot;,&quot;windowsVirtualKeyCode&quot;:89}}
+13:36:27.347 &lt;&lt; {&quot;id&quot;:21,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.347 &gt;&gt; {&quot;id&quot;:22,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;y&quot;,&quot;windowsVirtualKeyCode&quot;:89}}
+13:36:27.348 &lt;&lt; {&quot;id&quot;:22,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref passed">17</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>input(&#39;#password&#39;, &#39;world&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">28</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.17">13:36:27.349 &gt;&gt; {&quot;id&quot;:23,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;var e = document.querySelector(\&quot;#password\&quot;); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}&quot;,&quot;returnByValue&quot;:true}}
+13:36:27.351 &lt;&lt; {&quot;id&quot;:23,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;number&quot;,&quot;value&quot;:0,&quot;description&quot;:&quot;0&quot;}},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.351 &gt;&gt; {&quot;id&quot;:24,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;w&quot;,&quot;windowsVirtualKeyCode&quot;:87}}
+13:36:27.351 &lt;&lt; {&quot;id&quot;:24,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.351 &gt;&gt; {&quot;id&quot;:25,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;w&quot;,&quot;windowsVirtualKeyCode&quot;:87}}
+13:36:27.351 &lt;&lt; {&quot;id&quot;:25,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.355 &gt;&gt; {&quot;id&quot;:26,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;w&quot;,&quot;windowsVirtualKeyCode&quot;:87}}
+13:36:27.356 &lt;&lt; {&quot;id&quot;:26,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.357 &gt;&gt; {&quot;id&quot;:27,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;o&quot;,&quot;windowsVirtualKeyCode&quot;:79}}
+13:36:27.358 &lt;&lt; {&quot;id&quot;:27,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.358 &gt;&gt; {&quot;id&quot;:28,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;o&quot;,&quot;windowsVirtualKeyCode&quot;:79}}
+13:36:27.360 &lt;&lt; {&quot;id&quot;:28,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.360 &gt;&gt; {&quot;id&quot;:29,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;o&quot;,&quot;windowsVirtualKeyCode&quot;:79}}
+13:36:27.361 &lt;&lt; {&quot;id&quot;:29,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.362 &gt;&gt; {&quot;id&quot;:30,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;r&quot;,&quot;windowsVirtualKeyCode&quot;:82}}
+13:36:27.363 &lt;&lt; {&quot;id&quot;:30,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.364 &gt;&gt; {&quot;id&quot;:31,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;r&quot;,&quot;windowsVirtualKeyCode&quot;:82}}
+13:36:27.365 &lt;&lt; {&quot;id&quot;:31,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.366 &gt;&gt; {&quot;id&quot;:32,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;r&quot;,&quot;windowsVirtualKeyCode&quot;:82}}
+13:36:27.367 &lt;&lt; {&quot;id&quot;:32,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.367 &gt;&gt; {&quot;id&quot;:33,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;l&quot;,&quot;windowsVirtualKeyCode&quot;:76}}
+13:36:27.368 &lt;&lt; {&quot;id&quot;:33,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.368 &gt;&gt; {&quot;id&quot;:34,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;l&quot;,&quot;windowsVirtualKeyCode&quot;:76}}
+13:36:27.369 &lt;&lt; {&quot;id&quot;:34,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.370 &gt;&gt; {&quot;id&quot;:35,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;l&quot;,&quot;windowsVirtualKeyCode&quot;:76}}
+13:36:27.371 &lt;&lt; {&quot;id&quot;:35,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.371 &gt;&gt; {&quot;id&quot;:36,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;d&quot;,&quot;windowsVirtualKeyCode&quot;:68}}
+13:36:27.372 &lt;&lt; {&quot;id&quot;:36,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.373 &gt;&gt; {&quot;id&quot;:37,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;d&quot;,&quot;windowsVirtualKeyCode&quot;:68}}
+13:36:27.374 &lt;&lt; {&quot;id&quot;:37,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.375 &gt;&gt; {&quot;id&quot;:38,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;d&quot;,&quot;windowsVirtualKeyCode&quot;:68}}
+13:36:27.376 &lt;&lt; {&quot;id&quot;:38,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>submit().click(&quot;.form-signin button&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">226</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.18">13:36:27.377 &gt;&gt; {&quot;id&quot;:39,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.querySelector(\&quot;.form-signin button\&quot;).click()&quot;,&quot;returnByValue&quot;:true}}
+13:36:27.379 &lt;&lt; {&quot;id&quot;:39,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;undefined&quot;}},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.379 &lt;&lt; {&quot;method&quot;:&quot;Page.frameScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;,&quot;delay&quot;:0,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.379 &lt;&lt; {&quot;method&quot;:&quot;Page.frameRequestedNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;,&quot;disposition&quot;:&quot;currentTab&quot;},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.380 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.381 &lt;&lt; {&quot;method&quot;:&quot;Page.frameClearedScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.588 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.588 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;,&quot;loaderId&quot;:&quot;767CC3F469AA9C55A47489CCDBEA6AAA&quot;,&quot;url&quot;:&quot;http://localhost:8080/login?error&quot;,&quot;domainAndRegistry&quot;:&quot;&quot;,&quot;securityOrigin&quot;:&quot;http://localhost:8080&quot;,&quot;mimeType&quot;:&quot;text/html&quot;,&quot;adFrameStatus&quot;:{&quot;adFrameType&quot;:&quot;none&quot;},&quot;secureContextType&quot;:&quot;SecureLocalhost&quot;,&quot;crossOriginIsolatedContextType&quot;:&quot;NotIsolated&quot;,&quot;gatedAPIFeatures&quot;:[]},&quot;type&quot;:&quot;Navigation&quot;},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.588 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:2,&quot;origin&quot;:&quot;http://localhost:8080&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;-3184858702276158672.-6085360795119432943&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;}}},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.602 &lt;&lt; {&quot;method&quot;:&quot;Page.domContentEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21885.334369},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref failed">19</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>match html(&#39;.error&#39;) contains &#39;Error en nombre de usuario o contraseña&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">3015</div>
+  </div>
+
+   
+  
+  
+
+  <div class="embed" data-parent="0.19"><img src="external.login_2_1709642190689.png"/></div>
+
+  <div class="preformatted" data-parent="0.19">13:36:27.602 &lt;&lt; {&quot;method&quot;:&quot;Page.loadEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21885.334747},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.603 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.604 &gt;&gt; {&quot;id&quot;:40,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.querySelector(\&quot;.error\&quot;)[&#39;outerHTML&#39;]&quot;,&quot;returnByValue&quot;:true}}
+13:36:27.605 &lt;&lt; {&quot;id&quot;:40,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;className&quot;:&quot;TypeError&quot;,&quot;description&quot;:&quot;TypeError: Cannot read properties of null (reading &#39;outerHTML&#39;)\n    at &lt;anonymous&gt;:1:33&quot;,&quot;objectId&quot;:&quot;-2918858177067762422.2.1&quot;},&quot;exceptionDetails&quot;:{&quot;exceptionId&quot;:1,&quot;text&quot;:&quot;Uncaught&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:32,&quot;scriptId&quot;:&quot;10&quot;,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;10&quot;,&quot;url&quot;:&quot;&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:32}]},&quot;exception&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;className&quot;:&quot;TypeError&quot;,&quot;description&quot;:&quot;TypeError: Cannot read properties of null (reading &#39;outerHTML&#39;)\n    at &lt;anonymous&gt;:1:33&quot;,&quot;objectId&quot;:&quot;-2918858177067762422.2.2&quot;}}},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:27.606 devtools error: [id: 40, sessionId: D3C66CB558BEE06EE38B6038DFF49876, result: [type: MAP, value: {type=object, subtype=error, className=TypeError, description=TypeError: Cannot read properties of null (reading &#39;outerHTML&#39;)
+    at &lt;anonymous&gt;:1:33, objectId=-2918858177067762422.2.1}]]
+13:36:27.606 js eval failed once:document.querySelector(&quot;.error&quot;)[&#39;outerHTML&#39;], error: [type: MAP, value: {type=object, subtype=error, className=TypeError, description=TypeError: Cannot read properties of null (reading &#39;outerHTML&#39;)
+    at &lt;anonymous&gt;:1:33, objectId=-2918858177067762422.2.1}]
+13:36:30.608 &gt;&gt; {&quot;id&quot;:41,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.querySelector(\&quot;.error\&quot;)[&#39;outerHTML&#39;]&quot;,&quot;returnByValue&quot;:true}}
+13:36:30.608 &lt;&lt; {&quot;id&quot;:41,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;className&quot;:&quot;TypeError&quot;,&quot;description&quot;:&quot;TypeError: Cannot read properties of null (reading &#39;outerHTML&#39;)\n    at &lt;anonymous&gt;:1:33&quot;,&quot;objectId&quot;:&quot;-2918858177067762422.2.3&quot;},&quot;exceptionDetails&quot;:{&quot;exceptionId&quot;:2,&quot;text&quot;:&quot;Uncaught&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:32,&quot;scriptId&quot;:&quot;10&quot;,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;10&quot;,&quot;url&quot;:&quot;&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:32}]},&quot;exception&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;className&quot;:&quot;TypeError&quot;,&quot;description&quot;:&quot;TypeError: Cannot read properties of null (reading &#39;outerHTML&#39;)\n    at &lt;anonymous&gt;:1:33&quot;,&quot;objectId&quot;:&quot;-2918858177067762422.2.4&quot;}}},&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;}
+13:36:30.608 devtools error: [id: 41, sessionId: D3C66CB558BEE06EE38B6038DFF49876, result: [type: MAP, value: {type=object, subtype=error, className=TypeError, description=TypeError: Cannot read properties of null (reading &#39;outerHTML&#39;)
+    at &lt;anonymous&gt;:1:33, objectId=-2918858177067762422.2.3}]]
+13:36:30.608 js eval failed twice:document.querySelector(&quot;.error&quot;)[&#39;outerHTML&#39;], error: [type: MAP, value: {type=object, subtype=error, className=TypeError, description=TypeError: Cannot read properties of null (reading &#39;outerHTML&#39;)
+    at &lt;anonymous&gt;:1:33, objectId=-2918858177067762422.2.3}]
+13:36:30.608 classpath:external/login.feature:19
+Then match html(&#39;.error&#39;) contains &#39;Error en nombre de usuario o contraseña&#39;
+js failed:
+&gt;&gt;&gt;&gt;
+01: html(&#39;.error&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: js eval failed twice:document.querySelector(&quot;.error&quot;)[&#39;outerHTML&#39;], error: [type: MAP, value: {type=object, subtype=error, className=TypeError, description=TypeError: Cannot read properties of null (reading &#39;outerHTML&#39;)
+    at &lt;anonymous&gt;:1:33, objectId=-2918858177067762422.2.3}]
+- com.intuit.karate.driver.DevToolsDriver.evalInternal(DevToolsDriver.java:315)
+- com.intuit.karate.driver.DevToolsDriver.eval(DevToolsDriver.java:289)
+- com.intuit.karate.driver.DevToolsDriver.property(DevToolsDriver.java:695)
+- com.intuit.karate.driver.DevToolsDriver.html(DevToolsDriver.java:670)
+- &lt;js&gt;.:anonymous(Unnamed:1)
+
+classpath:external/login.feature:19
+13:36:30.618 &gt;&gt; {&quot;id&quot;:42,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Page.captureScreenshot&quot;}
+13:36:30.687 &lt;&lt; {&quot;id&quot;:42,&quot;result&quot;:{&quot;data&quot;:&quot;iVBORw0KGgoAAAANSUhEUgAAA6EAAANyCAYAAACT8c2rAAAAAXNSR0IArs4c6QAAIABJREFUeJzs3X98VfWd7/v3Wnvv7BAMCsIGC7QjIB0w2gjOoY6Pm2IRQs9Y9U4cZqSahzp4tUfv2DnGjPrQ2/boYJuJM/VeOcVpRn1sLU45Zm6t9JRAqZhzrTIjkNGIUwrYFrBxE/mRaGD/Wt/7x9q/9w4ECPsHvJ6PRx6QlfXj+13srfud7+f7XZYxxggAgFMQjkRL3QSUkL/KV+omAAAqkF3qBgAAAAAAzh2EUAAAAABA0RBCAQAAAABFQwgFAAAAABQNIRQAAAAAUDSEUAAAAABA0RBCAQAAAABFQwgFAAAAABQNIRQAAAAAUDTeUjcAAIBKEo1GNTg4qEgkLGNK3ZrTY1lSVZVftbW18vl8pW4OAOAcQQgFAGCEotGoPv64X7W14zR+/HhZllXqJp0WY4yGhob08cf9uvDCiQRRAEBRUI4LAMAIDQ4OqrZ2nMaOHVvxAVSSLMvS2LFjVVs7ToODg6VuDgDgHEEIBQBghCKRsGpqakrdjFFXU1OjSCRc6mYAAM4RhFAAAEbIGJ0VI6C5LMuq+PmtAIDKQQgFAAAAABQNIRQAUBGs2G4p3lfqZgAAgNNECAUAlJ/YbineL2vwv8v70RXyHHlUVf2XynfgSnmOPKyqvguk8NtS9AOCKQAAFYZHtAAAyocJS5H/kP/QH2VvP7ZHsmtlm2Oyjv4/shSW/9Afu4cYW9HJv5OxxksWjxgBAKDcEUIBAOUh+hv5P/68JCPJlmNNU7yqUbEx98q2h2TFQ5JdJVkXyYn1y3v0+7Jjr8vWx6oKTZNjTVdk0vuy7KpS9wQAABwHIRQAUGKONNQl36ffkmRk7M8pXPsjWZHX5T/6kHzhHwxznE+Rcf8sE/tI/qMPyTZ75em/Sc64v5aqrylyHwAAwEgRQgEApXV0i/wDN0iyFPW3yHhnqPrIF0dwY ...
+13:36:30.689 &gt;&gt; {&quot;id&quot;:43,&quot;sessionId&quot;:&quot;D3C66CB558BEE06EE38B6038DFF49876&quot;,&quot;method&quot;:&quot;Target.closeTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;2C1036476E599C45DAF2006A1F1F945F&quot;}}
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:22]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">login_b</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:22]</span>
+                <span class="scenario-name">login correcto como b</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>1153</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.23">
+      <div class="step-ref passed">23</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>driver baseUrl + &#39;/login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">931</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.23">13:36:30.709 karate.env system property was: null 
+13:36:30.711 preferred port 9222 not available, will use: 52431
+13:36:30.983 request:
+1 &gt; GET http://localhost:52431/json
+1 &gt; Host: localhost:52431
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.3.1)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+13:36:30.984 response time in milliseconds: 1
+1 &lt; 200
+1 &lt; Content-Security-Policy: frame-ancestors &#39;none&#39;
+1 &lt; Content-Length: 1733
+1 &lt; Content-Type: application/json; charset=UTF-8
+[ {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:52431/devtools/page/12E98D8BA304EC9CCB5EC70AC7B4CF8C&quot;,
+   &quot;id&quot;: &quot;12E98D8BA304EC9CCB5EC70AC7B4CF8C&quot;,
+   &quot;title&quot;: &quot;Google Network Speech&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://neajdppkdcdipfabeoofebfddakdcjhd/_generated_background_page.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:52431/devtools/page/12E98D8BA304EC9CCB5EC70AC7B4CF8C&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:52431/devtools/page/B9DA9C8129CA3890547618119EA972D9&quot;,
+   &quot;id&quot;: &quot;B9DA9C8129CA3890547618119EA972D9&quot;,
+   &quot;title&quot;: &quot;Google Hangouts&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:52431/devtools/page/B9DA9C8129CA3890547618119EA972D9&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:52431/devtools/page/5AF66A2DC23431E7D14762E71C3B5694&quot;,
+   &quot;id&quot;: &quot;5AF66A2DC23431E7D14762E71C3B5694&quot;,
+   &quot;title&quot;: &quot;Google Hangouts&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:52431/devtools/page/5AF66A2DC23431E7D14762E71C3B5694&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:52431/devtools/page/748908E033A8F254E5BC6859A540250A&quot;,
+   &quot;id&quot;: &quot;748908E033A8F254E5BC6859A540250A&quot;,
+   &quot;title&quot;: &quot;Nueva pestaña de Incógnito&quot;,
+   &quot;type&quot;: &quot;page&quot;,
+   &quot;url&quot;: &quot;chrome://newtab/&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:52431/devtools/page/748908E033A8F254E5BC6859A540250A&quot;
+} ]
+
+13:36:30.985 root frame id: 748908E033A8F254E5BC6859A540250A
+13:36:31.004 &gt;&gt; {&quot;id&quot;:1,&quot;method&quot;:&quot;Target.attachToTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;748908E033A8F254E5BC6859A540250A&quot;,&quot;flatten&quot;:true}}
+13:36:31.006 &lt;&lt; {&quot;method&quot;:&quot;Target.attachedToTarget&quot;,&quot;params&quot;:{&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;targetInfo&quot;:{&quot;targetId&quot;:&quot;748908E033A8F254E5BC6859A540250A&quot;,&quot;type&quot;:&quot;page&quot;,&quot;title&quot;:&quot;Nueva pesta\u00f1a de Inc\u00f3gnito&quot;,&quot;url&quot;:&quot;chrome://newtab/&quot;,&quot;attached&quot;:true,&quot;canAccessOpener&quot;:false,&quot;browserContextId&quot;:&quot;0B0C9FB7E62A130BEE9EE090EBDA26EC&quot;},&quot;waitingForDebugger&quot;:false}}
+13:36:31.006 &lt;&lt; {&quot;id&quot;:1,&quot;result&quot;:{&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}}
+13:36:31.006 &gt;&gt; {&quot;id&quot;:2,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Target.activateTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;748908E033A8F254E5BC6859A540250A&quot;}}
+13:36:31.007 &lt;&lt; {&quot;id&quot;:2,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.007 &gt;&gt; {&quot;id&quot;:3,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Page.enable&quot;}
+13:36:31.008 &lt;&lt; {&quot;id&quot;:3,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.008 &gt;&gt; {&quot;id&quot;:4,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Runtime.enable&quot;}
+13:36:31.011 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:1,&quot;origin&quot;:&quot;://&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;-6592840610839427972.-5072853572270149999&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;748908E033A8F254E5BC6859A540250A&quot;}}},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.011 &lt;&lt; {&quot;id&quot;:4,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.011 &gt;&gt; {&quot;id&quot;:5,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Browser.getWindowForTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;748908E033A8F254E5BC6859A540250A&quot;}}
+13:36:31.012 &lt;&lt; {&quot;id&quot;:5,&quot;result&quot;:{&quot;windowId&quot;:1483676803,&quot;bounds&quot;:{&quot;left&quot;:10,&quot;top&quot;:10,&quot;width&quot;:945,&quot;height&quot;:1020,&quot;windowState&quot;:&quot;normal&quot;}},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.026 &gt;&gt; {&quot;id&quot;:6,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Page.navigate&quot;,&quot;params&quot;:{&quot;url&quot;:&quot;http:\/\/localhost:8080\/login&quot;}}
+13:36:31.029 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;748908E033A8F254E5BC6859A540250A&quot;},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.468 &lt;&lt; {&quot;id&quot;:6,&quot;result&quot;:{&quot;frameId&quot;:&quot;748908E033A8F254E5BC6859A540250A&quot;,&quot;loaderId&quot;:&quot;1227AF1AF522CD0CB6F48574C04B77F7&quot;},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.470 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.478 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.478 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;748908E033A8F254E5BC6859A540250A&quot;,&quot;loaderId&quot;:&quot;1227AF1AF522CD0CB6F48574C04B77F7&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;,&quot;domainAndRegistry&quot;:&quot;&quot;,&quot;securityOrigin&quot;:&quot;http://localhost:8080&quot;,&quot;mimeType&quot;:&quot;text/html&quot;,&quot;adFrameStatus&quot;:{&quot;adFrameType&quot;:&quot;none&quot;},&quot;secureContextType&quot;:&quot;SecureLocalhost&quot;,&quot;crossOriginIsolatedContextType&quot;:&quot;NotIsolated&quot;,&quot;gatedAPIFeatures&quot;:[]},&quot;type&quot;:&quot;Navigation&quot;},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.479 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:1,&quot;origin&quot;:&quot;http://localhost:8080&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;2390198921313688846.4697048522072418912&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;748908E033A8F254E5BC6859A540250A&quot;}}},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.640 &lt;&lt; {&quot;method&quot;:&quot;Page.domContentEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21889.222603},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.24">
+      <div class="step-ref passed">24</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>input(&#39;#username&#39;, &#39;b&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">9</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.24">13:36:31.640 &lt;&lt; {&quot;method&quot;:&quot;Page.loadEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21889.372377},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.641 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;748908E033A8F254E5BC6859A540250A&quot;},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.641 &gt;&gt; {&quot;id&quot;:7,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;var e = document.querySelector(\&quot;#username\&quot;); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}&quot;,&quot;returnByValue&quot;:true}}
+13:36:31.643 &lt;&lt; {&quot;id&quot;:7,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;number&quot;,&quot;value&quot;:0,&quot;description&quot;:&quot;0&quot;}},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.644 &gt;&gt; {&quot;id&quot;:8,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;b&quot;,&quot;windowsVirtualKeyCode&quot;:66}}
+13:36:31.645 &lt;&lt; {&quot;id&quot;:8,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.646 &gt;&gt; {&quot;id&quot;:9,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;b&quot;,&quot;windowsVirtualKeyCode&quot;:66}}
+13:36:31.648 &lt;&lt; {&quot;id&quot;:9,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.648 &gt;&gt; {&quot;id&quot;:10,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;b&quot;,&quot;windowsVirtualKeyCode&quot;:66}}
+13:36:31.650 &lt;&lt; {&quot;id&quot;:10,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>input(&#39;#password&#39;, &#39;aa&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">17</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.25">13:36:31.651 &gt;&gt; {&quot;id&quot;:11,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;var e = document.querySelector(\&quot;#password\&quot;); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}&quot;,&quot;returnByValue&quot;:true}}
+13:36:31.653 &lt;&lt; {&quot;id&quot;:11,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;number&quot;,&quot;value&quot;:0,&quot;description&quot;:&quot;0&quot;}},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.653 &gt;&gt; {&quot;id&quot;:12,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:31.654 &lt;&lt; {&quot;id&quot;:12,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.655 &gt;&gt; {&quot;id&quot;:13,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:31.657 &lt;&lt; {&quot;id&quot;:13,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.659 &gt;&gt; {&quot;id&quot;:14,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:31.660 &lt;&lt; {&quot;id&quot;:14,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.660 &gt;&gt; {&quot;id&quot;:15,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:31.662 &lt;&lt; {&quot;id&quot;:15,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.663 &gt;&gt; {&quot;id&quot;:16,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:31.664 &lt;&lt; {&quot;id&quot;:16,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.666 &gt;&gt; {&quot;id&quot;:17,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:31.667 &lt;&lt; {&quot;id&quot;:17,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>submit().click(&quot;.form-signin button&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">191</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.26">13:36:31.668 &gt;&gt; {&quot;id&quot;:18,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.querySelector(\&quot;.form-signin button\&quot;).click()&quot;,&quot;returnByValue&quot;:true}}
+13:36:31.670 &lt;&lt; {&quot;id&quot;:18,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;undefined&quot;}},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.670 &lt;&lt; {&quot;method&quot;:&quot;Page.frameScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;748908E033A8F254E5BC6859A540250A&quot;,&quot;delay&quot;:0,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.670 &lt;&lt; {&quot;method&quot;:&quot;Page.frameRequestedNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;748908E033A8F254E5BC6859A540250A&quot;,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;,&quot;disposition&quot;:&quot;currentTab&quot;},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.671 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;748908E033A8F254E5BC6859A540250A&quot;},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.672 &lt;&lt; {&quot;method&quot;:&quot;Page.frameClearedScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;748908E033A8F254E5BC6859A540250A&quot;},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.816 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.816 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;748908E033A8F254E5BC6859A540250A&quot;,&quot;loaderId&quot;:&quot;EAA1BD4ECEC8180385CB93A186BAF623&quot;,&quot;url&quot;:&quot;http://localhost:8080/user/2&quot;,&quot;domainAndRegistry&quot;:&quot;&quot;,&quot;securityOrigin&quot;:&quot;http://localhost:8080&quot;,&quot;mimeType&quot;:&quot;text/html&quot;,&quot;adFrameStatus&quot;:{&quot;adFrameType&quot;:&quot;none&quot;},&quot;secureContextType&quot;:&quot;SecureLocalhost&quot;,&quot;crossOriginIsolatedContextType&quot;:&quot;NotIsolated&quot;,&quot;gatedAPIFeatures&quot;:[]},&quot;type&quot;:&quot;Navigation&quot;},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.816 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:2,&quot;origin&quot;:&quot;http://localhost:8080&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;-644300551890599651.6195486611866371777&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;748908E033A8F254E5BC6859A540250A&quot;}}},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.843 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;sending&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;//localhost:8080/user/received&quot;},{&quot;type&quot;:&quot;object&quot;,&quot;className&quot;:&quot;Object&quot;,&quot;description&quot;:&quot;Object&quot;,&quot;objectId&quot;:&quot;1333153225952631498.2.1&quot;,&quot;preview&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;description&quot;:&quot;Object&quot;,&quot;overflow&quot;:false,&quot;properties&quot;:[{&quot;name&quot;:&quot;method&quot;,&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;GET&quot;},{&quot;name&quot;:&quot;headers&quot;,&quot;type&quot;:&quot;object&quot;,&quot;value&quot;:&quot;Object&quot;}]}}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.709642191842141e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;go&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:94,&quot;columnNumber&quot;:12},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;13&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/ajax-demo.js&quot;,&quot;lineNumber&quot;:26,&quot;columnNumber&quot;:0}]}},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.844 [console] sending
+13:36:31.844 [console] //localhost:8080/user/received
+13:36:31.845 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Opening Web Socket...&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.709642191844543e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;Client._connect&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:291,&quot;columnNumber&quot;:21},{&quot;functionName&quot;:&quot;Client.connect&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:278,&quot;columnNumber&quot;:24},{&quot;functionName&quot;:&quot;initialize&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:35,&quot;columnNumber&quot;:27},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:199,&quot;columnNumber&quot;:11}]}},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.845 [console] Opening Web Socket...
+13:36:31.846 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Connected to WS &#39;ws://localhost:8080/ws&#39;&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.709642191845322e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;initialize&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:44,&quot;columnNumber&quot;:20},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:199,&quot;columnNumber&quot;:11}]}},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.846 [console] Connected to WS &#39;ws://localhost:8080/ws&#39;
+13:36:31.846 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;sending&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;//localhost:8080/user/unread&quot;},{&quot;type&quot;:&quot;object&quot;,&quot;className&quot;:&quot;Object&quot;,&quot;description&quot;:&quot;Object&quot;,&quot;objectId&quot;:&quot;1333153225952631498.2.2&quot;,&quot;preview&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;description&quot;:&quot;Object&quot;,&quot;overflow&quot;:false,&quot;properties&quot;:[{&quot;name&quot;:&quot;method&quot;,&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;GET&quot;},{&quot;name&quot;:&quot;headers&quot;,&quot;type&quot;:&quot;object&quot;,&quot;value&quot;:&quot;Object&quot;}]}}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.709642191845468e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;go&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:94,&quot;columnNumber&quot;:12},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:203,&quot;columnNumber&quot;:12}]}},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.846 [console] sending
+13:36:31.846 [console] //localhost:8080/user/unread
+13:36:31.859 &lt;&lt; {&quot;method&quot;:&quot;Page.domContentEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21889.578845},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.27">
+      <div class="step-ref passed">27</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>waitForUrl(baseUrl + &#39;/user/2&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.27">13:36:31.861 &gt;&gt; {&quot;id&quot;:19,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.location.href&quot;,&quot;returnByValue&quot;:true}}
+13:36:31.862 &lt;&lt; {&quot;id&quot;:19,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;http://localhost:8080/user/2&quot;}},&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;}
+13:36:31.863 &gt;&gt; {&quot;id&quot;:20,&quot;sessionId&quot;:&quot;08E6A3F8C021BC9FFBA3FFC1ED8F63CE&quot;,&quot;method&quot;:&quot;Target.closeTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;748908E033A8F254E5BC6859A540250A&quot;}}
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4:30]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">login_a</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4:30]</span>
+                <span class="scenario-name">login correcto como a</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>991</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.31">
+      <div class="step-ref passed">31</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>driver baseUrl + &#39;/login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">807</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.31">13:36:31.873 karate.env system property was: null 
+13:36:31.874 preferred port 9222 not available, will use: 52446
+13:36:32.282 request:
+1 &gt; GET http://localhost:52446/json
+1 &gt; Host: localhost:52446
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.3.1)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+13:36:32.291 response time in milliseconds: 9
+1 &lt; 200
+1 &lt; Content-Security-Policy: frame-ancestors &#39;none&#39;
+1 &lt; Content-Length: 1583
+1 &lt; Content-Type: application/json; charset=UTF-8
+[ {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:52446/devtools/page/CE3C3EE7D2DFB7C85AFF8E72925CCD11&quot;,
+   &quot;id&quot;: &quot;CE3C3EE7D2DFB7C85AFF8E72925CCD11&quot;,
+   &quot;title&quot;: &quot;Google Network Speech&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:52446/devtools/page/CE3C3EE7D2DFB7C85AFF8E72925CCD11&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:52446/devtools/page/2928CFADA6446AE5C85475BE42F421F7&quot;,
+   &quot;id&quot;: &quot;2928CFADA6446AE5C85475BE42F421F7&quot;,
+   &quot;title&quot;: &quot;Google Hangouts&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:52446/devtools/page/2928CFADA6446AE5C85475BE42F421F7&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:52446/devtools/page/9023C3C1D59A05ACBF68603E26C0E91E&quot;,
+   &quot;id&quot;: &quot;9023C3C1D59A05ACBF68603E26C0E91E&quot;,
+   &quot;title&quot;: &quot;Google Hangouts&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:52446/devtools/page/9023C3C1D59A05ACBF68603E26C0E91E&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:52446/devtools/page/F23DBCB803E121F2A6712EEF926436AD&quot;,
+   &quot;id&quot;: &quot;F23DBCB803E121F2A6712EEF926436AD&quot;,
+   &quot;title&quot;: &quot;Nueva pestaña de Incógnito&quot;,
+   &quot;type&quot;: &quot;page&quot;,
+   &quot;url&quot;: &quot;chrome://newtab/&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:52446/devtools/page/F23DBCB803E121F2A6712EEF926436AD&quot;
+} ]
+
+13:36:32.292 root frame id: F23DBCB803E121F2A6712EEF926436AD
+13:36:32.316 &gt;&gt; {&quot;id&quot;:1,&quot;method&quot;:&quot;Target.attachToTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;F23DBCB803E121F2A6712EEF926436AD&quot;,&quot;flatten&quot;:true}}
+13:36:32.320 &lt;&lt; {&quot;method&quot;:&quot;Target.attachedToTarget&quot;,&quot;params&quot;:{&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;targetInfo&quot;:{&quot;targetId&quot;:&quot;F23DBCB803E121F2A6712EEF926436AD&quot;,&quot;type&quot;:&quot;page&quot;,&quot;title&quot;:&quot;Nueva pesta\u00f1a de Inc\u00f3gnito&quot;,&quot;url&quot;:&quot;chrome://newtab/&quot;,&quot;attached&quot;:true,&quot;canAccessOpener&quot;:false,&quot;browserContextId&quot;:&quot;3FFA88D05CECF0F93EA1FFE9B82EC140&quot;},&quot;waitingForDebugger&quot;:false}}
+13:36:32.320 &lt;&lt; {&quot;id&quot;:1,&quot;result&quot;:{&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}}
+13:36:32.320 &gt;&gt; {&quot;id&quot;:2,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Target.activateTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;F23DBCB803E121F2A6712EEF926436AD&quot;}}
+13:36:32.321 &lt;&lt; {&quot;id&quot;:2,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.322 &gt;&gt; {&quot;id&quot;:3,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Page.enable&quot;}
+13:36:32.323 &lt;&lt; {&quot;id&quot;:3,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.323 &gt;&gt; {&quot;id&quot;:4,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Runtime.enable&quot;}
+13:36:32.326 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:1,&quot;origin&quot;:&quot;://&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;4824860512627086300.-5326481221753475770&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;F23DBCB803E121F2A6712EEF926436AD&quot;}}},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.326 &lt;&lt; {&quot;id&quot;:4,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.327 &gt;&gt; {&quot;id&quot;:5,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Browser.getWindowForTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;F23DBCB803E121F2A6712EEF926436AD&quot;}}
+13:36:32.327 &lt;&lt; {&quot;id&quot;:5,&quot;result&quot;:{&quot;windowId&quot;:1609114532,&quot;bounds&quot;:{&quot;left&quot;:10,&quot;top&quot;:10,&quot;width&quot;:945,&quot;height&quot;:1020,&quot;windowState&quot;:&quot;normal&quot;}},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.334 &gt;&gt; {&quot;id&quot;:6,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Page.navigate&quot;,&quot;params&quot;:{&quot;url&quot;:&quot;http:\/\/localhost:8080\/login&quot;}}
+13:36:32.337 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;F23DBCB803E121F2A6712EEF926436AD&quot;},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.562 &lt;&lt; {&quot;id&quot;:6,&quot;result&quot;:{&quot;frameId&quot;:&quot;F23DBCB803E121F2A6712EEF926436AD&quot;,&quot;loaderId&quot;:&quot;E8CE081CD20EE85C8E84B80486CAA30C&quot;},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.563 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.573 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.573 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;F23DBCB803E121F2A6712EEF926436AD&quot;,&quot;loaderId&quot;:&quot;E8CE081CD20EE85C8E84B80486CAA30C&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;,&quot;domainAndRegistry&quot;:&quot;&quot;,&quot;securityOrigin&quot;:&quot;http://localhost:8080&quot;,&quot;mimeType&quot;:&quot;text/html&quot;,&quot;adFrameStatus&quot;:{&quot;adFrameType&quot;:&quot;none&quot;},&quot;secureContextType&quot;:&quot;SecureLocalhost&quot;,&quot;crossOriginIsolatedContextType&quot;:&quot;NotIsolated&quot;,&quot;gatedAPIFeatures&quot;:[]},&quot;type&quot;:&quot;Navigation&quot;},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.573 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:1,&quot;origin&quot;:&quot;http://localhost:8080&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;4560331705360870904.7201256858658801344&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;F23DBCB803E121F2A6712EEF926436AD&quot;}}},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.680 &lt;&lt; {&quot;method&quot;:&quot;Page.domContentEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21890.411563},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.32">
+      <div class="step-ref passed">32</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>input(&#39;#username&#39;, &#39;a&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">12</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.32">13:36:32.681 &lt;&lt; {&quot;method&quot;:&quot;Page.loadEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21890.412616},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.681 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;F23DBCB803E121F2A6712EEF926436AD&quot;},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.682 &gt;&gt; {&quot;id&quot;:7,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;var e = document.querySelector(\&quot;#username\&quot;); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}&quot;,&quot;returnByValue&quot;:true}}
+13:36:32.684 &lt;&lt; {&quot;id&quot;:7,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;number&quot;,&quot;value&quot;:0,&quot;description&quot;:&quot;0&quot;}},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.684 &gt;&gt; {&quot;id&quot;:8,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:32.684 &lt;&lt; {&quot;id&quot;:8,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.684 &gt;&gt; {&quot;id&quot;:9,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:32.689 &lt;&lt; {&quot;id&quot;:9,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.689 &gt;&gt; {&quot;id&quot;:10,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:32.693 &lt;&lt; {&quot;id&quot;:10,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.33">
+      <div class="step-ref passed">33</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>input(&#39;#password&#39;, &#39;aa&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">14</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.33">13:36:32.693 &gt;&gt; {&quot;id&quot;:11,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;var e = document.querySelector(\&quot;#password\&quot;); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}&quot;,&quot;returnByValue&quot;:true}}
+13:36:32.694 &lt;&lt; {&quot;id&quot;:11,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;number&quot;,&quot;value&quot;:0,&quot;description&quot;:&quot;0&quot;}},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.694 &gt;&gt; {&quot;id&quot;:12,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:32.694 &lt;&lt; {&quot;id&quot;:12,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.694 &gt;&gt; {&quot;id&quot;:13,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:32.694 &lt;&lt; {&quot;id&quot;:13,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.694 &gt;&gt; {&quot;id&quot;:14,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:32.694 &lt;&lt; {&quot;id&quot;:14,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.694 &gt;&gt; {&quot;id&quot;:15,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:32.694 &lt;&lt; {&quot;id&quot;:15,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.694 &gt;&gt; {&quot;id&quot;:16,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:32.704 &lt;&lt; {&quot;id&quot;:16,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.706 &gt;&gt; {&quot;id&quot;:17,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:32.707 &lt;&lt; {&quot;id&quot;:17,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.34">
+      <div class="step-ref passed">34</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>submit().click(&quot;.form-signin button&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">156</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.34">13:36:32.708 &gt;&gt; {&quot;id&quot;:18,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.querySelector(\&quot;.form-signin button\&quot;).click()&quot;,&quot;returnByValue&quot;:true}}
+13:36:32.710 &lt;&lt; {&quot;id&quot;:18,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;undefined&quot;}},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.710 &lt;&lt; {&quot;method&quot;:&quot;Page.frameScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;F23DBCB803E121F2A6712EEF926436AD&quot;,&quot;delay&quot;:0,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.710 &lt;&lt; {&quot;method&quot;:&quot;Page.frameRequestedNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;F23DBCB803E121F2A6712EEF926436AD&quot;,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;,&quot;disposition&quot;:&quot;currentTab&quot;},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.712 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;F23DBCB803E121F2A6712EEF926436AD&quot;},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.713 &lt;&lt; {&quot;method&quot;:&quot;Page.frameClearedScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;F23DBCB803E121F2A6712EEF926436AD&quot;},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.836 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.836 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;F23DBCB803E121F2A6712EEF926436AD&quot;,&quot;loaderId&quot;:&quot;282538BF8E07ED41DA2757EB6270067C&quot;,&quot;url&quot;:&quot;http://localhost:8080/admin/&quot;,&quot;domainAndRegistry&quot;:&quot;&quot;,&quot;securityOrigin&quot;:&quot;http://localhost:8080&quot;,&quot;mimeType&quot;:&quot;text/html&quot;,&quot;adFrameStatus&quot;:{&quot;adFrameType&quot;:&quot;none&quot;},&quot;secureContextType&quot;:&quot;SecureLocalhost&quot;,&quot;crossOriginIsolatedContextType&quot;:&quot;NotIsolated&quot;,&quot;gatedAPIFeatures&quot;:[]},&quot;type&quot;:&quot;Navigation&quot;},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.837 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:2,&quot;origin&quot;:&quot;http://localhost:8080&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;84623877876814741.-4251083669495311618&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;F23DBCB803E121F2A6712EEF926436AD&quot;}}},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.859 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Opening Web Socket...&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.709642192858841e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;Client._connect&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:291,&quot;columnNumber&quot;:21},{&quot;functionName&quot;:&quot;Client.connect&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:278,&quot;columnNumber&quot;:24},{&quot;functionName&quot;:&quot;initialize&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:35,&quot;columnNumber&quot;:27},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:199,&quot;columnNumber&quot;:11}]}},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.859 [console] Opening Web Socket...
+13:36:32.859 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Connected to WS &#39;ws://localhost:8080/ws&#39;&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.709642192859333e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;initialize&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:44,&quot;columnNumber&quot;:20},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:199,&quot;columnNumber&quot;:11}]}},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.860 [console] Connected to WS &#39;ws://localhost:8080/ws&#39;
+13:36:32.860 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;sending&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;//localhost:8080/user/unread&quot;},{&quot;type&quot;:&quot;object&quot;,&quot;className&quot;:&quot;Object&quot;,&quot;description&quot;:&quot;Object&quot;,&quot;objectId&quot;:&quot;-4243493088307229577.2.1&quot;,&quot;preview&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;description&quot;:&quot;Object&quot;,&quot;overflow&quot;:false,&quot;properties&quot;:[{&quot;name&quot;:&quot;method&quot;,&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;GET&quot;},{&quot;name&quot;:&quot;headers&quot;,&quot;type&quot;:&quot;object&quot;,&quot;value&quot;:&quot;Object&quot;}]}}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.709642192859789e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;go&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:94,&quot;columnNumber&quot;:12},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:203,&quot;columnNumber&quot;:12}]}},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.860 [console] sending
+13:36:32.860 [console] //localhost:8080/user/unread
+13:36:32.862 &lt;&lt; {&quot;method&quot;:&quot;Page.domContentEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21890.59371},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>waitForUrl(baseUrl + &#39;/admin&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.35">13:36:32.863 &gt;&gt; {&quot;id&quot;:19,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.location.href&quot;,&quot;returnByValue&quot;:true}}
+13:36:32.864 &lt;&lt; {&quot;id&quot;:19,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;http://localhost:8080/admin/&quot;}},&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;}
+13:36:32.865 &gt;&gt; {&quot;id&quot;:20,&quot;sessionId&quot;:&quot;859AEFEB26BC9667F97E2C1D37607DC8&quot;,&quot;method&quot;:&quot;Target.closeTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;F23DBCB803E121F2A6712EEF926436AD&quot;}}
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5:37]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5:37]</span>
+                <span class="scenario-name">logout after login</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>983</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.38">
+      <div class="step-ref passed">38</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>driver baseUrl + &#39;/login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">766</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.38">13:36:32.875 karate.env system property was: null 
+13:36:32.879 preferred port 9222 not available, will use: 52458
+13:36:33.171 request:
+1 &gt; GET http://localhost:52458/json
+1 &gt; Host: localhost:52458
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.3.1)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+13:36:33.173 response time in milliseconds: 2
+1 &lt; 200
+1 &lt; Content-Security-Policy: frame-ancestors &#39;none&#39;
+1 &lt; Content-Length: 1650
+1 &lt; Content-Type: application/json; charset=UTF-8
+[ {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:52458/devtools/page/62BB04FEBE8147BB30D76CFAECE8B55C&quot;,
+   &quot;id&quot;: &quot;62BB04FEBE8147BB30D76CFAECE8B55C&quot;,
+   &quot;title&quot;: &quot;Google Network Speech&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:52458/devtools/page/62BB04FEBE8147BB30D76CFAECE8B55C&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:52458/devtools/page/3073B36D73498326C6030259974332F9&quot;,
+   &quot;id&quot;: &quot;3073B36D73498326C6030259974332F9&quot;,
+   &quot;title&quot;: &quot;Google Hangouts&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:52458/devtools/page/3073B36D73498326C6030259974332F9&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:52458/devtools/page/98D3FE35FB5A938CEA9EB27F31366364&quot;,
+   &quot;id&quot;: &quot;98D3FE35FB5A938CEA9EB27F31366364&quot;,
+   &quot;title&quot;: &quot;Google Hangouts&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:52458/devtools/page/98D3FE35FB5A938CEA9EB27F31366364&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:52458/devtools/page/19C339A62AE0BE32FCC059A658F07CCA&quot;,
+   &quot;id&quot;: &quot;19C339A62AE0BE32FCC059A658F07CCA&quot;,
+   &quot;title&quot;: &quot;Nueva pestaña de Incógnito&quot;,
+   &quot;type&quot;: &quot;page&quot;,
+   &quot;url&quot;: &quot;chrome://newtab/&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:52458/devtools/page/19C339A62AE0BE32FCC059A658F07CCA&quot;
+} ]
+
+13:36:33.174 root frame id: 19C339A62AE0BE32FCC059A658F07CCA
+13:36:33.190 &gt;&gt; {&quot;id&quot;:1,&quot;method&quot;:&quot;Target.attachToTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;,&quot;flatten&quot;:true}}
+13:36:33.193 &lt;&lt; {&quot;method&quot;:&quot;Target.attachedToTarget&quot;,&quot;params&quot;:{&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;targetInfo&quot;:{&quot;targetId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;,&quot;type&quot;:&quot;page&quot;,&quot;title&quot;:&quot;Nueva pesta\u00f1a de Inc\u00f3gnito&quot;,&quot;url&quot;:&quot;chrome://newtab/&quot;,&quot;attached&quot;:true,&quot;canAccessOpener&quot;:false,&quot;browserContextId&quot;:&quot;C2B16947ED411040443873E4F866F4B8&quot;},&quot;waitingForDebugger&quot;:false}}
+13:36:33.193 &lt;&lt; {&quot;id&quot;:1,&quot;result&quot;:{&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}}
+13:36:33.193 &gt;&gt; {&quot;id&quot;:2,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Target.activateTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;}}
+13:36:33.194 &lt;&lt; {&quot;id&quot;:2,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.194 &gt;&gt; {&quot;id&quot;:3,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Page.enable&quot;}
+13:36:33.195 &lt;&lt; {&quot;id&quot;:3,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.195 &gt;&gt; {&quot;id&quot;:4,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Runtime.enable&quot;}
+13:36:33.198 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:1,&quot;origin&quot;:&quot;://&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;8943380423057052068.2647343270215455654&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;}}},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.198 &lt;&lt; {&quot;id&quot;:4,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.198 &gt;&gt; {&quot;id&quot;:5,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Browser.getWindowForTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;}}
+13:36:33.199 &lt;&lt; {&quot;id&quot;:5,&quot;result&quot;:{&quot;windowId&quot;:570279898,&quot;bounds&quot;:{&quot;left&quot;:10,&quot;top&quot;:10,&quot;width&quot;:945,&quot;height&quot;:1020,&quot;windowState&quot;:&quot;normal&quot;}},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.206 &gt;&gt; {&quot;id&quot;:6,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Page.navigate&quot;,&quot;params&quot;:{&quot;url&quot;:&quot;http:\/\/localhost:8080\/login&quot;}}
+13:36:33.208 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.479 &lt;&lt; {&quot;id&quot;:6,&quot;result&quot;:{&quot;frameId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;,&quot;loaderId&quot;:&quot;FC15E7929481F450B94936F388589081&quot;},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.480 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.488 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.488 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;,&quot;loaderId&quot;:&quot;FC15E7929481F450B94936F388589081&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;,&quot;domainAndRegistry&quot;:&quot;&quot;,&quot;securityOrigin&quot;:&quot;http://localhost:8080&quot;,&quot;mimeType&quot;:&quot;text/html&quot;,&quot;adFrameStatus&quot;:{&quot;adFrameType&quot;:&quot;none&quot;},&quot;secureContextType&quot;:&quot;SecureLocalhost&quot;,&quot;crossOriginIsolatedContextType&quot;:&quot;NotIsolated&quot;,&quot;gatedAPIFeatures&quot;:[]},&quot;type&quot;:&quot;Navigation&quot;},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.488 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:1,&quot;origin&quot;:&quot;http://localhost:8080&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;-8593941848961825012.-3484813344317119941&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;}}},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.644 &lt;&lt; {&quot;method&quot;:&quot;Page.domContentEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21891.230859},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.39">
+      <div class="step-ref passed">39</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>input(&#39;#username&#39;, &#39;a&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">8</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.39">13:36:33.645 &gt;&gt; {&quot;id&quot;:7,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;var e = document.querySelector(\&quot;#username\&quot;); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}&quot;,&quot;returnByValue&quot;:true}}
+13:36:33.647 &lt;&lt; {&quot;method&quot;:&quot;Page.loadEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21891.379702},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.647 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.647 &lt;&lt; {&quot;id&quot;:7,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;number&quot;,&quot;value&quot;:0,&quot;description&quot;:&quot;0&quot;}},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.648 &gt;&gt; {&quot;id&quot;:8,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:33.649 &lt;&lt; {&quot;id&quot;:8,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.649 &gt;&gt; {&quot;id&quot;:9,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:33.650 &lt;&lt; {&quot;id&quot;:9,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.651 &gt;&gt; {&quot;id&quot;:10,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:33.652 &lt;&lt; {&quot;id&quot;:10,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.40">
+      <div class="step-ref passed">40</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>input(&#39;#password&#39;, &#39;aa&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">14</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.40">13:36:33.653 &gt;&gt; {&quot;id&quot;:11,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;var e = document.querySelector(\&quot;#password\&quot;); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}&quot;,&quot;returnByValue&quot;:true}}
+13:36:33.654 &lt;&lt; {&quot;id&quot;:11,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;number&quot;,&quot;value&quot;:0,&quot;description&quot;:&quot;0&quot;}},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.655 &gt;&gt; {&quot;id&quot;:12,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:33.657 &lt;&lt; {&quot;id&quot;:12,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.657 &gt;&gt; {&quot;id&quot;:13,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:33.659 &lt;&lt; {&quot;id&quot;:13,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.659 &gt;&gt; {&quot;id&quot;:14,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:33.660 &lt;&lt; {&quot;id&quot;:14,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.661 &gt;&gt; {&quot;id&quot;:15,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:33.662 &lt;&lt; {&quot;id&quot;:15,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.662 &gt;&gt; {&quot;id&quot;:16,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:33.664 &lt;&lt; {&quot;id&quot;:16,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.665 &gt;&gt; {&quot;id&quot;:17,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+13:36:33.665 &lt;&lt; {&quot;id&quot;:17,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.41">
+      <div class="step-ref passed">41</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>submit().click(&quot;.form-signin button&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">141</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.41">13:36:33.666 &gt;&gt; {&quot;id&quot;:18,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.querySelector(\&quot;.form-signin button\&quot;).click()&quot;,&quot;returnByValue&quot;:true}}
+13:36:33.668 &lt;&lt; {&quot;id&quot;:18,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;undefined&quot;}},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.668 &lt;&lt; {&quot;method&quot;:&quot;Page.frameScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;,&quot;delay&quot;:0,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.669 &lt;&lt; {&quot;method&quot;:&quot;Page.frameRequestedNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;,&quot;disposition&quot;:&quot;currentTab&quot;},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.670 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.671 &lt;&lt; {&quot;method&quot;:&quot;Page.frameClearedScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.773 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.773 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;,&quot;loaderId&quot;:&quot;396B5187BEE2E3B2A6DB26FFFF71D483&quot;,&quot;url&quot;:&quot;http://localhost:8080/admin/&quot;,&quot;domainAndRegistry&quot;:&quot;&quot;,&quot;securityOrigin&quot;:&quot;http://localhost:8080&quot;,&quot;mimeType&quot;:&quot;text/html&quot;,&quot;adFrameStatus&quot;:{&quot;adFrameType&quot;:&quot;none&quot;},&quot;secureContextType&quot;:&quot;SecureLocalhost&quot;,&quot;crossOriginIsolatedContextType&quot;:&quot;NotIsolated&quot;,&quot;gatedAPIFeatures&quot;:[]},&quot;type&quot;:&quot;Navigation&quot;},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.773 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:2,&quot;origin&quot;:&quot;http://localhost:8080&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;571956354064584678.4677600159809565561&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;}}},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.796 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Opening Web Socket...&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.709642193785794e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;Client._connect&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:291,&quot;columnNumber&quot;:21},{&quot;functionName&quot;:&quot;Client.connect&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:278,&quot;columnNumber&quot;:24},{&quot;functionName&quot;:&quot;initialize&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:35,&quot;columnNumber&quot;:27},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:199,&quot;columnNumber&quot;:11}]}},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.796 [console] Opening Web Socket...
+13:36:33.796 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Connected to WS &#39;ws://localhost:8080/ws&#39;&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.70964219378627e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;initialize&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:44,&quot;columnNumber&quot;:20},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:199,&quot;columnNumber&quot;:11}]}},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.796 [console] Connected to WS &#39;ws://localhost:8080/ws&#39;
+13:36:33.796 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;sending&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;//localhost:8080/user/unread&quot;},{&quot;type&quot;:&quot;object&quot;,&quot;className&quot;:&quot;Object&quot;,&quot;description&quot;:&quot;Object&quot;,&quot;objectId&quot;:&quot;-3167674413766629828.2.1&quot;,&quot;preview&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;description&quot;:&quot;Object&quot;,&quot;overflow&quot;:false,&quot;properties&quot;:[{&quot;name&quot;:&quot;method&quot;,&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;GET&quot;},{&quot;name&quot;:&quot;headers&quot;,&quot;type&quot;:&quot;object&quot;,&quot;value&quot;:&quot;Object&quot;}]}}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.709642193786508e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;go&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:94,&quot;columnNumber&quot;:12},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:203,&quot;columnNumber&quot;:12}]}},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.796 [console] sending
+13:36:33.796 [console] //localhost:8080/user/unread
+13:36:33.807 &lt;&lt; {&quot;method&quot;:&quot;Page.domContentEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21891.529739},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.42">
+      <div class="step-ref passed">42</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>waitForUrl(baseUrl + &#39;/admin&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.42">13:36:33.807 &lt;&lt; {&quot;method&quot;:&quot;Page.loadEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21891.53174},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.807 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.808 &gt;&gt; {&quot;id&quot;:19,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.location.href&quot;,&quot;returnByValue&quot;:true}}
+13:36:33.809 &lt;&lt; {&quot;id&quot;:19,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;http://localhost:8080/admin/&quot;}},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.43">
+      <div class="step-ref passed">43</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>submit().click(&quot;{button}logout&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">50</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.43">13:36:33.811 &gt;&gt; {&quot;id&quot;:20,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.evaluate(\&quot;\/\/button[normalize-space(text())=&#39;logout&#39;]\&quot;, document, null, 9, null).singleNodeValue.click()&quot;,&quot;returnByValue&quot;:true}}
+13:36:33.813 &lt;&lt; {&quot;id&quot;:20,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;undefined&quot;}},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.813 &lt;&lt; {&quot;method&quot;:&quot;Page.frameScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;,&quot;delay&quot;:0,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;http://localhost:8080/logout&quot;},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.813 &lt;&lt; {&quot;method&quot;:&quot;Page.frameRequestedNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;http://localhost:8080/logout&quot;,&quot;disposition&quot;:&quot;currentTab&quot;},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.814 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.815 &lt;&lt; {&quot;method&quot;:&quot;Page.frameClearedScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.815 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Whoops! Lost connection to ws://localhost:8080/ws&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.709642193805572e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:426,&quot;columnNumber&quot;:30}]}},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.815 [console] Whoops! Lost connection to ws://localhost:8080/ws
+13:36:33.815 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;STOMP: scheduling reconnection in 2000ms&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.709642193805722e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;Client._schedule_reconnect&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:453,&quot;columnNumber&quot;:25},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:435,&quot;columnNumber&quot;:33}]}},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.816 [console] STOMP: scheduling reconnection in 2000ms
+13:36:33.847 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.847 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;,&quot;loaderId&quot;:&quot;AB3AEBB34604F308C21731B7C2C1FAC9&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;,&quot;domainAndRegistry&quot;:&quot;&quot;,&quot;securityOrigin&quot;:&quot;http://localhost:8080&quot;,&quot;mimeType&quot;:&quot;text/html&quot;,&quot;adFrameStatus&quot;:{&quot;adFrameType&quot;:&quot;none&quot;},&quot;secureContextType&quot;:&quot;SecureLocalhost&quot;,&quot;crossOriginIsolatedContextType&quot;:&quot;NotIsolated&quot;,&quot;gatedAPIFeatures&quot;:[]},&quot;type&quot;:&quot;Navigation&quot;},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.848 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:3,&quot;origin&quot;:&quot;http://localhost:8080&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;7299542695468474414.-236080698102800978&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;}}},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.859 &lt;&lt; {&quot;method&quot;:&quot;Page.domContentEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21891.589411},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.44">
+      <div class="step-ref passed">44</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>waitForUrl(baseUrl + &#39;/login&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.44">13:36:33.860 &lt;&lt; {&quot;method&quot;:&quot;Page.loadEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:21891.592321},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.860 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.861 &gt;&gt; {&quot;id&quot;:21,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.location.href&quot;,&quot;returnByValue&quot;:true}}
+13:36:33.862 &lt;&lt; {&quot;id&quot;:21,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;http://localhost:8080/login&quot;}},&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;}
+13:36:33.863 &gt;&gt; {&quot;id&quot;:22,&quot;sessionId&quot;:&quot;CDC466C252C4422FF5625E01599A9EA5&quot;,&quot;method&quot;:&quot;Target.closeTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;19C339A62AE0BE32FCC059A658F07CCA&quot;}}
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

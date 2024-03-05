@@ -1,4 +1,34 @@
 /* CHAMPION BEGIN */
+.searchBar {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, 0%);
+    height: 70px;
+    width: 650px;
+    grid-gap: 2px;
+    z-index: 5;			
+}
+
+.searchBar input[type="text"] {
+    height: 60px;
+    width: 550px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.searchBar button[type="submit"] {
+    height: 60px;
+    width: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+}
+
 .buscaCampeones[type="text"] {
     height: 40px;
     width: 550px;
@@ -19,7 +49,7 @@
 
 .campeonGrid {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     width: 1000px;
     height: 10500px;

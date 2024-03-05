@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang="es" class="h-100" xmlns:th="http://www.thymeleaf.org">
+<html class="h-100" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{/css/login.css}">
     <th:block th:replace="fragments/head :: header" />
-    <title>GG: login</title>
+    <title>IW: Login</title>
 </head>
-<body>
+
+<body class="d-flex flex-column h-100">
     <header th:replace="fragments/nav.html :: nav"></header>
-    <div class="container">
-        <fieldset>
+
+    <main class="flex-shrink-0">
+        <div class="container">
             <form class="form-signin" method="post" th:action="@{/login}">
-                <legend>Usuario y contraseña</legend>
-                <div>
-                    <label for="nombreUsuario">Nombre de usuario:</label>
-                    <input id="nombreUsuario" type="text" name="nombreUsuario" placeholder="Nombre de usuario" required="required" />
-                </div>
-                <div>
-                    <label for="password">Password:</label>
-                    <input id="password" type="password" name="password" placeholder="Contraseña" required="required" />
-                </div>
-                <div>
-                    <button type="submit" name="login">Entrar</button>
-                    <a href="" class="registrarse">Registrarse</a>
-                </div>
+                <h2 class="form-signin-heading">Please sign in</h2>
+                <p th:if="${#request.getQueryString() == 'error'}" class="error">
+                    Error en nombre de usuario o contraseña
+                </p>
+                <p>
+                    <label for="username" class="visually-hidden">Username</label>
+                    <input type="text" id="username" name="username" class="form-control" placeholder="Username" required="required">
+                </p>
+                <p>
+                    <label for="password" class="visually-hidden">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="required">
+                </p>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
             </form>
-        </fieldset>
-    </div>
+        </div>
+    </main>
+
+    <th:block th:replace="fragments/footer.html :: footer" />
 </body>
+
 </html>
