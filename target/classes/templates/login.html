@@ -3,13 +3,14 @@
 
 <head>
     <th:block th:replace="fragments/head :: header" />
-    <title>IW: Login</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <title>GG: Login</title>
 </head>
 
-<body class="d-flex flex-column h-100">
+<body>
     <header th:replace="fragments/nav.html :: nav"></header>
 
-    <main class="flex-shrink-0">
+    <main>
         <div class="container">
             <form class="form-signin" method="post" th:action="@{/login}">
                 <h2 class="form-signin-heading">Please sign in</h2>
@@ -29,7 +30,7 @@
         </div>
     </main>
 
-    <th:block th:replace="fragments/footer.html :: footer" />
+    <!--<th:block th:replace="fragments/footer.html :: footer" />-->
 </body>
 
 </html>
