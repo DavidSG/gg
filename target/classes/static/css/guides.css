@@ -35,6 +35,12 @@ main {
     margin-bottom: 1vw;
 	display: grid;
 	grid-template-columns: 1fr 1fr 5fr;
+	transition: transform 0.26s ease;
+}
+
+.guia:hover{
+	background-color: #debb02;
+	transform: scale(1.1) translate(1px, 1px);
 }
 
 .guia h1 {
