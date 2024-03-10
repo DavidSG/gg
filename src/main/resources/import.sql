@@ -12,12 +12,12 @@ ALTER SEQUENCE 'PUBLIC'.'GEN' RESTART WITH 1024;
 
 
 INSERT INTO Guia (id, puntuacion, titulo, fecha, texto, autor, elo, campeon, items, hechizos) VALUES 
-(1, 9.8, 'Guia suspicaz', '13/02', 'texto generico', 'David Alfonso', 'diamante', 'aatrox', 'fefe', 'flash'),
-(2, 9.0, 'Guia excelente', '15/02', 'texto generico', 'Laura Lopez', 'platino', 'jhin', 'bf sword', 'ignite'),
-(3, 8.5, 'Guia versátil', '17/02', 'texto generico', 'Carlos Rodriguez', 'oro', 'leona', 'sunfire cape', 'teleport'),
-(4, 8.7, 'Guía táctica para principiantes', '2024-02-28', 'Consejos y estrategias esenciales para jugadores novatos.', 'Ana Martínez', 'plata', 'Annie', 'Dorans Ring, Boots of Speed', 'Teleport, Flash'),
+(1, 9.8, 'Guia suspicaz', '13/02', 'texto generico', 'David Alfonso', 'diamante', 'aatrox', '4010 3348 2419 2152 2150', 'flash ignite'),
+(2, 9.0, 'Guia excelente', '15/02', 'texto generico', 'Laura Lopez', 'platino', 'jhin', '4010 3348 2419 2152 2150', 'ignite'),
+(3, 8.5, 'Guia versátil', '17/02', 'texto generico', 'Carlos Rodriguez', 'oro', 'leona', '4010 3348 2419 2152 2150', 'teleport'),
+(4, 8.7, 'Guía táctica para principiantes', '2024-02-28', 'Consejos y estrategias esenciales para jugadores novatos.', 'Ana Martínez', 'plata', 'Annie', '4010 3348 2419 2152 2150', 'Teleport, Flash'),
 (5, 9.5, 'Dominando el juego con Jinx', '2024-02-26', 'Aprende a jugar como un profesional con la campeona Jinx.', 'Pablo González', 'diamante', 'Jinx', 'Infinity Edge, Rapid Firecannon', 'Flash, Heal'),
-(6, 9.8, 'Guia suspicaz', '13/02', 'texto generico', 'David Alfonso', 'diamante', 'aatrox', 'fefe', 'flash'),
+(6, 9.8, 'Guia suspicaz', '13/02', 'texto generico', 'David Alfonso', 'diamante', 'aatrox', '4010 3348 2419 2152 2150', 'flash'),
 (7, 9.0, 'Guia excelente', '15/02', 'texto generico', 'Laura Lopez', 'platino', 'jhin', 'bf sword', 'ignite'),
 (8, 8.5, 'Guia versátil', '17/02', 'texto generico', 'Carlos Rodriguez', 'oro', 'leona', 'sunfire cape', 'teleport');
 
