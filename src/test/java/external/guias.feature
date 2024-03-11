@@ -1,10 +1,8 @@
 Feature: Hacer una guia
 
-Backgroung:
-* call read ('login.feature@login_b')
-* waitForUrl(baseUrl + '/user/2')
-
-@anyadirGuia
-Scenario: anyadir guias
-    when driver '/guias' 
-    then waitForUrl(baseUrl + '/guias')
+    Scenario: anyadir guias
+        Given call read ('login.feature@login_a')
+        And driver baseUrl + '/user/2'
+        And driver baseUrl + '/guias' 
+        And click('.guias a:first-child')
+        Then waitForUrlMatching('.*/guia/\\d+$')  
