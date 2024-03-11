@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" th:href="@{/css/items.css}">
+    <title>Items</title>
+</head>
+<body>
+    <main>
+		<!-- HEADER -->
+		<div th:insert="./fragments/header"></div>
+		<!-- HEADER -->
+
+		<!-- SIDEBAR -->
+		<div th:insert="./fragments/sidebar"></div>
+		<!-- SIDEBAR -->
+		
+		<!-- ITEMS -->
+        <div class="itemGrid">
+			<div th:each="item : ${items}" class="item">
+				<img th:src="@{/img/items/__${item.id}__}" />
+			</div>
+		</div>
+		<!-- ITEMS -->
+    </main>
+</body>
+</html>

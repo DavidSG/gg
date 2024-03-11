@@ -1,0 +1,21 @@
+.contenido {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    height: 140%;
+    width: 80%;
+
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    z-index: -1;
+}
+
+.nuevoCampo {
+    position: relative;
+    height: 160px;
+
+    display:grid;
+    grid-template-rows: 1fr 1f;
+    z-index: -1;
+    
+}

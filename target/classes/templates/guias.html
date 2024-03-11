@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/guides.css}">
+	<link rel="stylesheet" th:href="@{/css/fragments/busqueda.css}">
+    <title>Guías</title>
+</head>
+<body>
+    <main>
+        <!-- HEADER -->
+		<div th:insert="./fragments/header"></div>
+		<!-- HEADER -->
+
+		<!-- SIDEBAR -->
+		<div th:insert="./fragments/sidebar"></div>
+		<!-- SIDEBAR -->
+
+		<form id = "searchFormId" th:action="@{/guias}" method="get">
+
+			<div class = "buscaGuia">
+
+				<input id="nombreId" type="text" placeholder="Busca un campeon " name="campeon" th:value="${campeon}" />
+
+				<div class = "buscaPosicion">	
+
+					<button type="submit" name="posiciones" value="" th:class="${posiciones eq '' ? 'bordeAmarillo' : ''}">
+						<img th:src="@{/img/posiciones/all.svg}">
+					</button>
+		
+					<button type="submit" name="posiciones" value="top" th:class="${posiciones eq 'top' ? 'bordeAmarillo' : ''}">
+						<img th:src="@{/img/posiciones/top.svg}">
+					</button>
+		
+					<button type="submit" name="posiciones" value="jgl" th:class="${posiciones eq 'jgl' ? 'bordeAmarillo' : ''}">
+						<img th:src="@{/img/posiciones/jgl.svg}">
+					</button>
+		
+					<button type="submit" name="posiciones" value="mid" th:class="${posiciones eq 'mid' ? 'bordeAmarillo' : ''}">
+						<img th:src="@{/img/posiciones/mid.svg}">
+					</button>
+		
+					<button type="submit" name="posiciones" value="bot" th:class="${posiciones eq 'bot' ? 'bordeAmarillo' : ''}">
+						<img th:src="@{/img/posiciones/bot.svg}">
+					</button>
+		
+					<button type="submit" name="posiciones" value="sup" th:class="${posiciones eq 'sup' ? 'bordeAmarillo' : ''}">
+						<img th:src="@{/img/posiciones/sup.svg}">
+					</button>
+
+				</div>
+
+				<div class = "buscaEtiquetas">	
+
+					<button type="submit" name="etiquetas" value="" th:class="${etiquetas eq '' ? 'bordeAmarillo' : ''}">
+						TODOS
+					</button>
+		
+					<button type="submit" name="etiquetas" value="campeon" th:class="${etiquetas eq 'campeon' ? 'bordeAmarillo' : ''}">
+						CAMPEON
+					</button>
+		
+					<button type="submit" name="etiquetas" value="posicion" th:class="${etiquetas eq 'posicion' ? 'bordeAmarillo' : ''}">
+						POSICION
+					</button>
+
+					<button type="submit" name="etiquetas" value="general" th:class="${etiquetas eq 'general' ? 'bordeAmarillo' : ''}">
+						GENERAL
+					</button>
+
+				</div>
+				
+			</div>
+
+			<div class = "ordenGuia">
+				<h1>ORDENAR:</h1>
+
+				<button type="submit" name="orderBy" value="puntuacion DESC" th:class="${orderBy eq 'puntuacion DESC' ? 'bordeAmarillo' : ''}">
+					PUNTUACION
+				</button>
+
+				<button type="submit" name="orderBy" value="fecha DESC" th:class="${orderBy eq 'fecha DESC' ? 'bordeAmarillo' : ''}">
+					FECHA
+				</button>
+			</div>
+					
+		</form>	
+
+		<div class = "guias">
+			<div th:each="guia : ${guias}">
+				<!-- Generate link to the guide -->
+				<a th:href="@{/guia/__${guia.id}__}">
+					<div class="guia">
+						<!-- Display guide details -->
+						<h2 th:text="${guia.puntuacion}"></h2>
+						<img th:src="@{/img/campeones/__${guia.campeon}__.png}" width="150px" height="150px"/>
+						<div class="tituloGuia">
+							<h1 th:text="${guia.titulo}"></h1>
+							<!-- Corrected author field name -->
+							<p th:text="${'Escrita por ' + guia.autor + ' ' + guia.fecha}"></p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		
+    </main>
+</body>
+</html>

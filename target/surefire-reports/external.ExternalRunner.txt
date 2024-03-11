@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: external.ExternalRunner
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 11.824 s <<< FAILURE! - in external.ExternalRunner
+testGuia[1][1]  Time elapsed: 3.483 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+js failed:
+>>>>
+01: click('.guias a:first-child')
+<<<<
+org.graalvm.polyglot.PolyglotException: js eval failed twice:document.querySelector(".guias a:first-child").click(), error: [type: MAP, value: {type=object, subtype=error, className=TypeError, description=TypeError: Cannot read properties of null (reading 'click')
+    at <anonymous>:1:47, objectId=3182363414864246347.2.3}]
+- com.intuit.karate.driver.DevToolsDriver.evalInternal(DevToolsDriver.java:315)
+- com.intuit.karate.driver.DevToolsDriver.eval(DevToolsDriver.java:289)
+- com.intuit.karate.driver.DevToolsDriver.click(DevToolsDriver.java:511)
+- <js>.:anonymous(Unnamed:1)
+
+classpath:external/guias.feature:7
+
+testGuia[1][2]  Time elapsed: 0.61 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+js failed:
+>>>>
+01: setQueryParam('campeon', 'Ezreal')
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "setQueryParam" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:external/guias.feature:14
+
+testWs[1][1]  Time elapsed: 1.888 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+match failed: CONTAINS
+  $ | actual does not contain expected (STRING:STRING)
+  '<div class="py-5 row" id="mensajes">
+            </div>'
+  'el número secreto es el 683'
+
+classpath:external/ws.feature:15
+

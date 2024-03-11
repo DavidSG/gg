@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <title>external.ws</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="karate-summary.html">
+      <img src="karate-logo.svg" alt="Karate"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2024-03-11 09:26:41 p. m.</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1:3]"><span>[1:3]</span> <span>envio de mensajes via websocket</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">external/ws.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">envío de mensajes</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:3]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:3]</span>
+                <span class="scenario-name">envio de mensajes via websocket</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1728</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref passed">4</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>call read(&#39;login.feature@login_a&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">474</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  <div>
+        
+    <div class="step-row">
+      <div class="step-container" id="0.4.0.call">
+        <div class="step-ref passed">&gt;&gt;</div>
+        <div class="step-indent"></div>
+        <div class="step-cell passed">external.login</div>
+      </div>
+      <div class="time-cell passed">467</div>
+    </div>
+    <div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.31">
+      <div class="step-ref passed">31</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>driver baseUrl + &#39;/login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">360</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4.0.call.0.31">21:26:39.414 karate.env system property was: null 
+21:26:39.420 preferred port 9222 not available, will use: 50618
+21:26:39.686 request:
+1 &gt; GET http://localhost:50618/json
+1 &gt; Host: localhost:50618
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.21)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+21:26:39.687 response time in milliseconds: 1
+1 &lt; 200
+1 &lt; Content-Security-Policy: frame-ancestors &#39;none&#39;
+1 &lt; Content-Length: 2557
+1 &lt; Content-Type: application/json; charset=UTF-8
+[ {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:50618/devtools/page/40EAFB14F7A9760359FC86F7052C7C70&quot;,
+   &quot;id&quot;: &quot;40EAFB14F7A9760359FC86F7052C7C70&quot;,
+   &quot;title&quot;: &quot;Google Network Speech&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://neajdppkdcdipfabeoofebfddakdcjhd/_generated_background_page.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:50618/devtools/page/40EAFB14F7A9760359FC86F7052C7C70&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:50618/devtools/page/DF8DC262AC0E6DCF43763CEF506BACDB&quot;,
+   &quot;id&quot;: &quot;DF8DC262AC0E6DCF43763CEF506BACDB&quot;,
+   &quot;title&quot;: &quot;Google Hangouts&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:50618/devtools/page/DF8DC262AC0E6DCF43763CEF506BACDB&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:50618/devtools/page/DCBC49E4299C0CB430D7CA220B439405&quot;,
+   &quot;id&quot;: &quot;DCBC49E4299C0CB430D7CA220B439405&quot;,
+   &quot;title&quot;: &quot;Google Hangouts&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:50618/devtools/page/DCBC49E4299C0CB430D7CA220B439405&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:50618/devtools/page/4D99AE77F72711F810816B42C836C717&quot;,
+   &quot;faviconUrl&quot;: &quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBmaWxsPSIjNDU1QTY0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0iTTMgMTFoMTh2MUgzem0xNC42Mi0xLTIuMjktNi4xYy0uMTktLjUtLjc0LS43Ny0xLjI1LS42TDEyIDRsLTIuMDktLjdjLS41MS0uMTctMS4wNi4xLTEuMjUuNkw2LjM4IDEwaDExLjI0em0tMS4xMiAzYy0xLjY2IDAtMy4wNCAxLjE2LTMuNCAyLjcxLS44NC0uMzYtMS42Mi0uMjYtMi4yLS4wMUEzLjUwMyAzLjUwMyAwIDAgMCA3LjUgMTNDNS41NyAxMyA0IDE0LjU3IDQgMTYuNVM1LjU3IDIwIDcuNSAyMGMxLjg0IDAgMy4zMy0xLjQyIDMuNDctMy4yMi4zLS4yMSAxLjA5LS42IDIuMDYuMDIuMTYgMS43OSAxLjY0IDMuMiAzLjQ3IDMuMiAxLjkzIDAgMy41LTEuNTcgMy41LTMuNVMxOC40MyAxMyAxNi41IDEzem0tOSA2YTIuNSAyLjUgMCAwIDEgMC01IDIuNSAyLjUgMCAwIDEgMCA1em05IDBhMi41IDIuNSAwIDAgMSAwLTUgMi41IDIuNSAwIDAgMSAwIDV6Ii8+PC9zdmc+&quot;,
+   &quot;id&quot;: &quot;4D99AE77F72711F810816B42C836C717&quot;,
+   &quot;title&quot;: &quot;Nueva pestaña de Incógnito&quot;,
+   &quot;type&quot;: &quot;page&quot;,
+   &quot;url&quot;: &quot;chrome://newtab/&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:50618/devtools/page/4D99AE77F72711F810816B42C836C717&quot;
+} ]
+
+21:26:39.687 root frame id: 4D99AE77F72711F810816B42C836C717
+21:26:39.699 &gt;&gt; {&quot;id&quot;:1,&quot;method&quot;:&quot;Target.attachToTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;,&quot;flatten&quot;:true}}
+21:26:39.699 &lt;&lt; {&quot;method&quot;:&quot;Target.attachedToTarget&quot;,&quot;params&quot;:{&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;targetInfo&quot;:{&quot;targetId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;,&quot;type&quot;:&quot;page&quot;,&quot;title&quot;:&quot;Nueva pesta\u00f1a de Inc\u00f3gnito&quot;,&quot;url&quot;:&quot;chrome://newtab/&quot;,&quot;attached&quot;:true,&quot;canAccessOpener&quot;:false,&quot;browserContextId&quot;:&quot;E1AD2DD0AB942B65A10E414C4B3EC38C&quot;},&quot;waitingForDebugger&quot;:false}}
+21:26:39.700 &lt;&lt; {&quot;id&quot;:1,&quot;result&quot;:{&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}}
+21:26:39.700 &gt;&gt; {&quot;id&quot;:2,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Target.activateTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;}}
+21:26:39.700 &lt;&lt; {&quot;id&quot;:2,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.700 &gt;&gt; {&quot;id&quot;:3,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Page.enable&quot;}
+21:26:39.701 &lt;&lt; {&quot;id&quot;:3,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.701 &gt;&gt; {&quot;id&quot;:4,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Runtime.enable&quot;}
+21:26:39.701 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:1,&quot;origin&quot;:&quot;chrome://newtab&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;-2432522653774475412.-9074511652779325685&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;}}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.701 &lt;&lt; {&quot;id&quot;:4,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.701 &gt;&gt; {&quot;id&quot;:5,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Browser.getWindowForTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;}}
+21:26:39.702 &lt;&lt; {&quot;id&quot;:5,&quot;result&quot;:{&quot;windowId&quot;:2012145134,&quot;bounds&quot;:{&quot;left&quot;:10,&quot;top&quot;:10,&quot;width&quot;:945,&quot;height&quot;:1020,&quot;windowState&quot;:&quot;normal&quot;}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.707 &lt;&lt; {&quot;method&quot;:&quot;Page.frameResized&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.710 &gt;&gt; {&quot;id&quot;:6,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Page.navigate&quot;,&quot;params&quot;:{&quot;url&quot;:&quot;http:\/\/localhost:8080\/login&quot;}}
+21:26:39.712 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.719 &lt;&lt; {&quot;id&quot;:6,&quot;result&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;,&quot;loaderId&quot;:&quot;2C29E8A51CFE36D595C64290FFC4975D&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.750 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.757 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.757 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;,&quot;loaderId&quot;:&quot;2C29E8A51CFE36D595C64290FFC4975D&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;,&quot;domainAndRegistry&quot;:&quot;&quot;,&quot;securityOrigin&quot;:&quot;http://localhost:8080&quot;,&quot;mimeType&quot;:&quot;text/html&quot;,&quot;adFrameStatus&quot;:{&quot;adFrameType&quot;:&quot;none&quot;},&quot;secureContextType&quot;:&quot;SecureLocalhost&quot;,&quot;crossOriginIsolatedContextType&quot;:&quot;NotIsolated&quot;,&quot;gatedAPIFeatures&quot;:[]},&quot;type&quot;:&quot;Navigation&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.757 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:1,&quot;origin&quot;:&quot;http://localhost:8080&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;334503149803878325.-4002705966899569919&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;}}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.779 &lt;&lt; {&quot;method&quot;:&quot;Page.domContentEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:235.592474},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.32">
+      <div class="step-ref passed">32</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>input(&#39;#username&#39;, &#39;a&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4.0.call.0.32">21:26:39.779 &lt;&lt; {&quot;method&quot;:&quot;Page.loadEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:235.593421},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.780 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.780 &gt;&gt; {&quot;id&quot;:7,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;var e = document.querySelector(\&quot;#username\&quot;); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}&quot;,&quot;returnByValue&quot;:true}}
+21:26:39.782 &lt;&lt; {&quot;id&quot;:7,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;number&quot;,&quot;value&quot;:0,&quot;description&quot;:&quot;0&quot;}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.782 &gt;&gt; {&quot;id&quot;:8,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+21:26:39.782 &lt;&lt; {&quot;id&quot;:8,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.783 &gt;&gt; {&quot;id&quot;:9,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+21:26:39.784 &lt;&lt; {&quot;id&quot;:9,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.784 &gt;&gt; {&quot;id&quot;:10,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+21:26:39.784 &lt;&lt; {&quot;id&quot;:10,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.33">
+      <div class="step-ref passed">33</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>input(&#39;#password&#39;, &#39;aa&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4.0.call.0.33">21:26:39.785 &gt;&gt; {&quot;id&quot;:11,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;var e = document.querySelector(\&quot;#password\&quot;); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}&quot;,&quot;returnByValue&quot;:true}}
+21:26:39.786 &lt;&lt; {&quot;id&quot;:11,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;number&quot;,&quot;value&quot;:0,&quot;description&quot;:&quot;0&quot;}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.786 &gt;&gt; {&quot;id&quot;:12,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+21:26:39.786 &lt;&lt; {&quot;id&quot;:12,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.786 &gt;&gt; {&quot;id&quot;:13,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+21:26:39.787 &lt;&lt; {&quot;id&quot;:13,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.787 &gt;&gt; {&quot;id&quot;:14,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+21:26:39.788 &lt;&lt; {&quot;id&quot;:14,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.788 &gt;&gt; {&quot;id&quot;:15,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+21:26:39.788 &lt;&lt; {&quot;id&quot;:15,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.788 &gt;&gt; {&quot;id&quot;:16,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+21:26:39.789 &lt;&lt; {&quot;id&quot;:16,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.789 &gt;&gt; {&quot;id&quot;:17,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+21:26:39.789 &lt;&lt; {&quot;id&quot;:17,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.34">
+      <div class="step-ref passed">34</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>submit().click(&quot;.form-signin button&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">96</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4.0.call.0.34">21:26:39.790 &gt;&gt; {&quot;id&quot;:18,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.querySelector(\&quot;.form-signin button\&quot;).click()&quot;,&quot;returnByValue&quot;:true}}
+21:26:39.791 &lt;&lt; {&quot;id&quot;:18,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;undefined&quot;}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.791 &lt;&lt; {&quot;method&quot;:&quot;Page.frameScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;,&quot;delay&quot;:0,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.791 &lt;&lt; {&quot;method&quot;:&quot;Page.frameRequestedNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;,&quot;disposition&quot;:&quot;currentTab&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.792 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.793 &lt;&lt; {&quot;method&quot;:&quot;Page.frameClearedScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.862 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.863 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;,&quot;loaderId&quot;:&quot;F4C4174AF68A5C8B1EB9221194DDB4FB&quot;,&quot;url&quot;:&quot;http://localhost:8080/admin/&quot;,&quot;domainAndRegistry&quot;:&quot;&quot;,&quot;securityOrigin&quot;:&quot;http://localhost:8080&quot;,&quot;mimeType&quot;:&quot;text/html&quot;,&quot;adFrameStatus&quot;:{&quot;adFrameType&quot;:&quot;none&quot;},&quot;secureContextType&quot;:&quot;SecureLocalhost&quot;,&quot;crossOriginIsolatedContextType&quot;:&quot;NotIsolated&quot;,&quot;gatedAPIFeatures&quot;:[]},&quot;type&quot;:&quot;Navigation&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.863 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:2,&quot;origin&quot;:&quot;http://localhost:8080&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;8968734431756073614.2171763967721951436&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;}}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.884 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Opening Web Socket...&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.710188799883834e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;Client._connect&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:291,&quot;columnNumber&quot;:21},{&quot;functionName&quot;:&quot;Client.connect&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:278,&quot;columnNumber&quot;:24},{&quot;functionName&quot;:&quot;initialize&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:35,&quot;columnNumber&quot;:27},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:199,&quot;columnNumber&quot;:11}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.884 [console] Opening Web Socket...
+21:26:39.884 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Connected to WS &#39;ws://localhost:8080/ws&#39;&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.710188799884068e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;initialize&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:44,&quot;columnNumber&quot;:20},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:199,&quot;columnNumber&quot;:11}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.884 [console] Connected to WS &#39;ws://localhost:8080/ws&#39;
+21:26:39.884 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;sending&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;//localhost:8080/user/unread&quot;},{&quot;type&quot;:&quot;object&quot;,&quot;className&quot;:&quot;Object&quot;,&quot;description&quot;:&quot;Object&quot;,&quot;objectId&quot;:&quot;5249185616630329289.2.1&quot;,&quot;preview&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;description&quot;:&quot;Object&quot;,&quot;overflow&quot;:false,&quot;properties&quot;:[{&quot;name&quot;:&quot;method&quot;,&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;GET&quot;},{&quot;name&quot;:&quot;headers&quot;,&quot;type&quot;:&quot;object&quot;,&quot;value&quot;:&quot;Object&quot;}]}}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.710188799884171e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;go&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:94,&quot;columnNumber&quot;:12},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:203,&quot;columnNumber&quot;:12}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.884 [console] sending
+21:26:39.884 [console] //localhost:8080/user/unread
+21:26:39.885 &lt;&lt; {&quot;method&quot;:&quot;Page.domContentEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:235.699202},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.885 &lt;&lt; {&quot;method&quot;:&quot;Page.loadEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:235.699385},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.35">
+      <div class="step-ref passed">35</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>waitForUrl(baseUrl + &#39;/admin&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4.0.call.0.35">21:26:39.885 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.885 &gt;&gt; {&quot;id&quot;:19,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.location.href&quot;,&quot;returnByValue&quot;:true}}
+21:26:39.886 &lt;&lt; {&quot;id&quot;:19,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;http://localhost:8080/admin/&quot;}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+    </div>    
+  </div>
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref passed">5</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>driver baseUrl + &#39;/user/2&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">54</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.5">21:26:39.888 &gt;&gt; {&quot;id&quot;:20,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Page.navigate&quot;,&quot;params&quot;:{&quot;url&quot;:&quot;http:\/\/localhost:8080\/user\/2&quot;}}
+21:26:39.889 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.901 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Web Socket Opened...&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.71018879990173e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:441,&quot;columnNumber&quot;:30}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.901 [console] Web Socket Opened...
+21:26:39.902 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;&gt;&gt;&gt; CONNECT\nX-CSRF-TOKEN:30c2076a-baea-44a1-8918-3d1cf6db6dd1\naccept-version:1.2,1.1,1.0\nheart-beat:10000,10000\n\n\u0000&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.710188799901936e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;Client._transmit&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:188,&quot;columnNumber&quot;:21},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:445,&quot;columnNumber&quot;:33}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.902 [console] &gt;&gt;&gt; CONNECT
+X-CSRF-TOKEN:30c2076a-baea-44a1-8918-3d1cf6db6dd1
+accept-version:1.2,1.1,1.0
+heart-beat:10000,10000
+
+ 
+21:26:39.904 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;&lt;&lt;&lt; CONNECTED\nversion:1.2\nheart-beat:0,0\nuser-name:a\n\n\u0000&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.710188799905051e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:339,&quot;columnNumber&quot;:30}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.905 [console] &lt;&lt;&lt; CONNECTED
+version:1.2
+heart-beat:0,0
+user-name:a
+
+ 
+21:26:39.905 &lt;&lt; {&quot;id&quot;:20,&quot;result&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;,&quot;loaderId&quot;:&quot;A68B72A7772D99FF33589A872116B722&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.905 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;connected to server undefined&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.710188799905256e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:349,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.905 [console] connected to server undefined
+21:26:39.905 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Connected to &quot;},{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;ws://localhost:8080/ws&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot; - subscribing:&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.710188799905338e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:37,&quot;columnNumber&quot;:24},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.906 [console] Connected to 
+21:26:39.906 [console] ws://localhost:8080/ws
+21:26:39.906 [console]  - subscribing:
+21:26:39.906 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot; ... to /user/queue/updates ...&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.710188799905359e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:40,&quot;columnNumber&quot;:28},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.906 [console]  ... to /user/queue/updates ...
+21:26:39.906 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;&gt;&gt;&gt; SUBSCRIBE\nid:sub-0\ndestination:/user/queue/updates\n\n\u0000&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.710188799905438e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;Client._transmit&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:188,&quot;columnNumber&quot;:21},{&quot;functionName&quot;:&quot;Client.subscribe&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:532,&quot;columnNumber&quot;:17},{&quot;functionName&quot;:&quot;subscribe&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:52,&quot;columnNumber&quot;:27},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:41,&quot;columnNumber&quot;:23},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.906 [console] &gt;&gt;&gt; SUBSCRIBE
+id:sub-0
+destination:/user/queue/updates
+
+ 
+21:26:39.906 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Hopefully subscribed to /user/queue/updates&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.710188799905471e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;subscribe&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:54,&quot;columnNumber&quot;:20},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:41,&quot;columnNumber&quot;:23},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.906 [console] Hopefully subscribed to /user/queue/updates
+21:26:39.906 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot; ... to /topic/admin ...&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.710188799905483e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:40,&quot;columnNumber&quot;:28},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.906 [console]  ... to /topic/admin ...
+21:26:39.906 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;&gt;&gt;&gt; SUBSCRIBE\nid:sub-1\ndestination:/topic/admin\n\n\u0000&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.710188799905499e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;Client._transmit&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:188,&quot;columnNumber&quot;:21},{&quot;functionName&quot;:&quot;Client.subscribe&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:532,&quot;columnNumber&quot;:17},{&quot;functionName&quot;:&quot;subscribe&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:52,&quot;columnNumber&quot;:27},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:41,&quot;columnNumber&quot;:23},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.906 [console] &gt;&gt;&gt; SUBSCRIBE
+id:sub-1
+destination:/topic/admin
+
+ 
+21:26:39.906 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Hopefully subscribed to /topic/admin&quot;}],&quot;executionContextId&quot;:2,&quot;timestamp&quot;:1.710188799905521e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;subscribe&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:54,&quot;columnNumber&quot;:20},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:41,&quot;columnNumber&quot;:23},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.906 [console] Hopefully subscribed to /topic/admin
+21:26:39.910 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.911 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;,&quot;loaderId&quot;:&quot;A68B72A7772D99FF33589A872116B722&quot;,&quot;url&quot;:&quot;http://localhost:8080/user/2&quot;,&quot;domainAndRegistry&quot;:&quot;&quot;,&quot;securityOrigin&quot;:&quot;http://localhost:8080&quot;,&quot;mimeType&quot;:&quot;text/html&quot;,&quot;adFrameStatus&quot;:{&quot;adFrameType&quot;:&quot;none&quot;},&quot;secureContextType&quot;:&quot;SecureLocalhost&quot;,&quot;crossOriginIsolatedContextType&quot;:&quot;NotIsolated&quot;,&quot;gatedAPIFeatures&quot;:[]},&quot;type&quot;:&quot;Navigation&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.911 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:3,&quot;origin&quot;:&quot;http://localhost:8080&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;1241969298427817377.-518670141639430840&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;}}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.941 &lt;&lt; {&quot;method&quot;:&quot;Runtime.exceptionThrown&quot;,&quot;params&quot;:{&quot;timestamp&quot;:1.710188799941602e+12,&quot;exceptionDetails&quot;:{&quot;exceptionId&quot;:1,&quot;text&quot;:&quot;Uncaught&quot;,&quot;lineNumber&quot;:5,&quot;columnNumber&quot;:20,&quot;scriptId&quot;:&quot;17&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/mdInclude.js&quot;,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;17&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/mdInclude.js&quot;,&quot;lineNumber&quot;:5,&quot;columnNumber&quot;:20}]},&quot;exception&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;className&quot;:&quot;ReferenceError&quot;,&quot;description&quot;:&quot;ReferenceError: marked is not defined\n    at http://localhost:8080/js/mdInclude.js:6:21&quot;,&quot;objectId&quot;:&quot;5249185616630329289.3.1&quot;,&quot;preview&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;description&quot;:&quot;ReferenceError: marked is not defined\n    at http://localhost:8080/js/mdInclude.js:6:21&quot;,&quot;overflow&quot;:false,&quot;properties&quot;:[{&quot;name&quot;:&quot;stack&quot;,&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;ReferenceError: marked is not defined\n    at http://localhost:8080/js/mdInclude.js:6:21&quot;},{&quot;name&quot;:&quot;message&quot;,&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;marked is not defined&quot;}]}},&quot;executionContextId&quot;:3}},&quot;sessionId&quot;:&quot;49264A937C0 ...
+21:26:39.942 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Opening Web Socket...&quot;}],&quot;executionContextId&quot;:3,&quot;timestamp&quot;:1.710188799941788e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;Client._connect&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:291,&quot;columnNumber&quot;:21},{&quot;functionName&quot;:&quot;Client.connect&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:278,&quot;columnNumber&quot;:24},{&quot;functionName&quot;:&quot;initialize&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:35,&quot;columnNumber&quot;:27},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:199,&quot;columnNumber&quot;:11}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.942 [console] Opening Web Socket...
+21:26:39.942 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Connected to WS &#39;ws://localhost:8080/ws&#39;&quot;}],&quot;executionContextId&quot;:3,&quot;timestamp&quot;:1.710188799941893e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;initialize&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:44,&quot;columnNumber&quot;:20},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:199,&quot;columnNumber&quot;:11}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.942 [console] Connected to WS &#39;ws://localhost:8080/ws&#39;
+21:26:39.942 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;sending&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;//localhost:8080/user/unread&quot;},{&quot;type&quot;:&quot;object&quot;,&quot;className&quot;:&quot;Object&quot;,&quot;description&quot;:&quot;Object&quot;,&quot;objectId&quot;:&quot;5249185616630329289.3.2&quot;,&quot;preview&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;description&quot;:&quot;Object&quot;,&quot;overflow&quot;:false,&quot;properties&quot;:[{&quot;name&quot;:&quot;method&quot;,&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;GET&quot;},{&quot;name&quot;:&quot;headers&quot;,&quot;type&quot;:&quot;object&quot;,&quot;value&quot;:&quot;Object&quot;}]}}],&quot;executionContextId&quot;:3,&quot;timestamp&quot;:1.710188799941932e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;go&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:94,&quot;columnNumber&quot;:12},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:203,&quot;columnNumber&quot;:12}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.942 [console] sending
+21:26:39.942 [console] //localhost:8080/user/unread
+21:26:39.942 &lt;&lt; {&quot;method&quot;:&quot;Page.domContentEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:235.756803},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref passed">6</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>def mensaje = script(&quot;&#39;el número secreto es el &#39; + Math.floor(Math.random() * 1000)&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.6">21:26:39.942 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.943 &gt;&gt; {&quot;id&quot;:21,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;&#39;el número secreto es el &#39; + Math.floor(Math.random() * 1000)&quot;,&quot;returnByValue&quot;:true}}
+21:26:39.944 &lt;&lt; {&quot;id&quot;:21,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;el n\u00famero secreto es el 683&quot;}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref passed">7</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>input(&#39;#message&#39;, mensaje)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">45</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.7">21:26:39.944 &gt;&gt; {&quot;id&quot;:22,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;var e = document.querySelector(\&quot;#message\&quot;); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}&quot;,&quot;returnByValue&quot;:true}}
+21:26:39.945 &lt;&lt; {&quot;id&quot;:22,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;number&quot;,&quot;value&quot;:0,&quot;description&quot;:&quot;0&quot;}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.945 &gt;&gt; {&quot;id&quot;:23,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.946 &lt;&lt; {&quot;id&quot;:23,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.946 &gt;&gt; {&quot;id&quot;:24,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.947 &lt;&lt; {&quot;id&quot;:24,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.947 &gt;&gt; {&quot;id&quot;:25,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.947 &lt;&lt; {&quot;id&quot;:25,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.947 &gt;&gt; {&quot;id&quot;:26,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;l&quot;,&quot;windowsVirtualKeyCode&quot;:76}}
+21:26:39.948 &lt;&lt; {&quot;id&quot;:26,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.948 &gt;&gt; {&quot;id&quot;:27,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;l&quot;,&quot;windowsVirtualKeyCode&quot;:76}}
+21:26:39.948 &lt;&lt; {&quot;id&quot;:27,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.948 &gt;&gt; {&quot;id&quot;:28,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;l&quot;,&quot;windowsVirtualKeyCode&quot;:76}}
+21:26:39.949 &lt;&lt; {&quot;id&quot;:28,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.949 &gt;&gt; {&quot;id&quot;:29,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot; &quot;,&quot;windowsVirtualKeyCode&quot;:32}}
+21:26:39.949 &lt;&lt; {&quot;id&quot;:29,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.949 &gt;&gt; {&quot;id&quot;:30,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot; &quot;,&quot;windowsVirtualKeyCode&quot;:32}}
+21:26:39.950 &lt;&lt; {&quot;id&quot;:30,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.950 &gt;&gt; {&quot;id&quot;:31,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot; &quot;,&quot;windowsVirtualKeyCode&quot;:32}}
+21:26:39.950 &lt;&lt; {&quot;id&quot;:31,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.950 &gt;&gt; {&quot;id&quot;:32,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;n&quot;,&quot;windowsVirtualKeyCode&quot;:78}}
+21:26:39.951 &lt;&lt; {&quot;id&quot;:32,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.951 &gt;&gt; {&quot;id&quot;:33,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;n&quot;,&quot;windowsVirtualKeyCode&quot;:78}}
+21:26:39.951 &lt;&lt; {&quot;id&quot;:33,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.951 &gt;&gt; {&quot;id&quot;:34,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;n&quot;,&quot;windowsVirtualKeyCode&quot;:78}}
+21:26:39.952 &lt;&lt; {&quot;id&quot;:34,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.952 unknown character / key code: ú
+21:26:39.952 &gt;&gt; {&quot;id&quot;:35,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;ú&quot;}}
+21:26:39.952 &lt;&lt; {&quot;id&quot;:35,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.953 &gt;&gt; {&quot;id&quot;:36,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;m&quot;,&quot;windowsVirtualKeyCode&quot;:77}}
+21:26:39.953 &lt;&lt; {&quot;id&quot;:36,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.953 &gt;&gt; {&quot;id&quot;:37,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;m&quot;,&quot;windowsVirtualKeyCode&quot;:77}}
+21:26:39.954 &lt;&lt; {&quot;id&quot;:37,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.954 &gt;&gt; {&quot;id&quot;:38,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;m&quot;,&quot;windowsVirtualKeyCode&quot;:77}}
+21:26:39.954 &lt;&lt; {&quot;id&quot;:38,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.954 &gt;&gt; {&quot;id&quot;:39,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.955 &lt;&lt; {&quot;id&quot;:39,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.955 &gt;&gt; {&quot;id&quot;:40,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.956 &lt;&lt; {&quot;id&quot;:40,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.956 &gt;&gt; {&quot;id&quot;:41,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.957 &lt;&lt; {&quot;id&quot;:41,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.957 &gt;&gt; {&quot;id&quot;:42,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;r&quot;,&quot;windowsVirtualKeyCode&quot;:82}}
+21:26:39.957 &lt;&lt; {&quot;id&quot;:42,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.957 &gt;&gt; {&quot;id&quot;:43,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;r&quot;,&quot;windowsVirtualKeyCode&quot;:82}}
+21:26:39.958 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Web Socket Opened...&quot;}],&quot;executionContextId&quot;:3,&quot;timestamp&quot;:1.710188799958049e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:441,&quot;columnNumber&quot;:30}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.958 [console] Web Socket Opened...
+21:26:39.958 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;&gt;&gt;&gt; CONNECT\nX-CSRF-TOKEN:30c2076a-baea-44a1-8918-3d1cf6db6dd1\naccept-version:1.2,1.1,1.0\nheart-beat:10000,10000\n\n\u0000&quot;}],&quot;executionContextId&quot;:3,&quot;timestamp&quot;:1.710188799958127e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;Client._transmit&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:188,&quot;columnNumber&quot;:21},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:445,&quot;columnNumber&quot;:33}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.958 [console] &gt;&gt;&gt; CONNECT
+X-CSRF-TOKEN:30c2076a-baea-44a1-8918-3d1cf6db6dd1
+accept-version:1.2,1.1,1.0
+heart-beat:10000,10000
+
+ 
+21:26:39.958 &lt;&lt; {&quot;id&quot;:43,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.958 &gt;&gt; {&quot;id&quot;:44,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;r&quot;,&quot;windowsVirtualKeyCode&quot;:82}}
+21:26:39.959 &lt;&lt; {&quot;id&quot;:44,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.959 &gt;&gt; {&quot;id&quot;:45,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;o&quot;,&quot;windowsVirtualKeyCode&quot;:79}}
+21:26:39.959 &lt;&lt; {&quot;id&quot;:45,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.959 &gt;&gt; {&quot;id&quot;:46,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;o&quot;,&quot;windowsVirtualKeyCode&quot;:79}}
+21:26:39.960 &lt;&lt; {&quot;id&quot;:46,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.960 &gt;&gt; {&quot;id&quot;:47,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;o&quot;,&quot;windowsVirtualKeyCode&quot;:79}}
+21:26:39.960 &lt;&lt; {&quot;id&quot;:47,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.961 &gt;&gt; {&quot;id&quot;:48,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot; &quot;,&quot;windowsVirtualKeyCode&quot;:32}}
+21:26:39.961 &lt;&lt; {&quot;id&quot;:48,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.961 &gt;&gt; {&quot;id&quot;:49,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot; &quot;,&quot;windowsVirtualKeyCode&quot;:32}}
+21:26:39.962 &lt;&lt; {&quot;id&quot;:49,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.962 &gt;&gt; {&quot;id&quot;:50,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot; &quot;,&quot;windowsVirtualKeyCode&quot;:32}}
+21:26:39.962 &lt;&lt; {&quot;id&quot;:50,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.963 &gt;&gt; {&quot;id&quot;:51,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;s&quot;,&quot;windowsVirtualKeyCode&quot;:83}}
+21:26:39.963 &lt;&lt; {&quot;id&quot;:51,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.963 &gt;&gt; {&quot;id&quot;:52,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;s&quot;,&quot;windowsVirtualKeyCode&quot;:83}}
+21:26:39.964 &lt;&lt; {&quot;id&quot;:52,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.964 &gt;&gt; {&quot;id&quot;:53,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;s&quot;,&quot;windowsVirtualKeyCode&quot;:83}}
+21:26:39.964 &lt;&lt; {&quot;id&quot;:53,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.964 &gt;&gt; {&quot;id&quot;:54,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.965 &lt;&lt; {&quot;id&quot;:54,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.965 &gt;&gt; {&quot;id&quot;:55,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.965 &lt;&lt; {&quot;id&quot;:55,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.965 &gt;&gt; {&quot;id&quot;:56,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.966 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;&lt;&lt;&lt; CONNECTED\nversion:1.2\nheart-beat:0,0\nuser-name:a\n\n\u0000&quot;}],&quot;executionContextId&quot;:3,&quot;timestamp&quot;:1.710188799965891e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:339,&quot;columnNumber&quot;:30}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.966 [console] &lt;&lt;&lt; CONNECTED
+version:1.2
+heart-beat:0,0
+user-name:a
+
+ 
+21:26:39.966 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;connected to server undefined&quot;}],&quot;executionContextId&quot;:3,&quot;timestamp&quot;:1.710188799966006e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:349,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.966 [console] connected to server undefined
+21:26:39.966 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Connected to &quot;},{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;ws://localhost:8080/ws&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot; - subscribing:&quot;}],&quot;executionContextId&quot;:3,&quot;timestamp&quot;:1.710188799966033e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:37,&quot;columnNumber&quot;:24},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.966 [console] Connected to 
+21:26:39.966 [console] ws://localhost:8080/ws
+21:26:39.966 [console]  - subscribing:
+21:26:39.966 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot; ... to /user/queue/updates ...&quot;}],&quot;executionContextId&quot;:3,&quot;timestamp&quot;:1.710188799966056e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:40,&quot;columnNumber&quot;:28},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.966 [console]  ... to /user/queue/updates ...
+21:26:39.966 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;&gt;&gt;&gt; SUBSCRIBE\nid:sub-0\ndestination:/user/queue/updates\n\n\u0000&quot;}],&quot;executionContextId&quot;:3,&quot;timestamp&quot;:1.710188799966086e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;Client._transmit&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:188,&quot;columnNumber&quot;:21},{&quot;functionName&quot;:&quot;Client.subscribe&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:532,&quot;columnNumber&quot;:17},{&quot;functionName&quot;:&quot;subscribe&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:52,&quot;columnNumber&quot;:27},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:41,&quot;columnNumber&quot;:23},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.966 [console] &gt;&gt;&gt; SUBSCRIBE
+id:sub-0
+destination:/user/queue/updates
+
+ 
+21:26:39.966 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Hopefully subscribed to /user/queue/updates&quot;}],&quot;executionContextId&quot;:3,&quot;timestamp&quot;:1.710188799966118e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;subscribe&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:54,&quot;columnNumber&quot;:20},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:41,&quot;columnNumber&quot;:23},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.966 [console] Hopefully subscribed to /user/queue/updates
+21:26:39.966 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot; ... to /topic/admin ...&quot;}],&quot;executionContextId&quot;:3,&quot;timestamp&quot;:1.710188799966136e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:40,&quot;columnNumber&quot;:28},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.966 [console]  ... to /topic/admin ...
+21:26:39.966 &lt;&lt; {&quot;id&quot;:56,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.966 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;&gt;&gt;&gt; SUBSCRIBE\nid:sub-1\ndestination:/topic/admin\n\n\u0000&quot;}],&quot;executionContextId&quot;:3,&quot;timestamp&quot;:1.710188799966152e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;Client._transmit&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:188,&quot;columnNumber&quot;:21},{&quot;functionName&quot;:&quot;Client.subscribe&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:532,&quot;columnNumber&quot;:17},{&quot;functionName&quot;:&quot;subscribe&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:52,&quot;columnNumber&quot;:27},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:41,&quot;columnNumber&quot;:23},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.966 &gt;&gt; {&quot;id&quot;:57,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;c&quot;,&quot;windowsVirtualKeyCode&quot;:67}}
+21:26:39.966 [console] &gt;&gt;&gt; SUBSCRIBE
+id:sub-1
+destination:/topic/admin
+
+ 
+21:26:39.966 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Hopefully subscribed to /topic/admin&quot;}],&quot;executionContextId&quot;:3,&quot;timestamp&quot;:1.710188799966185e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;subscribe&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:54,&quot;columnNumber&quot;:20},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:41,&quot;columnNumber&quot;:23},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.966 [console] Hopefully subscribed to /topic/admin
+21:26:39.967 &lt;&lt; {&quot;id&quot;:57,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.967 &gt;&gt; {&quot;id&quot;:58,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;c&quot;,&quot;windowsVirtualKeyCode&quot;:67}}
+21:26:39.967 &lt;&lt; {&quot;id&quot;:58,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.967 &gt;&gt; {&quot;id&quot;:59,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;c&quot;,&quot;windowsVirtualKeyCode&quot;:67}}
+21:26:39.968 &lt;&lt; {&quot;id&quot;:59,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.968 &gt;&gt; {&quot;id&quot;:60,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;r&quot;,&quot;windowsVirtualKeyCode&quot;:82}}
+21:26:39.968 &lt;&lt; {&quot;id&quot;:60,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.969 &gt;&gt; {&quot;id&quot;:61,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;r&quot;,&quot;windowsVirtualKeyCode&quot;:82}}
+21:26:39.969 &lt;&lt; {&quot;id&quot;:61,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.969 &gt;&gt; {&quot;id&quot;:62,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;r&quot;,&quot;windowsVirtualKeyCode&quot;:82}}
+21:26:39.969 &lt;&lt; {&quot;id&quot;:62,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.969 &gt;&gt; {&quot;id&quot;:63,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.970 &lt;&lt; {&quot;id&quot;:63,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.970 &gt;&gt; {&quot;id&quot;:64,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.970 &lt;&lt; {&quot;id&quot;:64,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.970 &gt;&gt; {&quot;id&quot;:65,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.971 &lt;&lt; {&quot;id&quot;:65,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.971 &gt;&gt; {&quot;id&quot;:66,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;t&quot;,&quot;windowsVirtualKeyCode&quot;:84}}
+21:26:39.971 &lt;&lt; {&quot;id&quot;:66,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.971 &gt;&gt; {&quot;id&quot;:67,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;t&quot;,&quot;windowsVirtualKeyCode&quot;:84}}
+21:26:39.972 &lt;&lt; {&quot;id&quot;:67,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.972 &gt;&gt; {&quot;id&quot;:68,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;t&quot;,&quot;windowsVirtualKeyCode&quot;:84}}
+21:26:39.972 &lt;&lt; {&quot;id&quot;:68,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.972 &gt;&gt; {&quot;id&quot;:69,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;o&quot;,&quot;windowsVirtualKeyCode&quot;:79}}
+21:26:39.973 &lt;&lt; {&quot;id&quot;:69,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.973 &gt;&gt; {&quot;id&quot;:70,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;o&quot;,&quot;windowsVirtualKeyCode&quot;:79}}
+21:26:39.973 &lt;&lt; {&quot;id&quot;:70,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.973 &gt;&gt; {&quot;id&quot;:71,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;o&quot;,&quot;windowsVirtualKeyCode&quot;:79}}
+21:26:39.974 &lt;&lt; {&quot;id&quot;:71,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.974 &gt;&gt; {&quot;id&quot;:72,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot; &quot;,&quot;windowsVirtualKeyCode&quot;:32}}
+21:26:39.974 &lt;&lt; {&quot;id&quot;:72,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.974 &gt;&gt; {&quot;id&quot;:73,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot; &quot;,&quot;windowsVirtualKeyCode&quot;:32}}
+21:26:39.975 &lt;&lt; {&quot;id&quot;:73,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.975 &gt;&gt; {&quot;id&quot;:74,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot; &quot;,&quot;windowsVirtualKeyCode&quot;:32}}
+21:26:39.975 &lt;&lt; {&quot;id&quot;:74,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.975 &gt;&gt; {&quot;id&quot;:75,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.976 &lt;&lt; {&quot;id&quot;:75,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.976 &gt;&gt; {&quot;id&quot;:76,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.976 &lt;&lt; {&quot;id&quot;:76,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.976 &gt;&gt; {&quot;id&quot;:77,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.977 &lt;&lt; {&quot;id&quot;:77,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.977 &gt;&gt; {&quot;id&quot;:78,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;s&quot;,&quot;windowsVirtualKeyCode&quot;:83}}
+21:26:39.977 &lt;&lt; {&quot;id&quot;:78,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.978 &gt;&gt; {&quot;id&quot;:79,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;s&quot;,&quot;windowsVirtualKeyCode&quot;:83}}
+21:26:39.978 &lt;&lt; {&quot;id&quot;:79,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.978 &gt;&gt; {&quot;id&quot;:80,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;s&quot;,&quot;windowsVirtualKeyCode&quot;:83}}
+21:26:39.978 &lt;&lt; {&quot;id&quot;:80,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.979 &gt;&gt; {&quot;id&quot;:81,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot; &quot;,&quot;windowsVirtualKeyCode&quot;:32}}
+21:26:39.979 &lt;&lt; {&quot;id&quot;:81,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.979 &gt;&gt; {&quot;id&quot;:82,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot; &quot;,&quot;windowsVirtualKeyCode&quot;:32}}
+21:26:39.980 &lt;&lt; {&quot;id&quot;:82,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.980 &gt;&gt; {&quot;id&quot;:83,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot; &quot;,&quot;windowsVirtualKeyCode&quot;:32}}
+21:26:39.980 &lt;&lt; {&quot;id&quot;:83,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.980 &gt;&gt; {&quot;id&quot;:84,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.981 &lt;&lt; {&quot;id&quot;:84,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.981 &gt;&gt; {&quot;id&quot;:85,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.981 &lt;&lt; {&quot;id&quot;:85,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.981 &gt;&gt; {&quot;id&quot;:86,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;e&quot;,&quot;windowsVirtualKeyCode&quot;:69}}
+21:26:39.982 &lt;&lt; {&quot;id&quot;:86,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.982 &gt;&gt; {&quot;id&quot;:87,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;l&quot;,&quot;windowsVirtualKeyCode&quot;:76}}
+21:26:39.982 &lt;&lt; {&quot;id&quot;:87,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.982 &gt;&gt; {&quot;id&quot;:88,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;l&quot;,&quot;windowsVirtualKeyCode&quot;:76}}
+21:26:39.983 &lt;&lt; {&quot;id&quot;:88,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.983 &gt;&gt; {&quot;id&quot;:89,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;l&quot;,&quot;windowsVirtualKeyCode&quot;:76}}
+21:26:39.983 &lt;&lt; {&quot;id&quot;:89,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.983 &gt;&gt; {&quot;id&quot;:90,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot; &quot;,&quot;windowsVirtualKeyCode&quot;:32}}
+21:26:39.984 &lt;&lt; {&quot;id&quot;:90,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.984 &gt;&gt; {&quot;id&quot;:91,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot; &quot;,&quot;windowsVirtualKeyCode&quot;:32}}
+21:26:39.984 &lt;&lt; {&quot;id&quot;:91,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.984 &gt;&gt; {&quot;id&quot;:92,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot; &quot;,&quot;windowsVirtualKeyCode&quot;:32}}
+21:26:39.985 &lt;&lt; {&quot;id&quot;:92,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.985 &gt;&gt; {&quot;id&quot;:93,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;6&quot;,&quot;windowsVirtualKeyCode&quot;:54}}
+21:26:39.985 &lt;&lt; {&quot;id&quot;:93,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.985 &gt;&gt; {&quot;id&quot;:94,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;6&quot;,&quot;windowsVirtualKeyCode&quot;:54}}
+21:26:39.986 &lt;&lt; {&quot;id&quot;:94,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.986 &gt;&gt; {&quot;id&quot;:95,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;6&quot;,&quot;windowsVirtualKeyCode&quot;:54}}
+21:26:39.986 &lt;&lt; {&quot;id&quot;:95,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.987 &gt;&gt; {&quot;id&quot;:96,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;8&quot;,&quot;windowsVirtualKeyCode&quot;:56}}
+21:26:39.987 &lt;&lt; {&quot;id&quot;:96,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.987 &gt;&gt; {&quot;id&quot;:97,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;8&quot;,&quot;windowsVirtualKeyCode&quot;:56}}
+21:26:39.987 &lt;&lt; {&quot;id&quot;:97,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.987 &gt;&gt; {&quot;id&quot;:98,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;8&quot;,&quot;windowsVirtualKeyCode&quot;:56}}
+21:26:39.988 &lt;&lt; {&quot;id&quot;:98,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.988 &gt;&gt; {&quot;id&quot;:99,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;3&quot;,&quot;windowsVirtualKeyCode&quot;:51}}
+21:26:39.988 &lt;&lt; {&quot;id&quot;:99,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.988 &gt;&gt; {&quot;id&quot;:100,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;3&quot;,&quot;windowsVirtualKeyCode&quot;:51}}
+21:26:39.989 &lt;&lt; {&quot;id&quot;:100,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.989 &gt;&gt; {&quot;id&quot;:101,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;3&quot;,&quot;windowsVirtualKeyCode&quot;:51}}
+21:26:39.989 &lt;&lt; {&quot;id&quot;:101,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref passed">8</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>click(&quot;button[id=sendmsg]&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.8">21:26:39.990 &gt;&gt; {&quot;id&quot;:102,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.querySelector(\&quot;button[id=sendmsg]\&quot;).click()&quot;,&quot;returnByValue&quot;:true}}
+21:26:39.991 &lt;&lt; {&quot;id&quot;:102,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;undefined&quot;}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.991 &lt;&lt; {&quot;method&quot;:&quot;Page.frameScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;,&quot;delay&quot;:0,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;http://localhost:8080/user/2/msg&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref passed">9</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>delay(500)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">514</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9">21:26:39.991 &lt;&lt; {&quot;method&quot;:&quot;Page.frameRequestedNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;http://localhost:8080/user/2/msg&quot;,&quot;disposition&quot;:&quot;currentTab&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.992 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:39.993 &lt;&lt; {&quot;method&quot;:&quot;Page.frameClearedScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.030 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.030 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;,&quot;loaderId&quot;:&quot;852BF4E42A751FFAFD8C0C85C2780CB4&quot;,&quot;url&quot;:&quot;http://localhost:8080/user/2/msg&quot;,&quot;domainAndRegistry&quot;:&quot;&quot;,&quot;securityOrigin&quot;:&quot;http://localhost:8080&quot;,&quot;mimeType&quot;:&quot;text/html&quot;,&quot;adFrameStatus&quot;:{&quot;adFrameType&quot;:&quot;none&quot;},&quot;secureContextType&quot;:&quot;SecureLocalhost&quot;,&quot;crossOriginIsolatedContextType&quot;:&quot;NotIsolated&quot;,&quot;gatedAPIFeatures&quot;:[]},&quot;type&quot;:&quot;Navigation&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.030 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:4,&quot;origin&quot;:&quot;http://localhost:8080&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;497390906721877999.8865431806982239927&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;}}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.048 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>call read(&#39;login.feature@login_b&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">132</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  <div>
+        
+    <div class="step-row">
+      <div class="step-container" id="0.11.0.call">
+        <div class="step-ref passed">&gt;&gt;</div>
+        <div class="step-indent"></div>
+        <div class="step-cell passed">external.login</div>
+      </div>
+      <div class="time-cell passed">127</div>
+    </div>
+    <div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.11.0.call">
+    <div class="step-container" id="0.11.0.call.0.23">
+      <div class="step-ref passed">23</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>driver baseUrl + &#39;/login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">23</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11.0.call.0.23">21:26:40.508 &gt;&gt; {&quot;id&quot;:103,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Page.navigate&quot;,&quot;params&quot;:{&quot;url&quot;:&quot;http:\/\/localhost:8080\/login&quot;}}
+21:26:40.509 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.515 &lt;&lt; {&quot;id&quot;:103,&quot;result&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;,&quot;loaderId&quot;:&quot;5DD6014B1706DCD3E7D72AC076ACC351&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.519 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.519 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;,&quot;loaderId&quot;:&quot;5DD6014B1706DCD3E7D72AC076ACC351&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;,&quot;domainAndRegistry&quot;:&quot;&quot;,&quot;securityOrigin&quot;:&quot;http://localhost:8080&quot;,&quot;mimeType&quot;:&quot;text/html&quot;,&quot;adFrameStatus&quot;:{&quot;adFrameType&quot;:&quot;none&quot;},&quot;secureContextType&quot;:&quot;SecureLocalhost&quot;,&quot;crossOriginIsolatedContextType&quot;:&quot;NotIsolated&quot;,&quot;gatedAPIFeatures&quot;:[]},&quot;type&quot;:&quot;Navigation&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.519 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:5,&quot;origin&quot;:&quot;http://localhost:8080&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;8829846861133589900.-5951921315298393929&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;}}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.531 &lt;&lt; {&quot;method&quot;:&quot;Page.domContentEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:236.344967},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.11.0.call">
+    <div class="step-container" id="0.11.0.call.0.24">
+      <div class="step-ref passed">24</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>input(&#39;#username&#39;, &#39;b&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11.0.call.0.24">21:26:40.532 &gt;&gt; {&quot;id&quot;:104,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;var e = document.querySelector(\&quot;#username\&quot;); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}&quot;,&quot;returnByValue&quot;:true}}
+21:26:40.533 &lt;&lt; {&quot;id&quot;:104,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;number&quot;,&quot;value&quot;:0,&quot;description&quot;:&quot;0&quot;}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.533 &gt;&gt; {&quot;id&quot;:105,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;b&quot;,&quot;windowsVirtualKeyCode&quot;:66}}
+21:26:40.533 &lt;&lt; {&quot;id&quot;:105,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.533 &gt;&gt; {&quot;id&quot;:106,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;b&quot;,&quot;windowsVirtualKeyCode&quot;:66}}
+21:26:40.534 &lt;&lt; {&quot;id&quot;:106,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.534 &gt;&gt; {&quot;id&quot;:107,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;b&quot;,&quot;windowsVirtualKeyCode&quot;:66}}
+21:26:40.535 &lt;&lt; {&quot;id&quot;:107,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.535 &lt;&lt; {&quot;method&quot;:&quot;Page.loadEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:236.349981},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.11.0.call">
+    <div class="step-container" id="0.11.0.call.0.25">
+      <div class="step-ref passed">25</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>input(&#39;#password&#39;, &#39;aa&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11.0.call.0.25">21:26:40.535 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.535 &gt;&gt; {&quot;id&quot;:108,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;var e = document.querySelector(\&quot;#password\&quot;); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}&quot;,&quot;returnByValue&quot;:true}}
+21:26:40.536 &lt;&lt; {&quot;id&quot;:108,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;number&quot;,&quot;value&quot;:0,&quot;description&quot;:&quot;0&quot;}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.536 &gt;&gt; {&quot;id&quot;:109,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+21:26:40.537 &lt;&lt; {&quot;id&quot;:109,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.537 &gt;&gt; {&quot;id&quot;:110,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+21:26:40.537 &lt;&lt; {&quot;id&quot;:110,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.537 &gt;&gt; {&quot;id&quot;:111,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+21:26:40.538 &lt;&lt; {&quot;id&quot;:111,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.538 &gt;&gt; {&quot;id&quot;:112,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;rawKeyDown&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+21:26:40.538 &lt;&lt; {&quot;id&quot;:112,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.538 &gt;&gt; {&quot;id&quot;:113,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;char&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+21:26:40.539 &lt;&lt; {&quot;id&quot;:113,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.539 &gt;&gt; {&quot;id&quot;:114,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Input.dispatchKeyEvent&quot;,&quot;params&quot;:{&quot;modifiers&quot;:0,&quot;type&quot;:&quot;keyUp&quot;,&quot;text&quot;:&quot;a&quot;,&quot;windowsVirtualKeyCode&quot;:65}}
+21:26:40.539 &lt;&lt; {&quot;id&quot;:114,&quot;result&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.11.0.call">
+    <div class="step-container" id="0.11.0.call.0.26">
+      <div class="step-ref passed">26</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>submit().click(&quot;.form-signin button&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">95</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11.0.call.0.26">21:26:40.539 &gt;&gt; {&quot;id&quot;:115,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.querySelector(\&quot;.form-signin button\&quot;).click()&quot;,&quot;returnByValue&quot;:true}}
+21:26:40.540 &lt;&lt; {&quot;id&quot;:115,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;undefined&quot;}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.540 &lt;&lt; {&quot;method&quot;:&quot;Page.frameScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;,&quot;delay&quot;:0,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.540 &lt;&lt; {&quot;method&quot;:&quot;Page.frameRequestedNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;,&quot;reason&quot;:&quot;formSubmissionPost&quot;,&quot;url&quot;:&quot;http://localhost:8080/login&quot;,&quot;disposition&quot;:&quot;currentTab&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.541 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.542 &lt;&lt; {&quot;method&quot;:&quot;Page.frameClearedScheduledNavigation&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.611 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.611 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;,&quot;loaderId&quot;:&quot;440EE652A7AA3AF0C901A64152A219BF&quot;,&quot;url&quot;:&quot;http://localhost:8080/user/2&quot;,&quot;domainAndRegistry&quot;:&quot;&quot;,&quot;securityOrigin&quot;:&quot;http://localhost:8080&quot;,&quot;mimeType&quot;:&quot;text/html&quot;,&quot;adFrameStatus&quot;:{&quot;adFrameType&quot;:&quot;none&quot;},&quot;secureContextType&quot;:&quot;SecureLocalhost&quot;,&quot;crossOriginIsolatedContextType&quot;:&quot;NotIsolated&quot;,&quot;gatedAPIFeatures&quot;:[]},&quot;type&quot;:&quot;Navigation&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.611 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:6,&quot;origin&quot;:&quot;http://localhost:8080&quot;,&quot;name&quot;:&quot;&quot;,&quot;uniqueId&quot;:&quot;-7505952340068457945.-6040657404876728102&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;}}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.633 &lt;&lt; {&quot;method&quot;:&quot;Runtime.exceptionThrown&quot;,&quot;params&quot;:{&quot;timestamp&quot;:1.710188800633459e+12,&quot;exceptionDetails&quot;:{&quot;exceptionId&quot;:2,&quot;text&quot;:&quot;Uncaught&quot;,&quot;lineNumber&quot;:5,&quot;columnNumber&quot;:20,&quot;scriptId&quot;:&quot;17&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/mdInclude.js&quot;,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;17&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/mdInclude.js&quot;,&quot;lineNumber&quot;:5,&quot;columnNumber&quot;:20}]},&quot;exception&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;className&quot;:&quot;ReferenceError&quot;,&quot;description&quot;:&quot;ReferenceError: marked is not defined\n    at http://localhost:8080/js/mdInclude.js:6:21&quot;,&quot;objectId&quot;:&quot;5249185616630329289.6.1&quot;,&quot;preview&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;description&quot;:&quot;ReferenceError: marked is not defined\n    at http://localhost:8080/js/mdInclude.js:6:21&quot;,&quot;overflow&quot;:false,&quot;properties&quot;:[{&quot;name&quot;:&quot;stack&quot;,&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;ReferenceError: marked is not defined\n    at http://localhost:8080/js/mdInclude.js:6:21&quot;},{&quot;name&quot;:&quot;message&quot;,&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;marked is not defined&quot;}]}},&quot;executionContextId&quot;:6}},&quot;sessionId&quot;:&quot;49264A937C0 ...
+21:26:40.633 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Opening Web Socket...&quot;}],&quot;executionContextId&quot;:6,&quot;timestamp&quot;:1.710188800633678e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;Client._connect&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:291,&quot;columnNumber&quot;:21},{&quot;functionName&quot;:&quot;Client.connect&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:278,&quot;columnNumber&quot;:24},{&quot;functionName&quot;:&quot;initialize&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:35,&quot;columnNumber&quot;:27},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:199,&quot;columnNumber&quot;:11}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.633 [console] Opening Web Socket...
+21:26:40.633 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Connected to WS &#39;ws://localhost:8080/ws&#39;&quot;}],&quot;executionContextId&quot;:6,&quot;timestamp&quot;:1.710188800633788e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;initialize&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:44,&quot;columnNumber&quot;:20},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:199,&quot;columnNumber&quot;:11}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.633 [console] Connected to WS &#39;ws://localhost:8080/ws&#39;
+21:26:40.633 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;sending&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;//localhost:8080/user/unread&quot;},{&quot;type&quot;:&quot;object&quot;,&quot;className&quot;:&quot;Object&quot;,&quot;description&quot;:&quot;Object&quot;,&quot;objectId&quot;:&quot;5249185616630329289.6.2&quot;,&quot;preview&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;description&quot;:&quot;Object&quot;,&quot;overflow&quot;:false,&quot;properties&quot;:[{&quot;name&quot;:&quot;method&quot;,&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;GET&quot;},{&quot;name&quot;:&quot;headers&quot;,&quot;type&quot;:&quot;object&quot;,&quot;value&quot;:&quot;Object&quot;}]}}],&quot;executionContextId&quot;:6,&quot;timestamp&quot;:1.710188800633828e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;go&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:94,&quot;columnNumber&quot;:12},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:203,&quot;columnNumber&quot;:12}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.633 [console] sending
+21:26:40.633 [console] //localhost:8080/user/unread
+21:26:40.634 &lt;&lt; {&quot;method&quot;:&quot;Page.domContentEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:236.448692},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.634 &lt;&lt; {&quot;method&quot;:&quot;Page.loadEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:236.449003},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.11.0.call">
+    <div class="step-container" id="0.11.0.call.0.27">
+      <div class="step-ref passed">27</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>waitForUrl(baseUrl + &#39;/user/2&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11.0.call.0.27">21:26:40.634 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.634 &gt;&gt; {&quot;id&quot;:116,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.location.href&quot;,&quot;returnByValue&quot;:true}}
+21:26:40.635 &lt;&lt; {&quot;id&quot;:116,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;http://localhost:8080/user/2&quot;}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+    </div>    
+  </div>
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># los mensajes se cargan via ajax, y tardan un poquito</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>delay(500)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">504</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.13">21:26:40.644 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Web Socket Opened...&quot;}],&quot;executionContextId&quot;:6,&quot;timestamp&quot;:1.710188800644779e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:441,&quot;columnNumber&quot;:30}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.644 [console] Web Socket Opened...
+21:26:40.644 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;&gt;&gt;&gt; CONNECT\nX-CSRF-TOKEN:3689ac37-eb7f-4b5f-9bc7-ccc8f6e3488f\naccept-version:1.2,1.1,1.0\nheart-beat:10000,10000\n\n\u0000&quot;}],&quot;executionContextId&quot;:6,&quot;timestamp&quot;:1.710188800644847e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;Client._transmit&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:188,&quot;columnNumber&quot;:21},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:445,&quot;columnNumber&quot;:33}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.644 [console] &gt;&gt;&gt; CONNECT
+X-CSRF-TOKEN:3689ac37-eb7f-4b5f-9bc7-ccc8f6e3488f
+accept-version:1.2,1.1,1.0
+heart-beat:10000,10000
+
+ 
+21:26:40.646 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;&lt;&lt;&lt; CONNECTED\nversion:1.2\nheart-beat:0,0\nuser-name:b\n\n\u0000&quot;}],&quot;executionContextId&quot;:6,&quot;timestamp&quot;:1.710188800646751e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:339,&quot;columnNumber&quot;:30}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.646 [console] &lt;&lt;&lt; CONNECTED
+version:1.2
+heart-beat:0,0
+user-name:b
+
+ 
+21:26:40.646 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;connected to server undefined&quot;}],&quot;executionContextId&quot;:6,&quot;timestamp&quot;:1.710188800646809e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:349,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.646 [console] connected to server undefined
+21:26:40.646 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Connected to &quot;},{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;ws://localhost:8080/ws&quot;},{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot; - subscribing:&quot;}],&quot;executionContextId&quot;:6,&quot;timestamp&quot;:1.71018880064683e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:37,&quot;columnNumber&quot;:24},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.646 [console] Connected to 
+21:26:40.646 [console] ws://localhost:8080/ws
+21:26:40.646 [console]  - subscribing:
+21:26:40.646 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot; ... to /user/queue/updates ...&quot;}],&quot;executionContextId&quot;:6,&quot;timestamp&quot;:1.710188800646845e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:40,&quot;columnNumber&quot;:28},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.646 [console]  ... to /user/queue/updates ...
+21:26:40.646 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;&gt;&gt;&gt; SUBSCRIBE\nid:sub-0\ndestination:/user/queue/updates\n\n\u0000&quot;}],&quot;executionContextId&quot;:6,&quot;timestamp&quot;:1.710188800646867e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;Client.debug&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:173,&quot;columnNumber&quot;:107},{&quot;functionName&quot;:&quot;Client._transmit&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:188,&quot;columnNumber&quot;:21},{&quot;functionName&quot;:&quot;Client.subscribe&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:532,&quot;columnNumber&quot;:17},{&quot;functionName&quot;:&quot;subscribe&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:52,&quot;columnNumber&quot;:27},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:41,&quot;columnNumber&quot;:23},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.646 [console] &gt;&gt;&gt; SUBSCRIBE
+id:sub-0
+destination:/user/queue/updates
+
+ 
+21:26:40.646 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;log&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Hopefully subscribed to /user/queue/updates&quot;}],&quot;executionContextId&quot;:6,&quot;timestamp&quot;:1.710188800646892e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;subscribe&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:54,&quot;columnNumber&quot;:20},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/iw.js&quot;,&quot;lineNumber&quot;:41,&quot;columnNumber&quot;:23},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;12&quot;,&quot;url&quot;:&quot;http://localhost:8080/js/stomp.js&quot;,&quot;lineNumber&quot;:362,&quot;columnNumber&quot;:42}]}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:40.646 [console] Hopefully subscribed to /user/queue/updates
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref failed">15</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>match html(&#39;#mensajes&#39;) contains mensaje</span>
+      </div>
+    </div>
+    <div class="time-cell failed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.15">21:26:41.141 &gt;&gt; {&quot;id&quot;:117,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.querySelector(\&quot;#mensajes\&quot;)[&#39;outerHTML&#39;]&quot;,&quot;returnByValue&quot;:true}}
+21:26:41.142 &lt;&lt; {&quot;id&quot;:117,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;&lt;div class=\&quot;py-5 row\&quot; id=\&quot;mensajes\&quot;&gt;\n            &lt;/div&gt;&quot;}},&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;}
+21:26:41.143 classpath:external/ws.feature:15
+Then match html(&#39;#mensajes&#39;) contains mensaje
+match failed: CONTAINS
+  $ | actual does not contain expected (STRING:STRING)
+  &#39;&lt;div class=&quot;py-5 row&quot; id=&quot;mensajes&quot;&gt;
+            &lt;/div&gt;&#39;
+  &#39;el número secreto es el 683&#39;
+
+classpath:external/ws.feature:15
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref skipped">16</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>driver.screenshot()</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  <div class="embed" data-parent="0.16"><img src="external.ws_1_1710188801211.png"/></div>
+
+  <div class="preformatted" data-parent="0.16">21:26:41.143 &gt;&gt; {&quot;id&quot;:118,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Page.captureScreenshot&quot;}
+21:26:41.210 &lt;&lt; {&quot;id&quot;:118,&quot;result&quot;:{&quot;data&quot;:&quot;iVBORw0KGgoAAAANSUhEUgAAA6EAAANyCAYAAACT8c2rAAAAAXNSR0IArs4c6QAAIABJREFUeJzs3X1UVFeeL/zv4VWjpstWA5JkaNFAQj8d0yRgtPtWx/RA0rdDxhHIM2LoiXaxHruN03MTRCWldz0BUQnds6ZNT3KHSpsbI9wIOI5kJgam1VSmJcHI6ORJTTAKTVQExViiIlBUneePejvn1Kk3XqoAv5+1aiXU2Wef39nlEn+1f3sfYWBwSAQRERERERFRCESEOwAiIiIiIiK6czAJJSIiIiIiopBhEkpEREREREQhwySUiIiIiIiIQoZJKBEREREREYUMk1AiIiIiIiIKGSahREREREREFDJMQomIiIiIiChkmIQSERERERFRyESFOwAiIiIiIqKpzmKx4OaNGxgcGoQohjua0REEIDYmFjNnzUJ0dHTw5w8MDk3yISAiIiIiIpq4LBYLrl7txd2z7sb0u+6CIAjhDmlURFHE7f5+9N3ow5w5c4NORFmOS0RERERENI5u3riBu2fdjbtmzJj0CSgACIKAu2bMwN2z7sbNGzeCPp9JKBERERER0TgaHBrE9LvuCncYY276XXdhcGgw6POYhBIREREREY0jUcSUmAFVEgRhROtbmYQSERERERFRyIQ2CbWcA6zdIb0kERERERERTRzjl4RazgHWqxBu/AOier6PiOtbEXv1u4jufQyR10sQ060BBj8DLB1MTImIiIiIiO4QY/+cUHEQsHyJ2G/SZW9H3G4HhJkQMICo268DGEDstWX2U8QIDN3zNRAxGxCCf84MERERERERTQ5jm4RaOhDT+yAEQQQQAVvE/bBGZWH4rhcRGdEPWK8AQgzEiHiIll5EDb6JSMsxCLiK2Cv3wSb8GSz3mAAhZkzDIiIiIiIioolhjJJQG9DfiKib2yAIImwRiRia9R4ihj5CzO3NiB6qUj9NjMbQt/4PxOFuxNwuQYT4NSJ6c2Gb9RIw7Ymx ...
+21:26:41.212 &gt;&gt; {&quot;id&quot;:119,&quot;sessionId&quot;:&quot;49264A937C0787015107931FC7FE1EE2&quot;,&quot;method&quot;:&quot;Target.closeTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;4D99AE77F72711F810816B42C836C717&quot;}}
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,221 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Estilos para las guías */
+
+/* BarraBusqueda BEGIN */
+.nuevaGuia {
+    position: absolute;
+    top: 16%;
+    left: 10%;
+    height: 70px;
+    width: 70px;
+}
+
+.buscaGuia {
+    position: absolute;
+    top: 30%;
+    left: 43%;
+    height: 70px;
+    width: 1000px;
+    transform: translate(-50%, 0%);
+
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;		
+}
+
+.buscaGuia input[type="text"] {
+    box-sizing: content-box;
+    height: 50px;
+    width: 220px;
+    padding: 10px;
+
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+
+.buscaPosicion {
+    position: relative;
+    left: 10px;
+    height: 50px;
+    width: 250px;
+    
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    z-index: 1;	
+}
+
+.buscaPosicion button[type="submit"]{
+    width: 70px; 
+	height: 70px; 
+
+	background-color: #000033;
+    transition: border-color 0.2s ease-out;
+}
+
+.buscaPosicion button[type="submit"]:hover{
+    border: 5px solid #ffff00;
+}
+
+.bordeAmarillo {
+    border: 5px solid #ffff00;
+}
+
+.buscaPosicion button[type="submit"] img { 
+	width: 50px; 
+	height: 50px; 
+    background-color: #000033;
+}
+
+.buscaEtiquetas {
+    position: relative;
+    left: 10px;
+    height: 50px;
+    width: 300px;
+    
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    z-index: 1;	
+}
+
+.buscaEtiquetas button[type="submit"]{
+    width: 125px; 
+	height: 70px; 
+
+    font-size: 20px;
+    color:white;
+	background-color: #000033;
+    transition: border-color 0.2s ease-out;
+}
+
+.buscaEtiquetas button[type="submit"]:hover{
+    border: 5px solid #ffff00;
+}
+
+.ordenGuia {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    height: 70px;
+    width: 80%;
+    transform: translate(-50%, 0%);
+
+	background-color: #0a0a26;
+
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 5fr;
+    grid-gap: 2px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.ordenGuia h1 {
+    font-size: 20px;
+    color:white;
+    text-align: center;
+}
+
+.ordenGuia button[type="submit"]{
+    width: 170px; 
+	height: 70px; 
+    
+
+    font-size: 20px;
+    color:white;
+	background-color: #000033;
+    transition: border-color 0.2s ease-out;
+}
+
+.ordenGuia button[type="submit"]:hover{
+    border: 5px solid #ffff00;
+}
+/* BarraBusqueda END */
+
+.guias {
+	position : absolute;
+	left: 50%;
+	top: 55%;
+	width: 80%;
+	transform: translate(-50%, 0%);
+}
+
+.guia {
+	position:relative;
+	height: 150px;
+
+	background-color: #FFD700;
+    border-radius: 1vw;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+	display: grid;
+	grid-template-columns: 1fr 1fr 5fr;
+
+	transition: transform 0.26s ease;
+}
+
+.guia:hover{
+	background-color: #debb02;
+	transform: scale(1.1) translate(1px, 1px);
+}
+
+.guia h1 {
+	position: relative;
+	top: 5px;
+	left: 0px;
+	font-size: 35px;
+}
+
+.guia h2 {
+    position: relative;
+	top: 35%;
+	left: 35%;
+	font-size: 35px;
+}
+
+.guia p {
+    top: -25px;
+    margin-top: 0px;
+    color: #666666;
+}
+
+.guia img {
+	position: relative;
+	font-size: 35px;
+}
+
+.tituloGuia {
+	position:relative;
+    top: 10%;
+    left: 3%;
+	height: 100%;
+	width: 100%;
+
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+}
+
+  
