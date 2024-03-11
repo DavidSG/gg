@@ -6,15 +6,19 @@ import javax.persistence.Id;
 @Entity
 public class Guia {
     private long id;
-    private double puntuacion;
     private String titulo;
-    private String fecha;
-    private String texto;
     private String autor;
-    private String elo;
+    private String fecha;
+    private double puntuacion;
+
     private String campeon;
-    private String items;
+    private String posiciones;
+    private String etiquetas;
+
+    private String elo;
     private String hechizos;
+    private String items;
+    private String texto;    
 
     @Id
     public long getId() {
@@ -23,6 +27,24 @@ public class Guia {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    // Getter and setter for 'posiciones'
+    public String getPosiciones() {
+        return posiciones;
+    }
+
+    public void setPosiciones(String posiciones) {
+        this.posiciones = posiciones;
+    }
+
+    // Getter and setter for 'posiciones'
+    public String getEtiquetas() {
+        return etiquetas;
+    }
+
+    public void setEtiquetas(String etiquetas) {
+        this.etiquetas = etiquetas;
     }
 
      // Getter and setter for 'puntuacion'

@@ -16,12 +16,41 @@
 		<div th:insert="./fragments/sidebar"></div>
 		<!-- SIDEBAR -->
 		
-		<div class = "searchBar">
-			<form th:action="@{/search}" method="get">
-				<input type="text" name="query" placeholder="Search..."/>
-				<button type="submit">Search</button>
-			</form>	
-		</div>
+			
+		<form id = "searchFormId" th:action="@{/searchCampeones}" method="get" class = "searchBar">
+
+			<input id="nombreId" type="text" placeholder="Busca un campeon " name="nombre" th:value="${nombre}" />
+
+			<div class = "buscaPosicion">	
+
+				<button type="submit" name="posiciones" value="" th:class="${posiciones eq '' ? 'bordeAmarillo' : ''}">
+					<img th:src="@{/img/posiciones/all.svg}">
+				</button>
+	
+				<button type="submit" name="posiciones" value="top" th:class="${posiciones eq 'top' ? 'bordeAmarillo' : ''}">
+					<img th:src="@{/img/posiciones/top.svg}">
+				</button>
+	
+				<button type="submit" name="posiciones" value="jgl" th:class="${posiciones eq 'jgl' ? 'bordeAmarillo' : ''}">
+					<img th:src="@{/img/posiciones/jgl.svg}">
+				</button>
+	
+				<button type="submit" name="posiciones" value="mid" th:class="${posiciones eq 'mid' ? 'bordeAmarillo' : ''}">
+					<img th:src="@{/img/posiciones/mid.svg}">
+				</button>
+	
+				<button type="submit" name="posiciones" value="bot" th:class="${posiciones eq 'bot' ? 'bordeAmarillo' : ''}">
+					<img th:src="@{/img/posiciones/bot.svg}">
+				</button>
+	
+				<button type="submit" name="posiciones" value="sup" th:class="${posiciones eq 'sup' ? 'bordeAmarillo' : ''}">
+					<img th:src="@{/img/posiciones/sup.svg}">
+				</button>
+
+			</div>
+			
+		</form>	
+		
 
 		<!-- CAMPEONES -->	
         <div class="campeonGrid">
@@ -34,5 +63,18 @@
 		</div>
 		<!-- CAMPEONES -->
     </main>
+
+	<script>
+
+		const inputField = document.getElementById('nombreId');
+		inputField.focus();
+
+		const form = document.getElementById('searchFormId');
+		
+		inputField.addEventListener('input', function updateOutput() {
+			form.submit();
+		});
+
+	</script>
 </body>
 </html>

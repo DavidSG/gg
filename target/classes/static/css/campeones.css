@@ -1,53 +1,64 @@
-/* CHAMPION BEGIN */
+/* BarraBusqueda BEGIN */
 .searchBar {
     position: absolute;
     top: 20%;
-    left: 41%;
-    transform: translate(-50%, 0%);
+    left: 50%;
     height: 70px;
-    width: 750px;
-    grid-gap: 2px;
-    z-index: -5;			
+    width: 1000px;
+    transform: translate(-50%, 0%);
+
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2px;		
 }
 
 .searchBar input[type="text"] {
     box-sizing: content-box;
-    height: 60px;
-    width: 550px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-right: 5px;
-    font-size: 20px;
-}
-
-.searchBar button[type="submit"] {
-    box-sizing: content-box;
-    height: 60px;
-    width: 70px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-right: 5px;
-}
-
-.buscaCampeones[type="text"] {
-    height: 40px;
-    width: 550px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-right: 5px;
-    font-size: 20px;
-}
-
-.botonBusqueda {
-    position: relative;
-    top: 6px;
-    left: -70px;
-    width: 50px; 
     height: 50px;
+    width: 220px;
+    padding: 10px;
+
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    font-size: 20px;
 }
+
+
+
+.buscaPosicion {
+    position: relative;
+    left: 10px;
+    height: 50px;
+    width: 250px;
+    
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    z-index: 1;	
+}
+
+.buscaPosicion button[type="submit"]{
+    width: 70px; 
+	height: 70px; 
+
+	background-color: #000033;
+    transition: border-color 0.2s ease-out;
+}
+
+.buscaPosicion button[type="submit"]:hover{
+    border: 5px solid #ffff00;
+}
+
+.bordeAmarillo {
+    border: 5px solid #ffff00;
+}
+
+.buscaPosicion button[type="submit"] img { 
+	width: 50px; 
+	height: 50px; 
+    background-color: #000033;
+}
+/* BarraBusqueda END */
 
 .campeonGrid {
     position: absolute;
@@ -104,3 +115,4 @@
     font-size: 25px;;
     color: yellow;
 }
+

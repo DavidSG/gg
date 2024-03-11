@@ -60,14 +60,22 @@ public class RootController {
         return "guias";
     }
 
-    @GetMapping("/search")
-    public String index(@RequestParam String query, Model model, HttpSession session) {
-        List<Campeon> cs = entityManager.createQuery(
-                "SELECT c FROM Campeon c WHERE c.nombre LIKE LOWER(:nombre)", Campeon.class)
-                .setParameter("nombre", "%" + query + "%")
-                .getResultList();
-        model.addAttribute("campeones", cs);
-        return "campeones";
+   
+
+    @GetMapping("/searchGuias")
+    public String index(@RequestParam String campeon, @RequestParam(defaultValue = "") String posiciones,  
+    @RequestParam(defaultValue = "") String etiquetas, Model model, HttpSession session) {
+        List<Guia> gs = entityManager.createQuery(
+            "SELECT g FROM Guia g WHERE LOWER(g.campeon) LIKE LOWER(:campeon) AND g.posiciones LIKE :posiciones AND g.etiquetas LIKE :etiquetas", Guia.class)
+            .setParameter("campeon", "%" + campeon + "%")
+            .setParameter("posiciones", "%" + posiciones + "%")
+            .setParameter("etiquetas", "%" + etiquetas + "%")
+            .getResultList();
+        model.addAttribute("guias", gs);
+        model.addAttribute("campeon", campeon);
+        model.addAttribute("posiciones", posiciones);
+        model.addAttribute("etiquetas", etiquetas);
+        return "guias";
     }
 
     @GetMapping("/{id}")
@@ -81,6 +89,19 @@ public class RootController {
     public String campeones(Model model, String userInput) {
         List<Campeon> cs = entityManager.createQuery("SELECT c FROM Campeon c").getResultList();
         model.addAttribute("campeones", cs);
+        return "campeones";
+    }
+
+    @GetMapping("/searchCampeones")
+    public String searchCampeones(@RequestParam String nombre, @RequestParam(defaultValue = "") String posiciones, Model model, HttpSession session) {
+        List<Campeon> cs = entityManager.createQuery(
+            "SELECT c FROM Campeon c WHERE LOWER(c.nombre) LIKE LOWER(:nombre) AND c.posiciones LIKE :posiciones", Campeon.class)
+            .setParameter("nombre", "%" + nombre + "%")
+            .setParameter("posiciones", "%" + posiciones + "%")
+            .getResultList();
+        model.addAttribute("campeones", cs);
+        model.addAttribute("nombre", nombre);
+        model.addAttribute("posiciones", posiciones);
         return "campeones";
     }
 

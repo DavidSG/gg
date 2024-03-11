@@ -21,13 +21,105 @@ main {
 }
 
 /* Estilos para las guías */
-.guia {
-	position:relative;
+
+/* BarraBusqueda BEGIN */
+.searchBar {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    height: 70px;
+    width: 1000px;
+    transform: translate(-50%, 0%);
+
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr ;
+    grid-gap: 2px;		
+}
+
+.searchBar input[type="text"] {
+    box-sizing: content-box;
+    height: 50px;
+    width: 220px;
+    padding: 10px;
+
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+
+.buscaPosicion {
+    position: relative;
+    left: 10px;
+    height: 50px;
+    width: 250px;
+    
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    z-index: 1;	
+}
+
+.buscaPosicion button[type="submit"]{
+    width: 70px; 
+	height: 70px; 
+
+	background-color: #000033;
+    transition: border-color 0.2s ease-out;
+}
+
+.buscaPosicion button[type="submit"]:hover{
+    border: 5px solid #ffff00;
+}
+
+.bordeAmarillo {
+    border: 5px solid #ffff00;
+}
+
+.buscaPosicion button[type="submit"] img { 
+	width: 50px; 
+	height: 50px; 
+    background-color: #000033;
+}
+
+.buscaEtiquetas {
+    position: relative;
+    left: 10px;
+    height: 50px;
+    width: 300px;
+    
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    z-index: 1;	
+}
+
+.buscaEtiquetas button[type="submit"]{
+    width: 150px; 
+	height: 70px; 
+
+    font-size: 20px;
+    color:white;
+	background-color: #000033;
+    transition: border-color 0.2s ease-out;
+}
+
+.buscaEtiquetas button[type="submit"]:hover{
+    border: 5px solid #ffff00;
+}
+/* BarraBusqueda END */
+
+.guias {
+	position : absolute;
 	left: 50%;
-	height: 150px;
+	top: 35%;
 	width: 80%;
 	transform: translate(-50%, 0%);
-	
+}
+
+.guia {
+	position:relative;
+	height: 150px;
+
 	background-color: #FFD700;
     border-radius: 1vw;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -35,6 +127,7 @@ main {
     margin-bottom: 1vw;
 	display: grid;
 	grid-template-columns: 1fr 1fr 5fr;
+
 	transition: transform 0.26s ease;
 }
 
@@ -78,3 +171,5 @@ main {
 	display: grid;
 	grid-template-rows: 1fr 1fr;
 }
+
+  
