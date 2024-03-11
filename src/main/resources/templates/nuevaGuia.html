@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/fragments/busqueda.css}">
     <link rel="stylesheet" th:href="@{/css/nuevaGuia.css}">
     <title>Guías</title>
 </head>
@@ -17,9 +18,108 @@
 		<!-- SIDEBAR -->
 
         <div class = "contenido">
-            <label for="titulo">Título de la Guía:</label>
-            <input type="text" id="titulo" name="titulo">
+            <div class="nuevoCampo">
+                <h1> 1. Titulo de la guia </h1>
+                <input type="text" id="titulo" name="titulo">
+            </div>
+            
+            <div class="nuevoCampo">
+                <h1> 2. Selecciona etiquetas </h1>
+                <div class = "buscaEtiquetas">	
+    
+                    <button id = "campeon">
+                        CAMPEON
+                    </button>
+        
+                    <button id = "posicion">
+                        POSICION
+                    </button>
+
+                    <button id = "general">
+                        GENERAL
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="nuevoCampo">
+                <h1> 3. Selecciona posiciones </h1>
+                <div class = "buscaPosicion">	
+                    
+                    <button id="all">
+                        <img th:src="@{/img/posiciones/all.svg}">
+                    </button>
+                    
+                    <button id="top">
+                        <img th:src="@{/img/posiciones/top.svg}">
+                    </button>
+        
+                    <button id="jgl">
+                        <img th:src="@{/img/posiciones/jgl.svg}">
+                    </button>
+        
+                    <button id="mid">
+                        <img th:src="@{/img/posiciones/mid.svg}">
+                    </button>
+        
+                    <button id="bot">
+                        <img th:src="@{/img/posiciones/bot.svg}">
+                    </button>
+        
+                    <button id="sup">
+                        <img th:src="@{/img/posiciones/sup.svg}">
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="nuevoCampo">
+                <h1> 4. Selecciona campeon </h1>
+                <div th:each="campeon : ${campeones}" class="campeon">
+				<div class="campeonImagen">
+					<img th:src="@{/img/campeones/__${campeon.nombre}__.png}" />
+				</div>
+				<div class="campeonTexto" th:text="${#strings.capitalize(campeon.nombre)}">Campeon Name</div>
+			</div>
+                
+            </div>
+
         </div>
+
+        <script>
+            
+            var etiquetas = ["campeon", "posicion", "general"];
+
+            for (var i = 0; i < etiquetas.length; i++) {
+                var element = document.getElementById(etiquetas[i]);
+                element.addEventListener('click', function() {
+                    if (this.classList.contains('bordeAmarillo')) {
+                        this.classList.remove('bordeAmarillo');
+                    }
+                    else {
+                        this.classList.add('bordeAmarillo');
+                    }
+                
+                });
+            }
+
+            var posiciones = ["all", "top", "jgl", "mid", "bot", "sup"];
+
+            for (var i = 0; i < posiciones.length; i++) {
+                var element = document.getElementById(posiciones[i]);
+                element.addEventListener('click', function() {
+                    if (this.classList.contains('bordeAmarillo')) {
+                        this.classList.remove('bordeAmarillo');
+                    }
+                    else {
+                        this.classList.add('bordeAmarillo');
+                    }
+                
+                });
+            }
+            
+        </script>
+            
 		
     </main>
 </body>

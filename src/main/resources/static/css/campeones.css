@@ -89,8 +89,8 @@
     transition-duration: 250ms;	
 }
 .campeon:hover {
-     transform: scale(1.1);
-     border-color: yellow;
+    transform: scale(1.1);
+    border-color: yellow;
 }
 
 .campeonImagen {
