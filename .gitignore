@@ -1,0 +1,7 @@
+*.class
+*/.classpath
+*/.settings/
+*/.project
+*/target/
+*.log
+src/test/java/karate-config.js
