@@ -16,58 +16,74 @@
 		<div th:insert="./fragments/sidebar"></div>
 		<!-- SIDEBAR -->
 
-		<form id = "searchFormId" th:action="@{/searchGuias}" method="get" class = "searchBar">
+		<form id = "searchFormId" th:action="@{/guias}" method="get">
 
-			<input id="nombreId" type="text" placeholder="Busca un campeon " name="campeon" th:value="${nombre}" />
+			<div class = "buscaGuia">
 
-			<div class = "buscaPosicion">	
+				<input id="nombreId" type="text" placeholder="Busca un campeon " name="campeon" th:value="${campeon}" />
 
-				<button type="submit" name="posiciones" value="" th:class="${posiciones eq '' ? 'bordeAmarillo' : ''}">
-					<img th:src="@{/img/posiciones/all.svg}">
-				</button>
-	
-				<button type="submit" name="posiciones" value="top" th:class="${posiciones eq 'top' ? 'bordeAmarillo' : ''}">
-					<img th:src="@{/img/posiciones/top.svg}">
-				</button>
-	
-				<button type="submit" name="posiciones" value="jgl" th:class="${posiciones eq 'jgl' ? 'bordeAmarillo' : ''}">
-					<img th:src="@{/img/posiciones/jgl.svg}">
-				</button>
-	
-				<button type="submit" name="posiciones" value="mid" th:class="${posiciones eq 'mid' ? 'bordeAmarillo' : ''}">
-					<img th:src="@{/img/posiciones/mid.svg}">
-				</button>
-	
-				<button type="submit" name="posiciones" value="bot" th:class="${posiciones eq 'bot' ? 'bordeAmarillo' : ''}">
-					<img th:src="@{/img/posiciones/bot.svg}">
-				</button>
-	
-				<button type="submit" name="posiciones" value="sup" th:class="${posiciones eq 'sup' ? 'bordeAmarillo' : ''}">
-					<img th:src="@{/img/posiciones/sup.svg}">
-				</button>
+				<div class = "buscaPosicion">	
 
+					<button type="submit" name="posiciones" value="" th:class="${posiciones eq '' ? 'bordeAmarillo' : ''}">
+						<img th:src="@{/img/posiciones/all.svg}">
+					</button>
+		
+					<button type="submit" name="posiciones" value="top" th:class="${posiciones eq 'top' ? 'bordeAmarillo' : ''}">
+						<img th:src="@{/img/posiciones/top.svg}">
+					</button>
+		
+					<button type="submit" name="posiciones" value="jgl" th:class="${posiciones eq 'jgl' ? 'bordeAmarillo' : ''}">
+						<img th:src="@{/img/posiciones/jgl.svg}">
+					</button>
+		
+					<button type="submit" name="posiciones" value="mid" th:class="${posiciones eq 'mid' ? 'bordeAmarillo' : ''}">
+						<img th:src="@{/img/posiciones/mid.svg}">
+					</button>
+		
+					<button type="submit" name="posiciones" value="bot" th:class="${posiciones eq 'bot' ? 'bordeAmarillo' : ''}">
+						<img th:src="@{/img/posiciones/bot.svg}">
+					</button>
+		
+					<button type="submit" name="posiciones" value="sup" th:class="${posiciones eq 'sup' ? 'bordeAmarillo' : ''}">
+						<img th:src="@{/img/posiciones/sup.svg}">
+					</button>
+
+				</div>
+
+				<div class = "buscaEtiquetas">	
+
+					<button type="submit" name="etiquetas" value="" th:class="${etiquetas eq '' ? 'bordeAmarillo' : ''}">
+						TODOS
+					</button>
+		
+					<button type="submit" name="etiquetas" value="campeon" th:class="${etiquetas eq 'campeon' ? 'bordeAmarillo' : ''}">
+						CAMPEON
+					</button>
+		
+					<button type="submit" name="etiquetas" value="posicion" th:class="${etiquetas eq 'posicion' ? 'bordeAmarillo' : ''}">
+						POSICION
+					</button>
+
+					<button type="submit" name="etiquetas" value="general" th:class="${etiquetas eq 'general' ? 'bordeAmarillo' : ''}">
+						GENERAL
+					</button>
+
+				</div>
+				
 			</div>
 
-			<div class = "buscaEtiquetas">	
+			<div class = "ordenGuia">
+				<h1>ORDENAR:</h1>
 
-				<button type="submit" name="etiquetas" value="" th:class="${etiquetas eq '' ? 'bordeAmarillo' : ''}">
-					TODOS
-				</button>
-	
-				<button type="submit" name="etiquetas" value="campeon" th:class="${etiquetas eq 'campeon' ? 'bordeAmarillo' : ''}">
-					CAMPEON
-				</button>
-	
-				<button type="submit" name="etiquetas" value="posicion" th:class="${etiquetas eq 'posicion' ? 'bordeAmarillo' : ''}">
-					POSICION
+				<button type="submit" name="orderBy" value="puntuacion DESC" th:class="${orderBy eq 'puntuacion DESC' ? 'bordeAmarillo' : ''}">
+					PUNTUACION
 				</button>
 
-				<button type="submit" name="etiquetas" value="general" th:class="${etiquetas eq 'general' ? 'bordeAmarillo' : ''}">
-					GENERAL
+				<button type="submit" name="orderBy" value="fecha DESC" th:class="${orderBy eq 'fecha DESC' ? 'bordeAmarillo' : ''}">
+					FECHA
 				</button>
-
 			</div>
-			
+					
 		</form>	
 
 		<div class = "guias">

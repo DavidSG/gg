@@ -54,51 +54,58 @@ public class RootController {
     }
 
     @GetMapping("/guias")
-    public String guides(Model model) {
-        List<Guia> gs = entityManager.createQuery("SELECT g FROM Guia g").getResultList();
-        model.addAttribute("guias", gs);
-        return "guias";
-    }
+    public String guias(@RequestParam(defaultValue = "") String campeon,
+            @RequestParam(defaultValue = "") String posiciones,
+            @RequestParam(defaultValue = "") String etiquetas,
+            @RequestParam(defaultValue = "") String orderBy,
+            Model model, HttpSession session) {
 
-   
+        String orderByS = "";
+        if (!orderBy.equals("")) {
+            orderByS = " ORDER BY g." + orderBy;
+        }
 
-    @GetMapping("/searchGuias")
-    public String index(@RequestParam String campeon, @RequestParam(defaultValue = "") String posiciones,  
-    @RequestParam(defaultValue = "") String etiquetas, Model model, HttpSession session) {
         List<Guia> gs = entityManager.createQuery(
-            "SELECT g FROM Guia g WHERE LOWER(g.campeon) LIKE LOWER(:campeon) AND g.posiciones LIKE :posiciones AND g.etiquetas LIKE :etiquetas", Guia.class)
-            .setParameter("campeon", "%" + campeon + "%")
-            .setParameter("posiciones", "%" + posiciones + "%")
-            .setParameter("etiquetas", "%" + etiquetas + "%")
-            .getResultList();
+                "SELECT g FROM Guia g WHERE LOWER(g.campeon) LIKE LOWER(:campeon) AND g.posiciones LIKE :posiciones AND g.etiquetas LIKE :etiquetas"
+                        + orderByS,
+                Guia.class)
+                .setParameter("campeon", "%" + campeon + "%")
+                .setParameter("posiciones", "%" + posiciones + "%")
+                .setParameter("etiquetas", "%" + etiquetas + "%")
+                .getResultList();
+
         model.addAttribute("guias", gs);
         model.addAttribute("campeon", campeon);
         model.addAttribute("posiciones", posiciones);
         model.addAttribute("etiquetas", etiquetas);
+        model.addAttribute("orderBy", orderBy);
+
         return "guias";
     }
 
-    @GetMapping("/{id}")
-    public String index(@PathVariable long id, Model model, HttpSession session) {
-        Guia g = entityManager.find(Guia.class, id);
-        model.addAttribute("guia", g);
-        return "guia";
+    @GetMapping("/misGuias")
+    public String misGuias(Model model) {
+        List<Guia> gs = entityManager.createQuery("SELECT g FROM Guia g").getResultList();
+        model.addAttribute("guias", gs);
+        return "misGuias";
+    }
+
+    @GetMapping("/nuevaGuia")
+    public String nuevaGuia(Model model) {
+
+        return "nuevaGuia";
     }
 
     @GetMapping("/campeones")
-    public String campeones(Model model, String userInput) {
-        List<Campeon> cs = entityManager.createQuery("SELECT c FROM Campeon c").getResultList();
-        model.addAttribute("campeones", cs);
-        return "campeones";
-    }
-
-    @GetMapping("/searchCampeones")
-    public String searchCampeones(@RequestParam String nombre, @RequestParam(defaultValue = "") String posiciones, Model model, HttpSession session) {
+    public String campeones(@RequestParam(defaultValue = "") String nombre,
+            @RequestParam(defaultValue = "") String posiciones,
+            Model model, HttpSession session) {
         List<Campeon> cs = entityManager.createQuery(
-            "SELECT c FROM Campeon c WHERE LOWER(c.nombre) LIKE LOWER(:nombre) AND c.posiciones LIKE :posiciones", Campeon.class)
-            .setParameter("nombre", "%" + nombre + "%")
-            .setParameter("posiciones", "%" + posiciones + "%")
-            .getResultList();
+                "SELECT c FROM Campeon c WHERE LOWER(c.nombre) LIKE LOWER(:nombre) AND c.posiciones LIKE :posiciones",
+                Campeon.class)
+                .setParameter("nombre", "%" + nombre + "%")
+                .setParameter("posiciones", "%" + posiciones + "%")
+                .getResultList();
         model.addAttribute("campeones", cs);
         model.addAttribute("nombre", nombre);
         model.addAttribute("posiciones", posiciones);

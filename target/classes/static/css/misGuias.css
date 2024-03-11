@@ -23,9 +23,17 @@ main {
 /* Estilos para las guías */
 
 /* BarraBusqueda BEGIN */
+.nuevaGuia {
+    position: absolute;
+    top: 16%;
+    left: 10%;
+    height: 70px;
+    width: 70px;
+}
+
 .buscaGuia {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 43%;
     height: 70px;
     width: 1000px;
@@ -108,7 +116,7 @@ main {
 
 .ordenGuia {
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: 50%;
     height: 70px;
     width: 80%;
@@ -149,7 +157,7 @@ main {
 .guias {
 	position : absolute;
 	left: 50%;
-	top: 45%;
+	top: 55%;
 	width: 80%;
 	transform: translate(-50%, 0%);
 }

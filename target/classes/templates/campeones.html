@@ -17,7 +17,7 @@
 		<!-- SIDEBAR -->
 		
 			
-		<form id = "searchFormId" th:action="@{/searchCampeones}" method="get" class = "searchBar">
+		<form id = "searchFormId" th:action="@{/campeones}" method="get" class = "searchBar">
 
 			<input id="nombreId" type="text" placeholder="Busca un campeon " name="nombre" th:value="${nombre}" />
 
@@ -65,7 +65,7 @@
     </main>
 
 	<script>
-
+		/*
 		const inputField = document.getElementById('nombreId');
 		inputField.focus();
 
@@ -74,6 +74,7 @@
 		inputField.addEventListener('input', function updateOutput() {
 			form.submit();
 		});
+		*/
 
 	</script>
 </body>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/nuevaGuia.css}">
+    <title>Guías</title>
+</head>
+<body>
+    <main>
+        <!-- HEADER -->
+		<div th:insert="./fragments/header"></div>
+		<!-- HEADER -->
+
+		<!-- SIDEBAR -->
+		<div th:insert="./fragments/sidebar"></div>
+		<!-- SIDEBAR -->
+
+        <div class = "contenido">
+            <label for="titulo">Título de la Guía:</label>
+            <input type="text" id="titulo" name="titulo">
+        </div>
+		
+    </main>
+</body>
+</html>

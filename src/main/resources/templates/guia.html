@@ -22,7 +22,7 @@
                 <div class = "informacionGuia">
                     <div class = "tituloGuia">
                         <h1 th:text="${guia.titulo}"></h1>
-                        <p th:text="${guia.fecha}"></p>
+                        <p th:text="${guia.autor + ' ' + guia.fecha}"></p>
                     </div>
 
                     <div class = "puntuacionGuia">
@@ -37,7 +37,7 @@
                 <img th:src="@{/img/rangos/__${guia.elo}__.png}">
             </div>
 
-            <p th:text="${'Escrita por ' + guia.autor }"></p>
+            <p></p>
 
             <div class = "guia">
 
