@@ -1,0 +1,2190 @@
+# Created at 2024-03-12T14:19:21.706
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:398)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+
+# Created at 2024-03-12T14:19:28.650
+Unexpected IOException with stream: 14:19:28.650 [main] ERROR c.intuit.karate.driver.DriverOptions - << timed out after milliseconds: 30000 - [id: 7, sessionId: 65C791F17A805F2C4E11D8D958CEC29D, method: Page.captureScreenshot]
+
+
+# Created at 2024-03-12T14:19:28.650
+Unexpected IOException with stream: 14:19:28.650 [main] ERROR com.intuit.karate - classpath:external/login.feature:15
+Given driver baseUrl + '/user/2'
+scenario [run] failed
+java.lang.RuntimeException: failed to get reply for: [id: 7, sessionId: 65C791F17A805F2C4E11D8D958CEC29D, method: Page.captureScreenshot]
+	at com.intuit.karate.driver.DevToolsDriver.sendAndWait(DevToolsDriver.java:161)
+	at com.intuit.karate.driver.DevToolsMessage.send(DevToolsMessage.java:213)
+	at com.intuit.karate.driver.DevToolsMessage.send(DevToolsMessage.java:209)
+	at com.intuit.karate.driver.DevToolsDriver.screenshot(DevToolsDriver.java:823)
+	at com.intuit.karate.driver.DevToolsDriver.screenshot(DevToolsDriver.java:801)
+	at com.intuit.karate.driver.Driver.onFailure(Driver.java:491)
+	at com.intuit.karate.core.ScenarioRuntime.execute(ScenarioRuntime.java:500)
+	at com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:402)
+	at com.intuit.karate.junit5.FeatureNode.lambda$next$1(FeatureNode.java:70)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.lambda$execute$0(DynamicTestTestDescriptor.java:53)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.api.extension.InvocationInterceptor.interceptDynamicTest(InvocationInterceptor.java:167)
+	at org.junit.jupiter.api.extension.InvocationInterceptor.interceptDynamicTest(InvocationInterceptor.java:184)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.lambda$execute$1(DynamicTestTestDescriptor.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptorCall.lambda$ofVoid$0(InvocationInterceptorChain.java:78)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.execute(DynamicTestTestDescriptor.java:60)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.execute(DynamicTestTestDescriptor.java:32)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:226)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:204)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEachOrdered(ReferencePipeline.java:601)
+	at org.junit.jupiter.engine.descriptor.DynamicContainerTestDescriptor.execute(DynamicContainerTestDescriptor.java:67)
+	at org.junit.jupiter.engine.descriptor.DynamicContainerTestDescriptor.execute(DynamicContainerTestDescriptor.java:33)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:226)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:204)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.junit.jupiter.engine.descriptor.TestFactoryTestDescriptor.lambda$invokeTestMethod$1(TestFactoryTestDescriptor.java:108)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestFactoryTestDescriptor.invokeTestMethod(TestFactoryTestDescriptor.java:95)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+
+
+# Created at 2024-03-12T14:19:28.650
+Unexpected IOException with stream: 14:19:28.650 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":8,"sessionId":"65C791F17A805F2C4E11D8D958CEC29D","method":"Target.closeTarget","params":{"targetId":"F86227DD56659173F6577684F981BB55"}}
+
+
+# Created at 2024-03-12T14:19:28.650
+Unexpected IOException with stream: 14:19:28.650 [nioEventLoopGroup-3-1] DEBUG c.i.k.http.WebSocketClientHandler - websocket closing
+
+
+# Created at 2024-03-12T14:19:28.650
+Unexpected IOException with stream: 14:19:28.650 [nioEventLoopGroup-3-1] DEBUG c.i.k.http.WebSocketClientHandler - websocket client disconnected
+
+
+# Created at 2024-03-12T14:19:28.650
+Unexpected IOException with stream: 14:19:28.650 [main] DEBUG com.intuit.karate.shell.Command - closing command: chrome_1710249508227
+
+
+# Created at 2024-03-12T14:19:28.665
+Unexpected IOException: 8,1,external.ExternalRunner,testLogin[1][2],null,failed to get reply for: [id: 7\002C sessionId: 65C791F17A805F2C4E11D8D958CEC29D\002C method: Page.captureScreenshot]\000Aclasspath:external/login.feature:14,null,failed to get reply for: [id: 7\002C sessionId: 65C791F17A805F2C4E11D8D958CEC29D\002C method: Page.captureScreenshot]\000Aclasspath:external/login.feature:14,ExternalRunner failed to get reply for: [id: 7\002C sessionId: 65C791F17A805F2C4E11D8D958CEC29D\002C method: Page.captureScreenshot]\000Aclasspath:external/login.feature:14,org.opentest4j.AssertionFailedError: \000Afailed to get reply for: [id: 7\002C sessionId: 65C791F17A805F2C4E11D8D958CEC29D\002C method: Page.captureScreenshot]\000Aclasspath:external/login.feature:14\000A
+
+
+# Created at 2024-03-12T14:19:28.665
+Unexpected IOException: 5,1,external.ExternalRunner,testLogin[1][3],null,null,null
+
+
+# Created at 2024-03-12T14:19:28.665
+Unexpected IOException with stream: 14:19:28.665 [main] INFO  com.intuit.karate - karate.env system property was: null 
+
+
+# Created at 2024-03-12T14:19:28.675
+Unexpected IOException with stream: 14:19:28.665 [main] DEBUG com.intuit.karate.shell.Command - found / verified free local port: 51839
+
+
+# Created at 2024-03-12T14:19:28.675
+Unexpected IOException with stream: 14:19:28.675 [main] WARN  c.intuit.karate.driver.DriverOptions - preferred port 9222 not available, will use: 51839
+
+
+# Created at 2024-03-12T14:19:28.675
+Unexpected IOException with stream: 14:19:28.675 [chrome_1710249568665] DEBUG c.i.k.driver.chrome_1710249568665 - command: [C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, --remote-debugging-port=51839, --no-first-run, --user-data-dir=u:\hlocal\gg\gg\target\chrome_1710249568665, --disable-popup-blocking, --remote-allow-origins=*, --incognito], working dir: target\chrome_1710249568665
+
+
+# Created at 2024-03-12T14:19:28.675
+Unexpected IOException with stream: 14:19:28.675 [main] DEBUG c.i.k.driver.chrome_1710249568665 - poll attempt #0 for port to be ready - localhost:51839
+
+
+# Created at 2024-03-12T14:19:28.691
+Unexpected IOException with stream: 14:19:28.691 [chrome_1710249508227] WARN  com.intuit.karate.shell.Command - exit code was non-zero: 1 - [C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, --remote-debugging-port=51789, --no-first-run, --user-data-dir=u:\hlocal\gg\gg\target\chrome_1710249508227, --disable-popup-blocking, --remote-allow-origins=*, --incognito] working dir: target\chrome_1710249508227
+
+
+# Created at 2024-03-12T14:19:28.939
+Unexpected IOException with stream: 14:19:28.939 [main] DEBUG c.i.k.driver.chrome_1710249568665 - poll attempt #1 for port to be ready - localhost:51839
+
+
+# Created at 2024-03-12T14:19:29.193
+Unexpected IOException with stream: 14:19:29.193 [main] DEBUG c.i.k.driver.chrome_1710249568665 - poll attempt #2 for port to be ready - localhost:51839
+
+
+# Created at 2024-03-12T14:19:29.354
+Unexpected IOException with stream: 14:19:29.353 [chrome_1710249568665-out] DEBUG c.i.k.driver.chrome_1710249568665 - 
+
+
+# Created at 2024-03-12T14:19:29.354
+Unexpected IOException with stream: 14:19:29.354 [chrome_1710249568665-out] DEBUG c.i.k.driver.chrome_1710249568665 - DevTools listening on ws://127.0.0.1:51839/devtools/browser/e1dd2ffd-0cb7-4122-985e-a5c6747541a2
+
+
+# Created at 2024-03-12T14:19:29.457
+Unexpected IOException with stream: 14:19:29.456 [main] DEBUG c.i.k.driver.chrome_1710249568665 - poll attempt #3 for port to be ready - localhost:51839
+
+
+# Created at 2024-03-12T14:19:29.531
+Unexpected IOException with stream: 14:19:29.530 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:51839/json
+1 > Host: localhost:51839
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.3.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+
+
+# Created at 2024-03-12T14:19:29.534
+Unexpected IOException with stream: 14:19:29.533 [main] DEBUG com.intuit.karate - response time in milliseconds: 2
+1 < 200
+1 < Content-Security-Policy: frame-ancestors 'none'
+1 < Content-Length: 1733
+1 < Content-Type: application/json; charset=UTF-8
+[ {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51839/devtools/page/42BF2C0376639DA25CA1528FD318B517",
+   "id": "42BF2C0376639DA25CA1528FD318B517",
+   "title": "Google Network Speech",
+   "type": "background_page",
+   "url": "chrome-extension://neajdppkdcdipfabeoofebfddakdcjhd/_generated_background_page.html",
+   "webSocketDebuggerUrl": "ws://localhost:51839/devtools/page/42BF2C0376639DA25CA1528FD318B517"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51839/devtools/page/EECA4F64A11285507D357498074D429F",
+   "id": "EECA4F64A11285507D357498074D429F",
+   "title": "Google Hangouts",
+   "type": "background_page",
+   "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html",
+   "webSocketDebuggerUrl": "ws://localhost:51839/devtools/page/EECA4F64A11285507D357498074D429F"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51839/devtools/page/2595FB9038076F7B488FBF4B4E0E6C9D",
+   "id": "2595FB9038076F7B488FBF4B4E0E6C9D",
+   "title": "Google Hangouts",
+   "type": "background_page",
+   "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html",
+   "webSocketDebuggerUrl": "ws://localhost:51839/devtools/page/2595FB9038076F7B488FBF4B4E0E6C9D"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51839/devtools/page/000EE41291D790F4E060D1D1815C9262",
+   "id": "000EE41291D790F4E060D1D1815C9262",
+   "title": "Nueva pestaña de Incógnito",
+   "type": "page",
+   "url": "chrome://newtab/",
+   "webSocketDebuggerUrl": "ws://localhost:51839/devtools/page/000EE41291D790F4E060D1D1815C9262"
+} ]
+
+
+
+# Created at 2024-03-12T14:19:29.534
+Unexpected IOException with stream: 14:19:29.534 [main] DEBUG com.intuit.karate.shell.Command - ready to accept http connections after 9 ms - http://localhost:51839/json
+
+
+# Created at 2024-03-12T14:19:29.537
+Unexpected IOException with stream: 14:19:29.537 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:51839/json
+1 > Host: localhost:51839
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.3.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+
+
+# Created at 2024-03-12T14:19:29.539
+Unexpected IOException with stream: 14:19:29.539 [main] DEBUG com.intuit.karate - response time in milliseconds: 1
+1 < 200
+1 < Content-Security-Policy: frame-ancestors 'none'
+1 < Content-Length: 1733
+1 < Content-Type: application/json; charset=UTF-8
+[ {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51839/devtools/page/42BF2C0376639DA25CA1528FD318B517",
+   "id": "42BF2C0376639DA25CA1528FD318B517",
+   "title": "Google Network Speech",
+   "type": "background_page",
+   "url": "chrome-extension://neajdppkdcdipfabeoofebfddakdcjhd/_generated_background_page.html",
+   "webSocketDebuggerUrl": "ws://localhost:51839/devtools/page/42BF2C0376639DA25CA1528FD318B517"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51839/devtools/page/EECA4F64A11285507D357498074D429F",
+   "id": "EECA4F64A11285507D357498074D429F",
+   "title": "Google Hangouts",
+   "type": "background_page",
+   "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html",
+   "webSocketDebuggerUrl": "ws://localhost:51839/devtools/page/EECA4F64A11285507D357498074D429F"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51839/devtools/page/2595FB9038076F7B488FBF4B4E0E6C9D",
+   "id": "2595FB9038076F7B488FBF4B4E0E6C9D",
+   "title": "Google Hangouts",
+   "type": "background_page",
+   "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html",
+   "webSocketDebuggerUrl": "ws://localhost:51839/devtools/page/2595FB9038076F7B488FBF4B4E0E6C9D"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51839/devtools/page/000EE41291D790F4E060D1D1815C9262",
+   "id": "000EE41291D790F4E060D1D1815C9262",
+   "title": "Nueva pestaña de Incógnito",
+   "type": "page",
+   "url": "chrome://newtab/",
+   "webSocketDebuggerUrl": "ws://localhost:51839/devtools/page/000EE41291D790F4E060D1D1815C9262"
+} ]
+
+
+
+# Created at 2024-03-12T14:19:29.578
+Unexpected IOException with stream: 14:19:29.578 [main] DEBUG c.intuit.karate.driver.DriverOptions - root frame id: 000EE41291D790F4E060D1D1815C9262
+
+
+# Created at 2024-03-12T14:19:29.592
+Unexpected IOException with stream: 14:19:29.592 [nioEventLoopGroup-4-1] DEBUG c.i.k.http.WebSocketClientHandler - websocket client connected
+
+
+# Created at 2024-03-12T14:19:29.592
+Unexpected IOException with stream: 14:19:29.592 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":1,"method":"Target.attachToTarget","params":{"targetId":"000EE41291D790F4E060D1D1815C9262","flatten":true}}
+
+
+# Created at 2024-03-12T14:19:29.602
+Unexpected IOException with stream: 14:19:29.592 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Target.attachedToTarget","params":{"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","targetInfo":{"targetId":"000EE41291D790F4E060D1D1815C9262","type":"page","title":"Nueva pesta\u00f1a de Inc\u00f3gnito","url":"chrome://newtab/","attached":true,"canAccessOpener":false,"browserContextId":"30A6A76801688CB6CE0BD2FD0C3F3085"},"waitingForDebugger":false}}
+
+
+# Created at 2024-03-12T14:19:29.602
+Unexpected IOException with stream: 14:19:29.602 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":1,"result":{"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}}
+
+
+# Created at 2024-03-12T14:19:29.602
+Unexpected IOException with stream: 14:19:29.602 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":2,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Target.activateTarget","params":{"targetId":"000EE41291D790F4E060D1D1815C9262"}}
+
+
+# Created at 2024-03-12T14:19:29.602
+Unexpected IOException with stream: 14:19:29.602 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":2,"result":{},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:29.602
+Unexpected IOException with stream: 14:19:29.602 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":3,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Page.enable"}
+
+
+# Created at 2024-03-12T14:19:29.602
+Unexpected IOException with stream: 14:19:29.602 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":3,"result":{},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:29.602
+Unexpected IOException with stream: 14:19:29.602 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":4,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Runtime.enable"}
+
+
+# Created at 2024-03-12T14:19:29.608
+Unexpected IOException with stream: 14:19:29.608 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextCreated","params":{"context":{"id":1,"origin":"://","name":"","uniqueId":"-1567662770609543009.8726709332410092060","auxData":{"isDefault":true,"type":"default","frameId":"000EE41291D790F4E060D1D1815C9262"}}},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:29.608
+Unexpected IOException with stream: 14:19:29.608 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":4,"result":{},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:29.643
+Unexpected IOException with stream: 14:19:29.643 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":5,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Browser.getWindowForTarget","params":{"targetId":"000EE41291D790F4E060D1D1815C9262"}}
+
+
+# Created at 2024-03-12T14:19:29.643
+Unexpected IOException with stream: 14:19:29.643 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextsCleared","params":{},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:29.643
+Unexpected IOException with stream: 14:19:29.643 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameNavigated","params":{"frame":{"id":"000EE41291D790F4E060D1D1815C9262","loaderId":"2815537920F903142DEEC33BA36A6E50","url":"chrome://newtab/","domainAndRegistry":"","securityOrigin":"chrome://newtab","mimeType":"text/html","adFrameStatus":{"adFrameType":"none"},"secureContextType":"Secure","crossOriginIsolatedContextType":"NotIsolated","gatedAPIFeatures":[]},"type":"Navigation"},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:29.643
+Unexpected IOException with stream: 14:19:29.643 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextCreated","params":{"context":{"id":2,"origin":"chrome://newtab","name":"","uniqueId":"-8790837128537953178.7233489713996118341","auxData":{"isDefault":true,"type":"default","frameId":"000EE41291D790F4E060D1D1815C9262"}}},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:29.643
+Unexpected IOException with stream: 14:19:29.643 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":5,"result":{"windowId":366323722,"bounds":{"left":10,"top":10,"width":945,"height":1020,"windowState":"normal"}},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:29.651
+Unexpected IOException with stream: 14:19:29.651 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":6,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Page.navigate","params":{"url":"http:\/\/localhost:8080\/login"}}
+
+
+# Created at 2024-03-12T14:19:29.660
+Unexpected IOException with stream: 14:19:29.659 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStartedLoading","params":{"frameId":"000EE41291D790F4E060D1D1815C9262"},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:29.864
+Unexpected IOException with stream: 14:19:29.863 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.domContentEventFired","params":{"timestamp":3074.602222},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:29.866
+Unexpected IOException with stream: 14:19:29.865 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":7,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Runtime.evaluate","params":{"expression":"var e = document.querySelector(\"#username\"); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}","returnByValue":true}}
+
+
+# Created at 2024-03-12T14:19:29.896
+Unexpected IOException with stream: 14:19:29.896 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.loadEventFired","params":{"timestamp":3074.636565},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:29.897
+Unexpected IOException with stream: 14:19:29.897 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStartedLoading","params":{"frameId":"000EE41291D790F4E060D1D1815C9262"},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:30.201
+Unexpected IOException with stream: 14:19:30.200 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":6,"result":{"frameId":"000EE41291D790F4E060D1D1815C9262","loaderId":"C52FB377B71A954E53F030E8C32A6D75"},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:30.208
+Unexpected IOException with stream: 14:19:30.207 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextsCleared","params":{},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:30.209
+Unexpected IOException with stream: 14:19:30.209 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextsCleared","params":{},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:30.210
+Unexpected IOException with stream: 14:19:30.210 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameNavigated","params":{"frame":{"id":"000EE41291D790F4E060D1D1815C9262","loaderId":"C52FB377B71A954E53F030E8C32A6D75","url":"http://localhost:8080/login","domainAndRegistry":"","securityOrigin":"http://localhost:8080","mimeType":"text/html","adFrameStatus":{"adFrameType":"none"},"secureContextType":"SecureLocalhost","crossOriginIsolatedContextType":"NotIsolated","gatedAPIFeatures":[]},"type":"Navigation"},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:30.211
+Unexpected IOException with stream: 14:19:30.210 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextCreated","params":{"context":{"id":1,"origin":"http://localhost:8080","name":"","uniqueId":"-7554997156515414155.-3080662427585701548","auxData":{"isDefault":true,"type":"default","frameId":"000EE41291D790F4E060D1D1815C9262"}}},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:30.214
+Unexpected IOException with stream: 14:19:30.214 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":7,"result":{"result":{"type":"object","subtype":"error","className":"TypeError","description":"TypeError: Cannot read properties of null (reading 'focus')\n    at <anonymous>:1:48","objectId":"-892209462436976520.1.1"},"exceptionDetails":{"exceptionId":1,"text":"Uncaught","lineNumber":0,"columnNumber":47,"scriptId":"5","stackTrace":{"callFrames":[{"functionName":"","scriptId":"5","url":"","lineNumber":0,"columnNumber":47}]},"exception":{"type":"object","subtype":"error","className":"TypeError","description":"TypeError: Cannot read properties of null (reading 'focus')\n    at <anonymous>:1:48","objectId":"-892209462436976520.1.2"}}},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:30.214
+Unexpected IOException with stream: 14:19:30.214 [nioEventLoopGroup-4-1] WARN  c.intuit.karate.driver.DriverOptions - devtools error: [id: 7, sessionId: E019E42776FC4AB3D4C721DC16DE1F12, result: [type: MAP, value: {type=object, subtype=error, className=TypeError, description=TypeError: Cannot read properties of null (reading 'focus')
+    at <anonymous>:1:48, objectId=-892209462436976520.1.1}]]
+
+
+# Created at 2024-03-12T14:19:30.215
+Unexpected IOException with stream: 14:19:30.215 [main] WARN  c.intuit.karate.driver.DriverOptions - js eval failed once:var e = document.querySelector("#username"); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}, error: [type: MAP, value: {type=object, subtype=error, className=TypeError, description=TypeError: Cannot read properties of null (reading 'focus')
+    at <anonymous>:1:48, objectId=-892209462436976520.1.1}]
+
+
+# Created at 2024-03-12T14:19:30.243
+Unexpected IOException with stream: 14:19:30.243 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.domContentEventFired","params":{"timestamp":3074.971853},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:30.245
+Unexpected IOException with stream: 14:19:30.244 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.loadEventFired","params":{"timestamp":3074.986786},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:30.255
+Unexpected IOException with stream: 14:19:30.255 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStoppedLoading","params":{"frameId":"000EE41291D790F4E060D1D1815C9262"},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.221
+Unexpected IOException with stream: 14:19:33.220 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":8,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Runtime.evaluate","params":{"expression":"var e = document.querySelector(\"#username\"); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}","returnByValue":true}}
+
+
+# Created at 2024-03-12T14:19:33.223
+Unexpected IOException with stream: 14:19:33.223 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":8,"result":{"result":{"type":"number","value":0,"description":"0"}},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.224
+Unexpected IOException with stream: 14:19:33.224 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":9,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"rawKeyDown","text":"b","windowsVirtualKeyCode":66}}
+
+
+# Created at 2024-03-12T14:19:33.227
+Unexpected IOException with stream: 14:19:33.226 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":9,"result":{},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.228
+Unexpected IOException with stream: 14:19:33.227 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":10,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"char","text":"b","windowsVirtualKeyCode":66}}
+
+
+# Created at 2024-03-12T14:19:33.231
+Unexpected IOException with stream: 14:19:33.231 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":10,"result":{},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.232
+Unexpected IOException with stream: 14:19:33.232 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":11,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"keyUp","text":"b","windowsVirtualKeyCode":66}}
+
+
+# Created at 2024-03-12T14:19:33.234
+Unexpected IOException with stream: 14:19:33.233 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":11,"result":{},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.236
+Unexpected IOException with stream: 14:19:33.235 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":12,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Runtime.evaluate","params":{"expression":"var e = document.querySelector(\"#password\"); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}","returnByValue":true}}
+
+
+# Created at 2024-03-12T14:19:33.239
+Unexpected IOException with stream: 14:19:33.238 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":12,"result":{"result":{"type":"number","value":0,"description":"0"}},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.240
+Unexpected IOException with stream: 14:19:33.239 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":13,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"rawKeyDown","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:33.242
+Unexpected IOException with stream: 14:19:33.241 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":13,"result":{},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.243
+Unexpected IOException with stream: 14:19:33.243 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":14,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"char","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:33.260
+Unexpected IOException with stream: 14:19:33.260 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":14,"result":{},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.261
+Unexpected IOException with stream: 14:19:33.261 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":15,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"keyUp","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:33.263
+Unexpected IOException with stream: 14:19:33.262 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":15,"result":{},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.264
+Unexpected IOException with stream: 14:19:33.263 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":16,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"rawKeyDown","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:33.265
+Unexpected IOException with stream: 14:19:33.265 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":16,"result":{},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.269
+Unexpected IOException with stream: 14:19:33.269 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":17,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"char","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:33.271
+Unexpected IOException with stream: 14:19:33.271 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":17,"result":{},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.272
+Unexpected IOException with stream: 14:19:33.272 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":18,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"keyUp","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:33.273
+Unexpected IOException with stream: 14:19:33.273 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":18,"result":{},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.276
+Unexpected IOException with stream: 14:19:33.276 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":19,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Runtime.evaluate","params":{"expression":"document.querySelector(\".form-signin button\").click()","returnByValue":true}}
+
+
+# Created at 2024-03-12T14:19:33.279
+Unexpected IOException with stream: 14:19:33.279 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":19,"result":{"result":{"type":"undefined"}},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.302
+Unexpected IOException with stream: 14:19:33.302 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameScheduledNavigation","params":{"frameId":"000EE41291D790F4E060D1D1815C9262","delay":0,"reason":"formSubmissionPost","url":"http://localhost:8080/login"},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.303
+Unexpected IOException with stream: 14:19:33.303 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameRequestedNavigation","params":{"frameId":"000EE41291D790F4E060D1D1815C9262","reason":"formSubmissionPost","url":"http://localhost:8080/login","disposition":"currentTab"},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.303
+Unexpected IOException with stream: 14:19:33.303 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStartedLoading","params":{"frameId":"000EE41291D790F4E060D1D1815C9262"},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.304
+Unexpected IOException with stream: 14:19:33.304 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameClearedScheduledNavigation","params":{"frameId":"000EE41291D790F4E060D1D1815C9262"},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.600
+Unexpected IOException with stream: 14:19:33.600 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextsCleared","params":{},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.601
+Unexpected IOException with stream: 14:19:33.601 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameNavigated","params":{"frame":{"id":"000EE41291D790F4E060D1D1815C9262","loaderId":"1DFECEFE2C35928D33C9F8BF74822EC4","url":"http://localhost:8080/user/2","domainAndRegistry":"","securityOrigin":"http://localhost:8080","mimeType":"text/html","adFrameStatus":{"adFrameType":"none"},"secureContextType":"SecureLocalhost","crossOriginIsolatedContextType":"NotIsolated","gatedAPIFeatures":[]},"type":"Navigation"},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.602
+Unexpected IOException with stream: 14:19:33.601 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextCreated","params":{"context":{"id":2,"origin":"http://localhost:8080","name":"","uniqueId":"-8701387628601428104.-4584653050375994518","auxData":{"isDefault":true,"type":"default","frameId":"000EE41291D790F4E060D1D1815C9262"}}},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.635
+Unexpected IOException with stream: 14:19:33.635 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.exceptionThrown","params":{"timestamp":1.710249573638098e+12,"exceptionDetails":{"exceptionId":2,"text":"Uncaught","lineNumber":5,"columnNumber":20,"scriptId":"13","url":"http://localhost:8080/js/mdInclude.js","stackTrace":{"callFrames":[{"functionName":"","scriptId":"13","url":"http://localhost:8080/js/mdInclude.js","lineNumber":5,"columnNumber":20}]},"exception":{"type":"object","subtype":"error","className":"ReferenceError","description":"ReferenceError: marked is not defined\n    at http://localhost:8080/js/mdInclude.js:6:21","objectId":"-892209462436976520.2.1","preview":{"type":"object","subtype":"error","description":"ReferenceError: marked is not defined\n    at http://localhost:8080/js/mdInclude.js:6:21","overflow":false,"properties":[{"name":"stack","type":"string","value":"ReferenceError: marked is not defined\n    at http://localhost:8080/js/mdInclude.js:6:21"},{"name":"message","type":"string","value":"marked is not defined"}]}},"executionContextId":2}},"sessionId":"E019E42776F ...
+
+
+# Created at 2024-03-12T14:19:33.635
+Unexpected IOException with stream: 14:19:33.635 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"Opening Web Socket..."}],"executionContextId":2,"timestamp":1.710249573638939e+12,"stackTrace":{"callFrames":[{"functionName":"Client.debug","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":173,"columnNumber":107},{"functionName":"Client._connect","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":291,"columnNumber":21},{"functionName":"Client.connect","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":278,"columnNumber":24},{"functionName":"initialize","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":35,"columnNumber":27},{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":199,"columnNumber":11}]}},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.635
+Unexpected IOException with stream: 14:19:33.635 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] Opening Web Socket...
+
+
+# Created at 2024-03-12T14:19:33.641
+Unexpected IOException with stream: 14:19:33.641 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"Connected to WS 'ws://localhost:8080/ws'"}],"executionContextId":2,"timestamp":1.710249573639277e+12,"stackTrace":{"callFrames":[{"functionName":"initialize","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":44,"columnNumber":20},{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":199,"columnNumber":11}]}},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.641
+Unexpected IOException with stream: 14:19:33.641 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] Connected to WS 'ws://localhost:8080/ws'
+
+
+# Created at 2024-03-12T14:19:33.642
+Unexpected IOException with stream: 14:19:33.642 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"sending"},{"type":"string","value":"//localhost:8080/user/unread"},{"type":"object","className":"Object","description":"Object","objectId":"-892209462436976520.2.2","preview":{"type":"object","description":"Object","overflow":false,"properties":[{"name":"method","type":"string","value":"GET"},{"name":"headers","type":"object","value":"Object"}]}}],"executionContextId":2,"timestamp":1.710249573639471e+12,"stackTrace":{"callFrames":[{"functionName":"go","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":94,"columnNumber":12},{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":203,"columnNumber":12}]}},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.642
+Unexpected IOException with stream: 14:19:33.642 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] sending
+
+
+# Created at 2024-03-12T14:19:33.643
+Unexpected IOException with stream: 14:19:33.643 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] //localhost:8080/user/unread
+
+
+# Created at 2024-03-12T14:19:33.643
+Unexpected IOException with stream: 14:19:33.643 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.domContentEventFired","params":{"timestamp":3078.382244},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.644
+Unexpected IOException with stream: 14:19:33.644 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.loadEventFired","params":{"timestamp":3078.383141},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.644
+Unexpected IOException with stream: 14:19:33.644 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStoppedLoading","params":{"frameId":"000EE41291D790F4E060D1D1815C9262"},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.649
+Unexpected IOException with stream: 14:19:33.649 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":20,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Runtime.evaluate","params":{"expression":"document.location.href","returnByValue":true}}
+
+
+# Created at 2024-03-12T14:19:33.651
+Unexpected IOException with stream: 14:19:33.650 [nioEventLoopGroup-4-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":20,"result":{"result":{"type":"string","value":"http://localhost:8080/user/2"}},"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12"}
+
+
+# Created at 2024-03-12T14:19:33.652
+Unexpected IOException with stream: 14:19:33.652 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":21,"sessionId":"E019E42776FC4AB3D4C721DC16DE1F12","method":"Target.closeTarget","params":{"targetId":"000EE41291D790F4E060D1D1815C9262"}}
+
+
+# Created at 2024-03-12T14:19:33.655
+Unexpected IOException with stream: 14:19:33.655 [nioEventLoopGroup-4-1] DEBUG c.i.k.http.WebSocketClientHandler - websocket closing
+
+
+# Created at 2024-03-12T14:19:33.656
+Unexpected IOException with stream: 14:19:33.655 [nioEventLoopGroup-4-1] DEBUG c.i.k.http.WebSocketClientHandler - websocket client disconnected
+
+
+# Created at 2024-03-12T14:19:33.658
+Unexpected IOException with stream: 14:19:33.658 [main] DEBUG com.intuit.karate.shell.Command - closing command: chrome_1710249568665
+
+
+# Created at 2024-03-12T14:19:33.658
+Unexpected IOException: 6,1,external.ExternalRunner,testLogin[1][3],null,null,null
+
+
+# Created at 2024-03-12T14:19:33.685
+Unexpected IOException: 5,1,external.ExternalRunner,testLogin[1][4],null,null,null
+
+
+# Created at 2024-03-12T14:19:33.685
+Unexpected IOException with stream: 14:19:33.685 [main] INFO  com.intuit.karate - karate.env system property was: null 
+
+
+# Created at 2024-03-12T14:19:33.685
+Unexpected IOException with stream: 14:19:33.685 [main] DEBUG com.intuit.karate.shell.Command - found / verified free local port: 51894
+
+
+# Created at 2024-03-12T14:19:33.700
+Unexpected IOException with stream: 14:19:33.700 [main] WARN  c.intuit.karate.driver.DriverOptions - preferred port 9222 not available, will use: 51894
+
+
+# Created at 2024-03-12T14:19:33.751
+Unexpected IOException with stream: 14:19:33.751 [main] DEBUG c.i.k.driver.chrome_1710249573685 - poll attempt #0 for port to be ready - localhost:51894
+
+
+# Created at 2024-03-12T14:19:33.753
+Unexpected IOException with stream: 14:19:33.752 [chrome_1710249573685] DEBUG c.i.k.driver.chrome_1710249573685 - command: [C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, --remote-debugging-port=51894, --no-first-run, --user-data-dir=u:\hlocal\gg\gg\target\chrome_1710249573685, --disable-popup-blocking, --remote-allow-origins=*, --incognito], working dir: target\chrome_1710249573685
+
+
+# Created at 2024-03-12T14:19:34.008
+Unexpected IOException with stream: 14:19:34.008 [main] DEBUG c.i.k.driver.chrome_1710249573685 - poll attempt #1 for port to be ready - localhost:51894
+
+
+# Created at 2024-03-12T14:19:34.156
+Unexpected IOException with stream: 14:19:34.156 [chrome_1710249568665] WARN  com.intuit.karate.shell.Command - exit code was non-zero: 1 - [C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, --remote-debugging-port=51839, --no-first-run, --user-data-dir=u:\hlocal\gg\gg\target\chrome_1710249568665, --disable-popup-blocking, --remote-allow-origins=*, --incognito] working dir: target\chrome_1710249568665
+
+
+# Created at 2024-03-12T14:19:34.267
+Unexpected IOException with stream: 14:19:34.267 [main] DEBUG c.i.k.driver.chrome_1710249573685 - poll attempt #2 for port to be ready - localhost:51894
+
+
+# Created at 2024-03-12T14:19:34.527
+Unexpected IOException with stream: 14:19:34.527 [main] DEBUG c.i.k.driver.chrome_1710249573685 - poll attempt #3 for port to be ready - localhost:51894
+
+
+# Created at 2024-03-12T14:19:34.563
+Unexpected IOException with stream: 14:19:34.562 [chrome_1710249573685-out] DEBUG c.i.k.driver.chrome_1710249573685 - 
+
+
+# Created at 2024-03-12T14:19:34.563
+Unexpected IOException with stream: 14:19:34.563 [chrome_1710249573685-out] DEBUG c.i.k.driver.chrome_1710249573685 - DevTools listening on ws://127.0.0.1:51894/devtools/browser/284de75c-754c-4e2f-a3fc-313f89d645fd
+
+
+# Created at 2024-03-12T14:19:34.793
+Unexpected IOException with stream: 14:19:34.793 [main] DEBUG c.i.k.driver.chrome_1710249573685 - poll attempt #4 for port to be ready - localhost:51894
+
+
+# Created at 2024-03-12T14:19:34.815
+Unexpected IOException with stream: 14:19:34.815 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:51894/json
+1 > Host: localhost:51894
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.3.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+
+
+# Created at 2024-03-12T14:19:34.833
+Unexpected IOException with stream: 14:19:34.833 [main] DEBUG com.intuit.karate - response time in milliseconds: 17
+1 < 200
+1 < Content-Security-Policy: frame-ancestors 'none'
+1 < Content-Length: 1733
+1 < Content-Type: application/json; charset=UTF-8
+[ {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51894/devtools/page/AC3A607DCA6954DB201F6DEB8E75A161",
+   "id": "AC3A607DCA6954DB201F6DEB8E75A161",
+   "title": "Google Network Speech",
+   "type": "background_page",
+   "url": "chrome-extension://neajdppkdcdipfabeoofebfddakdcjhd/_generated_background_page.html",
+   "webSocketDebuggerUrl": "ws://localhost:51894/devtools/page/AC3A607DCA6954DB201F6DEB8E75A161"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51894/devtools/page/4F4ABE33BBFF12F474D9B014BF6CC0FB",
+   "id": "4F4ABE33BBFF12F474D9B014BF6CC0FB",
+   "title": "Google Hangouts",
+   "type": "background_page",
+   "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html",
+   "webSocketDebuggerUrl": "ws://localhost:51894/devtools/page/4F4ABE33BBFF12F474D9B014BF6CC0FB"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51894/devtools/page/7CD3E4A490CEE01B3017A05F7D9F594A",
+   "id": "7CD3E4A490CEE01B3017A05F7D9F594A",
+   "title": "Google Hangouts",
+   "type": "background_page",
+   "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html",
+   "webSocketDebuggerUrl": "ws://localhost:51894/devtools/page/7CD3E4A490CEE01B3017A05F7D9F594A"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51894/devtools/page/69033615C68D800A5E765B240C490953",
+   "id": "69033615C68D800A5E765B240C490953",
+   "title": "Nueva pestaña de Incógnito",
+   "type": "page",
+   "url": "chrome://newtab/",
+   "webSocketDebuggerUrl": "ws://localhost:51894/devtools/page/69033615C68D800A5E765B240C490953"
+} ]
+
+
+
+# Created at 2024-03-12T14:19:34.859
+Unexpected IOException with stream: 14:19:34.859 [main] DEBUG com.intuit.karate.shell.Command - ready to accept http connections after 47 ms - http://localhost:51894/json
+
+
+# Created at 2024-03-12T14:19:34.861
+Unexpected IOException with stream: 14:19:34.861 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:51894/json
+1 > Host: localhost:51894
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.3.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+
+
+# Created at 2024-03-12T14:19:34.862
+Unexpected IOException with stream: 14:19:34.862 [main] DEBUG com.intuit.karate - response time in milliseconds: 1
+1 < 200
+1 < Content-Security-Policy: frame-ancestors 'none'
+1 < Content-Length: 1733
+1 < Content-Type: application/json; charset=UTF-8
+[ {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51894/devtools/page/AC3A607DCA6954DB201F6DEB8E75A161",
+   "id": "AC3A607DCA6954DB201F6DEB8E75A161",
+   "title": "Google Network Speech",
+   "type": "background_page",
+   "url": "chrome-extension://neajdppkdcdipfabeoofebfddakdcjhd/_generated_background_page.html",
+   "webSocketDebuggerUrl": "ws://localhost:51894/devtools/page/AC3A607DCA6954DB201F6DEB8E75A161"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51894/devtools/page/4F4ABE33BBFF12F474D9B014BF6CC0FB",
+   "id": "4F4ABE33BBFF12F474D9B014BF6CC0FB",
+   "title": "Google Hangouts",
+   "type": "background_page",
+   "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html",
+   "webSocketDebuggerUrl": "ws://localhost:51894/devtools/page/4F4ABE33BBFF12F474D9B014BF6CC0FB"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51894/devtools/page/7CD3E4A490CEE01B3017A05F7D9F594A",
+   "id": "7CD3E4A490CEE01B3017A05F7D9F594A",
+   "title": "Google Hangouts",
+   "type": "background_page",
+   "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html",
+   "webSocketDebuggerUrl": "ws://localhost:51894/devtools/page/7CD3E4A490CEE01B3017A05F7D9F594A"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51894/devtools/page/69033615C68D800A5E765B240C490953",
+   "id": "69033615C68D800A5E765B240C490953",
+   "title": "Nueva pestaña de Incógnito",
+   "type": "page",
+   "url": "chrome://newtab/",
+   "webSocketDebuggerUrl": "ws://localhost:51894/devtools/page/69033615C68D800A5E765B240C490953"
+} ]
+
+
+
+# Created at 2024-03-12T14:19:34.895
+Unexpected IOException with stream: 14:19:34.894 [main] DEBUG c.intuit.karate.driver.DriverOptions - root frame id: 69033615C68D800A5E765B240C490953
+
+
+# Created at 2024-03-12T14:19:34.927
+Unexpected IOException with stream: 14:19:34.927 [nioEventLoopGroup-5-1] DEBUG c.i.k.http.WebSocketClientHandler - websocket client connected
+
+
+# Created at 2024-03-12T14:19:34.928
+Unexpected IOException with stream: 14:19:34.927 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":1,"method":"Target.attachToTarget","params":{"targetId":"69033615C68D800A5E765B240C490953","flatten":true}}
+
+
+# Created at 2024-03-12T14:19:34.929
+Unexpected IOException with stream: 14:19:34.929 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Target.attachedToTarget","params":{"sessionId":"943DD63A0346846C7E818C15A8D966E9","targetInfo":{"targetId":"69033615C68D800A5E765B240C490953","type":"page","title":"Nueva pesta\u00f1a de Inc\u00f3gnito","url":"chrome://newtab/","attached":true,"canAccessOpener":false,"browserContextId":"D30AD4D8E77DDFE5D16831C4A05D7398"},"waitingForDebugger":false}}
+
+
+# Created at 2024-03-12T14:19:34.930
+Unexpected IOException with stream: 14:19:34.930 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":1,"result":{"sessionId":"943DD63A0346846C7E818C15A8D966E9"}}
+
+
+# Created at 2024-03-12T14:19:34.930
+Unexpected IOException with stream: 14:19:34.930 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":2,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Target.activateTarget","params":{"targetId":"69033615C68D800A5E765B240C490953"}}
+
+
+# Created at 2024-03-12T14:19:34.931
+Unexpected IOException with stream: 14:19:34.931 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":2,"result":{},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:34.932
+Unexpected IOException with stream: 14:19:34.932 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":3,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Page.enable"}
+
+
+# Created at 2024-03-12T14:19:34.933
+Unexpected IOException with stream: 14:19:34.933 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":3,"result":{},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:34.933
+Unexpected IOException with stream: 14:19:34.933 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":4,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Runtime.enable"}
+
+
+# Created at 2024-03-12T14:19:34.934
+Unexpected IOException with stream: 14:19:34.934 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextCreated","params":{"context":{"id":1,"origin":"chrome://newtab","name":"","uniqueId":"-7084364879004158630.-3745390053159529052","auxData":{"isDefault":true,"type":"default","frameId":"69033615C68D800A5E765B240C490953"}}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:34.935
+Unexpected IOException with stream: 14:19:34.935 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":4,"result":{},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:34.935
+Unexpected IOException with stream: 14:19:34.935 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":5,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Browser.getWindowForTarget","params":{"targetId":"69033615C68D800A5E765B240C490953"}}
+
+
+# Created at 2024-03-12T14:19:34.937
+Unexpected IOException with stream: 14:19:34.937 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":5,"result":{"windowId":1945608737,"bounds":{"left":380,"top":35,"width":945,"height":1020,"windowState":"normal"}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:34.946
+Unexpected IOException with stream: 14:19:34.946 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":6,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Page.navigate","params":{"url":"http:\/\/localhost:8080\/login"}}
+
+
+# Created at 2024-03-12T14:19:34.951
+Unexpected IOException with stream: 14:19:34.950 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStartedLoading","params":{"frameId":"69033615C68D800A5E765B240C490953"},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.039
+Unexpected IOException with stream: 14:19:35.039 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":6,"result":{"frameId":"69033615C68D800A5E765B240C490953","loaderId":"E5F22B8E661375B7EE642A73DB0E9280"},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.043
+Unexpected IOException with stream: 14:19:35.042 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextsCleared","params":{},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.043
+Unexpected IOException with stream: 14:19:35.043 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextsCleared","params":{},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.044
+Unexpected IOException with stream: 14:19:35.044 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameNavigated","params":{"frame":{"id":"69033615C68D800A5E765B240C490953","loaderId":"E5F22B8E661375B7EE642A73DB0E9280","url":"http://localhost:8080/login","domainAndRegistry":"","securityOrigin":"http://localhost:8080","mimeType":"text/html","adFrameStatus":{"adFrameType":"none"},"secureContextType":"SecureLocalhost","crossOriginIsolatedContextType":"NotIsolated","gatedAPIFeatures":[]},"type":"Navigation"},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.045
+Unexpected IOException with stream: 14:19:35.045 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextCreated","params":{"context":{"id":1,"origin":"http://localhost:8080","name":"","uniqueId":"2505004516103871963.1619490611657226593","auxData":{"isDefault":true,"type":"default","frameId":"69033615C68D800A5E765B240C490953"}}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.177
+Unexpected IOException with stream: 14:19:35.177 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.domContentEventFired","params":{"timestamp":3079.867235},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.178
+Unexpected IOException with stream: 14:19:35.178 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.loadEventFired","params":{"timestamp":3079.868469},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.178
+Unexpected IOException with stream: 14:19:35.178 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStoppedLoading","params":{"frameId":"69033615C68D800A5E765B240C490953"},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.179
+Unexpected IOException with stream: 14:19:35.179 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":7,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Runtime.evaluate","params":{"expression":"var e = document.querySelector(\"#username\"); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}","returnByValue":true}}
+
+
+# Created at 2024-03-12T14:19:35.560
+Unexpected IOException with stream: 14:19:35.560 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":7,"result":{"result":{"type":"number","value":0,"description":"0"}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.561
+Unexpected IOException with stream: 14:19:35.561 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":8,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"rawKeyDown","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:35.563
+Unexpected IOException with stream: 14:19:35.563 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":8,"result":{},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.563
+Unexpected IOException with stream: 14:19:35.563 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":9,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"char","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:35.563
+Unexpected IOException with stream: 14:19:35.563 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":9,"result":{},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.563
+Unexpected IOException with stream: 14:19:35.563 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":10,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"keyUp","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:35.563
+Unexpected IOException with stream: 14:19:35.563 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":10,"result":{},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.563
+Unexpected IOException with stream: 14:19:35.563 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":11,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Runtime.evaluate","params":{"expression":"var e = document.querySelector(\"#password\"); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}","returnByValue":true}}
+
+
+# Created at 2024-03-12T14:19:35.572
+Unexpected IOException with stream: 14:19:35.572 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":11,"result":{"result":{"type":"number","value":0,"description":"0"}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.573
+Unexpected IOException with stream: 14:19:35.573 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":12,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"rawKeyDown","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:35.574
+Unexpected IOException with stream: 14:19:35.574 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":12,"result":{},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.575
+Unexpected IOException with stream: 14:19:35.575 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":13,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"char","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:35.579
+Unexpected IOException with stream: 14:19:35.579 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":13,"result":{},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.580
+Unexpected IOException with stream: 14:19:35.580 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":14,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"keyUp","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:35.581
+Unexpected IOException with stream: 14:19:35.581 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":14,"result":{},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.632
+Unexpected IOException with stream: 14:19:35.632 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":15,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"rawKeyDown","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:35.632
+Unexpected IOException with stream: 14:19:35.632 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":15,"result":{},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.632
+Unexpected IOException with stream: 14:19:35.632 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":16,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"char","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:35.632
+Unexpected IOException with stream: 14:19:35.632 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":16,"result":{},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.632
+Unexpected IOException with stream: 14:19:35.632 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":17,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"keyUp","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:35.632
+Unexpected IOException with stream: 14:19:35.632 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":17,"result":{},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.632
+Unexpected IOException with stream: 14:19:35.632 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":18,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Runtime.evaluate","params":{"expression":"document.querySelector(\".form-signin button\").click()","returnByValue":true}}
+
+
+# Created at 2024-03-12T14:19:35.643
+Unexpected IOException with stream: 14:19:35.642 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":18,"result":{"result":{"type":"undefined"}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.644
+Unexpected IOException with stream: 14:19:35.643 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameScheduledNavigation","params":{"frameId":"69033615C68D800A5E765B240C490953","delay":0,"reason":"formSubmissionPost","url":"http://localhost:8080/login"},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.644
+Unexpected IOException with stream: 14:19:35.644 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameRequestedNavigation","params":{"frameId":"69033615C68D800A5E765B240C490953","reason":"formSubmissionPost","url":"http://localhost:8080/login","disposition":"currentTab"},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.646
+Unexpected IOException with stream: 14:19:35.645 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStartedLoading","params":{"frameId":"69033615C68D800A5E765B240C490953"},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.646
+Unexpected IOException with stream: 14:19:35.646 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameClearedScheduledNavigation","params":{"frameId":"69033615C68D800A5E765B240C490953"},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.746
+Unexpected IOException with stream: 14:19:35.746 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextsCleared","params":{},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.785
+Unexpected IOException with stream: 14:19:35.785 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameNavigated","params":{"frame":{"id":"69033615C68D800A5E765B240C490953","loaderId":"344FF96930C69A15AB472B6F478279F3","url":"http://localhost:8080/admin/","domainAndRegistry":"","securityOrigin":"http://localhost:8080","mimeType":"text/html","adFrameStatus":{"adFrameType":"none"},"secureContextType":"SecureLocalhost","crossOriginIsolatedContextType":"NotIsolated","gatedAPIFeatures":[]},"type":"Navigation"},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:35.786
+Unexpected IOException with stream: 14:19:35.786 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextCreated","params":{"context":{"id":2,"origin":"http://localhost:8080","name":"","uniqueId":"857432314979560899.-3241031717504111621","auxData":{"isDefault":true,"type":"default","frameId":"69033615C68D800A5E765B240C490953"}}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.417
+Unexpected IOException with stream: 14:19:36.417 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"Opening Web Socket..."}],"executionContextId":2,"timestamp":1.710249575774853e+12,"stackTrace":{"callFrames":[{"functionName":"Client.debug","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":173,"columnNumber":107},{"functionName":"Client._connect","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":291,"columnNumber":21},{"functionName":"Client.connect","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":278,"columnNumber":24},{"functionName":"initialize","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":35,"columnNumber":27},{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":199,"columnNumber":11}]}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.418
+Unexpected IOException with stream: 14:19:36.418 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] Opening Web Socket...
+
+
+# Created at 2024-03-12T14:19:36.418
+Unexpected IOException with stream: 14:19:36.418 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"Connected to WS 'ws://localhost:8080/ws'"}],"executionContextId":2,"timestamp":1.710249575775553e+12,"stackTrace":{"callFrames":[{"functionName":"initialize","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":44,"columnNumber":20},{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":199,"columnNumber":11}]}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.419
+Unexpected IOException with stream: 14:19:36.419 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] Connected to WS 'ws://localhost:8080/ws'
+
+
+# Created at 2024-03-12T14:19:36.419
+Unexpected IOException with stream: 14:19:36.419 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"sending"},{"type":"string","value":"//localhost:8080/user/unread"},{"type":"object","className":"Object","description":"Object","objectId":"-9136852753487082128.2.1","preview":{"type":"object","description":"Object","overflow":false,"properties":[{"name":"method","type":"string","value":"GET"},{"name":"headers","type":"object","value":"Object"}]}}],"executionContextId":2,"timestamp":1.710249575775888e+12,"stackTrace":{"callFrames":[{"functionName":"go","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":94,"columnNumber":12},{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":203,"columnNumber":12}]}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.444
+Unexpected IOException with stream: 14:19:36.444 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] sending
+
+
+# Created at 2024-03-12T14:19:36.444
+Unexpected IOException with stream: 14:19:36.444 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] //localhost:8080/user/unread
+
+
+# Created at 2024-03-12T14:19:36.445
+Unexpected IOException with stream: 14:19:36.445 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.domContentEventFired","params":{"timestamp":3080.51923},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.446
+Unexpected IOException with stream: 14:19:36.446 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.loadEventFired","params":{"timestamp":3080.519905},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.446
+Unexpected IOException with stream: 14:19:36.446 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStoppedLoading","params":{"frameId":"69033615C68D800A5E765B240C490953"},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.447
+Unexpected IOException with stream: 14:19:36.447 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"Web Socket Opened..."}],"executionContextId":2,"timestamp":1.710249575782294e+12,"stackTrace":{"callFrames":[{"functionName":"Client.debug","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":173,"columnNumber":107},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":441,"columnNumber":30}]}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.447
+Unexpected IOException with stream: 14:19:36.447 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":19,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Runtime.evaluate","params":{"expression":"document.location.href","returnByValue":true}}
+
+
+# Created at 2024-03-12T14:19:36.448
+Unexpected IOException with stream: 14:19:36.447 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] Web Socket Opened...
+
+
+# Created at 2024-03-12T14:19:36.448
+Unexpected IOException with stream: 14:19:36.448 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":">>> CONNECT\nX-CSRF-TOKEN:6e55d77b-d1c6-4693-8727-cea2831a41bd\naccept-version:1.2,1.1,1.0\nheart-beat:10000,10000\n\n\u0000"}],"executionContextId":2,"timestamp":1.710249575782555e+12,"stackTrace":{"callFrames":[{"functionName":"Client.debug","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":173,"columnNumber":107},{"functionName":"Client._transmit","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":188,"columnNumber":21},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":445,"columnNumber":33}]}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.449
+Unexpected IOException with stream: 14:19:36.448 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] >>> CONNECT
+X-CSRF-TOKEN:6e55d77b-d1c6-4693-8727-cea2831a41bd
+accept-version:1.2,1.1,1.0
+heart-beat:10000,10000
+
+ 
+
+
+# Created at 2024-03-12T14:19:36.449
+Unexpected IOException with stream: 14:19:36.449 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"<<< CONNECTED\nversion:1.2\nheart-beat:0,0\nuser-name:a\n\n\u0000"}],"executionContextId":2,"timestamp":1.710249575790716e+12,"stackTrace":{"callFrames":[{"functionName":"Client.debug","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":173,"columnNumber":107},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":339,"columnNumber":30}]}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.643
+Unexpected IOException with stream: 14:19:36.643 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] <<< CONNECTED
+version:1.2
+heart-beat:0,0
+user-name:a
+
+ 
+
+
+# Created at 2024-03-12T14:19:36.643
+Unexpected IOException with stream: 14:19:36.643 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"connected to server undefined"}],"executionContextId":2,"timestamp":1.710249575791016e+12,"stackTrace":{"callFrames":[{"functionName":"Client.debug","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":173,"columnNumber":107},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":349,"columnNumber":42}]}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.643
+Unexpected IOException with stream: 14:19:36.643 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] connected to server undefined
+
+
+# Created at 2024-03-12T14:19:36.643
+Unexpected IOException with stream: 14:19:36.643 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"Connected to "},{"type":"string","value":"ws://localhost:8080/ws"},{"type":"string","value":" - subscribing:"}],"executionContextId":2,"timestamp":1.710249575791467e+12,"stackTrace":{"callFrames":[{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":37,"columnNumber":24},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":362,"columnNumber":42}]}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.643
+Unexpected IOException with stream: 14:19:36.643 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] Connected to 
+
+
+# Created at 2024-03-12T14:19:36.643
+Unexpected IOException with stream: 14:19:36.643 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] ws://localhost:8080/ws
+
+
+# Created at 2024-03-12T14:19:36.643
+Unexpected IOException with stream: 14:19:36.643 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - [console]  - subscribing:
+
+
+# Created at 2024-03-12T14:19:36.643
+Unexpected IOException with stream: 14:19:36.643 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":" ... to /user/queue/updates ..."}],"executionContextId":2,"timestamp":1.710249575791541e+12,"stackTrace":{"callFrames":[{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":40,"columnNumber":28},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":362,"columnNumber":42}]}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.643
+Unexpected IOException with stream: 14:19:36.643 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - [console]  ... to /user/queue/updates ...
+
+
+# Created at 2024-03-12T14:19:36.643
+Unexpected IOException with stream: 14:19:36.643 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":">>> SUBSCRIBE\nid:sub-0\ndestination:/user/queue/updates\n\n\u0000"}],"executionContextId":2,"timestamp":1.710249575792025e+12,"stackTrace":{"callFrames":[{"functionName":"Client.debug","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":173,"columnNumber":107},{"functionName":"Client._transmit","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":188,"columnNumber":21},{"functionName":"Client.subscribe","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":532,"columnNumber":17},{"functionName":"subscribe","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":52,"columnNumber":27},{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":41,"columnNumber":23},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":362,"columnNumber":42}]}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.684
+Unexpected IOException with stream: 14:19:36.684 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] >>> SUBSCRIBE
+id:sub-0
+destination:/user/queue/updates
+
+ 
+
+
+# Created at 2024-03-12T14:19:36.685
+Unexpected IOException with stream: 14:19:36.685 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"Hopefully subscribed to /user/queue/updates"}],"executionContextId":2,"timestamp":1.710249575792139e+12,"stackTrace":{"callFrames":[{"functionName":"subscribe","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":54,"columnNumber":20},{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":41,"columnNumber":23},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":362,"columnNumber":42}]}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.685
+Unexpected IOException with stream: 14:19:36.685 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] Hopefully subscribed to /user/queue/updates
+
+
+# Created at 2024-03-12T14:19:36.686
+Unexpected IOException with stream: 14:19:36.686 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":" ... to /topic/admin ..."}],"executionContextId":2,"timestamp":1.710249575792183e+12,"stackTrace":{"callFrames":[{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":40,"columnNumber":28},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":362,"columnNumber":42}]}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.686
+Unexpected IOException with stream: 14:19:36.686 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - [console]  ... to /topic/admin ...
+
+
+# Created at 2024-03-12T14:19:36.686
+Unexpected IOException with stream: 14:19:36.686 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":">>> SUBSCRIBE\nid:sub-1\ndestination:/topic/admin\n\n\u0000"}],"executionContextId":2,"timestamp":1.710249575792239e+12,"stackTrace":{"callFrames":[{"functionName":"Client.debug","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":173,"columnNumber":107},{"functionName":"Client._transmit","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":188,"columnNumber":21},{"functionName":"Client.subscribe","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":532,"columnNumber":17},{"functionName":"subscribe","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":52,"columnNumber":27},{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":41,"columnNumber":23},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":362,"columnNumber":42}]}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.687
+Unexpected IOException with stream: 14:19:36.686 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] >>> SUBSCRIBE
+id:sub-1
+destination:/topic/admin
+
+ 
+
+
+# Created at 2024-03-12T14:19:36.728
+Unexpected IOException with stream: 14:19:36.728 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"Hopefully subscribed to /topic/admin"}],"executionContextId":2,"timestamp":1.710249575792358e+12,"stackTrace":{"callFrames":[{"functionName":"subscribe","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":54,"columnNumber":20},{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":41,"columnNumber":23},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":362,"columnNumber":42}]}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.728
+Unexpected IOException with stream: 14:19:36.728 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] Hopefully subscribed to /topic/admin
+
+
+# Created at 2024-03-12T14:19:36.728
+Unexpected IOException with stream: 14:19:36.728 [nioEventLoopGroup-5-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":19,"result":{"result":{"type":"string","value":"http://localhost:8080/admin/"}},"sessionId":"943DD63A0346846C7E818C15A8D966E9"}
+
+
+# Created at 2024-03-12T14:19:36.755
+Unexpected IOException with stream: 14:19:36.755 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":20,"sessionId":"943DD63A0346846C7E818C15A8D966E9","method":"Target.closeTarget","params":{"targetId":"69033615C68D800A5E765B240C490953"}}
+
+
+# Created at 2024-03-12T14:19:36.755
+Unexpected IOException with stream: 14:19:36.755 [nioEventLoopGroup-5-1] DEBUG c.i.k.http.WebSocketClientHandler - websocket closing
+
+
+# Created at 2024-03-12T14:19:36.765
+Unexpected IOException with stream: 14:19:36.765 [nioEventLoopGroup-5-1] DEBUG c.i.k.http.WebSocketClientHandler - websocket client disconnected
+
+
+# Created at 2024-03-12T14:19:36.765
+Unexpected IOException with stream: 14:19:36.765 [main] DEBUG com.intuit.karate.shell.Command - closing command: chrome_1710249573685
+
+
+# Created at 2024-03-12T14:19:36.765
+Unexpected IOException: 6,1,external.ExternalRunner,testLogin[1][4],null,null,null
+
+
+# Created at 2024-03-12T14:19:36.765
+Unexpected IOException: 5,1,external.ExternalRunner,testLogin[1][5],null,null,null
+
+
+# Created at 2024-03-12T14:19:36.773
+Unexpected IOException with stream: 14:19:36.772 [main] INFO  com.intuit.karate - karate.env system property was: null 
+
+
+# Created at 2024-03-12T14:19:36.776
+Unexpected IOException with stream: 14:19:36.775 [main] DEBUG com.intuit.karate.shell.Command - found / verified free local port: 51936
+
+
+# Created at 2024-03-12T14:19:36.776
+Unexpected IOException with stream: 14:19:36.776 [main] WARN  c.intuit.karate.driver.DriverOptions - preferred port 9222 not available, will use: 51936
+
+
+# Created at 2024-03-12T14:19:36.784
+Unexpected IOException with stream: 14:19:36.784 [main] DEBUG c.i.k.driver.chrome_1710249576775 - poll attempt #0 for port to be ready - localhost:51936
+
+
+# Created at 2024-03-12T14:19:36.785
+Unexpected IOException with stream: 14:19:36.785 [chrome_1710249576775] DEBUG c.i.k.driver.chrome_1710249576775 - command: [C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, --remote-debugging-port=51936, --no-first-run, --user-data-dir=u:\hlocal\gg\gg\target\chrome_1710249576775, --disable-popup-blocking, --remote-allow-origins=*, --incognito], working dir: target\chrome_1710249576775
+
+
+# Created at 2024-03-12T14:19:36.886
+Unexpected IOException with stream: 14:19:36.885 [chrome_1710249573685] WARN  com.intuit.karate.shell.Command - exit code was non-zero: 1 - [C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, --remote-debugging-port=51894, --no-first-run, --user-data-dir=u:\hlocal\gg\gg\target\chrome_1710249573685, --disable-popup-blocking, --remote-allow-origins=*, --incognito] working dir: target\chrome_1710249573685
+
+
+# Created at 2024-03-12T14:19:37.036
+Unexpected IOException with stream: 14:19:37.035 [main] DEBUG c.i.k.driver.chrome_1710249576775 - poll attempt #1 for port to be ready - localhost:51936
+
+
+# Created at 2024-03-12T14:19:37.046
+Unexpected IOException with stream: 14:19:37.046 [chrome_1710249576775-out] DEBUG c.i.k.driver.chrome_1710249576775 - 
+
+
+# Created at 2024-03-12T14:19:37.046
+Unexpected IOException with stream: 14:19:37.046 [chrome_1710249576775-out] DEBUG c.i.k.driver.chrome_1710249576775 - DevTools listening on ws://127.0.0.1:51936/devtools/browser/37bc4ed5-358d-4c9c-8a6c-fbe714553910
+
+
+# Created at 2024-03-12T14:19:37.303
+Unexpected IOException with stream: 14:19:37.303 [main] DEBUG c.i.k.driver.chrome_1710249576775 - poll attempt #2 for port to be ready - localhost:51936
+
+
+# Created at 2024-03-12T14:19:37.310
+Unexpected IOException with stream: 14:19:37.309 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:51936/json
+1 > Host: localhost:51936
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.3.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+
+
+# Created at 2024-03-12T14:19:37.322
+Unexpected IOException with stream: 14:19:37.321 [main] DEBUG com.intuit.karate - response time in milliseconds: 11
+1 < 200
+1 < Content-Security-Policy: frame-ancestors 'none'
+1 < Content-Length: 1733
+1 < Content-Type: application/json; charset=UTF-8
+[ {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51936/devtools/page/C6E51F3B156A27219C1F465A4507F3A7",
+   "id": "C6E51F3B156A27219C1F465A4507F3A7",
+   "title": "Google Network Speech",
+   "type": "background_page",
+   "url": "chrome-extension://neajdppkdcdipfabeoofebfddakdcjhd/_generated_background_page.html",
+   "webSocketDebuggerUrl": "ws://localhost:51936/devtools/page/C6E51F3B156A27219C1F465A4507F3A7"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51936/devtools/page/2FE806F227DB515A8232A14E978594EF",
+   "id": "2FE806F227DB515A8232A14E978594EF",
+   "title": "Google Hangouts",
+   "type": "background_page",
+   "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html",
+   "webSocketDebuggerUrl": "ws://localhost:51936/devtools/page/2FE806F227DB515A8232A14E978594EF"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51936/devtools/page/099D7114CED26C5DF358C070F52B5BF0",
+   "id": "099D7114CED26C5DF358C070F52B5BF0",
+   "title": "Google Hangouts",
+   "type": "background_page",
+   "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html",
+   "webSocketDebuggerUrl": "ws://localhost:51936/devtools/page/099D7114CED26C5DF358C070F52B5BF0"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51936/devtools/page/5D0022ADBFC551A0B949B5D3B0ADC4EB",
+   "id": "5D0022ADBFC551A0B949B5D3B0ADC4EB",
+   "title": "Nueva pestaña de Incógnito",
+   "type": "page",
+   "url": "chrome://newtab/",
+   "webSocketDebuggerUrl": "ws://localhost:51936/devtools/page/5D0022ADBFC551A0B949B5D3B0ADC4EB"
+} ]
+
+
+
+# Created at 2024-03-12T14:19:37.323
+Unexpected IOException with stream: 14:19:37.323 [main] DEBUG com.intuit.karate.shell.Command - ready to accept http connections after 17 ms - http://localhost:51936/json
+
+
+# Created at 2024-03-12T14:19:37.324
+Unexpected IOException with stream: 14:19:37.324 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:51936/json
+1 > Host: localhost:51936
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.3.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+
+
+# Created at 2024-03-12T14:19:37.332
+Unexpected IOException with stream: 14:19:37.332 [main] DEBUG com.intuit.karate - response time in milliseconds: 8
+1 < 200
+1 < Content-Security-Policy: frame-ancestors 'none'
+1 < Content-Length: 1733
+1 < Content-Type: application/json; charset=UTF-8
+[ {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51936/devtools/page/C6E51F3B156A27219C1F465A4507F3A7",
+   "id": "C6E51F3B156A27219C1F465A4507F3A7",
+   "title": "Google Network Speech",
+   "type": "background_page",
+   "url": "chrome-extension://neajdppkdcdipfabeoofebfddakdcjhd/_generated_background_page.html",
+   "webSocketDebuggerUrl": "ws://localhost:51936/devtools/page/C6E51F3B156A27219C1F465A4507F3A7"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51936/devtools/page/2FE806F227DB515A8232A14E978594EF",
+   "id": "2FE806F227DB515A8232A14E978594EF",
+   "title": "Google Hangouts",
+   "type": "background_page",
+   "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html",
+   "webSocketDebuggerUrl": "ws://localhost:51936/devtools/page/2FE806F227DB515A8232A14E978594EF"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51936/devtools/page/099D7114CED26C5DF358C070F52B5BF0",
+   "id": "099D7114CED26C5DF358C070F52B5BF0",
+   "title": "Google Hangouts",
+   "type": "background_page",
+   "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html",
+   "webSocketDebuggerUrl": "ws://localhost:51936/devtools/page/099D7114CED26C5DF358C070F52B5BF0"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51936/devtools/page/5D0022ADBFC551A0B949B5D3B0ADC4EB",
+   "id": "5D0022ADBFC551A0B949B5D3B0ADC4EB",
+   "title": "Nueva pestaña de Incógnito",
+   "type": "page",
+   "url": "chrome://newtab/",
+   "webSocketDebuggerUrl": "ws://localhost:51936/devtools/page/5D0022ADBFC551A0B949B5D3B0ADC4EB"
+} ]
+
+
+
+# Created at 2024-03-12T14:19:37.389
+Unexpected IOException with stream: 14:19:37.388 [main] DEBUG c.intuit.karate.driver.DriverOptions - root frame id: 5D0022ADBFC551A0B949B5D3B0ADC4EB
+
+
+# Created at 2024-03-12T14:19:37.410
+Unexpected IOException with stream: 14:19:37.409 [nioEventLoopGroup-6-1] DEBUG c.i.k.http.WebSocketClientHandler - websocket client connected
+
+
+# Created at 2024-03-12T14:19:37.410
+Unexpected IOException with stream: 14:19:37.410 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":1,"method":"Target.attachToTarget","params":{"targetId":"5D0022ADBFC551A0B949B5D3B0ADC4EB","flatten":true}}
+
+
+# Created at 2024-03-12T14:19:37.412
+Unexpected IOException with stream: 14:19:37.411 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Target.attachedToTarget","params":{"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","targetInfo":{"targetId":"5D0022ADBFC551A0B949B5D3B0ADC4EB","type":"page","title":"Nueva pesta\u00f1a de Inc\u00f3gnito","url":"chrome://newtab/","attached":true,"canAccessOpener":false,"browserContextId":"99D026C1219F85E09E12AA8354C3ECA8"},"waitingForDebugger":false}}
+
+
+# Created at 2024-03-12T14:19:37.412
+Unexpected IOException with stream: 14:19:37.412 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":1,"result":{"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}}
+
+
+# Created at 2024-03-12T14:19:37.412
+Unexpected IOException with stream: 14:19:37.412 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":2,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Target.activateTarget","params":{"targetId":"5D0022ADBFC551A0B949B5D3B0ADC4EB"}}
+
+
+# Created at 2024-03-12T14:19:37.413
+Unexpected IOException with stream: 14:19:37.413 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":2,"result":{},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.413
+Unexpected IOException with stream: 14:19:37.413 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":3,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Page.enable"}
+
+
+# Created at 2024-03-12T14:19:37.414
+Unexpected IOException with stream: 14:19:37.414 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":3,"result":{},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.415
+Unexpected IOException with stream: 14:19:37.414 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":4,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Runtime.enable"}
+
+
+# Created at 2024-03-12T14:19:37.478
+Unexpected IOException with stream: 14:19:37.478 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextCreated","params":{"context":{"id":1,"origin":"chrome://newtab","name":"","uniqueId":"-1306625055774741117.-6264976277096545160","auxData":{"isDefault":true,"type":"default","frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB"}}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.478
+Unexpected IOException with stream: 14:19:37.478 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":4,"result":{},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.479
+Unexpected IOException with stream: 14:19:37.479 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":5,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Browser.getWindowForTarget","params":{"targetId":"5D0022ADBFC551A0B949B5D3B0ADC4EB"}}
+
+
+# Created at 2024-03-12T14:19:37.480
+Unexpected IOException with stream: 14:19:37.480 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":5,"result":{"windowId":598821966,"bounds":{"left":10,"top":10,"width":945,"height":1020,"windowState":"normal"}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.487
+Unexpected IOException with stream: 14:19:37.486 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":6,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Page.navigate","params":{"url":"http:\/\/localhost:8080\/login"}}
+
+
+# Created at 2024-03-12T14:19:37.491
+Unexpected IOException with stream: 14:19:37.491 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStartedLoading","params":{"frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB"},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.498
+Unexpected IOException with stream: 14:19:37.498 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.loadEventFired","params":{"timestamp":3082.239535},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.499
+Unexpected IOException with stream: 14:19:37.499 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStartedLoading","params":{"frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB"},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.522
+Unexpected IOException with stream: 14:19:37.522 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":6,"result":{"frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB","loaderId":"68D5751FA101BFB01D469E607B61E578"},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.523
+Unexpected IOException with stream: 14:19:37.523 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextsCleared","params":{},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.529
+Unexpected IOException with stream: 14:19:37.529 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextsCleared","params":{},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.530
+Unexpected IOException with stream: 14:19:37.530 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameNavigated","params":{"frame":{"id":"5D0022ADBFC551A0B949B5D3B0ADC4EB","loaderId":"68D5751FA101BFB01D469E607B61E578","url":"http://localhost:8080/login","domainAndRegistry":"","securityOrigin":"http://localhost:8080","mimeType":"text/html","adFrameStatus":{"adFrameType":"none"},"secureContextType":"SecureLocalhost","crossOriginIsolatedContextType":"NotIsolated","gatedAPIFeatures":[]},"type":"Navigation"},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.531
+Unexpected IOException with stream: 14:19:37.530 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextCreated","params":{"context":{"id":1,"origin":"http://localhost:8080","name":"","uniqueId":"-724042365711348355.125443337733691260","auxData":{"isDefault":true,"type":"default","frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB"}}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.788
+Unexpected IOException with stream: 14:19:37.788 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.domContentEventFired","params":{"timestamp":3082.530153},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.796
+Unexpected IOException with stream: 14:19:37.796 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.loadEventFired","params":{"timestamp":3082.531312},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.796
+Unexpected IOException with stream: 14:19:37.796 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":7,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Runtime.evaluate","params":{"expression":"var e = document.querySelector(\"#username\"); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}","returnByValue":true}}
+
+
+# Created at 2024-03-12T14:19:37.797
+Unexpected IOException with stream: 14:19:37.797 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStoppedLoading","params":{"frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB"},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.799
+Unexpected IOException with stream: 14:19:37.798 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":7,"result":{"result":{"type":"number","value":0,"description":"0"}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.799
+Unexpected IOException with stream: 14:19:37.799 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":8,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"rawKeyDown","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:37.802
+Unexpected IOException with stream: 14:19:37.802 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":8,"result":{},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.803
+Unexpected IOException with stream: 14:19:37.803 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":9,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"char","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:37.806
+Unexpected IOException with stream: 14:19:37.805 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":9,"result":{},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.806
+Unexpected IOException with stream: 14:19:37.806 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":10,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"keyUp","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:37.807
+Unexpected IOException with stream: 14:19:37.807 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":10,"result":{},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.809
+Unexpected IOException with stream: 14:19:37.808 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":11,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Runtime.evaluate","params":{"expression":"var e = document.querySelector(\"#password\"); e.focus(); try { e.selectionStart = e.selectionEnd = e.value.length } catch(x) {}","returnByValue":true}}
+
+
+# Created at 2024-03-12T14:19:37.811
+Unexpected IOException with stream: 14:19:37.811 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":11,"result":{"result":{"type":"number","value":0,"description":"0"}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.860
+Unexpected IOException with stream: 14:19:37.860 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":12,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"rawKeyDown","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:37.860
+Unexpected IOException with stream: 14:19:37.860 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":12,"result":{},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.860
+Unexpected IOException with stream: 14:19:37.860 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":13,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"char","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:37.875
+Unexpected IOException with stream: 14:19:37.875 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":13,"result":{},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.875
+Unexpected IOException with stream: 14:19:37.875 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":14,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"keyUp","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:37.876
+Unexpected IOException with stream: 14:19:37.876 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":14,"result":{},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.877
+Unexpected IOException with stream: 14:19:37.877 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":15,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"rawKeyDown","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:37.878
+Unexpected IOException with stream: 14:19:37.878 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":15,"result":{},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.878
+Unexpected IOException with stream: 14:19:37.878 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":16,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"char","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:37.880
+Unexpected IOException with stream: 14:19:37.880 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":16,"result":{},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.880
+Unexpected IOException with stream: 14:19:37.880 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":17,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Input.dispatchKeyEvent","params":{"modifiers":0,"type":"keyUp","text":"a","windowsVirtualKeyCode":65}}
+
+
+# Created at 2024-03-12T14:19:37.882
+Unexpected IOException with stream: 14:19:37.881 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":17,"result":{},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.882
+Unexpected IOException with stream: 14:19:37.882 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":18,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Runtime.evaluate","params":{"expression":"document.querySelector(\".form-signin button\").click()","returnByValue":true}}
+
+
+# Created at 2024-03-12T14:19:37.884
+Unexpected IOException with stream: 14:19:37.884 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":18,"result":{"result":{"type":"undefined"}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.984
+Unexpected IOException with stream: 14:19:37.983 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameScheduledNavigation","params":{"frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB","delay":0,"reason":"formSubmissionPost","url":"http://localhost:8080/login"},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.984
+Unexpected IOException with stream: 14:19:37.984 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameRequestedNavigation","params":{"frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB","reason":"formSubmissionPost","url":"http://localhost:8080/login","disposition":"currentTab"},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.985
+Unexpected IOException with stream: 14:19:37.984 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStartedLoading","params":{"frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB"},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.985
+Unexpected IOException with stream: 14:19:37.985 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameClearedScheduledNavigation","params":{"frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB"},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.993
+Unexpected IOException with stream: 14:19:37.993 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextsCleared","params":{},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.994
+Unexpected IOException with stream: 14:19:37.994 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameNavigated","params":{"frame":{"id":"5D0022ADBFC551A0B949B5D3B0ADC4EB","loaderId":"4760F215A64A1F885ABA47E962B41740","url":"http://localhost:8080/admin/","domainAndRegistry":"","securityOrigin":"http://localhost:8080","mimeType":"text/html","adFrameStatus":{"adFrameType":"none"},"secureContextType":"SecureLocalhost","crossOriginIsolatedContextType":"NotIsolated","gatedAPIFeatures":[]},"type":"Navigation"},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:37.994
+Unexpected IOException with stream: 14:19:37.994 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextCreated","params":{"context":{"id":2,"origin":"http://localhost:8080","name":"","uniqueId":"4966328123602173964.-4611006398510757033","auxData":{"isDefault":true,"type":"default","frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB"}}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.053
+Unexpected IOException with stream: 14:19:38.052 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"Opening Web Socket..."}],"executionContextId":2,"timestamp":1.710249578051327e+12,"stackTrace":{"callFrames":[{"functionName":"Client.debug","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":173,"columnNumber":107},{"functionName":"Client._connect","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":291,"columnNumber":21},{"functionName":"Client.connect","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":278,"columnNumber":24},{"functionName":"initialize","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":35,"columnNumber":27},{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":199,"columnNumber":11}]}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.063
+Unexpected IOException with stream: 14:19:38.062 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] Opening Web Socket...
+
+
+# Created at 2024-03-12T14:19:38.063
+Unexpected IOException with stream: 14:19:38.063 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"Connected to WS 'ws://localhost:8080/ws'"}],"executionContextId":2,"timestamp":1.710249578051695e+12,"stackTrace":{"callFrames":[{"functionName":"initialize","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":44,"columnNumber":20},{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":199,"columnNumber":11}]}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.088
+Unexpected IOException with stream: 14:19:38.087 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] Connected to WS 'ws://localhost:8080/ws'
+
+
+# Created at 2024-03-12T14:19:38.088
+Unexpected IOException with stream: 14:19:38.088 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"sending"},{"type":"string","value":"//localhost:8080/user/unread"},{"type":"object","className":"Object","description":"Object","objectId":"-7826516489170967100.2.1","preview":{"type":"object","description":"Object","overflow":false,"properties":[{"name":"method","type":"string","value":"GET"},{"name":"headers","type":"object","value":"Object"}]}}],"executionContextId":2,"timestamp":1.710249578052008e+12,"stackTrace":{"callFrames":[{"functionName":"go","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":94,"columnNumber":12},{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":203,"columnNumber":12}]}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.088
+Unexpected IOException with stream: 14:19:38.088 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] sending
+
+
+# Created at 2024-03-12T14:19:38.089
+Unexpected IOException with stream: 14:19:38.089 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] //localhost:8080/user/unread
+
+
+# Created at 2024-03-12T14:19:38.089
+Unexpected IOException with stream: 14:19:38.089 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.domContentEventFired","params":{"timestamp":3082.795431},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.090
+Unexpected IOException with stream: 14:19:38.089 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.loadEventFired","params":{"timestamp":3082.795916},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.090
+Unexpected IOException with stream: 14:19:38.090 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStoppedLoading","params":{"frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB"},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.090
+Unexpected IOException with stream: 14:19:38.090 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":19,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Runtime.evaluate","params":{"expression":"document.location.href","returnByValue":true}}
+
+
+# Created at 2024-03-12T14:19:38.091
+Unexpected IOException with stream: 14:19:38.091 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"Web Socket Opened..."}],"executionContextId":2,"timestamp":1.710249578057095e+12,"stackTrace":{"callFrames":[{"functionName":"Client.debug","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":173,"columnNumber":107},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":441,"columnNumber":30}]}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.091
+Unexpected IOException with stream: 14:19:38.091 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] Web Socket Opened...
+
+
+# Created at 2024-03-12T14:19:38.137
+Unexpected IOException with stream: 14:19:38.137 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":">>> CONNECT\nX-CSRF-TOKEN:548adcb6-a7f8-4909-b320-f31f5050b12f\naccept-version:1.2,1.1,1.0\nheart-beat:10000,10000\n\n\u0000"}],"executionContextId":2,"timestamp":1.710249578057558e+12,"stackTrace":{"callFrames":[{"functionName":"Client.debug","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":173,"columnNumber":107},{"functionName":"Client._transmit","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":188,"columnNumber":21},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":445,"columnNumber":33}]}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.138
+Unexpected IOException with stream: 14:19:38.138 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] >>> CONNECT
+X-CSRF-TOKEN:548adcb6-a7f8-4909-b320-f31f5050b12f
+accept-version:1.2,1.1,1.0
+heart-beat:10000,10000
+
+ 
+
+
+# Created at 2024-03-12T14:19:38.138
+Unexpected IOException with stream: 14:19:38.138 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"<<< CONNECTED\nversion:1.2\nheart-beat:0,0\nuser-name:a\n\n\u0000"}],"executionContextId":2,"timestamp":1.710249578061197e+12,"stackTrace":{"callFrames":[{"functionName":"Client.debug","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":173,"columnNumber":107},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":339,"columnNumber":30}]}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.139
+Unexpected IOException with stream: 14:19:38.138 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] <<< CONNECTED
+version:1.2
+heart-beat:0,0
+user-name:a
+
+ 
+
+
+# Created at 2024-03-12T14:19:38.139
+Unexpected IOException with stream: 14:19:38.139 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"connected to server undefined"}],"executionContextId":2,"timestamp":1.710249578061493e+12,"stackTrace":{"callFrames":[{"functionName":"Client.debug","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":173,"columnNumber":107},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":349,"columnNumber":42}]}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.139
+Unexpected IOException with stream: 14:19:38.139 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] connected to server undefined
+
+
+# Created at 2024-03-12T14:19:38.140
+Unexpected IOException with stream: 14:19:38.140 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"Connected to "},{"type":"string","value":"ws://localhost:8080/ws"},{"type":"string","value":" - subscribing:"}],"executionContextId":2,"timestamp":1.71024957806173e+12,"stackTrace":{"callFrames":[{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":37,"columnNumber":24},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":362,"columnNumber":42}]}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.140
+Unexpected IOException with stream: 14:19:38.140 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] Connected to 
+
+
+# Created at 2024-03-12T14:19:38.140
+Unexpected IOException with stream: 14:19:38.140 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] ws://localhost:8080/ws
+
+
+# Created at 2024-03-12T14:19:38.231
+Unexpected IOException with stream: 14:19:38.231 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console]  - subscribing:
+
+
+# Created at 2024-03-12T14:19:38.250
+Unexpected IOException with stream: 14:19:38.249 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":" ... to /user/queue/updates ..."}],"executionContextId":2,"timestamp":1.710249578061778e+12,"stackTrace":{"callFrames":[{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":40,"columnNumber":28},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":362,"columnNumber":42}]}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.250
+Unexpected IOException with stream: 14:19:38.250 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console]  ... to /user/queue/updates ...
+
+
+# Created at 2024-03-12T14:19:38.251
+Unexpected IOException with stream: 14:19:38.250 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":">>> SUBSCRIBE\nid:sub-0\ndestination:/user/queue/updates\n\n\u0000"}],"executionContextId":2,"timestamp":1.71024957806246e+12,"stackTrace":{"callFrames":[{"functionName":"Client.debug","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":173,"columnNumber":107},{"functionName":"Client._transmit","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":188,"columnNumber":21},{"functionName":"Client.subscribe","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":532,"columnNumber":17},{"functionName":"subscribe","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":52,"columnNumber":27},{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":41,"columnNumber":23},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":362,"columnNumber":42}]}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.251
+Unexpected IOException with stream: 14:19:38.251 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] >>> SUBSCRIBE
+id:sub-0
+destination:/user/queue/updates
+
+ 
+
+
+# Created at 2024-03-12T14:19:38.252
+Unexpected IOException with stream: 14:19:38.251 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"Hopefully subscribed to /user/queue/updates"}],"executionContextId":2,"timestamp":1.710249578062551e+12,"stackTrace":{"callFrames":[{"functionName":"subscribe","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":54,"columnNumber":20},{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":41,"columnNumber":23},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":362,"columnNumber":42}]}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.252
+Unexpected IOException with stream: 14:19:38.252 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] Hopefully subscribed to /user/queue/updates
+
+
+# Created at 2024-03-12T14:19:38.252
+Unexpected IOException with stream: 14:19:38.252 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":" ... to /topic/admin ..."}],"executionContextId":2,"timestamp":1.710249578062578e+12,"stackTrace":{"callFrames":[{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":40,"columnNumber":28},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":362,"columnNumber":42}]}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.369
+Unexpected IOException with stream: 14:19:38.369 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console]  ... to /topic/admin ...
+
+
+# Created at 2024-03-12T14:19:38.369
+Unexpected IOException with stream: 14:19:38.369 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":">>> SUBSCRIBE\nid:sub-1\ndestination:/topic/admin\n\n\u0000"}],"executionContextId":2,"timestamp":1.710249578062621e+12,"stackTrace":{"callFrames":[{"functionName":"Client.debug","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":173,"columnNumber":107},{"functionName":"Client._transmit","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":188,"columnNumber":21},{"functionName":"Client.subscribe","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":532,"columnNumber":17},{"functionName":"subscribe","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":52,"columnNumber":27},{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":41,"columnNumber":23},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":362,"columnNumber":42}]}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.370
+Unexpected IOException with stream: 14:19:38.370 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] >>> SUBSCRIBE
+id:sub-1
+destination:/topic/admin
+
+ 
+
+
+# Created at 2024-03-12T14:19:38.370
+Unexpected IOException with stream: 14:19:38.370 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"Hopefully subscribed to /topic/admin"}],"executionContextId":2,"timestamp":1.71024957806266e+12,"stackTrace":{"callFrames":[{"functionName":"subscribe","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":54,"columnNumber":20},{"functionName":"","scriptId":"12","url":"http://localhost:8080/js/iw.js","lineNumber":41,"columnNumber":23},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":362,"columnNumber":42}]}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.370
+Unexpected IOException with stream: 14:19:38.370 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] Hopefully subscribed to /topic/admin
+
+
+# Created at 2024-03-12T14:19:38.373
+Unexpected IOException with stream: 14:19:38.373 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":19,"result":{"result":{"type":"string","value":"http://localhost:8080/admin/"}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.375
+Unexpected IOException with stream: 14:19:38.375 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":20,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Runtime.evaluate","params":{"expression":"document.evaluate(\"\/\/button[normalize-space(text())='logout']\", document, null, 9, null).singleNodeValue.click()","returnByValue":true}}
+
+
+# Created at 2024-03-12T14:19:38.381
+Unexpected IOException with stream: 14:19:38.381 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":20,"result":{"result":{"type":"undefined"}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.382
+Unexpected IOException with stream: 14:19:38.382 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameScheduledNavigation","params":{"frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB","delay":0,"reason":"formSubmissionPost","url":"http://localhost:8080/logout"},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.383
+Unexpected IOException with stream: 14:19:38.382 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameRequestedNavigation","params":{"frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB","reason":"formSubmissionPost","url":"http://localhost:8080/logout","disposition":"currentTab"},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.513
+Unexpected IOException with stream: 14:19:38.513 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStartedLoading","params":{"frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB"},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.533
+Unexpected IOException with stream: 14:19:38.533 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameClearedScheduledNavigation","params":{"frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB"},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.534
+Unexpected IOException with stream: 14:19:38.534 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"Whoops! Lost connection to ws://localhost:8080/ws"}],"executionContextId":2,"timestamp":1.710249578388259e+12,"stackTrace":{"callFrames":[{"functionName":"Client.debug","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":173,"columnNumber":107},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":426,"columnNumber":30}]}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.534
+Unexpected IOException with stream: 14:19:38.534 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] Whoops! Lost connection to ws://localhost:8080/ws
+
+
+# Created at 2024-03-12T14:19:38.534
+Unexpected IOException with stream: 14:19:38.534 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.consoleAPICalled","params":{"type":"log","args":[{"type":"string","value":"STOMP: scheduling reconnection in 2000ms"}],"executionContextId":2,"timestamp":1.710249578388409e+12,"stackTrace":{"callFrames":[{"functionName":"Client.debug","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":173,"columnNumber":107},{"functionName":"Client._schedule_reconnect","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":453,"columnNumber":25},{"functionName":"","scriptId":"11","url":"http://localhost:8080/js/stomp.js","lineNumber":435,"columnNumber":33}]}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.535
+Unexpected IOException with stream: 14:19:38.535 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - [console] STOMP: scheduling reconnection in 2000ms
+
+
+# Created at 2024-03-12T14:19:38.535
+Unexpected IOException with stream: 14:19:38.535 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextsCleared","params":{},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.535
+Unexpected IOException with stream: 14:19:38.535 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameNavigated","params":{"frame":{"id":"5D0022ADBFC551A0B949B5D3B0ADC4EB","loaderId":"DDF05D6E659BCF74E42447DF8749BDFD","url":"http://localhost:8080/login","domainAndRegistry":"","securityOrigin":"http://localhost:8080","mimeType":"text/html","adFrameStatus":{"adFrameType":"none"},"secureContextType":"SecureLocalhost","crossOriginIsolatedContextType":"NotIsolated","gatedAPIFeatures":[]},"type":"Navigation"},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.536
+Unexpected IOException with stream: 14:19:38.535 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextCreated","params":{"context":{"id":3,"origin":"http://localhost:8080","name":"","uniqueId":"-460569764878583863.-6142581542931527961","auxData":{"isDefault":true,"type":"default","frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB"}}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.566
+Unexpected IOException with stream: 14:19:38.566 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.domContentEventFired","params":{"timestamp":3083.166724},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.567
+Unexpected IOException with stream: 14:19:38.567 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.loadEventFired","params":{"timestamp":3083.167243},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.567
+Unexpected IOException with stream: 14:19:38.567 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStoppedLoading","params":{"frameId":"5D0022ADBFC551A0B949B5D3B0ADC4EB"},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.568
+Unexpected IOException with stream: 14:19:38.567 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":21,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Runtime.evaluate","params":{"expression":"document.location.href","returnByValue":true}}
+
+
+# Created at 2024-03-12T14:19:38.569
+Unexpected IOException with stream: 14:19:38.569 [nioEventLoopGroup-6-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":21,"result":{"result":{"type":"string","value":"http://localhost:8080/login"}},"sessionId":"C3920D0E13F730596397B1EBF09F6DFF"}
+
+
+# Created at 2024-03-12T14:19:38.569
+Unexpected IOException with stream: 14:19:38.569 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":22,"sessionId":"C3920D0E13F730596397B1EBF09F6DFF","method":"Target.closeTarget","params":{"targetId":"5D0022ADBFC551A0B949B5D3B0ADC4EB"}}
+
+
+# Created at 2024-03-12T14:19:38.570
+Unexpected IOException with stream: 14:19:38.570 [nioEventLoopGroup-6-1] DEBUG c.i.k.http.WebSocketClientHandler - websocket closing
+
+
+# Created at 2024-03-12T14:19:38.570
+Unexpected IOException with stream: 14:19:38.570 [nioEventLoopGroup-6-1] DEBUG c.i.k.http.WebSocketClientHandler - websocket client disconnected
+
+
+# Created at 2024-03-12T14:19:38.572
+Unexpected IOException with stream: 14:19:38.572 [main] DEBUG com.intuit.karate.shell.Command - closing command: chrome_1710249576775
+
+
+# Created at 2024-03-12T14:19:38.666
+Unexpected IOException with stream: 14:19:38.666 [chrome_1710249576775] WARN  com.intuit.karate.shell.Command - exit code was non-zero: 1 - [C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, --remote-debugging-port=51936, --no-first-run, --user-data-dir=u:\hlocal\gg\gg\target\chrome_1710249576775, --disable-popup-blocking, --remote-allow-origins=*, --incognito] working dir: target\chrome_1710249576775
+
+
+# Created at 2024-03-12T14:19:39.282
+Unexpected IOException with stream: ---------------------------------------------------------
+feature: classpath:external/login.feature
+scenarios:  5 | passed:  4 | failed:  1 | time: 42,0602
+---------------------------------------------------------
+
+
+# Created at 2024-03-12T14:19:39.283
+Unexpected IOException with stream: 
+
+
+# Created at 2024-03-12T14:19:39.302
+Unexpected IOException with stream: Karate version: 1.1.0
+
+
+# Created at 2024-03-12T14:19:39.302
+Unexpected IOException with stream: ======================================================
+
+
+# Created at 2024-03-12T14:19:39.302
+Unexpected IOException with stream: elapsed:  73,58 | threads:    1 | thread time: 42,06 
+
+
+# Created at 2024-03-12T14:19:39.302
+Unexpected IOException with stream: features:     1 | skipped:    0 | efficiency: 0,57
+
+
+# Created at 2024-03-12T14:19:39.303
+Unexpected IOException with stream: scenarios:    5 | passed:     4 | failed: 1
+
+
+# Created at 2024-03-12T14:19:39.303
+Unexpected IOException with stream: ======================================================
+
+
+# Created at 2024-03-12T14:19:39.303
+Unexpected IOException with stream: >>> failed features:
+
+
+# Created at 2024-03-12T14:19:39.303
+Unexpected IOException with stream: failed to get reply for: [id: 7, sessionId: 65C791F17A805F2C4E11D8D958CEC29D, method: Page.captureScreenshot]
+classpath:external/login.feature:14
+
+
+# Created at 2024-03-12T14:19:39.304
+Unexpected IOException with stream: <<<
+
+
+# Created at 2024-03-12T14:19:39.361
+Unexpected IOException with stream: 
+HTML report: (paste into browser to view) | Karate version: 1.1.0
+file:///u:/hlocal/gg/gg/target/karate-reports/karate-summary.html
+===================================================================
+
+
+
+# Created at 2024-03-12T14:19:39.361
+Unexpected IOException: 6,1,external.ExternalRunner,testLogin[1][5],null,null,null
+
+
+# Created at 2024-03-12T14:19:39.361
+Unexpected IOException with stream: 14:19:39.361 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+
+
+# Created at 2024-03-12T14:19:39.375
+Unexpected IOException: 5,1,external.ExternalRunner,testGuia[1][1],null,null,null
+
+
+# Created at 2024-03-12T14:19:39.376
+Unexpected IOException with stream: 14:19:39.376 [main] INFO  com.intuit.karate - karate.env system property was: null 
+
+
+# Created at 2024-03-12T14:19:39.376
+Unexpected IOException with stream: 14:19:39.376 [main] DEBUG com.intuit.karate.shell.Command - found / verified free local port: 51966
+
+
+# Created at 2024-03-12T14:19:39.376
+Unexpected IOException with stream: 14:19:39.376 [main] WARN  c.intuit.karate.driver.DriverOptions - preferred port 9222 not available, will use: 51966
+
+
+# Created at 2024-03-12T14:19:39.401
+Unexpected IOException with stream: 14:19:39.401 [main] DEBUG c.i.k.driver.chrome_1710249579376 - poll attempt #0 for port to be ready - localhost:51966
+
+
+# Created at 2024-03-12T14:19:39.401
+Unexpected IOException with stream: 14:19:39.401 [chrome_1710249579376] DEBUG c.i.k.driver.chrome_1710249579376 - command: [C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, --remote-debugging-port=51966, --no-first-run, --user-data-dir=u:\hlocal\gg\gg\target\chrome_1710249579376, --disable-popup-blocking, --remote-allow-origins=*, --incognito], working dir: target\chrome_1710249579376
+
+
+# Created at 2024-03-12T14:19:39.622
+Unexpected IOException with stream: 14:19:39.622 [chrome_1710249579376-out] DEBUG c.i.k.driver.chrome_1710249579376 - 
+
+
+# Created at 2024-03-12T14:19:39.622
+Unexpected IOException with stream: 14:19:39.622 [chrome_1710249579376-out] DEBUG c.i.k.driver.chrome_1710249579376 - DevTools listening on ws://127.0.0.1:51966/devtools/browser/769e2151-c250-4c05-b994-4895f5e39fb8
+
+
+# Created at 2024-03-12T14:19:39.661
+Unexpected IOException with stream: 14:19:39.661 [main] DEBUG c.i.k.driver.chrome_1710249579376 - poll attempt #1 for port to be ready - localhost:51966
+
+
+# Created at 2024-03-12T14:19:39.674
+Unexpected IOException with stream: 14:19:39.673 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:51966/json
+1 > Host: localhost:51966
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.3.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+
+
+# Created at 2024-03-12T14:19:39.689
+Unexpected IOException with stream: 14:19:39.689 [main] DEBUG com.intuit.karate - response time in milliseconds: 12
+1 < 200
+1 < Content-Security-Policy: frame-ancestors 'none'
+1 < Content-Length: 1583
+1 < Content-Type: application/json; charset=UTF-8
+[ {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51966/devtools/page/EF547C6E4629CBB72C05C76EA3CC14A9",
+   "id": "EF547C6E4629CBB72C05C76EA3CC14A9",
+   "title": "Google Network Speech",
+   "type": "background_page",
+   "url": "",
+   "webSocketDebuggerUrl": "ws://localhost:51966/devtools/page/EF547C6E4629CBB72C05C76EA3CC14A9"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51966/devtools/page/280AF03C72663A61A70B6DBBE1BE8768",
+   "id": "280AF03C72663A61A70B6DBBE1BE8768",
+   "title": "Google Hangouts",
+   "type": "background_page",
+   "url": "",
+   "webSocketDebuggerUrl": "ws://localhost:51966/devtools/page/280AF03C72663A61A70B6DBBE1BE8768"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51966/devtools/page/FB5E594FD6D85F5648F498ECA0FC7A5B",
+   "id": "FB5E594FD6D85F5648F498ECA0FC7A5B",
+   "title": "Google Hangouts",
+   "type": "background_page",
+   "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html",
+   "webSocketDebuggerUrl": "ws://localhost:51966/devtools/page/FB5E594FD6D85F5648F498ECA0FC7A5B"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51966/devtools/page/68A22F03C1FE20F85FC56DB7CB7DB038",
+   "id": "68A22F03C1FE20F85FC56DB7CB7DB038",
+   "title": "Nueva pestaña de Incógnito",
+   "type": "page",
+   "url": "chrome://newtab/",
+   "webSocketDebuggerUrl": "ws://localhost:51966/devtools/page/68A22F03C1FE20F85FC56DB7CB7DB038"
+} ]
+
+
+
+# Created at 2024-03-12T14:19:39.732
+Unexpected IOException with stream: 14:19:39.730 [main] DEBUG com.intuit.karate.shell.Command - ready to accept http connections after 59 ms - http://localhost:51966/json
+
+
+# Created at 2024-03-12T14:19:39.734
+Unexpected IOException with stream: 14:19:39.733 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:51966/json
+1 > Host: localhost:51966
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.3.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+
+
+# Created at 2024-03-12T14:19:39.744
+Unexpected IOException with stream: 14:19:39.744 [main] DEBUG com.intuit.karate - response time in milliseconds: 10
+1 < 200
+1 < Content-Security-Policy: frame-ancestors 'none'
+1 < Content-Length: 1733
+1 < Content-Type: application/json; charset=UTF-8
+[ {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51966/devtools/page/EF547C6E4629CBB72C05C76EA3CC14A9",
+   "id": "EF547C6E4629CBB72C05C76EA3CC14A9",
+   "title": "Google Network Speech",
+   "type": "background_page",
+   "url": "chrome-extension://neajdppkdcdipfabeoofebfddakdcjhd/_generated_background_page.html",
+   "webSocketDebuggerUrl": "ws://localhost:51966/devtools/page/EF547C6E4629CBB72C05C76EA3CC14A9"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51966/devtools/page/280AF03C72663A61A70B6DBBE1BE8768",
+   "id": "280AF03C72663A61A70B6DBBE1BE8768",
+   "title": "Google Hangouts",
+   "type": "background_page",
+   "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html",
+   "webSocketDebuggerUrl": "ws://localhost:51966/devtools/page/280AF03C72663A61A70B6DBBE1BE8768"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51966/devtools/page/FB5E594FD6D85F5648F498ECA0FC7A5B",
+   "id": "FB5E594FD6D85F5648F498ECA0FC7A5B",
+   "title": "Google Hangouts",
+   "type": "background_page",
+   "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html",
+   "webSocketDebuggerUrl": "ws://localhost:51966/devtools/page/FB5E594FD6D85F5648F498ECA0FC7A5B"
+}, {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:51966/devtools/page/68A22F03C1FE20F85FC56DB7CB7DB038",
+   "id": "68A22F03C1FE20F85FC56DB7CB7DB038",
+   "title": "Nueva pestaña de Incógnito",
+   "type": "page",
+   "url": "chrome://newtab/",
+   "webSocketDebuggerUrl": "ws://localhost:51966/devtools/page/68A22F03C1FE20F85FC56DB7CB7DB038"
+} ]
+
+
+
+# Created at 2024-03-12T14:19:39.745
+Unexpected IOException with stream: 14:19:39.745 [main] DEBUG c.intuit.karate.driver.DriverOptions - root frame id: 68A22F03C1FE20F85FC56DB7CB7DB038
+
+
+# Created at 2024-03-12T14:19:39.762
+Unexpected IOException with stream: 14:19:39.762 [nioEventLoopGroup-7-1] DEBUG c.i.k.http.WebSocketClientHandler - websocket client connected
+
+
+# Created at 2024-03-12T14:19:39.763
+Unexpected IOException with stream: 14:19:39.763 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":1,"method":"Target.attachToTarget","params":{"targetId":"68A22F03C1FE20F85FC56DB7CB7DB038","flatten":true}}
+
+
+# Created at 2024-03-12T14:19:39.773
+Unexpected IOException with stream: 14:19:39.773 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Target.attachedToTarget","params":{"sessionId":"73966DCC05475AB40357353F5F6492DF","targetInfo":{"targetId":"68A22F03C1FE20F85FC56DB7CB7DB038","type":"page","title":"Nueva pesta\u00f1a de Inc\u00f3gnito","url":"chrome://newtab/","attached":true,"canAccessOpener":false,"browserContextId":"F2808CF40FDE8F02BE1070738D1834DD"},"waitingForDebugger":false}}
+
+
+# Created at 2024-03-12T14:19:39.774
+Unexpected IOException with stream: 14:19:39.773 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":1,"result":{"sessionId":"73966DCC05475AB40357353F5F6492DF"}}
+
+
+# Created at 2024-03-12T14:19:39.774
+Unexpected IOException with stream: 14:19:39.774 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":2,"sessionId":"73966DCC05475AB40357353F5F6492DF","method":"Target.activateTarget","params":{"targetId":"68A22F03C1FE20F85FC56DB7CB7DB038"}}
+
+
+# Created at 2024-03-12T14:19:39.775
+Unexpected IOException with stream: 14:19:39.775 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":2,"result":{},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:39.776
+Unexpected IOException with stream: 14:19:39.775 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":3,"sessionId":"73966DCC05475AB40357353F5F6492DF","method":"Page.enable"}
+
+
+# Created at 2024-03-12T14:19:39.777
+Unexpected IOException with stream: 14:19:39.777 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":3,"result":{},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:39.777
+Unexpected IOException with stream: 14:19:39.777 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":4,"sessionId":"73966DCC05475AB40357353F5F6492DF","method":"Runtime.enable"}
+
+
+# Created at 2024-03-12T14:19:39.780
+Unexpected IOException with stream: 14:19:39.780 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextCreated","params":{"context":{"id":1,"origin":"://","name":"","uniqueId":"-3819399336901942769.8948632100917030227","auxData":{"isDefault":true,"type":"default","frameId":"68A22F03C1FE20F85FC56DB7CB7DB038"}}},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:39.781
+Unexpected IOException with stream: 14:19:39.781 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":4,"result":{},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:39.782
+Unexpected IOException with stream: 14:19:39.781 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":5,"sessionId":"73966DCC05475AB40357353F5F6492DF","method":"Browser.getWindowForTarget","params":{"targetId":"68A22F03C1FE20F85FC56DB7CB7DB038"}}
+
+
+# Created at 2024-03-12T14:19:39.783
+Unexpected IOException with stream: 14:19:39.782 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":5,"result":{"windowId":808666142,"bounds":{"left":10,"top":10,"width":945,"height":1020,"windowState":"normal"}},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:39.801
+Unexpected IOException with stream: 14:19:39.801 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":6,"sessionId":"73966DCC05475AB40357353F5F6492DF","method":"Page.navigate","params":{"url":"http:\/\/localhost:8080\/user\/2"}}
+
+
+# Created at 2024-03-12T14:19:39.804
+Unexpected IOException with stream: 14:19:39.803 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStartedLoading","params":{"frameId":"68A22F03C1FE20F85FC56DB7CB7DB038"},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:39.987
+Unexpected IOException with stream: 14:19:39.987 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":6,"result":{"frameId":"68A22F03C1FE20F85FC56DB7CB7DB038","loaderId":"696787B7800BF1D30279FCB0EB6E5CC8"},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:39.996
+Unexpected IOException with stream: 14:19:39.996 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextsCleared","params":{},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:39.997
+Unexpected IOException with stream: 14:19:39.997 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextsCleared","params":{},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:39.997
+Unexpected IOException with stream: 14:19:39.997 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameNavigated","params":{"frame":{"id":"68A22F03C1FE20F85FC56DB7CB7DB038","loaderId":"696787B7800BF1D30279FCB0EB6E5CC8","url":"http://localhost:8080/login","domainAndRegistry":"","securityOrigin":"http://localhost:8080","mimeType":"text/html","adFrameStatus":{"adFrameType":"none"},"secureContextType":"SecureLocalhost","crossOriginIsolatedContextType":"NotIsolated","gatedAPIFeatures":[]},"type":"Navigation"},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:39.998
+Unexpected IOException with stream: 14:19:39.998 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextCreated","params":{"context":{"id":1,"origin":"http://localhost:8080","name":"","uniqueId":"234286549422473231.8950778977569820477","auxData":{"isDefault":true,"type":"default","frameId":"68A22F03C1FE20F85FC56DB7CB7DB038"}}},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:40.107
+Unexpected IOException with stream: 14:19:40.107 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.domContentEventFired","params":{"timestamp":3084.740219},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:40.108
+Unexpected IOException with stream: 14:19:40.108 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.loadEventFired","params":{"timestamp":3084.85009},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:40.109
+Unexpected IOException with stream: 14:19:40.109 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStoppedLoading","params":{"frameId":"68A22F03C1FE20F85FC56DB7CB7DB038"},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:40.109
+Unexpected IOException with stream: 14:19:40.109 [main] DEBUG c.intuit.karate.driver.DriverOptions - >> {"id":7,"sessionId":"73966DCC05475AB40357353F5F6492DF","method":"Page.navigate","params":{"url":"http:\/\/localhost:8080\/guias"}}
+
+
+# Created at 2024-03-12T14:19:40.118
+Unexpected IOException with stream: 14:19:40.118 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStartedLoading","params":{"frameId":"68A22F03C1FE20F85FC56DB7CB7DB038"},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:40.118
+Unexpected IOException with stream: *** waiting for socket, type the command below:
+curl http://localhost:9000
+in a new terminal (or open the URL in a web-browser) to proceed ...
+
+
+# Created at 2024-03-12T14:19:40.127
+Unexpected IOException with stream: 14:19:40.127 [stop-listener-9000] INFO  c.i.karate.shell.StopListenerThread - starting thread: stop-listener-9000
+
+
+# Created at 2024-03-12T14:19:40.168
+Unexpected IOException with stream: 14:19:40.168 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"id":7,"result":{"frameId":"68A22F03C1FE20F85FC56DB7CB7DB038","loaderId":"ADF2A72EA06B8C9432E3CB687085DC10"},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:40.172
+Unexpected IOException with stream: 14:19:40.172 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextsCleared","params":{},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:40.208
+Unexpected IOException with stream: 14:19:40.208 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameNavigated","params":{"frame":{"id":"68A22F03C1FE20F85FC56DB7CB7DB038","loaderId":"ADF2A72EA06B8C9432E3CB687085DC10","url":"http://localhost:8080/login","domainAndRegistry":"","securityOrigin":"http://localhost:8080","mimeType":"text/html","adFrameStatus":{"adFrameType":"none"},"secureContextType":"SecureLocalhost","crossOriginIsolatedContextType":"NotIsolated","gatedAPIFeatures":[]},"type":"Navigation"},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:40.208
+Unexpected IOException with stream: 14:19:40.208 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Runtime.executionContextCreated","params":{"context":{"id":2,"origin":"http://localhost:8080","name":"","uniqueId":"-2734195949958353893.-789801902181710790","auxData":{"isDefault":true,"type":"default","frameId":"68A22F03C1FE20F85FC56DB7CB7DB038"}}},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:40.209
+Unexpected IOException with stream: 14:19:40.209 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.domContentEventFired","params":{"timestamp":3084.92182},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:40.209
+Unexpected IOException with stream: 14:19:40.209 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.loadEventFired","params":{"timestamp":3084.923599},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+
+# Created at 2024-03-12T14:19:40.209
+Unexpected IOException with stream: 14:19:40.209 [nioEventLoopGroup-7-1] DEBUG c.intuit.karate.driver.DriverOptions - << {"method":"Page.frameStoppedLoading","params":{"frameId":"68A22F03C1FE20F85FC56DB7CB7DB038"},"sessionId":"73966DCC05475AB40357353F5F6492DF"}
+
+

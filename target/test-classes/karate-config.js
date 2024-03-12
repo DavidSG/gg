@@ -22,10 +22,10 @@ function fn() {
         type: 'chrome',
         // descomentar para chromium bajo linux
         // executable: '/usr/bin/chromium-browser',
-        //executable: "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
-        executable: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        executable: "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+        //executable: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
         addOptions: ["--remote-allow-origins=*", "--incognito"],
-        showDriverLog: true
+        //showDriverLog: true
     })
 
     if (env == 'dev') {

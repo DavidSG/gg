@@ -1,0 +1,52 @@
+# Created at 2024-03-12T14:28:43.787
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:398)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+
+# Created at 2024-03-12T14:28:50.101
+Unexpected IOException with stream: 14:28:50.101 [nioEventLoopGroup-7-1] DEBUG c.i.k.driver.chrome_1710250112617 - << {"id":7,"result":{"frameId":"4CBDAA180B89B7C77F2731BC38F15193","loaderId":"A614525AC60E54ED9996518575767ACD","errorText":"net::ERR_ABORTED"},"sessionId":"69DF29511DB7C3A63E5C33853C7FD040"}
+
+
+# Created at 2024-03-12T14:28:50.103
+Unexpected IOException with stream: 14:28:50.102 [nioEventLoopGroup-7-1] DEBUG c.i.k.driver.chrome_1710250112617 - << {"method":"Page.frameStoppedLoading","params":{"frameId":"4CBDAA180B89B7C77F2731BC38F15193"},"sessionId":"69DF29511DB7C3A63E5C33853C7FD040"}
+
+
+# Created at 2024-03-12T14:28:50.104
+Unexpected IOException with stream: 14:28:50.104 [nioEventLoopGroup-7-1] DEBUG c.i.k.driver.chrome_1710250112617 - << {"method":"Inspector.detached","params":{"reason":"Render process gone."}}
+
+
+# Created at 2024-03-12T14:28:50.105
+Unexpected IOException with stream: 14:28:50.104 [nioEventLoopGroup-7-1] DEBUG c.i.k.driver.chrome_1710250112617 - << {"method":"Inspector.detached","params":{"reason":"Render process gone."},"sessionId":"69DF29511DB7C3A63E5C33853C7FD040"}
+
+
+# Created at 2024-03-12T14:28:50.105
+Unexpected IOException with stream: 14:28:50.105 [nioEventLoopGroup-7-1] DEBUG c.i.k.driver.chrome_1710250112617 - << {"method":"Inspector.detached","params":{"reason":"target_closed"}}
+
+
+# Created at 2024-03-12T14:28:50.106
+Unexpected IOException with stream: 14:28:50.106 [nioEventLoopGroup-7-1] DEBUG c.i.k.http.WebSocketClientHandler - websocket client disconnected
+
+
+# Created at 2024-03-12T14:28:50.366
+Unexpected IOException with stream: 14:28:50.365 [chrome_1710250112617] DEBUG com.intuit.karate.shell.Command - command complete, exit code: 0 - [C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, --remote-debugging-port=52534, --no-first-run, --user-data-dir=u:\hlocal\gg\gg\target\chrome_1710250112617, --disable-popup-blocking, --remote-allow-origins=*, --incognito]
+
+
+# Created at 2024-03-12T14:29:03.063
+Unexpected IOException with stream: 14:29:03.063 [main] ERROR c.i.k.driver.chrome_1710250112617 - << timed out after milliseconds: 30000 - [id: 7, sessionId: 69DF29511DB7C3A63E5C33853C7FD040, method: Page.navigate, params: {"url":"http://localhost:8080/guias"}]
+
+
+# Created at 2024-03-12T14:29:03.064
+Unexpected IOException with stream: 14:29:03.064 [main] ERROR com.intuit.karate - classpath:external/guias.feature:13
+And driver baseUrl + '/guias'
+failed to get reply for: [id: 7, sessionId: 69DF29511DB7C3A63E5C33853C7FD040, method: Page.navigate, params: {"url":"http://localhost:8080/guias"}]
+classpath:external/guias.feature:13
+
+
+# Created at 2024-03-12T14:29:03.065
+Unexpected IOException with stream: 14:29:03.064 [main] DEBUG c.i.k.driver.chrome_1710250112617 - >> {"id":8,"sessionId":"69DF29511DB7C3A63E5C33853C7FD040","method":"Page.captureScreenshot"}
+
+
