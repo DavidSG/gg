@@ -81,54 +81,87 @@
 				</div>
 				<div class="campeonTexto" th:text="${#strings.capitalize(campeon.nombre)}">Campeon Name</div>
 			</div>
-                
+            <button id="prueba">Prueba</button>
+
             </div>
 
         </div>
 
         <script>
             
-            var etiquetas = ["campeon", "posicion", "general"];
+            var titulo;
+            const seleccion = {etiquetas: new Set(), posiciones: new Set()}
+            
+            function toggle(set, key) {
+                if (set.has(key)) set.delete(key); else set.add(key);
+            }
+
+            // TITULO
+
+            var element = document.getElementById("titulo");
+            element.addEventListener('click', function() {
+                titulo = this.value;
+            });
+
+            // ETIQUETAS
+
+            const etiquetas = ["campeon", "posicion", "general"];
 
             for (var i = 0; i < etiquetas.length; i++) {
                 var element = document.getElementById(etiquetas[i]);
                 element.addEventListener('click', function() {
-                    if (this.classList.contains('bordeAmarillo')) {
-                        this.classList.remove('bordeAmarillo');
-                    }
-                    else {
-                        this.classList.add('bordeAmarillo');
-                    }
-                
+                    toggle(seleccion.etiquetas, this.id);
+                    this.classList.toggle('bordeAmarillo')
                 });
             }
 
-            var posiciones = ["all", "top", "jgl", "mid", "bot", "sup"];
+            // POSICIONES
+
+            const posiciones = ["all", "top", "jgl", "mid", "bot", "sup"];
 
             for (var i = 0; i < posiciones.length; i++) {
                 var element = document.getElementById(posiciones[i]);
                 element.addEventListener('click', function() {
-                    if (this.classList.contains('bordeAmarillo')) {
-                        this.classList.remove('bordeAmarillo');
-                    }
-                    else {
-                        this.classList.add('bordeAmarillo');
-                    }
-                
+                    toggle(seleccion.posiciones, this.id);
+                    this.classList.toggle('bordeAmarillo')
                 });
             }
 
-            fetch('/api/champions')
-            .then(response => response.json())
-            .then(champions => {
-                // Process the champions data in JavaScript
-                console.log(champions);
-            })
-            .catch(error => console.error('Error fetching champions:', error));
+            function actualizaConJson(json) {
+                //TODO
+
+                /*
+                const grid = document.querySelector('.campeonGrid');
+
+                for (var i = 0; i < json.length; i++) {
+                    const campeon = document.createElement('div');
+                    campeon.classList.add('campeon');
+                    
+                    const campeonImagen = document.createElement('div');
+                    campeonImagen.classList.add('campeonImagen');
+                    console.log("Nombre: " + arrayJSON[i].nombre + ", Edad: " + arrayJSON[i].edad);
+                }
+            */
+            }
+
+            // CAMPEONES
+            var test;
+            document.querySelector("#prueba").addEventListener("click", () => 
+                go('/api/campeones', 'GET', {
+                        etiquetas: [... seleccion.etiquetas].join(","), 
+                        posiciones: [... seleccion.posiciones].join(",")
+                    })
+                    .then(json => 
+                        console.log("OK", actualizaConJson(json)))
+                    .catch(e => console.log("ERR", e))
+            );
+            
+            
             
         </script>
             
-		
+		<script type="text/javascript" src="js/iw.js"></script>
+		<script type="text/javascript" src="js/stomp.js"></script>
     </main>
 </body>
 </html>
