@@ -14,12 +14,12 @@ ALTER SEQUENCE 'PUBLIC'.'GEN' RESTART WITH 1024;
 INSERT INTO Guia (id, titulo, autor, fecha, puntuacion, campeon, posiciones, etiquetas, elo, hechizos, items, texto) VALUES 
 (1, 'Guia suspicaz', 'David Alfonso', '2024-01-02', 9.8, 'aatrox', 'top', 'campeon', 'diamante', 'flash', '4010 3348 2419 2152 2150', 'texto generico'),
 (2, 'Guia excelente', 'Laura Lopez', '2021-05-01', 9.0, 'jhin', 'bot', 'campeon', 'platino', 'ignite', '4010 3348 2419 2152 2150', 'texto generico'),
-(3, 'Guia versÃ¡til', 'Carlos Rodriguez', '2023-12-02', 8.5, 'leona', 'sup', 'campeon', 'oro', 'teleport', '4010 3348 2419 2152 2150', 'texto generico'),
-(4, 'GuÃ­a tÃ¡ctica para principiantes', 'Ana MartÃ­nez', '2023-05-02', 8.7, 'Annie', 'mid', 'campeon',  'plata', 'Teleport Flash', '4010 3348 2419 2152 2150', 'Consejos y estrategias esenciales para jugadores novatos.'),
-(5, 'Dominando el juego con Jinx', 'Pablo GonzÃ¡lez', '2023-10-15', 9.5, 'Jinx', 'bot', 'campeon', 'diamante', 'Flash Heal', '4010 3348 2419 2152 2150', 'Aprende a jugar como un profesional con la campeona Jinx.'),
+(3, 'Guia versátil', 'Carlos Rodriguez', '2023-12-02', 8.5, 'leona', 'sup', 'campeon', 'oro', 'teleport', '4010 3348 2419 2152 2150', 'texto generico'),
+(4, 'Guía táctica para principiantes', 'Ana Martínez', '2023-05-02', 8.7, 'Annie', 'mid', 'campeon',  'plata', 'Teleport Flash', '4010 3348 2419 2152 2150', 'Consejos y estrategias esenciales para jugadores novatos.'),
+(5, 'Dominando el juego con Jinx', 'Pablo González', '2023-10-15', 9.5, 'Jinx', 'bot', 'campeon', 'diamante', 'Flash Heal', '4010 3348 2419 2152 2150', 'Aprende a jugar como un profesional con la campeona Jinx.'),
 (6, 'Guia suspicaz', 'David Alfonso', '2023-12-12', 9.8, 'aatrox', 'top', 'campeon', 'diamante', 'flash', '4010 3348 2419 2152 2150', 'texto generico'),
 (7, 'Guia excelente', 'Laura Lopez', '2023-12-15', 9.0, 'jhin', 'bot', 'campeon', 'platino', 'ignite', '4010 3348 2419 2152 2150', 'texto generico'),
-(8, 'Guia versÃ¡til', 'Carlos Rodriguez', '2023-12-15', 8.5, 'leona', 'sup','campeon', 'oro', 'teleport', '4010 3348 2419 2152 2150', 'texto generico');
+(8, 'Guia versátil', 'Carlos Rodriguez', '2023-12-15', 8.5, 'leona', 'sup','campeon', 'oro', 'teleport', '4010 3348 2419 2152 2150', 'texto generico');
 
 
 

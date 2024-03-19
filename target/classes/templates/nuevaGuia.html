@@ -73,15 +73,14 @@
                 </div>
             </div>
 
-            <div class="nuevoCampo">
+            <div class="nuevoCampeon">
                 <h1> 4. Selecciona campeon </h1>
-                <div th:each="campeon : ${campeones}" class="campeon">
-				<div class="campeonImagen">
-					<img th:src="@{/img/campeones/__${campeon.nombre}__.png}" />
-				</div>
-				<div class="campeonTexto" th:text="${#strings.capitalize(campeon.nombre)}">Campeon Name</div>
+                <div class = "nuevoCampeonSeleccionado">
+                    <input type="text" id="campeonSelector" name="campeonSelector">
+                </div>
+                <div class="nuevoCampeonGrid"></div>
 			</div>
-            <button id="prueba">Prueba</button>
+            
 
             </div>
 
@@ -128,25 +127,45 @@
             }
 
             function actualizaConJson(json) {
-                //TODO
 
-                /*
-                const grid = document.querySelector('.campeonGrid');
+                const grid = document.querySelector('.nuevoCampeonGrid');
+                const searchBar = document.getElementById('campeonSelector');
+                const campeonSeleccionado = document.querySelector('.nuevoCampeonSeleccionado');
 
-                for (var i = 0; i < json.length; i++) {
-                    const campeon = document.createElement('div');
-                    campeon.classList.add('campeon');
-                    
-                    const campeonImagen = document.createElement('div');
-                    campeonImagen.classList.add('campeonImagen');
-                    console.log("Nombre: " + arrayJSON[i].nombre + ", Edad: " + arrayJSON[i].edad);
+                while (grid.firstChild) {
+                    grid.removeChild(grid.firstChild);
                 }
-            */
+                
+                var numCampeones = 0;
+                var i = 0;
+                const regex = new RegExp(searchBar.value);
+                while (i < json.length && numCampeones < 10) {
+                    if (regex.test(json[i].nombre)) {
+                        const image = document.createElement('img');
+                        image.src = "/img/campeones/" + json[i].nombre + ".png";
+                        image.addEventListener('click', function() {
+                            if (campeonSeleccionado.children.length >= 2) {
+                                const secondChild = campeonSeleccionado.children[1];
+                                campeonSeleccionado.removeChild(secondChild);
+                            }
+                            const seleccionado = document.createElement('img');
+                            seleccionado.src = this.src;
+                            campeonSeleccionado.appendChild(this);
+                        });
+
+                        grid.appendChild(image);
+                        numCampeones++;
+                    }
+                    i++;
+                }
+                
+            
             }
 
             // CAMPEONES
+            
             var test;
-            document.querySelector("#prueba").addEventListener("click", () => 
+            document.querySelector("#campeonSelector").addEventListener("input", () => 
                 go('/api/campeones', 'GET', {
                         etiquetas: [... seleccion.etiquetas].join(","), 
                         posiciones: [... seleccion.posiciones].join(",")

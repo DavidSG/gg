@@ -3,7 +3,7 @@
     top: 20%;
     left: 20%;
     height: 140%;
-    width: 80%;
+    width: 60%;
 
     display:grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -18,4 +18,55 @@
     grid-template-rows: 1fr 1f;
     z-index: -1;
     
+}
+
+.nuevoCampeon {
+    position: relative;
+    height: 450px;
+
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    z-index: -1;
+    
+}
+
+.nuevoCampeonSeleccionado {
+    position: relative;
+    height: 60px;
+    width:100%;
+
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    z-index: -1;
+}
+
+.nuevoCampeonSeleccionado img {
+    position:relative;
+    width: 100%;
+    height: 100%; 
+
+    border: 5px solid #ffff00;;
+}
+
+.nuevoCampeonGrid {
+    position: relative;
+    height:  340px;
+
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+}
+
+.nuevoCampeonGrid img {
+    position:relative;
+    width: 102%;
+    height: 102%; 
+
+    border: 7px solid transparent;
+    transition: transform 0.5s ease;
+}
+
+.nuevoCampeonGrid img:hover {
+    border: 7px solid #ffff00;
 }
