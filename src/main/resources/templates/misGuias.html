@@ -95,7 +95,7 @@
 		<div class = "guias">
 			<div th:each="guia : ${guias}">
 				<!-- Generate link to the guide -->
-				<th:block th:if="${guia.autor == 'seassion.u.username'}">
+				<th:block th:if="${guia.autor == session.u.username}">
 					<a th:href="@{/guia/__${guia.id}__}">
 						<div class="guia">
 							<!-- Display guide details -->
