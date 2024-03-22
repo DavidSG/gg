@@ -24,27 +24,31 @@
 
 			<div class = "buscaPosicion">	
 
-				<button id = "all">
-					<img th:src="@{/img/posiciones/all.svg}">
-				</button>
+				<div class = "posicion">
+					<button id = "all" name = "todos">
+						<img th:src="@{/img/posiciones/all.svg}">
+					</button>
+				</div>
+				
+				<div class = "posicion">
+					<button id = "top" name = "top">
+						<img th:src="@{/img/posiciones/top.svg}">
+					</button>
+				</div>
 	
-				<button id = "top">
-					<img th:src="@{/img/posiciones/top.svg}">
-				</button>
-	
-				<button id = "jgl">
+				<button id = "jgl" name = "jungla" class = "posicion">
 					<img th:src="@{/img/posiciones/jgl.svg}">
 				</button>
 	
-				<button id = "mid">
+				<button id = "mid" name = "mid">
 					<img th:src="@{/img/posiciones/mid.svg}">
 				</button>
 	
-				<button id = "bot">
+				<button id = "bot" name = "bot">
 					<img th:src="@{/img/posiciones/bot.svg}">
 				</button>
 	
-				<button id = "sup">
+				<button id = "sup" name = "soporte">
 					<img th:src="@{/img/posiciones/sup.svg}">
 				</button>
 

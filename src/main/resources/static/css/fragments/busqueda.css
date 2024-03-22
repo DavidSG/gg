@@ -48,21 +48,18 @@
     font-size: 20px;
 }
 
-
-
-
 .buscaPosicion {
     position: relative;
     left: 10px;
-    height: 50px;
-    width: 250px;
+    height: 70px;
+    width: 420px;
     
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     z-index: 1;	
 }
 
-.buscaPosicion button{
+.buscaPosicion button {
     width: 70px; 
 	height: 70px; 
 
@@ -70,19 +67,42 @@
     transition: border-color 0.2s ease-out;
 }
 
-.buscaPosicion button:hover{
-    border: 5px solid #ffff00;
-}
-
-.bordeAmarillo {
-    border: 5px solid #ffff00;
-}
-
 .buscaPosicion button img { 
 	width: 50px; 
 	height: 50px; 
     background-color: #000033;
 }
+
+.buscaPosicion button:hover{
+    border: 5px solid #ffff00;
+}
+
+.buscaPosicion button::before {
+    content: attr(name);
+
+    position: absolute;
+    top: -50px;
+    transform: translateX(-20%);
+    padding: 10px;
+    
+    background-color: #000033;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #ffff00;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.buscaPosicion button:hover::before {
+    opacity:1;
+}
+
+
+.bordeAmarillo {
+    border: 5px solid #ffff00;
+}
+
+
 
 .buscaEtiquetas {
     position: relative;
