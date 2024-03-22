@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" th:href="@{/css/fragments/busqueda.css}">
 	<link rel="stylesheet" th:href="@{/css/campeones.css}">
-    <title>Champions</title>
+    <title>Campeones</title>
 </head>
 <body>
     <main>
@@ -17,65 +18,183 @@
 		<!-- SIDEBAR -->
 		
 			
-		<form id = "searchFormId" th:action="@{/campeones}" method="get" class = "searchBar">
+		<div class = "buscaCampeones">
 
-			<input id="nombreId" type="text" placeholder="Busca un campeon " name="nombre" th:value="${nombre}" />
+			<input id="campeonesNombreId" type="text" placeholder="Busca un campeon " name="nombre"/>
 
 			<div class = "buscaPosicion">	
 
-				<button type="submit" name="posiciones" value="" th:class="${posiciones eq '' ? 'bordeAmarillo' : ''}">
+				<button id = "all">
 					<img th:src="@{/img/posiciones/all.svg}">
 				</button>
 	
-				<button type="submit" name="posiciones" value="top" th:class="${posiciones eq 'top' ? 'bordeAmarillo' : ''}">
+				<button id = "top">
 					<img th:src="@{/img/posiciones/top.svg}">
 				</button>
 	
-				<button type="submit" name="posiciones" value="jgl" th:class="${posiciones eq 'jgl' ? 'bordeAmarillo' : ''}">
+				<button id = "jgl">
 					<img th:src="@{/img/posiciones/jgl.svg}">
 				</button>
 	
-				<button type="submit" name="posiciones" value="mid" th:class="${posiciones eq 'mid' ? 'bordeAmarillo' : ''}">
+				<button id = "mid">
 					<img th:src="@{/img/posiciones/mid.svg}">
 				</button>
 	
-				<button type="submit" name="posiciones" value="bot" th:class="${posiciones eq 'bot' ? 'bordeAmarillo' : ''}">
+				<button id = "bot">
 					<img th:src="@{/img/posiciones/bot.svg}">
 				</button>
 	
-				<button type="submit" name="posiciones" value="sup" th:class="${posiciones eq 'sup' ? 'bordeAmarillo' : ''}">
+				<button id = "sup">
 					<img th:src="@{/img/posiciones/sup.svg}">
 				</button>
 
 			</div>
 			
-		</form>	
+		</div>	
 		
 
 		<!-- CAMPEONES -->	
-        <div class="campeonGrid">
-			<div th:each="campeon : ${campeones}" class="campeon">
-				<div class="campeonImagen">
-					<img th:src="@{/img/campeones/__${campeon.nombre}__.png}" />
-				</div>
-				<div class="campeonTexto" th:text="${#strings.capitalize(campeon.nombre)}">Campeon Name</div>
-			</div>
-		</div>
+
+		<div class = campeonGrid></div>
+
 		<!-- CAMPEONES -->
+
     </main>
 
+	<script type="text/javascript" src="js/iw.js"></script>
 	<script>
-		/*
-		const inputField = document.getElementById('nombreId');
-		inputField.focus();
 
-		const form = document.getElementById('searchFormId');
+		// VARIABLES Y FUNCIONES EMPLEADAS
+
+		var campeon = "";
+		var posiciones = new Set();
+
+		function actualizaConJson(json) {
+
+			console.log(json);
+
+			const grid = document.querySelector('.campeonGrid');
+			const campeonNombre = document.getElementById('campeonesNombreId');
+
+			// Reiniciar campeones
+			
+			var gridHeight = 0;
+
+			while (grid.firstChild) {
+				grid.removeChild(grid.firstChild);
+			}
+
+			// Bucle principal
+
+			const campeonRegex = new RegExp(campeonNombre.value);
+
+			for (var i = 0; i < json.length; i++) {
+
+				// Regex parametros
+
+				var nombreBuscado = campeonRegex.test(json[i].nombre);
+				var posicionBuscada = true;
+				for (const posicion of posiciones) {
+					const posicionRegex = new RegExp(posicion);
+					if (!posicionRegex.test(json[i].posiciones)) posicionBuscada = false;
+				}
+				
+				// Generar campeones
+
+				if (nombreBuscado && posicionBuscada) {
+
+					const campeon = document.createElement('div');
+					campeon.classList.add('campeon');
+					
+					const campeonImagen = document.createElement('div');
+					campeonImagen.classList.add('campeonImagen');
+
+					const image = document.createElement('img');
+					image.src = "/img/campeones/" + json[i].nombre + ".png";
+
+					const campeonPosiciones = document.createElement('div');
+					campeonPosiciones.classList.add('campeonPosiciones');
+
+					const posicionesLista = json[i].posiciones.split(' ');
+					for (var j = 0; j < posicionesLista.length; j++) {
+						const posicionImagen = document.createElement('img');
+						posicionImagen.src = "/img/posiciones/" + posicionesLista[j] + ".svg";
+						campeonPosiciones.appendChild(posicionImagen);
+					}
+					
+					
+					const campeonTexto = document.createElement('div');
+					campeonTexto.classList.add('campeonTexto');
+					campeonTexto.textContent = json[i].nombre.charAt(0).toUpperCase() + json[i].nombre.substring(1);
+					
+					
+					campeonImagen.appendChild(image)
+					campeon.appendChild(campeonImagen);
+					campeon.appendChild(campeonPosiciones);
+					campeon.appendChild(campeonTexto);
+					grid.appendChild(campeon);
+
+					if ((grid.childElementCount - 1) % 4 == 0) {
+						gridHeight += 250;
+						grid.style.height = gridHeight + 'px';
+					}
+				}
+			}
+		}
+
+		function fetchCampeones() {
+			go('/api/campeones', 'GET', {})
+				.then(json => 
+					console.log("OK", actualizaConJson(json)))
+				.catch(e => console.log("ERR", e));
+		}
+
+		// CAMPEON
+
+		document.getElementById("campeonesNombreId").addEventListener("input", fetchCampeones);
+
+		// POSICIONES
+
+		const posicionesID = ["top", "jgl", "mid", "bot", "sup"];
+
+		var posicionesBoton = document.getElementById("all");
+		posicionesBoton.classList.add('bordeAmarillo');
 		
-		inputField.addEventListener('input', function updateOutput() {
-			form.submit();
+		posicionesBoton.addEventListener('click', function() {
+			this.classList.add('bordeAmarillo');
+
+			for (var i = 0; i < posicionesID.length; i++) { 
+				posiciones.delete(posicionesID[i]);
+				document.getElementById(posicionesID[i]).classList.remove('bordeAmarillo');
+			}
+
+			fetchCampeones();
 		});
-		*/
+
+		for (var i = 0; i < posicionesID.length; i++) {
+			var posicionesBoton = document.getElementById(posicionesID[i]);
+			posicionesBoton.addEventListener('click', function() {
+				
+
+				if (posiciones.has(this.id)) {
+					posiciones.delete(this.id);
+					if (posiciones.size == 0) document.getElementById("all").classList.add('bordeAmarillo');
+				}
+				else {
+					posiciones.add(this.id);
+					document.getElementById("all").classList.remove('bordeAmarillo');
+				}
+
+				this.classList.toggle('bordeAmarillo');
+
+				fetchCampeones();
+			});
+		}
+
+		fetchCampeones();
 
 	</script>
+
+	
 </body>
 </html>

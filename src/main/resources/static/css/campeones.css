@@ -1,89 +1,25 @@
-/* BarraBusqueda BEGIN */
-.searchBar {
-    position: absolute;
-    top: 20%;
-    left: 51%;
-    height: 70px;
-    width: 1000px;
-    transform: translate(-50%, 0%);
-
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 2px;		
-}
-
-.searchBar input[type="text"] {
-    box-sizing: content-box;
-    height: 50px;
-    width: 220px;
-    padding: 10px;
-
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-right: 5px;
-    font-size: 20px;
-}
-
-
-
-.buscaPosicion {
-    position: relative;
-    left: 10px;
-    height: 50px;
-    width: 250px;
-    
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    z-index: 1;	
-}
-
-.buscaPosicion button[type="submit"]{
-    width: 70px; 
-	height: 70px; 
-
-	background-color: #000033;
-    transition: border-color 0.2s ease-out;
-}
-
-.buscaPosicion button[type="submit"]:hover{
-    border: 5px solid #ffff00;
-}
-
-.bordeAmarillo {
-    border: 5px solid #ffff00;
-}
-
-.buscaPosicion button[type="submit"] img { 
-	width: 50px; 
-	height: 50px; 
-    background-color: #000033;
-}
-/* BarraBusqueda END */
 
 .campeonGrid {
     position: absolute;
     top: 35%;
     left: 50%;
     width: 1000px;
-    height: 10500px;
     transform: translate(-50%, 0%);
+
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(42, 1fr);
-    /*background-color: #000033;*/
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
     
+    margin-bottom: 200px;
 }
 
 .campeon {
     position:relative;
-    top: 15px;
-    left: 15px;
-    width: 220px;
-    height: 220px;
+    top: 10px;
+    left: 10px;
+    width: 230px;
+    height: 230px;
     background-color: #000033;
-    border-radius: 15px;
-    display:grid;
-    grid-template-rows: 4fr 1fr;
+    border-radius: 10px;
     border: 3px solid transparent;
     
     transition-duration: 250ms;	
@@ -93,8 +29,27 @@
     border-color: yellow;
 }
 
+
+.campeonPosiciones {
+    position: absolute;
+    top: 10px;
+    left: 172px;
+    width: 40px;
+    height: 200px;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    
+}
+.campeonPosiciones img {
+    position: relative;
+    width: 91%;
+    height: 91%; 
+}
+
+
 .campeonImagen {
-    position:relative;
+    position: absolute;
     top: 30px;
     left: 50%;
     transform: translate(-50%, -0%);
@@ -109,7 +64,10 @@
     border-radius: 50%; 
     border: 5px solid yellow; 
 }
+
 .campeonTexto {
+    position: relative;
+    top: 160px;
     text-align: center;
     font-family: "Monaco", "Times New Roman", serif;
     font-size: 25px;;

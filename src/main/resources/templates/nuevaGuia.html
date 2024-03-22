@@ -164,7 +164,6 @@
 
             // CAMPEONES
             
-            var test;
             document.querySelector("#campeonSelector").addEventListener("input", () => 
                 go('/api/campeones', 'GET', {
                         etiquetas: [... seleccion.etiquetas].join(","), 

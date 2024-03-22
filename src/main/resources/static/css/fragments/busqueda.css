@@ -1,3 +1,28 @@
+.buscaCampeones {
+    position: absolute;
+    top: 20%;
+    left: 51%;
+    height: 70px;
+    width: 1000px;
+    transform: translate(-50%, 0%);
+
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2px;		
+}
+
+.buscaCampeones input[type="text"] {
+    box-sizing: content-box;
+    height: 50px;
+    width: 220px;
+    padding: 10px;
+
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
 
 .buscaGuia {
     position: absolute;
@@ -22,6 +47,8 @@
     margin-right: 5px;
     font-size: 20px;
 }
+
+
 
 
 .buscaPosicion {
