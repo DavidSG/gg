@@ -148,3 +148,19 @@
     grid-template-rows: 1fr 4fr;
     z-index: -1;
 }
+
+.nuevoItemsClass {
+    height: 700px;
+
+    display:grid;
+    grid-template-rows: 1fr 4fr;
+    z-index: -1;
+}
+
+.nuevoItemsList {
+    height: 700px;
+
+    display:grid;
+    grid-template-rows: 1fr 4fr;
+    z-index: -1;
+}
