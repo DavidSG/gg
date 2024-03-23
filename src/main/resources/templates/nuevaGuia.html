@@ -46,50 +46,67 @@
                 <h1> 3. Selecciona posiciones </h1>
                 <div class = "buscaPosicion">	
                     
-                    <button id="all">
+                    <button id = "all" name = "todos">
                         <img th:src="@{/img/posiciones/all.svg}">
                     </button>
-                    
-                    <button id="top">
+        
+                    <button id = "top" name = "top">
                         <img th:src="@{/img/posiciones/top.svg}">
                     </button>
         
-                    <button id="jgl">
+                    <button id = "jgl" name = "jungla">
                         <img th:src="@{/img/posiciones/jgl.svg}">
                     </button>
         
-                    <button id="mid">
+                    <button id = "mid" name = "mid">
                         <img th:src="@{/img/posiciones/mid.svg}">
                     </button>
         
-                    <button id="bot">
+                    <button id = "bot" name = "bot">
                         <img th:src="@{/img/posiciones/bot.svg}">
                     </button>
         
-                    <button id="sup">
+                    <button id = "sup" name = "soporte">
                         <img th:src="@{/img/posiciones/sup.svg}">
                     </button>
 
                 </div>
             </div>
 
-            <div class="nuevoCampeon">
+            <div class="nuevoCampoCampeon">
                 <h1> 4. Selecciona campeon </h1>
-                <div class = "nuevoCampeonSeleccionado">
+                <div id = "nuevoCampeonSeleccionadoID" class = "nuevoCampeonSeleccionado">
+                    <h1>?</h1>
+                </div>
+                <div class = "nuevoCampeonBuscar">
                     <input type="text" id="campeonSelector" name="campeonSelector">
                 </div>
                 <div class="nuevoCampeonGrid"></div>
 			</div>
-            
 
-            </div>
+            <div class="nuevoCampoHechizos">
+                <h1> 5. Selecciona hechizos </h1>
+                <div class="nuevoHechizoGrid"></div>
+			</div>
+
+            <div class="nuevoCampoItems">
+                <h1> 6. Selecciona Items </h1>
+                <div class="nuevoItemGrid"></div>
+			</div>
 
         </div>
 
+
+        <script type="text/javascript" src="js/iw.js"></script>
+		<script type="text/javascript" src="js/stomp.js"></script>
         <script>
+
+            var titulo = "";
+            var etiquetas = new Set();
+            var posiciones = new Set();
+            var campeon = "";
+            var hechizos = new Set(); var ultimoHechizo;
             
-            var titulo;
-            const seleccion = {etiquetas: new Set(), posiciones: new Set()}
             
             function toggle(set, key) {
                 if (set.has(key)) set.delete(key); else set.add(key);
@@ -104,53 +121,101 @@
 
             // ETIQUETAS
 
-            const etiquetas = ["campeon", "posicion", "general"];
+            const etiquetasID = ["campeon", "posicion", "general"];
 
-            for (var i = 0; i < etiquetas.length; i++) {
-                var element = document.getElementById(etiquetas[i]);
+            for (var i = 0; i < etiquetasID.length; i++) {
+                var element = document.getElementById(etiquetasID[i]);
                 element.addEventListener('click', function() {
-                    toggle(seleccion.etiquetas, this.id);
+                    toggle(etiquetas, this.id);
                     this.classList.toggle('bordeAmarillo')
                 });
             }
 
             // POSICIONES
 
-            const posiciones = ["all", "top", "jgl", "mid", "bot", "sup"];
+            const posicionesID = ["top", "jgl", "mid", "bot", "sup"];
 
-            for (var i = 0; i < posiciones.length; i++) {
-                var element = document.getElementById(posiciones[i]);
-                element.addEventListener('click', function() {
-                    toggle(seleccion.posiciones, this.id);
-                    this.classList.toggle('bordeAmarillo')
+            var posicionesBoton = document.getElementById("all");
+            posicionesBoton.classList.add('bordeAmarillo');
+            
+            posicionesBoton.addEventListener('click', function() {
+                this.classList.add('bordeAmarillo');
+
+                for (var i = 0; i < posicionesID.length; i++) { 
+                    posiciones.delete(posicionesID[i]);
+                    document.getElementById(posicionesID[i]).classList.remove('bordeAmarillo');
+                }
+            });
+
+            for (var i = 0; i < posicionesID.length; i++) {
+                var posicionesBoton = document.getElementById(posicionesID[i]);
+                posicionesBoton.addEventListener('click', function() {
+                    
+
+                    if (posiciones.has(this.id)) {
+                        posiciones.delete(this.id);
+                        if (posiciones.size == 0) document.getElementById("all").classList.add('bordeAmarillo');
+                    }
+                    else {
+                        posiciones.add(this.id);
+                        document.getElementById("all").classList.remove('bordeAmarillo');
+                    }
+
+                    this.classList.toggle('bordeAmarillo');
+
                 });
             }
 
+            // CAMPEONES
+
             function actualizaConJson(json) {
 
+                // Variables importantes
+
                 const grid = document.querySelector('.nuevoCampeonGrid');
-                const searchBar = document.getElementById('campeonSelector');
+                const campeonBusqueda = document.getElementById('campeonSelector');
                 const campeonSeleccionado = document.querySelector('.nuevoCampeonSeleccionado');
+
+                // Resetear grid
 
                 while (grid.firstChild) {
                     grid.removeChild(grid.firstChild);
                 }
-                
+
                 var numCampeones = 0;
                 var i = 0;
-                const regex = new RegExp(searchBar.value);
+                const regex = new RegExp(campeonBusqueda.value);
+
+                // Bucle principal
+
                 while (i < json.length && numCampeones < 10) {
                     if (regex.test(json[i].nombre)) {
+
+                        // Añade si regex
+
                         const image = document.createElement('img');
                         image.src = "/img/campeones/" + json[i].nombre + ".png";
+                        image.name = json[i].nombre;
+
+                        // Los campeones permiten clickearlos para seleccionarlos
+
                         image.addEventListener('click', function() {
-                            if (campeonSeleccionado.children.length >= 2) {
-                                const secondChild = campeonSeleccionado.children[1];
-                                campeonSeleccionado.removeChild(secondChild);
+                            while (campeonSeleccionado.firstChild) {
+                                campeonSeleccionado.removeChild(campeonSeleccionado.firstChild);
                             }
+
+                            // añade al personaje seleccionado y la x
                             const seleccionado = document.createElement('img');
                             seleccionado.src = this.src;
-                            campeonSeleccionado.appendChild(this);
+                            campeonSeleccionado.appendChild(seleccionado);
+
+                            const h2 = document.createElement('h2');
+                            h2.textContent = 'x';
+                            campeonSeleccionado.appendChild(h2)
+
+                            campeonSeleccionado.classList.add("bordeAmarillo");
+
+                            campeon = this.name;
                         });
 
                         grid.appendChild(image);
@@ -158,28 +223,75 @@
                     }
                     i++;
                 }
-                
-            
             }
 
-            // CAMPEONES
-            
-            document.querySelector("#campeonSelector").addEventListener("input", () => 
-                go('/api/campeones', 'GET', {
-                        etiquetas: [... seleccion.etiquetas].join(","), 
-                        posiciones: [... seleccion.posiciones].join(",")
-                    })
+            function fetchCampeones() {
+                go('/api/campeones', 'GET')
                     .then(json => 
                         console.log("OK", actualizaConJson(json)))
-                    .catch(e => console.log("ERR", e))
-            );
-            
-            
+                    .catch(e => console.log("ERR", e));
+            }
+
+            document.getElementById("campeonSelector").addEventListener("input", fetchCampeones); 
+            fetchCampeones();
+
+            document.getElementById('nuevoCampeonSeleccionadoID').addEventListener('click', function() {
+                if (this.children.length > 0) {
+                    while (this.firstChild) {
+                        this.removeChild(this.firstChild);
+                    }
+
+                    const h1 = document.createElement('h1');
+                    h1.textContent = '?';
+                    this.appendChild(h1);
+                    campeon = "";
+                }
+            });
+
+
+            // HECHIZOS
+
+            function actualizaHechizos(json) {
+                const grid = document.querySelector('.nuevoHechizoGrid');
+               for (var i = 0; i < json.length; i++) {
+                    const image = document.createElement('img');
+                    image.src = "/img/hechizos/" + json[i].nombre + ".png";
+                    image.name = json[i].nombre;
+
+                    image.addEventListener('click', function() {
+                        
+                        if (hechizos.has(this.name)) {
+                            hechizos.delete(this.name);
+                            
+                        }
+                        else {
+                            if (hechizos.size == 2) {
+                                ultimoHechizo.classList.remove('bordeAmarilloCircular');
+                                hechizos.delete(ultimoHechizo.name);
+                            }
+                            hechizos.add(this.name);
+                            ultimoHechizo = this;
+                        }
+
+                        this.classList.toggle('bordeAmarilloCircular');
+                    });
+
+                    grid.appendChild(image);
+                    
+               }
+            }
+
+            function fetchHechizos() {
+                go('/api/hechizos', 'GET')
+                    .then(json => actualizaHechizos(json))
+                    .catch(e => console.log("ERR", e));
+            }
+
+            fetchHechizos();
             
         </script>
             
-		<script type="text/javascript" src="js/iw.js"></script>
-		<script type="text/javascript" src="js/stomp.js"></script>
+		
     </main>
 </body>
 </html>

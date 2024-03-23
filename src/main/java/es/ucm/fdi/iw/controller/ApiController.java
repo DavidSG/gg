@@ -19,6 +19,7 @@ import org.springframework.web.client.RestTemplate;
 
 import es.ucm.fdi.iw.model.Campeon;
 import es.ucm.fdi.iw.model.Guia;
+import es.ucm.fdi.iw.model.Hechizo;
 import es.ucm.fdi.iw.model.Item;
 
 /**
@@ -40,6 +41,15 @@ public class ApiController {
                 "SELECT c FROM Campeon c",
                 Campeon.class)
                 // .setParameter("nombre", "%" + nombre + "%")
+                .getResultList();
+    }
+
+    @GetMapping(path = "/hechizos", produces = "application/json")
+    @ResponseBody
+    public List<Hechizo> getHechizos() {
+        return entityManager.createQuery(
+                "SELECT h FROM Hechizo h",
+                Hechizo.class)
                 .getResultList();
     }
 

@@ -15,42 +15,68 @@
     height: 160px;
 
     display:grid;
-    grid-template-rows: 1fr 1f;
+    grid-template-rows: 1fr 1fr ;
     z-index: -1;
     
 }
 
-.nuevoCampeon {
-    position: relative;
-    height: 450px;
+.nuevoCampoCampeon {
+    height: 700px;
 
     display:grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 4fr;
     z-index: -1;
     
 }
 
 .nuevoCampeonSeleccionado {
-    position: relative;
-    height: 60px;
-    width:100%;
+    width: 150px;
+    height: 150px;
 
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    z-index: -1;
+    border: 5px solid #000033;
+    border-radius: 10px;
+}
+
+
+.nuevoCampeonSeleccionado h1 {
+    position: relative;
+    top: 8%;
+    text-align: center;
+    font-family: "Monaco", "Times New Roman", serif;
+    font-size: 100px;
+    color: #000033;
+}
+
+
+.nuevoCampeonSeleccionado h2 {
+    position: relative;
+    top: -175px;
+    font-family: "Monaco", "Times New Roman", serif;
+    font-size: 75px;
+    color: #ffff00;
 }
 
 .nuevoCampeonSeleccionado img {
-    position:relative;
     width: 100%;
-    height: 100%; 
+    height: 100%;
+}
 
-    border: 5px solid #ffff00;;
+.bordeAmarilloRedondo {
+    border: 5px solid #ffff00;
+    border-radius: 10px;
+}
+
+.nuevoCampeonBuscar {
+    height: 60px;
+    width: 100%;
+
+    z-index: -1;
 }
 
 .nuevoCampeonGrid {
     position: relative;
-    height:  340px;
+    height: 300px;
+    width: 750px;
 
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -69,4 +95,56 @@
 
 .nuevoCampeonGrid img:hover {
     border: 7px solid #ffff00;
+}
+
+.nuevoHechizoGrid {
+    position: relative;
+    width: 500px;
+    height: 300px;
+
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.nuevoHechizoGrid img {
+    height: 90%;
+    width: 90%;
+
+    border: 5px solid #000033;
+    border-radius: 50%;
+}
+
+.nuevoHechizoGrid img:hover {
+    border: 5px solid #ffff00;
+}
+
+.bordeAmarilloCircular {
+    border: 5px solid #ffff00 !important;
+    opacity: 0.7;
+}
+
+.nuevoCampoHechizos {
+    height: 370px;
+
+    display:grid;
+    grid-template-rows: 1fr 4fr;
+    z-index: -1;
+    
+}
+
+.nuevoCampoItems {
+    height: 700px;
+
+    display:grid;
+    grid-template-rows: 1fr 5fr;
+    z-index: -1;
+}
+
+.nuevoItemsShop {
+    height: 700px;
+
+    display:grid;
+    grid-template-rows: 1fr 4fr;
+    z-index: -1;
 }

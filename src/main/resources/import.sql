@@ -193,6 +193,21 @@ INSERT INTO Campeon (nombre, posiciones) VALUES
 ('zoe', 'mid'),
 ('zyra', 'sup');
 
+INSERT INTO Hechizo (nombre) VALUES 
+('flash'),
+('ghost'),
+('ignite'),
+('teleport'),
+('heal'),
+('exhaust'),
+('barrier'),
+('clarity'),
+('cleanse'),
+('snowball'),
+('smite'),
+('red-smite'),
+('green-smite'),
+('blue-smite');
 
 
 INSERT INTO Item (id, nombre) VALUES 

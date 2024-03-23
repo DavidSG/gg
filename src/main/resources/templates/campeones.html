@@ -24,19 +24,15 @@
 
 			<div class = "buscaPosicion">	
 
-				<div class = "posicion">
-					<button id = "all" name = "todos">
-						<img th:src="@{/img/posiciones/all.svg}">
-					</button>
-				</div>
-				
-				<div class = "posicion">
-					<button id = "top" name = "top">
-						<img th:src="@{/img/posiciones/top.svg}">
-					</button>
-				</div>
+				<button id = "all" name = "todos">
+					<img th:src="@{/img/posiciones/all.svg}">
+				</button>
 	
-				<button id = "jgl" name = "jungla" class = "posicion">
+				<button id = "top" name = "top">
+					<img th:src="@{/img/posiciones/top.svg}">
+				</button>
+	
+				<button id = "jgl" name = "jungla">
 					<img th:src="@{/img/posiciones/jgl.svg}">
 				</button>
 	
@@ -74,8 +70,6 @@
 		var posiciones = new Set();
 
 		function actualizaConJson(json) {
-
-			console.log(json);
 
 			const grid = document.querySelector('.campeonGrid');
 			const campeonNombre = document.getElementById('campeonesNombreId');
@@ -126,7 +120,6 @@
 						campeonPosiciones.appendChild(posicionImagen);
 					}
 					
-					
 					const campeonTexto = document.createElement('div');
 					campeonTexto.classList.add('campeonTexto');
 					campeonTexto.textContent = json[i].nombre.charAt(0).toUpperCase() + json[i].nombre.substring(1);
@@ -147,7 +140,7 @@
 		}
 
 		function fetchCampeones() {
-			go('/api/campeones', 'GET', {})
+			go('/api/campeones', 'GET')
 				.then(json => 
 					console.log("OK", actualizaConJson(json)))
 				.catch(e => console.log("ERR", e));
@@ -178,7 +171,6 @@
 		for (var i = 0; i < posicionesID.length; i++) {
 			var posicionesBoton = document.getElementById(posicionesID[i]);
 			posicionesBoton.addEventListener('click', function() {
-				
 
 				if (posiciones.has(this.id)) {
 					posiciones.delete(this.id);
