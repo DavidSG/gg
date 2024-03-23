@@ -91,7 +91,42 @@
 
             <div class="nuevoCampoItems">
                 <h1> 6. Selecciona Items </h1>
-                <div class="nuevoItemGrid"></div>
+                <div class="nuevoItemsShop">
+
+                    <div class="nuevoItemsClass">
+
+                        <button id = "tanque">
+                            <img th:src="@{/img/clases/tank.png}">
+                        </button>
+            
+                        <button id = "bruiser">
+                            <img th:src="@{/img/clases/bruiser.png}">
+                        </button>
+            
+                        <button id = "asesino">
+                            <img th:src="@{/img/clases/assasin.png}">
+                        </button>
+            
+                        <button id = "mago">
+                            <img th:src="@{/img/clases/mage.png}">
+                        </button>
+            
+                        <button id = "tirador">
+                            <img th:src="@{/img/clases/marksman.png}">
+                        </button>
+            
+                        <button id = "soporte">
+                            <img th:src="@{/img/clases/support.png}">
+                        </button>
+            
+
+                    </div>
+
+                    <div class="nuevoItemsList">
+                        
+                        
+                    </div>
+                </div>
 			</div>
 
         </div>
@@ -288,6 +323,37 @@
             }
 
             fetchHechizos();
+
+
+            // ITEMS
+
+            function actualizaItems(json) {
+                console.log(json);
+                
+                const grid = document.querySelector('.nuevoItemsList');
+                for (var i = 0; i < json.length; i++) {
+                    const item = document.createElement('div');
+					item.classList.add('nuevoItem');
+
+                    const image = document.createElement('img');
+                    image.src = "/img/items/" + json[i].id;
+
+                    const h1 = document.createElement('h1');
+                    h1.textContent = json[i].nombre;
+
+                    item.appendChild(image);
+                    item.appendChild(h1); 
+                    grid.appendChild(item);                   
+                }
+            }
+
+            function fetchItems() {
+                go('/api/items', 'GET')
+                    .then(json => actualizaItems(json))
+                    .catch(e => console.log("ERR", e));
+            }
+
+            fetchItems();
             
         </script>
             

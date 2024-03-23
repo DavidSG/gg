@@ -53,4 +53,13 @@ public class ApiController {
                 .getResultList();
     }
 
+    @GetMapping(path = "/items", produces = "application/json")
+    @ResponseBody
+    public List<Item> getItems() {
+        return entityManager.createQuery(
+                "SELECT i FROM Item i",
+                Item.class)
+                .getResultList();
+    }
+
 }
