@@ -7,6 +7,7 @@ import javax.persistence.Id;
 public class Item {
     private String id;
     private String nombre;
+    private String etiquetas;
 
     @Id
     public String getId() {
@@ -23,5 +24,13 @@ public class Item {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getEtiquetas() {
+        return etiquetas;
+    }
+
+    public void setEtiquetas(String etiquetas) {
+        this.etiquetas = etiquetas;
     }
 }
