@@ -92,7 +92,7 @@ function go(url, method, data = {}, headers = false) {
     } else {
         params.headers["X-CSRF-TOKEN"] = config.csrf.value;
     }
-    console.log("sending", url, params)
+    console.log("sending", url, params);
     return fetch(url, params)
         .then(response => {
             const r = response;

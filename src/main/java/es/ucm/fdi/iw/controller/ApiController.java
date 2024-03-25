@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -59,6 +60,36 @@ public class ApiController {
         return entityManager.createQuery(
                 "SELECT i FROM Item i",
                 Item.class)
+                .getResultList();
+    }
+
+    @GetMapping(path = "/guias", produces = "application/json")
+    @ResponseBody
+    public List<Guia> getGuias(@RequestParam String ordenar) {
+        String orderBy = " ORDER BY ";
+        if (ordenar.charAt(0) == '1') {
+            orderBy += "g.puntuacion DESC";
+        } else if (ordenar.charAt(0)  == '2') {
+            orderBy += "g.puntuacion ASC"; 
+        }
+
+        if (ordenar.charAt(1) == '1') {
+            if (orderBy.length() > 10) {
+                orderBy += ", "; 
+            }
+            orderBy += "g.fecha DESC"; 
+        } else if (ordenar.charAt(1) == '2') {
+            if (orderBy.length() > 10) {
+                orderBy += ", "; 
+            }
+            orderBy += "g.fecha ASC"; 
+        }
+
+        if (orderBy.equals(" ORDER BY ")) orderBy = "";
+        for (int i = 0; i < 100; i++) System.out.println("aasdfasdf + " + orderBy);
+        return entityManager.createQuery(
+                "SELECT g FROM Guia g" + orderBy,
+                Guia.class)
                 .getResultList();
     }
 

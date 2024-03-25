@@ -102,6 +102,10 @@
     border: 5px solid #ffff00;
 }
 
+.bordeRojo {
+    border: 5px solid #ff0000;
+}
+
 
 
 .buscaEtiquetas {
@@ -161,9 +165,16 @@
     font-size: 20px;
     color:white;
 	background-color: #000033;
-    transition: border-color 0.2s ease-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px) rotate(-5deg); }
+    50% { transform: translateX(5px) rotate(5deg); }
+    75% { transform: translateX(-5px) rotate(-5deg); }
+    100% { transform: translateX(0); }
 }
 
 .ordenGuia button:hover{
-    border: 5px solid #ffff00;
+    animation: shake 0.5s;
 }

@@ -91,6 +91,12 @@
 
             <div class="nuevoCampoItems">
                 <h1> 6. Selecciona Items </h1>
+                <div class = "nuevoItemsSeleccionados">
+                    <div class = "nuevoItemInterrogante">
+                        <h1>?</h1>
+                    </div>
+                </div>
+                
                 <div class="nuevoItemsShop">
 
                     <div class = "nuevoCuadradoVacio">
@@ -341,6 +347,8 @@
                 
                 const grid = document.querySelector('.nuevoItemsList');
                 const itemNombre = document.getElementById('nuevoItemNombre');
+                const itemsSeleccionados = document.querySelector('.nuevoItemsSeleccionados');
+                const interrogante = document.querySelector('.nuevoItemInterrogante');
 
                 // Reiniciar campeones
                 
@@ -364,11 +372,29 @@
                         const item = document.createElement('div');
                         item.classList.add('nuevoItem');
 
+                        item.name = json[i].nombre;
+
                         const image = document.createElement('img');
                         image.src = "/img/items/" + json[i].id + '.png';
 
                         const h1 = document.createElement('h1');
                         h1.textContent = json[i].nombre;
+
+                        item.addEventListener('click', function() {
+                            if (!items.has(this.name)){
+                                items.add(this.name);
+
+                                var clon = this.cloneNode(true);
+                                clon.name = this.name;
+                                clon.querySelector('h1').setAttribute("style", "color: #000033;");
+                                clon.addEventListener('click', function() {
+                                    itemsSeleccionados.removeChild(this);
+                                    items.delete(this.name);
+                                });
+                                
+                                itemsSeleccionados.insertBefore(clon, interrogante);
+                            }
+                        });
 
                         item.appendChild(image);
                         item.appendChild(h1); 

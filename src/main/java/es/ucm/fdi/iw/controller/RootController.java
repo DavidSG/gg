@@ -94,7 +94,6 @@ public class RootController {
 
     @GetMapping("/nuevaGuia")
     public String nuevaGuia(Model model) {
-
         return "nuevaGuia";
     }
 

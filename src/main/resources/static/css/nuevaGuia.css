@@ -38,7 +38,6 @@
     border-radius: 10px;
 }
 
-
 .nuevoCampeonSeleccionado h1 {
     position: relative;
     top: 8%;
@@ -143,14 +142,42 @@
 /* ITEMS */
 
 .nuevoCampoItems {
-    height: 700px;
+    height: 1000px;
 
     display:grid;
-    grid-template-rows: 1fr 6fr;
+    grid-template-rows: 1fr 3fr 6fr;
     z-index: -1;
 
     margin-bottom: 200px;
 }
+
+.nuevoItemsSeleccionados {
+    height: 200px;
+
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    overflow-y: auto;
+    z-index: -1;
+
+}
+
+.nuevoItemInterrogante {
+    width: 150px;
+    height: 170px;
+
+    border: 5px solid #000033;
+    border-radius: 10px;
+}
+
+.nuevoItemInterrogante h1 {
+    position: relative;
+    top: 7%;
+    text-align: center;
+    font-family: "Monaco", "Times New Roman", serif;
+    font-size: 120px;
+    color: #000033;
+}
+
 
 .nuevoItemsShop {
     height: 700px;
@@ -223,13 +250,12 @@
     z-index: -1;
 }
 
-.nuevoItem{
+.nuevoItem {
     position:relative;
     top: 5%;
     left: 5%;
     height: 170px;
     width: 150px;
-
     border-radius: 10px;
     
     transition-duration: 250ms;

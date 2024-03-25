@@ -71,6 +71,8 @@ main {
 }
 
 .guia img {
+	height: 150px;
+	width: 150px;
 	position: relative;
 	font-size: 35px;
 }
