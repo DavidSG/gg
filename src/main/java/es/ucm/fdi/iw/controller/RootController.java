@@ -116,6 +116,7 @@ public class RootController {
 
     @GetMapping("/matchHistory")
     public String matchHistory(Model model) {
+        /*
         RestTemplate restTemplate = new RestTemplate();
         String apiKey = "RGAPI-1b502722-f491-400f-9697-5d40fae6d653";
 
@@ -129,7 +130,7 @@ public class RootController {
         ResponseEntity<String> matchHistoryResponse = restTemplate.getForEntity(historyUrl, String.class);
         model.addAttribute("history", matchHistoryResponse.getBody());
 
-        /*
+        
          * String matchUrl =
          * "https://europe.api.riotgames.com/lol/match/v5/matches/EUW1_6836248164?api_key=RGAPI-3ff69220-8e9a-472f-acb1-1f253ce847b4";
          * ResponseEntity<String> matchResponse = restTemplate.getForEntity(matchUrl,

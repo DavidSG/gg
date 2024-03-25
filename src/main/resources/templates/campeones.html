@@ -141,8 +141,7 @@
 
 		function fetchCampeones() {
 			go('/api/campeones', 'GET')
-				.then(json => 
-					console.log("OK", actualizaConJson(json)))
+				.then(json => actualizaConJson(json))
 				.catch(e => console.log("ERR", e));
 		}
 

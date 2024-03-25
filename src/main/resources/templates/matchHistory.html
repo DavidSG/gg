@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" th:href="@{/css/matchHistory.css}">
-    <title>match-history</title>
+    <title>PerfilJugador</title>
 </head>
 <body>
 	<!-- HEADER -->
@@ -15,86 +15,196 @@
 	<div th:insert="./fragments/sidebar"></div>
 	<!-- SIDEBAR -->
 
-	<div class="match-history">
-        <div class="match-history-header"></div>
-		<div class="partida">
-			<div class="resumenPartida">
-				<div class = "textoCentral"><b>Ranked Solo</b></div>
-				<div class = "textoCentral">35:02 Hace 1h</div>
-				<div class = "textoCentral"></div>
-				<div class = "textoResultado"><b>VICTORIA</b></div>
-			</div>
-			<div class="campeon">
-				<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="102px" height="102px">
-				<div class="hechizosInvocador">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="50px" height="50px">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="50px" height="50px">
-				</div>
-				<div class="runas">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="50px" height="50px">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="50px" height="50px">
-				</div>
-			</div>
-			<div class="kda">
-				<div class = "kdaTexto">0 / <span style="color: red;">40</span> / 0</div>
-				<div class = "textoCentral"><span style="color: red;"> 0 </span> KDA</div>
-				<div class = "textoCentral">160 cs</div>
-				<div class = "textoCentral"> 20 vision</div>
-			</div>
-			<div class="items">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="50px" height="50px">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="50px" height="50px">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="50px" height="50px">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="50px" height="50px">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="50px" height="50px">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="50px" height="50px">			
-			</div>
-			<div class="jugadores">
-				<div class="jugador">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="20px" height="20px">
-					<div>Juan01</div>
-				</div>
-				<div class="jugador">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="20px" height="20px">
-					<div>Juan01</div>
-				</div>
-				<div class="jugador">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="20px" height="20px">
-					<div>Juan01</div>
-				</div>
-				<div class="jugador">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="20px" height="20px">
-					<div>Juan01</div>
-				</div>
-				<div class="jugador">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="20px" height="20px">
-					<div>Juan01</div>
-				</div>
-				<div class="jugador">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="20px" height="20px">
-					<div>Juan01</div>
-				</div>
-				<div class="jugador">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="20px" height="20px">
-					<div>Juan01</div>
-				</div>
-				<div class="jugador">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="20px" height="20px">
-					<div>Juan01</div>
-				</div>
-				<div class="jugador">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="20px" height="20px">
-					<div>Juan01</div>
-				</div>
-				<div class="jugador">
-					<img src="https://static.wikia.nocookie.net/leagueoflegends/images/a/a9/Miss_Fortune_OriginalTFTSquare.png/revision/latest?cb=20240120231524" alt="" width="20px" height="20px">
-					<div>Juan01</div>
-				</div>
-			</div>
-		</div>
-		<h2 th:text="${summoner}"></h2>
-		<h2 th:text="${history}"></h2>
-		<h2 th:text="${match}"></h2>
-    </div>
+	<div class = "perfil"></div>
+
+	<div class="partidas"></div>
+
+	<script type="text/javascript" src="js/iw.js"></script>
+	<script type="text/javascript" src="js/stomp.js"></script>
+	<script>
+		// La llave solo funciona por 24 horas y debe ser copiada y pegada de nuevo 
+		// a menos que le pida a riot una permanente (es de desarrollo exclusivamente)
+		apiKey = "RGAPI-e9293211-a561-4045-bc24-aaec93312fa2";
+
+
+		// FASE 1: PEDIR USUARIO ( 1 peticion )
+		var puuid;
+		function jugador(json) {
+			console.log("jugador");
+			console.log(json);
+
+			puuid = json.puuid;
+
+			const perfilDiv = document.querySelector('.perfil');
+
+			var img = document.createElement('img');
+			img.src = "https://static.bigbrain.gg/assets/lol/riot_static/14.6.1/img/profileicon/" + json.profileIconId + ".png";
+		
+			var h1 = document.createElement('h1');
+			h1.textContent = json.name;
+
+			var h2 = document.createElement('h2');
+			h2.textContent = json.summonerLevel;
+
+			perfilDiv.appendChild(img);
+			perfilDiv.appendChild(h1);
+			perfilDiv.appendChild(h2);
+
+			fetchHistorial();
+
+		}
+		function fetchJugador() {
+			go('https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Danielclprp9' + '?api_key=' + apiKey , 'GET')
+				.then(json => jugador(json))
+				.catch(e => console.log("ERR", e));		
+		}
+		fetchJugador();
+
+		// FASE 2: PEDIR ID DE PARTIDAS RECIENTES ( 1 peticion )
+
+		function historial(json) {
+			console.log("Historial");
+			console.log(json);
+
+			for (var i = 0; i < 10; i++) {
+				console.log("partida " + i);
+				fetchPartida(json[i]);
+			}
+		}
+
+		async function fetchHistorial() {
+			go('https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/' + puuid + '/ids?start=0&count=10&api_key=' + apiKey , 'GET')
+				.then(json => historial(json))
+				.catch(e => console.log("ERR", e));	
+		}	
+		
+		// FASE 3: ITERAR LAS PARTIDAS ( 1 peticion por partida )
+
+		let hechizosMap = new Map([
+			[1, 'cleanse'],
+			[3, 'exhaust'],
+			[4, 'flash'],
+			[6, 'ghost'],
+			[7, 'heal'],
+			[11, 'smite'],
+			[12, 'teleport'],
+			[13, 'clarity'],
+			[14, 'ignite'],
+			[21, 'Barrier'],
+			[32, 'snowball']	
+		]);
+
+		function partida(json) {
+			console.log(json);
+
+			const partidasDiv = document.querySelector('.partidas');
+
+			var partidaDiv = document.createElement('div');
+			partidaDiv.classList.add('partida');
+
+			// RESUMEN
+
+			var resumenPartidaDiv = document.createElement('div');
+			resumenPartidaDiv.classList.add('resumenPartida');
+
+
+
+			var tipoPartida = document.createElement('h1');
+			tipoPartida.textContent = json.info.gameMode;
+
+			var duracionPartida = document.createElement('h1');
+			duracionPartida.textContent = Math.floor(json.info.gameDuration / 60) + ':' + json.info.gameDuration % 60;
+
+			var espacioPartida = document.createElement('h1');
+						
+			var resultadoPartida = document.createElement('h2');
+			resultadoPartida.textContent = "VICTORIA";
+
+			resumenPartidaDiv.appendChild(tipoPartida);
+			resumenPartidaDiv.appendChild(duracionPartida);
+			resumenPartidaDiv.appendChild(espacioPartida);
+			resumenPartidaDiv.appendChild(resultadoPartida);
+
+
+
+			partidaDiv.appendChild(resumenPartidaDiv);
+
+			// /RESUMEN
+
+			var jugador;
+
+			for (var i = 0; i < 10; i++) {
+				if  (json.info.participants[i].puuid == puuid) jugador = i;
+			}
+
+			// CAMPEON	
+			
+			var campeonDiv = document.createElement('div');
+			campeonDiv.classList.add('campeon');
+
+
+			var campeonImg = document.createElement('img');
+			campeonImg.src = "/img/campeones/" + json.info.participants[jugador].championName.toLowerCase() + ".png";
+
+			campeonDiv.appendChild(campeonImg);
+
+			// HECHIZOS
+
+			var hechizosDiv = document.createElement('div');
+			hechizosDiv.classList.add('hechizosInvocador');
+
+			var hechizoImg1 = document.createElement('img');
+			hechizoImg1.src = "/img/hechizos/" + hechizosMap.get(json.info.participants[jugador].summoner1Id) + ".png";
+
+			var hechizoImg2 = document.createElement('img');
+			hechizoImg2.src = "/img/hechizos/" + hechizosMap.get(json.info.participants[jugador].summoner2Id) + ".png";
+
+			hechizosDiv.appendChild(hechizoImg1);
+			hechizosDiv.appendChild(hechizoImg2);
+
+			campeonDiv.appendChild(hechizosDiv);
+
+			// /HECHIZOS
+
+			partidaDiv.appendChild(campeonDiv);
+
+			// KDA
+
+			var kdaDiv = document.createElement('div');
+			kdaDiv.classList.add('kda');
+
+			// /KDA
+
+			partidaDiv.appendChild(kdaDiv);
+
+			// ITEMS
+			var itemsDiv = document.createElement('div');
+			itemsDiv.classList.add('items');
+
+			for (var i = 1; i <= 6; i++) {
+				var itemImg = document.createElement('img');
+				itemImg.src = "/img/items/" + json.info.participants[jugador][`item${i}`] + ".png";
+				itemsDiv.appendChild(itemImg);
+			}
+
+			// /ITEMS
+
+			partidaDiv.appendChild(itemsDiv);
+
+
+			// /CAMPEON
+
+			
+			partidasDiv.appendChild(partidaDiv);
+
+		}
+
+		function fetchPartida(partidaID) {
+			go('https://europe.api.riotgames.com/lol/match/v5/matches/' + partidaID + '?api_key=' + apiKey , 'GET')
+				.then(json => partida(json))
+				.catch(e => console.log("ERR", e));	
+		}	
+
+	</script>
 </body>
 </html>
