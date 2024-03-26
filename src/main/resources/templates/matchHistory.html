@@ -17,7 +17,9 @@
 
 	<div class = "perfil"></div>
 
-	<div class="partidas"></div>
+	<div class="partidas">
+		<div class = "botonMasPartidas"></div>
+	</div>
 
 	<script type="text/javascript" src="js/iw.js"></script>
 	<script type="text/javascript" src="js/stomp.js"></script>
@@ -25,6 +27,10 @@
 		// La llave solo funciona por 24 horas y debe ser copiada y pegada de nuevo 
 		// a menos que le pida a riot una permanente (es de desarrollo exclusivamente)
 		apiKey = "RGAPI-e9293211-a561-4045-bc24-aaec93312fa2";
+
+		const queryParams = new URLSearchParams(window.location.search);
+
+		var masPartidas = document.querySelector(".botonMasPartidas");
 
 
 		// FASE 1: PEDIR USUARIO ( 1 peticion )
@@ -54,7 +60,7 @@
 
 		}
 		function fetchJugador() {
-			go('https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Danielclprp9' + '?api_key=' + apiKey , 'GET')
+			go('https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/' + queryParams.get('jugador') + '?api_key=' + apiKey , 'GET')
 				.then(json => jugador(json))
 				.catch(e => console.log("ERR", e));		
 		}
@@ -62,18 +68,22 @@
 
 		// FASE 2: PEDIR ID DE PARTIDAS RECIENTES ( 1 peticion )
 
-		function historial(json) {
+		async function historial(json) {
 			console.log("Historial");
 			console.log(json);
 
 			for (var i = 0; i < 10; i++) {
 				console.log("partida " + i);
-				fetchPartida(json[i]);
+				await fetchPartida(json[i]);
 			}
+
+			start += 10;
 		}
 
-		async function fetchHistorial() {
-			go('https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/' + puuid + '/ids?start=0&count=10&api_key=' + apiKey , 'GET')
+		var start = 0;
+		
+		function fetchHistorial() {
+			go('https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/' + puuid + '/ids?start=' + start + '&count=10&api_key=' + apiKey , 'GET')
 				.then(json => historial(json))
 				.catch(e => console.log("ERR", e));	
 		}	
@@ -97,10 +107,25 @@
 		function partida(json) {
 			console.log(json);
 
+			// INFORMACIÓN IMPORTANTE
+			var jugador; // Que jugador es?
+
+			for (var i = 0; i < 10; i++) {
+				if  (json.info.participants[i].puuid == puuid) jugador = i;
+			}
+
+
 			const partidasDiv = document.querySelector('.partidas');
 
 			var partidaDiv = document.createElement('div');
 			partidaDiv.classList.add('partida');
+			if (json.info.participants[jugador].win) {
+				partidaDiv.setAttribute("style", "background-color: #000033cc;");
+			}
+			else {
+				partidaDiv.setAttribute("style", "background-color: #330000cc;");
+			}
+			
 
 			// RESUMEN
 
@@ -113,12 +138,25 @@
 			tipoPartida.textContent = json.info.gameMode;
 
 			var duracionPartida = document.createElement('h1');
-			duracionPartida.textContent = Math.floor(json.info.gameDuration / 60) + ':' + json.info.gameDuration % 60;
+			duracionPartida.textContent = Math.floor(json.info.gameDuration / 60) + ':';
+
+			if (json.info.gameDuration % 60 < 10) {
+				duracionPartida.textContent += '0';
+			}
+
+			duracionPartida.textContent += json.info.gameDuration % 60;
 
 			var espacioPartida = document.createElement('h1');
 						
 			var resultadoPartida = document.createElement('h2');
-			resultadoPartida.textContent = "VICTORIA";
+			if (json.info.participants[jugador].win) {
+				resultadoPartida.textContent = "VICTORIA";
+				resultadoPartida.setAttribute("style", "color: blue;");
+			}
+			else {
+				resultadoPartida.textContent = "DERROTA";
+				resultadoPartida.setAttribute("style", "color: red;");
+			}
 
 			resumenPartidaDiv.appendChild(tipoPartida);
 			resumenPartidaDiv.appendChild(duracionPartida);
@@ -131,11 +169,6 @@
 
 			// /RESUMEN
 
-			var jugador;
-
-			for (var i = 0; i < 10; i++) {
-				if  (json.info.participants[i].puuid == puuid) jugador = i;
-			}
 
 			// CAMPEON	
 			
@@ -168,10 +201,50 @@
 
 			partidaDiv.appendChild(campeonDiv);
 
+			// /CAMPEON
+
 			// KDA
 
 			var kdaDiv = document.createElement('div');
 			kdaDiv.classList.add('kda');
+
+			var kdaText = document.createElement('h1');
+			let killsSpan = document.createElement('span');
+			killsSpan.textContent = json.info.participants[jugador].kills;
+			killsSpan.style.color = 'white'; 
+
+			let deathsSpan = document.createElement('span');
+			deathsSpan.textContent =  json.info.participants[jugador].deaths;
+			deathsSpan.style.color = 'red'; 
+
+			let assistsSpan = document.createElement('span');
+			assistsSpan.textContent = json.info.participants[jugador].assists;
+			assistsSpan.style.color = 'white';
+
+			let separatorSpan = document.createElement('span');
+			separatorSpan.textContent = ' / ';
+			separatorSpan.setAttribute("style", "color: 'white';");
+			separatorSpan.style.opacity = '0.7'; 
+			separatorSpan.style.fontSize = '25px'; 
+
+			kdaText.appendChild(killsSpan);
+			kdaText.appendChild(separatorSpan); 
+			kdaText.appendChild(deathsSpan);
+			kdaText.appendChild(separatorSpan.cloneNode(true)); 
+			kdaText.appendChild(assistsSpan);
+
+			var kdaTotalText = document.createElement('h2');
+			var kdaTotal = (json.info.participants[jugador].kills + json.info.participants[jugador].assists) / json.info.participants[jugador].deaths;
+			kdaTotal = kdaTotal.toFixed(2);
+			kdaTotalText.textContent = kdaTotal + ' KDA';
+
+			var csText = document.createElement('h2');
+			csText.textContent = json.info.participants[jugador].totalMinionsKilled + ' CS (' 
+			+ (json.info.participants[jugador].totalMinionsKilled / (json.info.gameDuration / 60)).toFixed(1) + ')';
+
+			kdaDiv.appendChild(kdaText);
+			kdaDiv.appendChild(kdaTotalText);
+			kdaDiv.appendChild(csText);
 
 			// /KDA
 
@@ -181,29 +254,78 @@
 			var itemsDiv = document.createElement('div');
 			itemsDiv.classList.add('items');
 
-			for (var i = 1; i <= 6; i++) {
-				var itemImg = document.createElement('img');
-				itemImg.src = "/img/items/" + json.info.participants[jugador][`item${i}`] + ".png";
-				itemsDiv.appendChild(itemImg);
-			}
+			for (var i = 0; i < 6; i++) {
+				if (json.info.participants[jugador][`item${i}`] != 0) {
+					var itemImg = document.createElement('img');
+					itemImg.src = "/img/items/" + json.info.participants[jugador][`item${i}`] + ".png";
+					itemsDiv.appendChild(itemImg);
+				}
+				else {
+					var itemsVacio = document.createElement('div');
+					itemsVacio.classList.add('itemsVacio');
+					itemsDiv.appendChild(itemsVacio);
 
-			// /ITEMS
+					var tipoPartida = document.createElement('h1');
+					tipoPartida.textContent = json.info.gameMode;
+				}
+			}
 
 			partidaDiv.appendChild(itemsDiv);
 
+			// /ITEMS
 
-			// /CAMPEON
+			// JUGADORES
 
+			var jugadoresDiv = document.createElement('div');
+			jugadoresDiv.classList.add('jugadores');
+
+			for (var i = 0; i < 10; i++) {
+				var jugadorDiv = document.createElement('div');
+				jugadorDiv.classList.add('jugador');
+
+				var jugadorImg = document.createElement('img');
+				jugadorImg.src = "/img/campeones/" + json.info.participants[i].championName.toLowerCase() + ".png";
+				if (i == jugador) {
+					jugadorImg.style.border = '1px solid orange';
+				}
+
+				var jugadorNombre = document.createElement('h1');
+				jugadorNombre.textContent = json.info.participants[i].summonerName;
+				if (i == jugador) {
+					jugadorNombre.style.fontWeight = 'bold';
+					jugadorNombre.style.fontSize = '17px';
+				}
+				
+
+				jugadorDiv.appendChild(jugadorImg);
+				jugadorDiv.appendChild(jugadorNombre);
+
+				jugadorDiv.name = jugadorNombre.textContent;
+				jugadorDiv.addEventListener('click', function() {
+					window.location.href = '/matchHistory?jugador=' + this.name;
+				});
+
+				jugadoresDiv.appendChild(jugadorDiv);
+			}
+
+			partidaDiv.appendChild(jugadoresDiv);
+
+			// /JUGADORES
 			
-			partidasDiv.appendChild(partidaDiv);
+			partidasDiv.insertBefore(partidaDiv, masPartidas);
 
 		}
 
 		function fetchPartida(partidaID) {
-			go('https://europe.api.riotgames.com/lol/match/v5/matches/' + partidaID + '?api_key=' + apiKey , 'GET')
+			return go('https://europe.api.riotgames.com/lol/match/v5/matches/' + partidaID + '?api_key=' + apiKey , 'GET')
 				.then(json => partida(json))
-				.catch(e => console.log("ERR", e));	
-		}	
+				.catch(e => console.log("ERR", e));
+		}
+
+		masPartidas.addEventListener('click', function() {
+			fetchHistorial();
+		});
+
 
 	</script>
 </body>

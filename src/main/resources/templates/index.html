@@ -27,12 +27,8 @@
 			<div class="centroContainer">
 				<div class="ggLogo">GG</div>
 				<div class="searchContainer">
-					<input type="text" placeholder="Search Player or a Champion">
-					<div class="botonBusqueda">
-						<a href="matchHistory">
-							<img width="50px" height="50px" src="/img/img_general/lupa_icon.webp">
-						</a>
-					</div>
+					<input id = "buscaJugadorBarra" type="text" placeholder="Search Player">
+					<img id = "buscaJugadorBoton" src="/img/img_general/lupa_icon.webp">
 				</div>
 			</div>
 			
@@ -47,6 +43,24 @@
 				</a>
 			</div>
 		</div>
+
+		<script>
+			let barra = document.getElementById('buscaJugadorBarra');
+			let boton = document.getElementById('buscaJugadorBoton');
+
+			barra.addEventListener('keypress', function() {
+				if (event.key === 'Enter') {
+					window.location.href = '/matchHistory?jugador=' + barra.value;
+				}
+				
+			});
+
+			boton.addEventListener('click', function() {
+				window.location.href = '/matchHistory?jugador=' + barra.value;
+			});
+
+		</script>
+		
     </main>
 </body>
 
