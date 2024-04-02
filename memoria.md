@@ -1,16 +1,14 @@
-# Propuesta Practica 1
+# GG - Avance Post-Semana Santa
 
-Nuestra propuesta es una página donde los usuarios pueden subir y visualizar guías de como utilizar a los personajes del juego League of Legends y que objetos equipar a cada uno de los personajes.
+* **Resumen**
 
-Vistas.
-* **index.html**: se trata de la vista de la página pricipal, en esta vista se pueden ver los campeones disponibles en el juego, los objetos disponibles y las guias que otros usuarios han subido sobre los campeones jugables. También podrás acceder a tu cuenta y modificarla en ajustes.
+En esta semana santa nos hemos centrado en una de las funcionalidades principales de la aplicación web, la información de partidas a través de la api.
+Las barras de busqueda son totalmente funcionales. Al entrar, en el index podrá buscar cualquier jugador, por ejemplo 'DavidSG45', y la aplicación mostrará tanto el historial como los detalles tanto del jugador como de la partida. Además se puede clickear y ver el historial de los otros jugadores de la partida. La clave de la api hay que regenerarla cada 24h y tiene 200 peticiones por minuto.
+También se ha arreglado el cómo crear una guía, solo falta poder subirla, el muestreo de los campeones y su busqueda es totalmente funcional y eficaz y mis guias muestra solo las guías del usuario, falta que muestre las del session.u.username.
 
-* **campeones.html**: Muestra todos los campeones disponibles em el juego. En éste, se podran seleccionar y ver la información de cada uno de ellos.
+* **Falta por implementar**
 
-* **items.html**: Muestra todos los items del juego y permite ver sus descripciones y características.
-
-* **guides.html**: Recopilación de guías para los usuarios sobre el juego League of Legends. Más adelante habrá varias opciones, subir una guía, ver tus guías subidas y guardadas y ver o buscar otras guías.
-
-* **ajustes.html**: Ajustes de la página para el usuario. Aquí podrá cambiar el nombre de usuario y foto de perfil, etc...
-
-* **matchHistory.html**: Aquí apareceá en pantalla todas las últimas partidas jugadas, sus resultados y algunos datos sobre ella como los participantes.
+En el proyecto faltan por implementar que se puedan subir guias, comentarios (websockets), likes y dislikes, actualmente estamos enfocados en esa parte.
+Por parte de los campeones, falta añadir cuantas guías existen de cada campeón y que al hacer click se muestren.
+Una vez terminada, nos centraremos en arreglar el login, ajustes y funciones tanto de admin como usuario y los test de la aplicación.
+Por último, si hay tiempo, se arreglará el apartado visual para que sea más apetecible a la vista y más sencillo de comprender cambiando el index, por unos menús más sencillos y explicando que es cada objeto o función de la aplicación.
