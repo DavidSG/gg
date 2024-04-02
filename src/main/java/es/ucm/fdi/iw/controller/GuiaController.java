@@ -1,7 +1,9 @@
 package es.ucm.fdi.iw.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.persistence.EntityManager;
 import javax.servlet.http.HttpSession;
@@ -47,6 +49,9 @@ public class GuiaController {
         HtmlRenderer renderer = HtmlRenderer.builder().build();
         String renderedHtml = renderer.render(document); // Render Markdown to HTML
 
+        Map<String, String> itemMap = new HashMap<>();
+
+        model.addAttribute("items", itemMap);
         model.addAttribute("guia", g);
         model.addAttribute("renderedHtml", renderedHtml); // Add HTML content as attribute
 

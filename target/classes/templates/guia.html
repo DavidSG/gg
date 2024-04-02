@@ -47,7 +47,7 @@
                     <div class = "guiaHechizos">
                         <div th:each="hechizo : ${#strings.arraySplit(guia.hechizos, ' ')}" class="guiaHechizo">
                             <img th:src="@{/img/hechizos/__${hechizo}__.png}" />
-                            <h1>Item</h1>
+                            <h2 th:text="${hechizo}">Abracadabra</h2>
                         </div>
                     </div>
 
@@ -55,7 +55,7 @@
                     <div class = "guiaItems">
                         <div th:each="item : ${#strings.arraySplit(guia.items, ' ')}" class="guiaItem">
                             <img th:src="@{/img/items/__${item}__.png}" />
-                            <h1>Item</h1>
+                            <h2 th:text="${items[item]}">Abracadabra</h2>
                         </div>
                     </div>
 
@@ -66,6 +66,8 @@
             </div>
 
         </div> 
+
+        <script></script>
 		
     </main>
 </body>
