@@ -5,6 +5,7 @@
 En esta semana santa nos hemos centrado en una de las funcionalidades principales de la aplicación web, la información de partidas a través de la api.
 Las barras de busqueda son totalmente funcionales. Al entrar, en el index podrá buscar cualquier jugador, por ejemplo 'DavidSG45', y la aplicación mostrará tanto el historial como los detalles tanto del jugador como de la partida. Además se puede clickear y ver el historial de los otros jugadores de la partida. La clave de la api hay que regenerarla cada 24h y tiene 200 peticiones por minuto.
 También se ha arreglado el cómo crear una guía, solo falta poder subirla, el muestreo de los campeones y su busqueda es totalmente funcional y eficaz y mis guias muestra solo las guías del usuario, falta que muestre las del session.u.username.
+Por último, está terminada y totalmente funcional la filtración de guías respecto su orden, tipo, puntuación y fecha, estos dos últimos tanto de forma ascendente como descendente.
 
 * **Falta por implementar**
 
