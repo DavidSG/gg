@@ -21,6 +21,7 @@ import org.springframework.web.client.RestTemplate;
 import es.ucm.fdi.iw.model.Campeon;
 import es.ucm.fdi.iw.model.Guia;
 import es.ucm.fdi.iw.model.Item;
+import es.ucm.fdi.iw.model.User;
 
 /**
  * Non-authenticated requests only.
@@ -86,8 +87,11 @@ public class RootController {
     }
 
     @GetMapping("/misGuias")
-    public String misGuias(Model model) {
-        List<Guia> gs = entityManager.createQuery("SELECT g FROM Guia g").getResultList();
+    public String misGuias(Model model, HttpSession session) {
+        User u = (User) session.getAttribute("u");
+        List<Guia> gs = entityManager.createQuery("SELECT g FROM Guia g WHERE g.autor = :user")
+        .setParameter("user", u.getUsername())
+        .getResultList();
         model.addAttribute("guias", gs);
         return "misGuias";
     }

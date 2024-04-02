@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{/css/misGuias.css}">
+    <link rel="stylesheet" th:href="@{/css/guides.css}">
+	<link rel="stylesheet" th:href="@{/css/fragments/busqueda.css}">
     <title>Guías</title>
 </head>
 <body>
@@ -16,41 +17,33 @@
 		<div th:insert="./fragments/sidebar"></div>
 		<!-- SIDEBAR -->
 
-		<a href="/nuevaGuia" style="text-decoration: none;">
-            <button class = "nuevaGuia">
-                + Create
-            </button>
-		</a>
-
-		<form id = "searchFormId" th:action="@{/guias}" method="get">
-
 			<div class = "buscaGuia">
 
-				<input id="nombreId" type="text" placeholder="Busca un campeon " name="campeon" th:value="${campeon}" />
+				<input id="campeonesNombreId" type="text" placeholder="Busca un campeon " name="nombre"/>
 
 				<div class = "buscaPosicion">	
 
-					<button type="submit" name="posiciones" value="" th:class="${posiciones eq '' ? 'bordeAmarillo' : ''}">
+					<button id = "all" name = "todos">
 						<img th:src="@{/img/posiciones/all.svg}">
 					</button>
 		
-					<button type="submit" name="posiciones" value="top" th:class="${posiciones eq 'top' ? 'bordeAmarillo' : ''}">
+					<button id = "top" name = "top">
 						<img th:src="@{/img/posiciones/top.svg}">
 					</button>
 		
-					<button type="submit" name="posiciones" value="jgl" th:class="${posiciones eq 'jgl' ? 'bordeAmarillo' : ''}">
+					<button id = "jgl" name = "jungla">
 						<img th:src="@{/img/posiciones/jgl.svg}">
 					</button>
 		
-					<button type="submit" name="posiciones" value="mid" th:class="${posiciones eq 'mid' ? 'bordeAmarillo' : ''}">
+					<button id = "mid" name = "mid">
 						<img th:src="@{/img/posiciones/mid.svg}">
 					</button>
 		
-					<button type="submit" name="posiciones" value="bot" th:class="${posiciones eq 'bot' ? 'bordeAmarillo' : ''}">
+					<button id = "bot" name = "bot">
 						<img th:src="@{/img/posiciones/bot.svg}">
 					</button>
 		
-					<button type="submit" name="posiciones" value="sup" th:class="${posiciones eq 'sup' ? 'bordeAmarillo' : ''}">
+					<button id = "sup" name = "soporte">
 						<img th:src="@{/img/posiciones/sup.svg}">
 					</button>
 
@@ -58,59 +51,260 @@
 
 				<div class = "buscaEtiquetas">	
 
-					<button type="submit" name="etiquetas" value="" th:class="${etiquetas eq '' ? 'bordeAmarillo' : ''}">
+					<button id = "todos">
 						TODOS
 					</button>
 		
-					<button type="submit" name="etiquetas" value="campeon" th:class="${etiquetas eq 'campeon' ? 'bordeAmarillo' : ''}">
-						CAMPEON
-					</button>
-		
-					<button type="submit" name="etiquetas" value="posicion" th:class="${etiquetas eq 'posicion' ? 'bordeAmarillo' : ''}">
-						POSICION
-					</button>
+					<button id = "campeon">
+                        CAMPEON
+                    </button>
+        
+                    <button id = "posicion">
+                        POSICION
+                    </button>
 
-					<button type="submit" name="etiquetas" value="general" th:class="${etiquetas eq 'general' ? 'bordeAmarillo' : ''}">
-						GENERAL
-					</button>
-
+                    <button id = "general">
+                        GENERAL
+                    </button>
 				</div>
-				
-			</div>
 
+			</div>
+				
 			<div class = "ordenGuia">
 				<h1>ORDENAR:</h1>
 
-				<button type="submit" name="orderBy" value="puntuacion DESC" th:class="${orderBy eq 'puntuacion DESC' ? 'bordeAmarillo' : ''}">
+				<button id = "puntuacion">
 					PUNTUACION
 				</button>
 
-				<button type="submit" name="orderBy" value="fecha DESC" th:class="${orderBy eq 'fecha DESC' ? 'bordeAmarillo' : ''}">
+				<button id = "fecha">
 					FECHA
 				</button>
 			</div>
 					
 		</form>	
 
-		<div class = "guias">
-			<div th:each="guia : ${guias}">
-				<!-- Generate link to the guide -->
-				<th:block th:if="${guia.autor == session.u.username}">
-					<a th:href="@{/guia/__${guia.id}__}">
-						<div class="guia">
-							<!-- Display guide details -->
-							<h2 th:text="${guia.puntuacion}"></h2>
-							<img th:src="@{/img/campeones/__${guia.campeon}__.png}" width="150px" height="150px"/>
-							<div class="tituloGuia">
-								<h1 th:text="${guia.titulo}"></h1>
-								<!-- Corrected author field name -->
-								<p th:text="${'Escrita por ' + guia.autor + ' ' + guia.fecha}"></p>
-							</div>
-						</div>
-					</a>
-			</th:block>
-			</div>
-		</div>
+		<div class = "guias"></div>
+
+		<script type="text/javascript" src="js/iw.js"></script>
+		<script type="text/javascript" src="js/stomp.js"></script>
+		<script th:inline="javascript">
+			var username = /*[[${session.getAttribute('u')}]]*/ 'default';
+		</script>
+        <script>
+			var etiquetas = new Set();
+            var posiciones = new Set();
+			var ordenar = "00";
+
+			function toggle(set, key) {
+                if (set.has(key)) set.delete(key); else set.add(key);
+            }
+
+			// CAMPEON
+
+			document.getElementById("campeonesNombreId").addEventListener("input", fetchGuias);
+
+			// POSICIONES
+
+			const posicionesID = ["top", "jgl", "mid", "bot", "sup"];
+
+			var posicionesBoton = document.getElementById("all");
+			posicionesBoton.classList.add('bordeAmarillo');
+
+			posicionesBoton.addEventListener('click', function() {
+				this.classList.add('bordeAmarillo');
+
+				for (var i = 0; i < posicionesID.length; i++) { 
+					posiciones.delete(posicionesID[i]);
+					document.getElementById(posicionesID[i]).classList.remove('bordeAmarillo');
+				}
+
+				fetchGuias();
+			});
+
+			for (var i = 0; i < posicionesID.length; i++) {
+				var posicionesBoton = document.getElementById(posicionesID[i]);
+				posicionesBoton.addEventListener('click', function() {
+
+					if (posiciones.has(this.id)) {
+						posiciones.delete(this.id);
+						if (posiciones.size == 0) document.getElementById("all").classList.add('bordeAmarillo');
+					}
+					else {
+						posiciones.add(this.id);
+						document.getElementById("all").classList.remove('bordeAmarillo');
+					}
+
+					this.classList.toggle('bordeAmarillo');
+
+					fetchGuias();
+				});
+			}
+
+			// ETIQUETAS
+
+			const etiquetasID = ["campeon", "posicion", "general"];
+
+			var etiquetasBoton = document.getElementById("todos");
+			etiquetasBoton.classList.add('bordeAmarillo');
+
+			etiquetasBoton.addEventListener('click', function() {
+				this.classList.add('bordeAmarillo');
+
+				for (var i = 0; i < etiquetasID.length; i++) { 
+					etiquetas.delete(etiquetasID[i]);
+					document.getElementById(etiquetasID[i]).classList.remove('bordeAmarillo');
+				}
+
+				fetchGuias();
+			});
+
+			for (var i = 0; i < etiquetasID.length; i++) {
+				var etiquetasBoton = document.getElementById(etiquetasID[i]);
+				etiquetasBoton.addEventListener('click', function() {
+
+					if (etiquetas.has(this.id)) {
+						etiquetas.delete(this.id);
+						if (etiquetas.size == 0) document.getElementById("todos").classList.add('bordeAmarillo');
+					}
+					else {
+						etiquetas.add(this.id);
+						document.getElementById("todos").classList.remove('bordeAmarillo');
+					}
+
+					this.classList.toggle('bordeAmarillo');
+
+					fetchGuias();
+				});
+			}
+
+			// ORDENAR
+
+			document.getElementById("puntuacion").addEventListener('click', function() {
+				if (ordenar[0] === '0') {
+					this.classList.add('bordeAmarillo');
+					ordenar = '1' + ordenar[1];
+				}
+				else if (ordenar[0] === '1') {
+					this.classList.remove('bordeAmarillo');
+					this.classList.add('bordeRojo');
+					ordenar = '2' + ordenar[1];
+					
+				}
+				else if (ordenar[0] === '2') {
+					this.classList.remove('bordeRojo');
+					ordenar = '0' + ordenar[1];
+				}
+
+				fetchGuias();
+			});
+
+			document.getElementById("fecha").addEventListener('click', function() {
+				if (ordenar[1] === '0') {
+					this.classList.add('bordeAmarillo');
+					ordenar =  ordenar[0] + '1';
+				}
+				else if (ordenar[1] === '1') {
+					this.classList.remove('bordeAmarillo');
+					this.classList.add('bordeRojo');
+					ordenar = ordenar[0] + '2';
+					
+				}
+				else if (ordenar[1] === '2') {
+					this.classList.remove('bordeRojo');
+					ordenar = ordenar[0] + '0';
+				}
+
+				fetchGuias();
+			});
+
+			// FETCH GUIAS
+
+			function actualizaGuias(json) {
+
+				const guiasDiv = document.querySelector('.guias');
+
+				while (guiasDiv.firstChild) {
+					guiasDiv.removeChild(guiasDiv.firstChild);
+				}
+
+				const campeonNombre = document.getElementById('campeonesNombreId');
+				const campeonRegex = new RegExp(campeonNombre.value);
+				
+				for (var i = 0; i < json.length; i++) {
+					
+					var nombreBuscado = campeonRegex.test(json[i].campeon);
+					var posicionBuscada;
+					if (posiciones.size === 0) {
+						posicionBuscada = true;
+					}
+					else {
+						posicionBuscada = false;
+						for (const posicion of posiciones) {
+							const posicionRegex = new RegExp(posicion);
+							if (posicionRegex.test(json[i].posiciones)) posicionBuscada = true;
+						}
+					}
+
+					var etiquetasBuscadas;
+					if (etiquetas.size === 0) {
+						etiquetasBuscadas = true;
+					}
+					else {
+						etiquetasBuscadas = false;
+						for (const posicion of etiquetas) {
+							const posicionRegex = new RegExp(posicion);
+							if (posicionRegex.test(json[i].etiquetas)) etiquetasBuscadas = true;
+						}
+					}
+
+
+					if (nombreBuscado && posicionBuscada && etiquetasBuscadas && json[i].autor === username) {
+						var link = document.createElement('a');
+						link.href = "/guia/" + json[i].id;
+
+						var guiaDiv = document.createElement('div');
+						guiaDiv.classList.add('guia');
+
+						var h2 = document.createElement('h2');
+						h2.textContent = json[i].puntuacion;
+
+						var img = document.createElement('img');
+						img.src = "/img/campeones/" + json[i].campeon + ".png";
+
+						var tituloGuiaDiv = document.createElement('div');
+						tituloGuiaDiv.classList.add('tituloGuia');
+
+						var h1 = document.createElement('h1');
+						h1.textContent = json[i].titulo;
+
+						var p = document.createElement('p');
+						p.textContent = 'Escrita por ' + json[i].autor + ' ' + json[i].fecha;
+
+						tituloGuiaDiv.appendChild(h1);
+						tituloGuiaDiv.appendChild(p);
+
+						guiaDiv.appendChild(h2);
+						guiaDiv.appendChild(img);
+						guiaDiv.appendChild(tituloGuiaDiv);
+
+						link.appendChild(guiaDiv);
+
+						guiasDiv.appendChild(link);
+					}
+				}
+			}
+
+			function fetchGuias() {
+				console.log(ordenar);
+				go('/api/guias?ordenar=' + ordenar, 'GET')
+					.then(json => actualizaGuias(json))
+					.catch(e => console.log("ERR", e));
+			}
+
+			fetchGuias();
+
+		</script>
 		
     </main>
 </body>
