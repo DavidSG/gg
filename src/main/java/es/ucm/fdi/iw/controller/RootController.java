@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.apache.logging.log4j.LogManager;
@@ -61,14 +62,33 @@ public class RootController {
             @RequestParam(defaultValue = "") String posiciones,
             @RequestParam(defaultValue = "") String etiquetas,
             @RequestParam(defaultValue = "") String orderBy,
+            @RequestParam(defaultValue = "") String usuario,
             Model model, HttpSession session) {
-
+        
         String orderByS = "";
         if (!orderBy.equals("")) {
             orderByS = " ORDER BY g." + orderBy;
         }
-
-        List<Guia> gs = entityManager.createQuery(
+        User u = (User) session.getAttribute("u");
+        if (usuario == "si"){
+            
+            List<Guia> gs = entityManager.createQuery(
+                "SELECT g FROM Guia g WHERE LOWER(g.campeon) LIKE LOWER(:campeon) AND g.posiciones LIKE :posiciones AND g.etiquetas LIKE :etiquetas AND g.autor = :user"
+                        + orderByS,
+                Guia.class)
+                .setParameter("campeon", "%" + campeon + "%")
+                .setParameter("posiciones", "%" + posiciones + "%")
+                .setParameter("etiquetas", "%" + etiquetas + "%")
+                .setParameter("user", u.getUsername())
+                .getResultList();
+                model.addAttribute("guias", gs);
+                model.addAttribute("campeon", campeon);
+                model.addAttribute("posiciones", posiciones);
+                model.addAttribute("etiquetas", etiquetas);
+                model.addAttribute("orderBy", orderBy);
+        }
+        else {
+            List<Guia> gs = entityManager.createQuery(
                 "SELECT g FROM Guia g WHERE LOWER(g.campeon) LIKE LOWER(:campeon) AND g.posiciones LIKE :posiciones AND g.etiquetas LIKE :etiquetas"
                         + orderByS,
                 Guia.class)
@@ -76,12 +96,12 @@ public class RootController {
                 .setParameter("posiciones", "%" + posiciones + "%")
                 .setParameter("etiquetas", "%" + etiquetas + "%")
                 .getResultList();
-
-        model.addAttribute("guias", gs);
-        model.addAttribute("campeon", campeon);
-        model.addAttribute("posiciones", posiciones);
-        model.addAttribute("etiquetas", etiquetas);
-        model.addAttribute("orderBy", orderBy);
+                model.addAttribute("guias", gs);
+                model.addAttribute("campeon", campeon);
+                model.addAttribute("posiciones", posiciones);
+                model.addAttribute("etiquetas", etiquetas);
+                model.addAttribute("orderBy", orderBy);
+        }
 
         return "guias";
     }
