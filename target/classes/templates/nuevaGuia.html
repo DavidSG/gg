@@ -411,6 +411,13 @@
                     .catch(e => console.log("ERR", e));
             }
 
+            // Crear Guia
+
+            function fetchNuevaGuia() {
+                go('/api/nuevaguia', 'POST')
+                    .catch(e => console.log("ERR", e));
+            }
+
             document.getElementById("nuevoItemNombre").addEventListener("input", fetchItems); 
 
 

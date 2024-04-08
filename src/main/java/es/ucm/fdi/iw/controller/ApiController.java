@@ -144,4 +144,24 @@ public class ApiController {
 
     }
 
+    @GetMapping(path = "/nuevaguia")
+    @ResponseBody
+    public void createGuia(@RequestParam String titulo , @RequestParam String autor, @RequestParam String fecha,
+                            @RequestParam String campeon, @RequestParam String posiciones, @RequestParam String items,
+                            @RequestParam String texto) {
+        entityManager.createQuery(
+            "INSERT INTO Guia (id, titulo, autor, fecha, puntuacion, campeon, posiciones, etiquetas, elo, items, texto) VALUES (:id, :titulo, :autor, :fecha, :puntuacion, :campeon, :posiciones, :etiquetas, :elo, :items, :texto)")
+            .setParameter("id", 10)
+            .setParameter("titulo", titulo)
+            .setParameter("autor", autor)
+            .setParameter("fecha", fecha)
+            .setParameter("puntuacion", 0)
+            .setParameter("campeon", campeon)
+            .setParameter("posiciones", posiciones)
+            .setParameter("etiquetas", "campeon")
+            .setParameter("elo", "diamante")
+            .setParameter("items", items)
+            .setParameter("texto", texto)
+            .executeUpdate();
+    }
 }
