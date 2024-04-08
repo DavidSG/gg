@@ -146,7 +146,7 @@ public class ApiController {
 
     @GetMapping(path = "/nuevaguia")
     @ResponseBody
-    public void createGuia(@RequestParam String titulo , @RequestParam String autor, @RequestParam String fecha,
+    public ResponseEntity<String> createGuia(@RequestParam String titulo , @RequestParam String autor, @RequestParam String fecha,
                             @RequestParam String campeon, @RequestParam String posiciones, @RequestParam String items,
                             @RequestParam String texto) {
         entityManager.createQuery(
@@ -163,5 +163,7 @@ public class ApiController {
             .setParameter("items", items)
             .setParameter("texto", texto)
             .executeUpdate();
+
+        return ResponseEntity.ok("Nueva guía creada con éxito");
     }
 }
