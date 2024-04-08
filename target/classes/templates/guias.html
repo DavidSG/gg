@@ -293,7 +293,6 @@
 			}
 
 			function fetchGuias() {
-				console.log(ordenar);
 				go('/api/guias?ordenar=' + ordenar, 'GET')
 					.then(json => actualizaGuias(json))
 					.catch(e => console.log("ERR", e));

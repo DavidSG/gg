@@ -88,10 +88,8 @@
 
 		<script type="text/javascript" src="js/iw.js"></script>
 		<script type="text/javascript" src="js/stomp.js"></script>
-		<script th:inline="javascript">
-			var username = /*[[${session.getAttribute('u')}]]*/ 'default';
-		</script>
         <script>
+
 			var etiquetas = new Set();
             var posiciones = new Set();
 			var ordenar = "00";
@@ -258,8 +256,7 @@
 						}
 					}
 
-
-					if (nombreBuscado && posicionBuscada && etiquetasBuscadas && json[i].autor === username) {
+					if (nombreBuscado && posicionBuscada && etiquetasBuscadas) {
 						var link = document.createElement('a');
 						link.href = "/guia/" + json[i].id;
 
@@ -296,8 +293,7 @@
 			}
 
 			function fetchGuias() {
-				console.log(ordenar);
-				go('/api/guias?ordenar=' + ordenar, 'GET')
+				go('/api/guiasU?ordenar=' + ordenar, 'GET')
 					.then(json => actualizaGuias(json))
 					.catch(e => console.log("ERR", e));
 			}

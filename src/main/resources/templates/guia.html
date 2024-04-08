@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/css/guia.css}">
+    <script th:src="@{/js/items.js}"></script>
     <title>Guías</title>
     
 </head>
@@ -55,7 +56,7 @@
                     <div class = "guiaItems">
                         <div th:each="item : ${#strings.arraySplit(guia.items, ' ')}" class="guiaItem">
                             <img th:src="@{/img/items/__${item}__.png}" />
-                            <h2 th:text="${items[item]}">Abracadabra</h2>
+                            <h2 class="item" th:attr="data-item_id=${'i' + item}"></h2>
                         </div>
                     </div>
 
@@ -67,7 +68,9 @@
 
         </div> 
 
-        <script></script>
+        <script>
+            document.querySelectorAll(".item").forEach(o => o.textContent = items[o.dataset.item_id]);
+        </script>
 		
     </main>
 </body>

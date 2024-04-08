@@ -12,15 +12,15 @@ ALTER SEQUENCE 'PUBLIC'.'GEN' RESTART WITH 1024;
 
 
 INSERT INTO Guia (id, titulo, autor, fecha, puntuacion, campeon, posiciones, etiquetas, elo, hechizos, items, texto) VALUES 
-(1, 'Guia suspicaz', 'David Alfonso', '2024-01-02', 9.8, 'aatrox', 'top', 'campeon', 'diamante', 'flash ignite', '4010 3348 2419 2152 2150', 'texto generico'),
-(2, 'Guia excelente', 'Laura Lopez', '2021-05-01', 9.0, 'jhin', 'bot', 'campeon', 'platino', 'flash ignite', '4010 3348 2419 2152 2150', 'texto generico'),
-(3, 'Guia vers?til', 'Carlos Rodriguez', '2023-12-02', 8.5, 'leona', 'sup', 'campeon', 'oro', 'flash teleport', '4010 3348 2419 2152 2150', 'texto generico'),
-(4, 'Gu?a t?ctica para principiantes', 'Ana Mart?nez', '2023-05-02', 8.7, 'Annie', 'mid', 'campeon',  'plata', 'Teleport Flash', '4010 3348 2419 2152 2150', 'Consejos y estrategias esenciales para jugadores novatos.'),
-(5, 'Dominando el juego con Jinx', 'Pablo Gonz?lez', '2023-10-15', 9.5, 'Jinx', 'bot', 'campeon', 'diamante', 'Flash Heal', '4010 3348 2419 2152 2150', 'Aprende a jugar como un profesional con la campeona Jinx.'),
-(6, 'Guia suspicaz', 'b', '2023-12-12', 9.8, 'aatrox', 'top', 'campeon', 'diamante', 'flash', '4010 3348 2419 2152 2150', 'texto generico'),
-(7, 'Guia excelente', 'b', '2023-12-15', 9.0, 'jhin', 'bot', 'campeon', 'platino', 'ignite', '4010 3348 2419 2152 2150', 'texto generico'),
-(8, 'Guia vers?til', 'a', '2023-12-15', 8.5, 'leona', 'sup','campeon', 'oro', 'teleport', '4010 3348 2419 2152 2150', 'texto generico'),
-(9, 'Guia furra', 'a', '2024-04-23', 10, 'yuumi', 'sup','campeon', 'bronce', 'teleport', '4010 3348 2419 2152 2150', 'texto generico');
+(1, 'Guia suspicaz', 'David Alfonso', '2024-01-02', 9.8, 'aatrox', 'top', 'campeon', 'diamante', 'flash ignite', '6333 6698 3161 3302 6610 3748', 'texto generico'),
+(2, 'Guia excelente', 'Laura Lopez', '2021-05-01', 9.0, 'jhin', 'bot', 'campeon', 'platino', 'flash ignite', '6333 6698 3161 3302 6610 3748', 'texto generico'),
+(3, 'Guia vers?til', 'Carlos Rodriguez', '2023-12-02', 8.5, 'leona', 'sup', 'campeon', 'oro', 'flash teleport', '6333 6698 3161 3302 6610 3748', 'texto generico'),
+(4, 'Gu?a t?ctica para principiantes', 'a', '2023-05-02', 8.7, 'Annie', 'mid', 'campeon',  'plata', 'Teleport Flash', '6333 6698 3161 3302 6610 3748', 'Consejos y estrategias esenciales para jugadores novatos.'),
+(5, 'Dominando el juego con Jinx', 'b', '2023-10-15', 9.5, 'Jinx', 'bot', 'campeon', 'diamante', 'Flash Heal', '6333 6698 3161 3302 6610 3748', 'Aprende a jugar como un profesional con la campeona Jinx.'),
+(6, 'Guia suspicaz', 'b', '2023-12-12', 9.8, 'aatrox', 'top', 'campeon', 'diamante', 'flash', '6333 6698 3161 3302 6610 3748', 'texto generico'),
+(7, 'Guia excelente', 'b', '2023-12-15', 9.0, 'jhin', 'bot', 'campeon', 'platino', 'ignite', '6333 6698 3161 3302 6610 3748', 'texto generico'),
+(8, 'Guia vers?til', 'a', '2023-12-15', 8.5, 'leona', 'sup','campeon', 'oro', 'teleport', '6333 6698 3161 3302 6610 3748', 'texto generico'),
+(9, 'Guia furra', 'a', '2024-04-23', 10, 'yuumi', 'sup','campeon', 'bronce', 'teleport', '6333 6698 3161 3302 6610 3748', 'texto generico');
 
 
 

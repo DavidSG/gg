@@ -22,6 +22,7 @@ import es.ucm.fdi.iw.model.Campeon;
 import es.ucm.fdi.iw.model.Guia;
 import es.ucm.fdi.iw.model.Hechizo;
 import es.ucm.fdi.iw.model.Item;
+import es.ucm.fdi.iw.model.User;
 
 /**
  * Non-authenticated requests only.
@@ -65,32 +66,82 @@ public class ApiController {
 
     @GetMapping(path = "/guias", produces = "application/json")
     @ResponseBody
-    public List<Guia> getGuias(@RequestParam String ordenar) {
+    public List<Guia> getGuias(@RequestParam String ordenar, @RequestParam(defaultValue = "no") String usuario,
+            HttpSession session) {
+        User u = (User) session.getAttribute("u");
+        if (u == null) {
+            // boom!
+        } else {
+            u = entityManager.find(User.class, u.getId());
+        }
+
         String orderBy = " ORDER BY ";
         if (ordenar.charAt(0) == '1') {
             orderBy += "g.puntuacion DESC";
-        } else if (ordenar.charAt(0)  == '2') {
-            orderBy += "g.puntuacion ASC"; 
+        } else if (ordenar.charAt(0) == '2') {
+            orderBy += "g.puntuacion ASC";
         }
 
         if (ordenar.charAt(1) == '1') {
             if (orderBy.length() > 10) {
-                orderBy += ", "; 
+                orderBy += ", ";
             }
-            orderBy += "g.fecha DESC"; 
+            orderBy += "g.fecha DESC";
         } else if (ordenar.charAt(1) == '2') {
             if (orderBy.length() > 10) {
-                orderBy += ", "; 
+                orderBy += ", ";
             }
-            orderBy += "g.fecha ASC"; 
+            orderBy += "g.fecha ASC";
         }
 
-        if (orderBy.equals(" ORDER BY ")) orderBy = "";
-        for (int i = 0; i < 100; i++) System.out.println("aasdfasdf + " + orderBy);
+        if (orderBy.equals(" ORDER BY "))
+            orderBy = "";
+
         return entityManager.createQuery(
                 "SELECT g FROM Guia g" + orderBy,
                 Guia.class)
                 .getResultList();
+
+    }
+
+    @GetMapping(path = "/guiasU", produces = "application/json")
+    @ResponseBody
+    public List<Guia> getGuiasU(@RequestParam String ordenar, HttpSession session) {
+        User u = (User) session.getAttribute("u");
+        if (u == null) {
+            // boom!
+        } else {
+            u = entityManager.find(User.class, u.getId());
+        }
+
+        String orderBy = " ORDER BY ";
+        if (ordenar.charAt(0) == '1') {
+            orderBy += "g.puntuacion DESC";
+        } else if (ordenar.charAt(0) == '2') {
+            orderBy += "g.puntuacion ASC";
+        }
+
+        if (ordenar.charAt(1) == '1') {
+            if (orderBy.length() > 10) {
+                orderBy += ", ";
+            }
+            orderBy += "g.fecha DESC";
+        } else if (ordenar.charAt(1) == '2') {
+            if (orderBy.length() > 10) {
+                orderBy += ", ";
+            }
+            orderBy += "g.fecha ASC";
+        }
+
+        if (orderBy.equals(" ORDER BY "))
+            orderBy = "";
+
+        return entityManager.createQuery(
+                "SELECT g FROM Guia g WHERE g.autor = :autor" + orderBy,
+                Guia.class)
+                .setParameter("autor", u.getUsername())
+                .getResultList();
+
     }
 
 }

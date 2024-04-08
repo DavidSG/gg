@@ -59,41 +59,36 @@ public class RootController {
 
     @GetMapping("/guias")
     public String guias(@RequestParam(defaultValue = "") String campeon,
-    @RequestParam(defaultValue = "") String posiciones,
-    @RequestParam(defaultValue = "") String etiquetas,
-    @RequestParam(defaultValue = "") String orderBy,
-    Model model, HttpSession session) {
+            @RequestParam(defaultValue = "") String posiciones,
+            @RequestParam(defaultValue = "") String etiquetas,
+            @RequestParam(defaultValue = "") String orderBy,
+            Model model, HttpSession session) {
 
-    String orderByS = "";
-    if (!orderBy.equals("")) {
-        orderByS = " ORDER BY g." + orderBy;
-    }
+        String orderByS = "";
+        if (!orderBy.equals("")) {
+            orderByS = " ORDER BY g." + orderBy;
+        }
 
-    List<Guia> gs = entityManager.createQuery(
-            "SELECT g FROM Guia g WHERE LOWER(g.campeon) LIKE LOWER(:campeon) AND g.posiciones LIKE :posiciones AND g.etiquetas LIKE :etiquetas"
-                    + orderByS,
-            Guia.class)
-            .setParameter("campeon", "%" + campeon + "%")
-            .setParameter("posiciones", "%" + posiciones + "%")
-            .setParameter("etiquetas", "%" + etiquetas + "%")
-            .getResultList();
+        List<Guia> gs = entityManager.createQuery(
+                "SELECT g FROM Guia g WHERE LOWER(g.campeon) LIKE LOWER(:campeon) AND g.posiciones LIKE :posiciones AND g.etiquetas LIKE :etiquetas"
+                        + orderByS,
+                Guia.class)
+                .setParameter("campeon", "%" + campeon + "%")
+                .setParameter("posiciones", "%" + posiciones + "%")
+                .setParameter("etiquetas", "%" + etiquetas + "%")
+                .getResultList();
 
-    model.addAttribute("guias", gs);
-    model.addAttribute("campeon", campeon);
-    model.addAttribute("posiciones", posiciones);
-    model.addAttribute("etiquetas", etiquetas);
-    model.addAttribute("orderBy", orderBy);
+        model.addAttribute("guias", gs);
+        model.addAttribute("campeon", campeon);
+        model.addAttribute("posiciones", posiciones);
+        model.addAttribute("etiquetas", etiquetas);
+        model.addAttribute("orderBy", orderBy);
 
-    return "guias";
+        return "guias";
     }
 
     @GetMapping("/misGuias")
     public String misGuias(Model model, HttpSession session) {
-        User u = (User) session.getAttribute("u");
-        List<Guia> gs = entityManager.createQuery("SELECT g FROM Guia g WHERE g.autor = :user")
-        .setParameter("user", u.getUsername())
-        .getResultList();
-        model.addAttribute("guias", gs);
         return "misGuias";
     }
 

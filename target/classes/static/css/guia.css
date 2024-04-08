@@ -104,33 +104,11 @@
 
 }
 
-.guiaItems {
-    position: relative;
-
-    display : grid;
-    grid-template-columns: repeat(10, 1fr);
-    
-}
-
-.guiaItem {
-    position: relative;
-    
-    display : grid;
-    grid-template-rows: 1fr 1fr;
-}
-
-.guiaItem h1 {
-    position: relative;
-	
-    font-size: 20px;
-    color:white;
-}
-
 .guiaHechizos {
     position: relative;
 
     display : grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     
 }
 
@@ -141,12 +119,56 @@
     grid-template-rows: 1fr 1fr;
 }
 
-.guiaHechizo h1 {
+.guiaHechizo img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    height: 100px;
+    width: 100px;
+}
+
+.guiaHechizo h2 {
     position: relative;
 	
     font-size: 20px;
+    text-align: center;
     color:white;
 }
+
+
+.guiaItems {
+    position: relative;
+
+    display : grid;
+    grid-template-columns: repeat(6, 1fr);
+    
+}
+
+.guiaItem {
+    position: relative;
+    
+    display : grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.guiaItem img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 100px;
+    width: 100px;
+}
+
+.guiaItem h2 {
+    position: relative;
+	
+    font-size: 20px;
+    text-align: center;
+    color:white;
+}
+
 
 
 .md {
