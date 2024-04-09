@@ -153,15 +153,12 @@
 		<script type="text/javascript" src="js/stomp.js"></script>
         <script>
 
-            var data = {
-                titulo: "",
-                etiquetas: new Set(),
-                posiciones: new Set(),
-                campeon: "",
-                hechizos: new Set(),
-                ultimoHechizo: null,
-                items: new Set()
-            };
+            var titulo = "";
+            var etiquetas = new Set();
+            var posiciones = new Set();
+            var campeon = "";
+            var hechizos = new Set(); var ultimoHechizo;
+            var items = new Set();
             
             
             function toggle(set, key) {
@@ -172,7 +169,7 @@
 
             var element = document.getElementById("titulo");
             element.addEventListener('click', function() {
-                data.titulo = this.value;
+                titulo = this.value;
             });
 
             // ETIQUETAS
@@ -182,7 +179,7 @@
             for (var i = 0; i < etiquetasID.length; i++) {
                 var element = document.getElementById(etiquetasID[i]);
                 element.addEventListener('click', function() {
-                    toggle(data.etiquetas, this.id);
+                    toggle(etiquetas, this.id);
                     this.classList.toggle('bordeAmarillo')
                 });
             }
@@ -198,7 +195,7 @@
                 this.classList.add('bordeAmarillo');
 
                 for (var i = 0; i < posicionesID.length; i++) { 
-                    data.posiciones.delete(posicionesID[i]);
+                    posiciones.delete(posicionesID[i]);
                     document.getElementById(posicionesID[i]).classList.remove('bordeAmarillo');
                 }
             });
@@ -208,12 +205,12 @@
                 posicionesBoton.addEventListener('click', function() {
                     
 
-                    if (data.posiciones.has(this.id)) {
-                        data.posiciones.delete(this.id);
-                        if (data.posiciones.size == 0) document.getElementById("all").classList.add('bordeAmarillo');
+                    if (posiciones.has(this.id)) {
+                        posiciones.delete(this.id);
+                        if (posiciones.size == 0) document.getElementById("all").classList.add('bordeAmarillo');
                     }
                     else {
-                        data.posiciones.add(this.id);
+                        posiciones.add(this.id);
                         document.getElementById("all").classList.remove('bordeAmarillo');
                     }
 
@@ -271,7 +268,7 @@
 
                             campeonSeleccionado.classList.add("bordeAmarillo");
 
-                            data.campeon = this.name;
+                            campeon = this.name;
                         });
 
                         grid.appendChild(image);
@@ -299,7 +296,7 @@
                     const h1 = document.createElement('h1');
                     h1.textContent = '?';
                     this.appendChild(h1);
-                    data.campeon = "";
+                    campeon = "";
                 }
             });
 
@@ -317,16 +314,16 @@
 
                     image.addEventListener('click', function() {
                         
-                        if (data.hechizos.has(this.name)) {
-                            data.hechizos.delete(this.name);
+                        if (hechizos.has(this.name)) {
+                            hechizos.delete(this.name);
                             
                         }
                         else {
-                            if (data.hechizos.size == 2) {
+                            if (hechizos.size == 2) {
                                 ultimoHechizo.classList.remove('bordeAmarilloCircular');
-                                data.hechizos.delete(ultimoHechizo.name);
+                                hechizos.delete(ultimoHechizo.name);
                             }
-                            data.hechizos.add(this.name);
+                            hechizos.add(this.name);
                             ultimoHechizo = this;
                         }
 
@@ -352,6 +349,8 @@
             var clase = "";
 
             function actualizaItems(json) {
+
+                console.log(json);
                 
                 const grid = document.querySelector('.nuevoItemsList');
                 const itemNombre = document.getElementById('nuevoItemNombre');
@@ -373,14 +372,12 @@
 
                 for (var i = 0; i < json.length; i++) {
 
-                    // Generar campeones
-
                     if (itemRegex.test(json[i].nombre) && claseRegex.test(json[i].etiquetas)) {
 
                         const item = document.createElement('div');
                         item.classList.add('nuevoItem');
 
-                        item.name = json[i].nombre;
+                        item.name = json[i].id;
 
                         const image = document.createElement('img');
                         image.src = "/img/items/" + json[i].id + '.png';
@@ -389,15 +386,15 @@
                         h1.textContent = json[i].nombre;
 
                         item.addEventListener('click', function() {
-                            if (!data.items.has(this.name)){
-                                data.items.add(this.name);
+                            if (!items.has(this.name)){
+                                items.add(this.name);
 
                                 var clon = this.cloneNode(true);
                                 clon.name = this.name;
                                 clon.querySelector('h1').setAttribute("style", "color: #000033;");
                                 clon.addEventListener('click', function() {
                                     itemsSeleccionados.removeChild(this);
-                                    data.items.delete(this.name);
+                                    items.delete(this.name);
                                 });
                                 
                                 itemsSeleccionados.insertBefore(clon, interrogante);
@@ -416,6 +413,13 @@
             function fetchItems() {
                 go('/api/items', 'GET')
                     .then(json => actualizaItems(json))
+                    .catch(e => console.log("ERR", e));
+            }
+
+            // Crear Guia
+
+            function fetchNuevaGuia() {
+                go('/api/nuevaguia', 'POST')
                     .catch(e => console.log("ERR", e));
             }
 
@@ -447,9 +451,18 @@
 
             // Crear Guia
             document.getElementById("Enviar").addEventListener('click', function() {
-                //fetchNuevaGuia
-                go('/api/nuevaguia', 'POST', data)
-                    .catch(e => console.log("ERR", e));
+                data = {
+                    "titulo": titulo,
+                    "etiquetas": Array.from(etiquetas).join(" "),
+                    "posiciones": Array.from(posiciones).join(" "),
+                    "campeon": campeon,
+                    "hechizos": Array.from(hechizos).join(" "),
+                    "items": Array.from(items).join(" ")
+                };
+                console.log(data); 
+                console.log(JSON.stringify(data)); 
+                /*go('/api/nuevaguia', 'POST', data)
+                    .catch(e => console.log("ERR", e));*/
             });
         </script>
             
