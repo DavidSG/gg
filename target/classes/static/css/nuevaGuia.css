@@ -295,3 +295,11 @@
 }
 
 /* ITEMS */
+
+.botonNuevaGuia button{
+    width: 100px; 
+	height: 100px; 
+
+	background-color: #000033;
+    transition: border-color 0.2s ease-out;
+}

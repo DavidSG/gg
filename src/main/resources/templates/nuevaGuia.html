@@ -140,7 +140,12 @@
 
                 </div>
 			</div>
-
+            
+            <div class = "enviarNuevaGuia">
+                <button id = "Enviar">
+                    <input type="submit">
+                </button>
+            </div>
         </div>
 
 
@@ -148,12 +153,15 @@
 		<script type="text/javascript" src="js/stomp.js"></script>
         <script>
 
-            var titulo = "";
-            var etiquetas = new Set();
-            var posiciones = new Set();
-            var campeon = "";
-            var hechizos = new Set(); var ultimoHechizo;
-            var items = new Set();
+            var data = {
+                titulo: "",
+                etiquetas: new Set(),
+                posiciones: new Set(),
+                campeon: "",
+                hechizos: new Set(),
+                ultimoHechizo: null,
+                items: new Set()
+            };
             
             
             function toggle(set, key) {
@@ -164,7 +172,7 @@
 
             var element = document.getElementById("titulo");
             element.addEventListener('click', function() {
-                titulo = this.value;
+                data.titulo = this.value;
             });
 
             // ETIQUETAS
@@ -174,7 +182,7 @@
             for (var i = 0; i < etiquetasID.length; i++) {
                 var element = document.getElementById(etiquetasID[i]);
                 element.addEventListener('click', function() {
-                    toggle(etiquetas, this.id);
+                    toggle(data.etiquetas, this.id);
                     this.classList.toggle('bordeAmarillo')
                 });
             }
@@ -190,7 +198,7 @@
                 this.classList.add('bordeAmarillo');
 
                 for (var i = 0; i < posicionesID.length; i++) { 
-                    posiciones.delete(posicionesID[i]);
+                    data.posiciones.delete(posicionesID[i]);
                     document.getElementById(posicionesID[i]).classList.remove('bordeAmarillo');
                 }
             });
@@ -200,12 +208,12 @@
                 posicionesBoton.addEventListener('click', function() {
                     
 
-                    if (posiciones.has(this.id)) {
-                        posiciones.delete(this.id);
-                        if (posiciones.size == 0) document.getElementById("all").classList.add('bordeAmarillo');
+                    if (data.posiciones.has(this.id)) {
+                        data.posiciones.delete(this.id);
+                        if (data.posiciones.size == 0) document.getElementById("all").classList.add('bordeAmarillo');
                     }
                     else {
-                        posiciones.add(this.id);
+                        data.posiciones.add(this.id);
                         document.getElementById("all").classList.remove('bordeAmarillo');
                     }
 
@@ -263,7 +271,7 @@
 
                             campeonSeleccionado.classList.add("bordeAmarillo");
 
-                            campeon = this.name;
+                            data.campeon = this.name;
                         });
 
                         grid.appendChild(image);
@@ -291,7 +299,7 @@
                     const h1 = document.createElement('h1');
                     h1.textContent = '?';
                     this.appendChild(h1);
-                    campeon = "";
+                    data.campeon = "";
                 }
             });
 
@@ -309,16 +317,16 @@
 
                     image.addEventListener('click', function() {
                         
-                        if (hechizos.has(this.name)) {
-                            hechizos.delete(this.name);
+                        if (data.hechizos.has(this.name)) {
+                            data.hechizos.delete(this.name);
                             
                         }
                         else {
-                            if (hechizos.size == 2) {
+                            if (data.hechizos.size == 2) {
                                 ultimoHechizo.classList.remove('bordeAmarilloCircular');
-                                hechizos.delete(ultimoHechizo.name);
+                                data.hechizos.delete(ultimoHechizo.name);
                             }
-                            hechizos.add(this.name);
+                            data.hechizos.add(this.name);
                             ultimoHechizo = this;
                         }
 
@@ -381,15 +389,15 @@
                         h1.textContent = json[i].nombre;
 
                         item.addEventListener('click', function() {
-                            if (!items.has(this.name)){
-                                items.add(this.name);
+                            if (!data.items.has(this.name)){
+                                data.items.add(this.name);
 
                                 var clon = this.cloneNode(true);
                                 clon.name = this.name;
                                 clon.querySelector('h1').setAttribute("style", "color: #000033;");
                                 clon.addEventListener('click', function() {
                                     itemsSeleccionados.removeChild(this);
-                                    items.delete(this.name);
+                                    data.items.delete(this.name);
                                 });
                                 
                                 itemsSeleccionados.insertBefore(clon, interrogante);
@@ -408,13 +416,6 @@
             function fetchItems() {
                 go('/api/items', 'GET')
                     .then(json => actualizaItems(json))
-                    .catch(e => console.log("ERR", e));
-            }
-
-            // Crear Guia
-
-            function fetchNuevaGuia() {
-                go('/api/nuevaguia', 'POST')
                     .catch(e => console.log("ERR", e));
             }
 
@@ -443,7 +444,13 @@
             }
 
             fetchItems();
-            
+
+            // Crear Guia
+            document.getElementById("Enviar").addEventListener('click', function() {
+                //fetchNuevaGuia
+                go('/api/nuevaguia', 'POST', data)
+                    .catch(e => console.log("ERR", e));
+            });
         </script>
             
 		
