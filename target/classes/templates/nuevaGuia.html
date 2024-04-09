@@ -416,13 +416,6 @@
                     .catch(e => console.log("ERR", e));
             }
 
-            // Crear Guia
-
-            function fetchNuevaGuia() {
-                go('/api/nuevaguia', 'POST')
-                    .catch(e => console.log("ERR", e));
-            }
-
             document.getElementById("nuevoItemNombre").addEventListener("input", fetchItems); 
 
 
@@ -463,6 +456,9 @@
                 var jsonData = JSON.stringify(data); 
                 console.log(jsonData); 
                 go('/api/nuevaguia', 'POST', data)
+                    .then(responseData => {
+                        console.log("Respuesta exitosa:", responseData);
+                    })
                     .catch(e => console.log("ERR", e));
             });
         </script>

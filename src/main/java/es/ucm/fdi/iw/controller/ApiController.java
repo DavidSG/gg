@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -149,15 +150,16 @@ public class ApiController {
     @PostMapping(path = "/nuevaguia", produces = "application/json")
     @ResponseBody
     public ResponseEntity<String> createGuia(@RequestBody JsonNode guia) {
-        
+        try {
         entityManager.createQuery(
-        "INSERT INTO Guia (id, titulo, autor, fecha, puntuacion, campeon, posiciones, etiquetas, elo, hechizos, items, texto) VALUES (:id, :titulo, :autor, :fecha, :puntuacion, :campeon, :posiciones, :etiquetas, :elo, :items, :texto)"
+        "INSERT INTO Guia (id, titulo, autor, fecha, puntuacion, campeon, posiciones, etiquetas, elo, hechizos, items, texto) " + 
+        "VALUES (:id, :titulo, :autor, :fecha, :puntuacion, :campeon, :posiciones, :etiquetas, :elo, :items, :texto);"
         )
-        .setParameter("id", 10)
+        .setParameter("id", 10L)
         .setParameter("titulo", guia.get("titulo").asText())
         .setParameter("autor", guia.get("autor").asText())
         .setParameter("fecha", "2023-12-15")
-        .setParameter("puntuacion", 0)
+        .setParameter("puntuacion", 0.0)
         .setParameter("campeon", guia.get("campeon").asText())
         .setParameter("posiciones", guia.get("posiciones").asText())
         .setParameter("etiquetas", guia.get("etiquetas").asText())
@@ -169,5 +171,9 @@ public class ApiController {
         
 
         return ResponseEntity.ok("Nueva guía creada con éxito");
+        } catch (Exception e) {
+        // Manejar la excepción
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al crear la nueva guía: " + e.getMessage());
+        }
     }
 }
