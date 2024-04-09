@@ -460,9 +460,10 @@
                     "items": Array.from(items).join(" ")
                 };
                 console.log(data); 
-                console.log(JSON.stringify(data)); 
-                /*go('/api/nuevaguia', 'POST', data)
-                    .catch(e => console.log("ERR", e));*/
+                var jsonData = JSON.stringify(data); 
+                console.log(jsonData); 
+                go('/api/nuevaguia', 'POST', data)
+                    .catch(e => console.log("ERR", e));
             });
         </script>
             

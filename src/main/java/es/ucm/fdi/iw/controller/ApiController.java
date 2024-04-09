@@ -12,11 +12,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
+import com.fasterxml.jackson.databind.JsonNode;
 
 import es.ucm.fdi.iw.model.Campeon;
 import es.ucm.fdi.iw.model.Guia;
@@ -144,28 +146,27 @@ public class ApiController {
 
     }
 
-    @GetMapping(path = "/nuevaguia")
+    @PostMapping(path = "/nuevaguia", produces = "application/json")
     @ResponseBody
-    public ResponseEntity<String> createGuia(@RequestBody String guia) {
-        for (int i = 0; i < 100; i++)
-            System.out.println(guia);
-        /*
-         * entityManager.createQuery(
-         * "INSERT INTO Guia (id, titulo, autor, fecha, puntuacion, campeon, posiciones, etiquetas, elo, items, texto) VALUES (:id, :titulo, :autor, :fecha, :puntuacion, :campeon, :posiciones, :etiquetas, :elo, :items, :texto)"
-         * )
-         * .setParameter("id", 10)
-         * .setParameter("titulo", titulo)
-         * .setParameter("autor", autor)
-         * .setParameter("fecha", fecha)
-         * .setParameter("puntuacion", 0)
-         * .setParameter("campeon", campeon)
-         * .setParameter("posiciones", posiciones)
-         * .setParameter("etiquetas", "campeon")
-         * .setParameter("elo", "diamante")
-         * .setParameter("items", items)
-         * .setParameter("texto", texto)
-         * .executeUpdate();
-         */
+    public ResponseEntity<String> createGuia(@RequestBody JsonNode guia) {
+        
+        entityManager.createQuery(
+        "INSERT INTO Guia (id, titulo, autor, fecha, puntuacion, campeon, posiciones, etiquetas, elo, hechizos, items, texto) VALUES (:id, :titulo, :autor, :fecha, :puntuacion, :campeon, :posiciones, :etiquetas, :elo, :items, :texto)"
+        )
+        .setParameter("id", 10)
+        .setParameter("titulo", guia.get("titulo").asText())
+        .setParameter("autor", guia.get("autor").asText())
+        .setParameter("fecha", "2023-12-15")
+        .setParameter("puntuacion", 0)
+        .setParameter("campeon", guia.get("campeon").asText())
+        .setParameter("posiciones", guia.get("posiciones").asText())
+        .setParameter("etiquetas", guia.get("etiquetas").asText())
+        .setParameter("elo", "diamante")
+        .setParameter("hechizos", guia.get("hechizos").asText())
+        .setParameter("items", guia.get("items").asText())
+        .setParameter("texto", "texto")
+        .executeUpdate();
+        
 
         return ResponseEntity.ok("Nueva guía creada con éxito");
     }
