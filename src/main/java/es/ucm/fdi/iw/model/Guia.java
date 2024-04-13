@@ -7,8 +7,10 @@ import javax.persistence.Id;
 
 @Entity
 public class Guia {
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     private String titulo;
     private String autor;
     private String fecha;
@@ -23,7 +25,6 @@ public class Guia {
     private String items;
     private String texto;    
 
-    @Id
     public long getId() {
         return id;
     }

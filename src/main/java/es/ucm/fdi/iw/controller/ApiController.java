@@ -1,9 +1,11 @@
 package es.ucm.fdi.iw.controller;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.servlet.http.HttpSession;
+import javax.transaction.Transactional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -147,33 +149,42 @@ public class ApiController {
 
     }
 
+    @Transactional
     @PostMapping(path = "/nuevaguia", produces = "application/json")
     @ResponseBody
-    public ResponseEntity<String> createGuia(@RequestBody JsonNode guia) {
+    public ResponseEntity<String> createGuia(@RequestBody Guia guia, HttpSession session) {
         try {
-        entityManager.createQuery(
-        "INSERT INTO Guia (id, titulo, autor, fecha, puntuacion, campeon, posiciones, etiquetas, elo, hechizos, items, texto) " + 
-        "VALUES (:id, :titulo, :autor, :fecha, :puntuacion, :campeon, :posiciones, :etiquetas, :elo, :items, :texto);"
-        )
-        .setParameter("id", 10L)
-        .setParameter("titulo", guia.get("titulo").asText())
-        .setParameter("autor", guia.get("autor").asText())
-        .setParameter("fecha", "2023-12-15")
-        .setParameter("puntuacion", 0.0)
-        .setParameter("campeon", guia.get("campeon").asText())
-        .setParameter("posiciones", guia.get("posiciones").asText())
-        .setParameter("etiquetas", guia.get("etiquetas").asText())
-        .setParameter("elo", "diamante")
-        .setParameter("hechizos", guia.get("hechizos").asText())
-        .setParameter("items", guia.get("items").asText())
-        .setParameter("texto", "texto")
-        .executeUpdate();
-        
+            guia.setAutor("b");
+            guia.setFecha(LocalDate.now().toString());
+            guia.setPuntuacion(10);
+            guia.setElo("diamante");
+            guia.setTexto("texto a");
 
-        return ResponseEntity.ok("Nueva guía creada con éxito");
+            for(int i = 0; i < 10; i++) {
+                System.out.println(guia.getId());
+                System.out.println(guia.getTitulo());
+                System.out.println(guia.getAutor());
+                System.out.println(guia.getFecha());
+                System.out.println(guia.getPuntuacion());
+                System.out.println(guia.getCampeon());
+                System.out.println(guia.getPosiciones());
+                System.out.println(guia.getEtiquetas());
+                System.out.println(guia.getElo());
+                System.out.println(guia.getHechizos());
+                System.out.println(guia.getItems());
+                System.out.println(guia.getTexto());
+                System.out.println();
+            }
+
+            entityManager.persist(guia);
+
+            
+
+            return ResponseEntity.ok("Nueva guía creada con éxito");
         } catch (Exception e) {
-        // Manejar la excepción
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al crear la nueva guía: " + e.getMessage());
+           
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al crear la nueva guía: " + e.getMessage());
         }
     }
 }
