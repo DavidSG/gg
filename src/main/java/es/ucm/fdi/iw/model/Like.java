@@ -6,6 +6,7 @@ import javax.persistence.Id;
 @Entity
 public class Like {
     private String id;
+    private Boolean like;
     private String autor;
     private String guia;
 
@@ -16,6 +17,14 @@ public class Like {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public Boolean getLike() {
+        return like;
+    }
+
+    public void setLike(Boolean like){
+        this.like = like;
     }
 
     public String getAutor(){
