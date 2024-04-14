@@ -3,6 +3,7 @@ package es.ucm.fdi.iw.controller;
 import java.time.LocalDate;
 import java.util.List;
 
+import javax.persistence.Query;
 import javax.persistence.EntityManager;
 import javax.servlet.http.HttpSession;
 import javax.transaction.Transactional;
@@ -27,6 +28,7 @@ import es.ucm.fdi.iw.model.Campeon;
 import es.ucm.fdi.iw.model.Guia;
 import es.ucm.fdi.iw.model.Hechizo;
 import es.ucm.fdi.iw.model.Item;
+import es.ucm.fdi.iw.model.Like;
 import es.ucm.fdi.iw.model.User;
 import es.ucm.fdi.iw.model.Vote;
 
@@ -164,7 +166,13 @@ public class ApiController {
 
             guia.setAutor(u.getUsername());
             guia.setFecha(LocalDate.now().toString());
-            guia.setPuntuacion(10);
+            guia.setPuntuacion(0);
+
+            /*Query query = entityManager.createNativeQuery("SELECT u.elo FROM User u WHERE u.user = :user");
+            query.setParameter("autor", u.getUsername());
+            Object elo = query.getSingleResult();
+            String eloString = elo.toString();*/
+
             guia.setElo("diamante");
             guia.setTexto("texto a");
             
