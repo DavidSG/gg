@@ -28,8 +28,12 @@
 
                     <div class = "puntuacionGuia">
                         <h1 th:text="${guia.puntuacion}"></h1>
-                        <button type="submit">Like</button>
-                        <button type="submit">Dislike</button>
+                        <button th:class = "${vote == 1 ? 'likebutton clicked' : 'likebutton'}">
+                            <img src="https://pngimg.com/uploads/like/like_PNG60.png">
+                        </button>
+                        <button th:class = "${vote == 2 ? 'dislikebutton clicked' : 'dislikebutton'}">
+                            <img src="https://purepng.com/public/uploads/large/black-and-white-dislike-symbol-grf.png">
+                        </button>
                     </div>
                 </div>
                 
@@ -68,8 +72,52 @@
 
         </div> 
 
+        <script type="text/javascript" src="../js/iw.js"></script>
+		<script type="text/javascript" src="../js/stomp.js"></script>
         <script>
             document.querySelectorAll(".item").forEach(o => o.textContent = items[o.dataset.item_id]);
+            const likeButton = document.querySelector(".likebutton");
+            const dislikeButton = document.querySelector(".dislikebutton");
+
+            likeButton.addEventListener('click', function() {
+                const domain = window.location.href.split('/');
+                
+                likeButton.classList.remove('clicked');
+                dislikeButton.classList.remove('clicked');
+                likeButton.classList.add('clicked');
+
+                data = {
+                    "like": true,
+                    "guia": domain.pop()
+                };
+
+                go('/api/voteguia', 'POST', data)
+                    .then(responseData => {
+                        console.log("Respuesta exitosa:", responseData);
+                    })
+                    .catch(e => console.log("ERR", e));
+            });
+
+            dislikeButton.addEventListener('click', function() {
+                const domain = window.location.href.split('/');
+                
+                
+                likeButton.classList.remove('clicked');
+                dislikeButton.classList.remove('clicked');
+                dislikeButton.classList.add('clicked');
+
+                data = {
+                    "like": false,
+                    "guia": domain.pop()
+                };
+
+                go('/api/voteguia', 'POST', data)
+                    .then(responseData => {
+                        console.log("Respuesta exitosa:", responseData);
+                    })
+                    .catch(e => console.log("ERR", e));
+            });
+
         </script>
 		
     </main>

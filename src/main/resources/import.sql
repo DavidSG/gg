@@ -22,7 +22,8 @@ INSERT INTO Guia (titulo, autor, fecha, puntuacion, campeon, posiciones, etiquet
 ('Gu�a vers�til', 'a', '2023-12-15', 8.5, 'leona', 'sup','campeon', 'oro', 'teleport', '6333 6698 3161 3302 6610 3748', 'texto generico'),
 ('Gu�a furra', 'a', '2024-04-23', 10, 'yuumi', 'sup','campeon', 'bronce', 'teleport', '6333 6698 3161 3302 6610 3748', 'texto generico');
 
-
+INSERT INTO Vote (vote, autor, guia) VALUES 
+(true, 'a', 1L);
 
 INSERT INTO Campeon (nombre, posiciones) VALUES 
 ('aatrox', 'top'),

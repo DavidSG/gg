@@ -67,15 +67,61 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.puntuacionGuia button[type="submit"] {
+.likebutton {
     box-sizing: content-box;
     height: 50px;
     width: 50px;
-
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s;
 }
+
+.likebutton.clicked { 
+    background-color: yellow; 
+    animation: shake 0.5s ease; 
+}
+
+.likebutton img {
+    height: 30px;
+    width: 30px;
+}
+  
+
+
+
+.dislikebutton {
+    box-sizing: content-box;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s;
+}
+
+.dislikebutton img {
+    height: 30px;
+    width: 30px;
+}
+
+.dislikebutton.clicked { 
+    background-color: red; 
+    animation: shake 0.5s ease; 
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+ 
 
 /* header guia END*/
 

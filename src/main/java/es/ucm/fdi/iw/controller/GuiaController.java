@@ -23,6 +23,8 @@ import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.HtmlRenderer;
 
 import es.ucm.fdi.iw.model.Guia;
+import es.ucm.fdi.iw.model.User;
+import es.ucm.fdi.iw.model.Vote;
 
 /**
  * Non-authenticated requests only.
@@ -36,24 +38,36 @@ public class GuiaController {
     @Autowired
     private EntityManager entityManager;
 
-    private static class GuiaParaMostrar {
-        public Guia guia;
-        public String html;
-    }
-
     @GetMapping("{id}")
     public String index(@PathVariable long id, Model model, HttpSession session) {
+        
+        // Coger guia con id
         Guia g = entityManager.find(Guia.class, id);
-        Parser parser = Parser.builder().build();
-        Node document = parser.parse("1.md");
-        HtmlRenderer renderer = HtmlRenderer.builder().build();
-        String renderedHtml = renderer.render(document); // Render Markdown to HTML
+
+        
+        // Coger like, dislike 
+        int vote = 0;
+        User u = (User) session.getAttribute("u");
+        if (u != null) {
+            u = entityManager.find(User.class, u.getId());
+            List<Boolean> voteList = entityManager.createQuery("SELECT v.vote FROM Vote v WHERE v.autor = :autor AND v.guia = :guia",
+            Boolean.class)
+                .setParameter("autor", u.getUsername())
+                .setParameter("guia", id)
+                .getResultList();
+            
+            
+            if(voteList.isEmpty()) vote = 0;
+            else if (voteList.get(0)) vote = 1;
+            else vote = 2;
+        }
+        
 
         Map<String, String> itemMap = new HashMap<>();
 
         model.addAttribute("items", itemMap);
         model.addAttribute("guia", g);
-        model.addAttribute("renderedHtml", renderedHtml); // Add HTML content as attribute
+        model.addAttribute("vote", vote); // Add HTML content as attribute
 
         return "guia";
     }

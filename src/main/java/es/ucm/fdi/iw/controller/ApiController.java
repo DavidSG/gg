@@ -28,6 +28,7 @@ import es.ucm.fdi.iw.model.Guia;
 import es.ucm.fdi.iw.model.Hechizo;
 import es.ucm.fdi.iw.model.Item;
 import es.ucm.fdi.iw.model.User;
+import es.ucm.fdi.iw.model.Vote;
 
 /**
  * Non-authenticated requests only.
@@ -154,12 +155,20 @@ public class ApiController {
     @ResponseBody
     public ResponseEntity<String> createGuia(@RequestBody Guia guia, HttpSession session) {
         try {
-            guia.setAutor("b");
+            User u = (User) session.getAttribute("u");
+            if (u == null) {
+                // boom!
+            } else {
+                u = entityManager.find(User.class, u.getId());
+            }
+
+            guia.setAutor(u.getUsername());
             guia.setFecha(LocalDate.now().toString());
             guia.setPuntuacion(10);
             guia.setElo("diamante");
             guia.setTexto("texto a");
-
+            
+            /* 
             for(int i = 0; i < 10; i++) {
                 System.out.println(guia.getId());
                 System.out.println(guia.getTitulo());
@@ -174,9 +183,54 @@ public class ApiController {
                 System.out.println(guia.getItems());
                 System.out.println(guia.getTexto());
                 System.out.println();
-            }
+                
+            }*/
 
             entityManager.persist(guia);
+
+            
+
+            return ResponseEntity.ok("Nueva guía creada con éxito");
+        } catch (Exception e) {
+           
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al crear la nueva guía: " + e.getMessage());
+        }
+    }
+
+    @Transactional
+    @PostMapping(path = "/voteguia", produces = "application/json")
+    @ResponseBody
+    public ResponseEntity<String> likeGuia(@RequestBody Vote vote, HttpSession session) {
+        try {
+            User u = (User) session.getAttribute("u");
+            if (u == null) {
+                // boom!
+            } else {
+                u = entityManager.find(User.class, u.getId());
+                
+                entityManager.createQuery(
+                "DELETE FROM Vote v WHERE v.autor = :autor AND v.guia = :guia")
+                .setParameter("autor", u.getUsername())
+                .setParameter("guia", vote.getGuia()) 
+                .executeUpdate();
+                
+                vote.setAutor(u.getUsername());
+                entityManager.persist(vote);
+                 
+            }
+
+            /* 
+            for(int i = 0; i < 10; i++) {
+                System.out.println(vote.getId());
+                System.out.println(vote.getVote());
+                System.out.println(vote.getAutor());
+                System.out.println(vote.getGuia());
+                System.out.println();
+            }
+            */
+
+            
 
             
 
