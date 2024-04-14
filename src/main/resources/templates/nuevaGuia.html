@@ -142,8 +142,8 @@
 			</div>
             
             <div class = "enviarNuevaGuia">
-                <button id = "Enviar">
-                    <input type="submit">
+                <button id = "Crear">
+                    Crear
                 </button>
             </div>
         </div>
@@ -443,7 +443,7 @@
             fetchItems();
 
             // Crear Guia
-            document.getElementById("Enviar").addEventListener('click', function() {
+            document.getElementById("Crear").addEventListener('click', function() {
                 data = {
                     "titulo": titulo,
                     "etiquetas": Array.from(etiquetas).join(" "),

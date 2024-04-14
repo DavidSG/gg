@@ -303,3 +303,31 @@
 	background-color: #000033;
     transition: border-color 0.2s ease-out;
 }
+
+/* Boton crear */
+
+.enviarNuevaGuia {
+    text-align: center;
+}
+
+#Crear {
+    background-color: #421d78;
+    border: none;
+    color: white;
+    padding: 10px 400px ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: -30px 2px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#Crear:hover {
+    background-color: #3e1768;
+}
+
+#Crear:active {
+    background-color: #3e1768;
+}
