@@ -82,14 +82,23 @@
             likeButton.addEventListener('click', function() {
                 const domain = window.location.href.split('/');
                 
-                likeButton.classList.remove('clicked');
-                dislikeButton.classList.remove('clicked');
-                likeButton.classList.add('clicked');
+                // Comprueba si ya existe un like del usuario
+                if (likeButton.classList.contains('clicked')){
+                    likeButton.classList.remove('clicked');
+                    data = {
+                        "guia": domain.pop(),
+                    };
+                }
+                else{
+                    likeButton.classList.remove('clicked');
+                    dislikeButton.classList.remove('clicked');
+                    likeButton.classList.add('clicked');
 
-                data = {
-                    "like": true,
-                    "guia": domain.pop()
-                };
+                    data = {
+                        "like": true,
+                        "guia": domain.pop()
+                    };
+                }
 
                 go('/api/voteguia', 'POST', data)
                     .then(responseData => {
@@ -100,16 +109,24 @@
 
             dislikeButton.addEventListener('click', function() {
                 const domain = window.location.href.split('/');
-                
-                
-                likeButton.classList.remove('clicked');
-                dislikeButton.classList.remove('clicked');
-                dislikeButton.classList.add('clicked');
 
-                data = {
-                    "like": false,
-                    "guia": domain.pop()
-                };
+                // Comprueba si ya existe un dislike del usuario
+                if (dislikeButton.classList.contains('clicked')){
+                    dislikeButton.classList.remove('clicked');
+                    data = {
+                        "guia": domain.pop(),
+                    };
+                }
+                else{
+                    likeButton.classList.remove('clicked');
+                    dislikeButton.classList.remove('clicked');
+                    dislikeButton.classList.add('clicked');
+
+                    data = {
+                        "like": false,
+                        "guia": domain.pop(),
+                    };
+                }
 
                 go('/api/voteguia', 'POST', data)
                     .then(responseData => {

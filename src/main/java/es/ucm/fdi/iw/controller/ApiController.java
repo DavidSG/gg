@@ -173,28 +173,8 @@ public class ApiController {
 
             guia.setElo("diamante");
             guia.setTexto("texto a");
-            
-            /* 
-            for(int i = 0; i < 10; i++) {
-                System.out.println(guia.getId());
-                System.out.println(guia.getTitulo());
-                System.out.println(guia.getAutor());
-                System.out.println(guia.getFecha());
-                System.out.println(guia.getPuntuacion());
-                System.out.println(guia.getCampeon());
-                System.out.println(guia.getPosiciones());
-                System.out.println(guia.getEtiquetas());
-                System.out.println(guia.getElo());
-                System.out.println(guia.getHechizos());
-                System.out.println(guia.getItems());
-                System.out.println(guia.getTexto());
-                System.out.println();
-                
-            }*/
 
             entityManager.persist(guia);
-
-            
 
             return ResponseEntity.ok("Nueva guía creada con éxito");
         } catch (Exception e) {
@@ -214,31 +194,19 @@ public class ApiController {
                 // boom!
             } else {
                 u = entityManager.find(User.class, u.getId());
-                
+
                 entityManager.createQuery(
-                "DELETE FROM Vote v WHERE v.autor = :autor AND v.guia = :guia")
-                .setParameter("autor", u.getUsername())
-                .setParameter("guia", vote.getGuia()) 
-                .executeUpdate();
-                
-                vote.setAutor(u.getUsername());
-                entityManager.persist(vote);
-                 
+                    "DELETE FROM Vote v WHERE v.autor = :autor AND v.guia = :guia")
+                    .setParameter("autor", u.getUsername())
+                    .setParameter("guia", vote.getGuia()) 
+                    .executeUpdate();
+
+                // Si se ha seleccionado un voto, se sube uno nuevo
+                if (vote.getVote() != null){
+                    vote.setAutor(u.getUsername());
+                    entityManager.persist(vote);
+                }
             }
-
-            /* 
-            for(int i = 0; i < 10; i++) {
-                System.out.println(vote.getId());
-                System.out.println(vote.getVote());
-                System.out.println(vote.getAutor());
-                System.out.println(vote.getGuia());
-                System.out.println();
-            }
-            */
-
-            
-
-            
 
             return ResponseEntity.ok("Nueva guía creada con éxito");
         } catch (Exception e) {
