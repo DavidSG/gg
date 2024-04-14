@@ -21,14 +21,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.client.RestTemplate;
-import com.fasterxml.jackson.databind.JsonNode;
+
 
 import es.ucm.fdi.iw.model.Campeon;
 import es.ucm.fdi.iw.model.Guia;
 import es.ucm.fdi.iw.model.Hechizo;
 import es.ucm.fdi.iw.model.Item;
-import es.ucm.fdi.iw.model.Like;
 import es.ucm.fdi.iw.model.User;
 import es.ucm.fdi.iw.model.Vote;
 
