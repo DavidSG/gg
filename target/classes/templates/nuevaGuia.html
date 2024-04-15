@@ -137,14 +137,21 @@
                         <div class="nuevoItemsList"></div>
 
                     </div>
-
+            
                 </div>
 			</div>
             
+            <div class="nuevoCampo">
+                <h1> Escribe aquí su guia </h1>
+                <textarea type="text" id="texto" name="texto" rows="8" cols="80"></textarea>
+            </div>
+
             <div class = "enviarNuevaGuia">
-                <button id = "Crear">
-                    Crear
-                </button>
+                <a href="guias">
+                    <button id = "Crear">
+                        Crear
+                    </button>
+                </a>
             </div>
         </div>
 
@@ -157,8 +164,10 @@
             var etiquetas = new Set();
             var posiciones = new Set();
             var campeon = "";
-            var hechizos = new Set(); var ultimoHechizo;
+            var hechizos = new Set(); 
+            var ultimoHechizo;
             var items = new Set();
+            var texto = "";
             
             
             function toggle(set, key) {
@@ -442,24 +451,40 @@
 
             fetchItems();
 
+            // Texto
+            var element = document.getElementById("texto");
+            element.addEventListener('textarea', function() {
+                texto = this.value;
+                console.log(texto);
+            });
+
             // Crear Guia
             document.getElementById("Crear").addEventListener('click', function() {
-                data = {
-                    "titulo": titulo,
-                    "etiquetas": Array.from(etiquetas).join(" "),
-                    "posiciones": Array.from(posiciones).join(" "),
-                    "campeon": campeon,
-                    "hechizos": Array.from(hechizos).join(" "),
-                    "items": Array.from(items).join(" ")
-                };
-                console.log(data); //TODO Remove
-                var jsonData = JSON.stringify(data); 
-                console.log(jsonData); 
-                go('/api/nuevaguia', 'POST', data)
-                    .then(responseData => {
-                        console.log("Respuesta exitosa:", responseData);
-                    })
-                    .catch(e => console.log("ERR", e));
+                console.log(Array.from(etiquetas).length);
+                if (titulo == "" || campeon == "" || Array.from(etiquetas).length < 1 || Array.from(posiciones).length < 1 
+                    || Array.from(hechizos).length < 1 || Array.from(items).length < 1){
+
+                    event.preventDefault();
+                    alert("Por favor, complete todos los campos antes de crear la guía.");
+                }
+                else{
+                    data = {
+                        "titulo": titulo,
+                        "etiquetas": Array.from(etiquetas).join(" "),
+                        "posiciones": Array.from(posiciones).join(" "),
+                        "campeon": campeon,
+                        "hechizos": Array.from(hechizos).join(" "),
+                        "items": Array.from(items).join(" ")
+                    };
+                    console.log(data); //TODO Remove
+                    var jsonData = JSON.stringify(data); 
+                    console.log(jsonData); 
+                    go('/api/nuevaguia', 'POST', data)
+                        .then(responseData => {
+                            console.log("Respuesta exitosa:", responseData);
+                        })
+                        .catch(e => console.log("ERR", e));
+                }
             });
         </script>
             
