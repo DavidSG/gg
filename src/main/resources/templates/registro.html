@@ -4,7 +4,7 @@
 <head>
     <th:block th:replace="fragments/head :: header" />
     <link rel="stylesheet" th:href="@{/css/login.css}">
-    <title>GG: Login</title>
+    <title>GG: Register</title>
 </head>
 
 <body>
@@ -12,11 +12,8 @@
 
     <main>
         <div class="container">
-            <form class="form-signin" method="post" th:action="@{/login}">
-                <h2 class="form-signin-heading">Please sign in</h2>
-                <p th:if="${#request.getQueryString() == 'error'}" class="error">
-                    Error en nombre de usuario o contraseña
-                </p>
+            <form class="form-signin" method="post" th:action="@{/registro}">
+                <h2 class="form-signin-heading">Register</h2>
                 <p>
                     <label for="username" class="visually-hidden">Username</label>
                     <input type="text" id="username" name="username" class="form-control" placeholder="Username" required="required">
@@ -25,8 +22,12 @@
                     <label for="password" class="visually-hidden">Password</label>
                     <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="required">
                 </p>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                <p class="mt-3">Don't have an account? <a href="/registro">Register here</a></p> 
+                <p>
+                    <label for="confirmPassword" class="visually-hidden">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Confirm Password" required="required">
+                </p>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+                <p class="mt-3">Already have an account? <a href="/login">Sign in here</a></p> <!-- Añade un enlace para iniciar sesión -->
             </form>
         </div>
     </main>

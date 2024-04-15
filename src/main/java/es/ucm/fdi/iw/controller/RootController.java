@@ -52,6 +52,11 @@ public class RootController {
         return "login";
     }
 
+    @GetMapping("/registro")
+    public String registro(Model model) {
+        return "registro";
+    }
+    
     @GetMapping("/db")
     public String header(Model model) {
         return "db";
@@ -118,25 +123,4 @@ public class RootController {
     public String matchHistory(Model model) {
         return "matchHistory";
     }
-
-    /*
-     * @GetMapping("/campeones")
-     * public String campeones(@RequestParam(defaultValue = "") String nombre,
-     * 
-     * @RequestParam(defaultValue = "") String posiciones,
-     * Model model, HttpSession session) {
-     * List<Campeon> cs = entityManager.createQuery(
-     * "SELECT c FROM Campeon c WHERE LOWER(c.nombre) LIKE LOWER(:nombre) AND c.posiciones LIKE :posiciones"
-     * ,
-     * Campeon.class)
-     * .setParameter("nombre", "%" + nombre + "%")
-     * .setParameter("posiciones", "%" + posiciones + "%")
-     * .getResultList();
-     * model.addAttribute("campeones", cs);
-     * model.addAttribute("nombre", nombre);
-     * model.addAttribute("posiciones", posiciones);
-     * return "campeones";
-     * }
-     */
-
 }
