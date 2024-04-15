@@ -172,7 +172,6 @@ public class ApiController {
             String eloString = elo.toString();*/
 
             guia.setElo("diamante");
-            guia.setTexto("texto a");
 
             entityManager.persist(guia);
 

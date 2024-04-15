@@ -141,7 +141,7 @@
                 </div>
 			</div>
             
-            <div class="nuevoCampo">
+            <div class="nuevoCampoTexto">
                 <h1> Escribe aquí su guia </h1>
                 <textarea type="text" id="texto" name="texto" rows="8" cols="80"></textarea>
             </div>
@@ -453,7 +453,7 @@
 
             // Texto
             var element = document.getElementById("texto");
-            element.addEventListener('textarea', function() {
+            element.addEventListener('input', function() {
                 texto = this.value;
                 console.log(texto);
             });
@@ -461,7 +461,7 @@
             // Crear Guia
             document.getElementById("Crear").addEventListener('click', function() {
                 console.log(Array.from(etiquetas).length);
-                if (titulo == "" || campeon == "" || Array.from(etiquetas).length < 1 || Array.from(posiciones).length < 1 
+                if (titulo == "" || campeon == "" || texto == "" || Array.from(etiquetas).length < 1 || Array.from(posiciones).length < 1 
                     || Array.from(hechizos).length < 1 || Array.from(items).length < 1){
 
                     event.preventDefault();
@@ -474,7 +474,8 @@
                         "posiciones": Array.from(posiciones).join(" "),
                         "campeon": campeon,
                         "hechizos": Array.from(hechizos).join(" "),
-                        "items": Array.from(items).join(" ")
+                        "items": Array.from(items).join(" "),
+                        "texto": texto
                     };
                     console.log(data); //TODO Remove
                     var jsonData = JSON.stringify(data); 
