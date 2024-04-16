@@ -460,7 +460,6 @@
 
             // Crear Guia
             document.getElementById("Crear").addEventListener('click', function() {
-                console.log(Array.from(etiquetas).length);
                 if (titulo == "" || campeon == "" || texto == "" || Array.from(etiquetas).length < 1 || Array.from(posiciones).length < 1 
                     || Array.from(hechizos).length < 1 || Array.from(items).length < 1){
 
@@ -477,9 +476,7 @@
                         "items": Array.from(items).join(" "),
                         "texto": texto
                     };
-                    console.log(data); //TODO Remove
                     var jsonData = JSON.stringify(data); 
-                    console.log(jsonData); 
                     go('/api/nuevaguia', 'POST', data)
                         .then(responseData => {
                             console.log("Respuesta exitosa:", responseData);

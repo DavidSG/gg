@@ -215,6 +215,23 @@
     color:white;
 }
 
+/*  COMENTARIOS  */
+.guiaComentar {
+    box-sizing: content-box;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer; 
+
+}
+
+.guiaComentar img {
+    height: 30px;
+    width: 30px;
+}
+
 
 
 .md {

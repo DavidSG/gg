@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 import es.ucm.fdi.iw.model.Campeon;
+import es.ucm.fdi.iw.model.Comentario;
 import es.ucm.fdi.iw.model.Guia;
 import es.ucm.fdi.iw.model.Hechizo;
 import es.ucm.fdi.iw.model.Item;
@@ -210,6 +211,29 @@ public class ApiController {
             return ResponseEntity.ok("Nueva guía creada con éxito");
         } catch (Exception e) {
            
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al crear la nueva guía: " + e.getMessage());
+        }
+    }
+
+    @Transactional
+    @PostMapping(path = "/comentarguia", produces = "application/json")
+    @ResponseBody
+    public ResponseEntity<String> comentarGuia(@RequestBody Comentario comentario, HttpSession session) {
+        try {
+            User u = (User) session.getAttribute("u");
+            if (u == null) {
+                // boom!
+            } else {
+                u = entityManager.find(User.class, u.getId());
+
+                comentario.setAutor_id(u.getUsername());
+                entityManager.persist(comentario);
+            }
+
+            return ResponseEntity.ok("Nueva guía creada con éxito");
+        } catch (Exception e) {
+
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al crear la nueva guía: " + e.getMessage());
         }

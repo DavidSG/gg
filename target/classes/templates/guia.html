@@ -64,11 +64,33 @@
                         </div>
                     </div>
 
+                    <div class = "guiaTexto">
+                        <p th:text="${guia.texto}"></p>
+                     </div>
+
                     <div th:utext=${renderedContent}></div>
                     
                 </div>
 
+
+                <!--<div class = "guiaComentario">
+                    <div th:each="comentarios : ${#strings.arraySplit(comanetario, ' ')}" class="guiaComentario">
+                        <h2 class="item" th:attr="data-item_id=${'i' + item}"></h2>
+                    </div>
+                </div>-->
+
             </div>
+
+            <div class="comentarCampo">
+                <h1> Comentar </h1>
+                <textarea type="text" id="texto" name="texto" rows="8" cols="80"></textarea>
+            </div>
+
+            <button class = 'guiaComentar'>
+                <img src="https://pngimg.com/uploads/like/like_PNG60.png">
+            </button>
+
+            
 
         </div> 
 
@@ -124,11 +146,32 @@
 
                     data = {
                         "like": false,
-                        "guia": domain.pop(),
+                        "guia": domain.pop()
                     };
                 }
 
                 go('/api/voteguia', 'POST', data)
+                    .then(responseData => {
+                        console.log("Respuesta exitosa:", responseData);
+                    })
+                    .catch(e => console.log("ERR", e));
+            });
+
+            var element = document.getElementById("texto");
+            element.addEventListener('input', function() {
+                texto = this.value;
+                console.log(texto);
+            });
+            
+            const comentar = document.querySelector(".guiaComentar");
+            comentar.addEventListener('click', function() {
+                const domain = window.location.href.split('/');
+                data = {
+                    "contenido": texto,
+                    "guia_id": domain.pop()
+                };
+                
+                go('/api/comentarguia', 'POST', data)
                     .then(responseData => {
                         console.log("Respuesta exitosa:", responseData);
                     })
