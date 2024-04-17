@@ -211,3 +211,21 @@ document.addEventListener("DOMContentLoaded", () => {
     // 	 document.addEventListener("DOMContentLoaded", () => { /* your-code-here */ });
     //   (assuming you do not care about order-of-execution, all such handlers will be called correctly)
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (config.socketUrl) {
+        let subs = ["/topic/comentarios", "/user/queue/updates"]
+        ws.initialize(config.socketUrl, subs);
+
+        let p = document.querySelector("#nav-unread");
+        if (p) {
+            go(`${config.rootUrl}/user/unread`, "GET").then(d => p.textContent = d.unread);
+        }
+    } else {
+        console.log("Not opening websocket: missing config", config)
+    }
+
+    // add your after-page-loaded JS code here; or even better, call 
+    // 	 document.addEventListener("DOMContentLoaded", () => { /* your-code-here */ });
+    //   (assuming you do not care about order-of-execution, all such handlers will be called correctly)
+});

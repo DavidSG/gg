@@ -66,7 +66,7 @@
 
                     <div class = "guiaTexto">
                         <p th:text="${guia.texto}"></p>
-                     </div>
+                    </div>
 
                     <div th:utext=${renderedContent}></div>
                     
@@ -81,6 +81,7 @@
 
             </div>
 
+            
             <div class="comentarCampo">
                 <h1> Comentar </h1>
                 <textarea type="text" id="texto" name="texto" rows="8" cols="80"></textarea>
@@ -94,8 +95,18 @@
 
         </div> 
 
+        <script type="text/javascript">
+            const config = {
+                // La URL del WebSocket debería estar disponible en la sesión y definida en el controlador del lado del servidor.
+                // Asegúrate de que la variable de sesión "ws" contenga la URL del WebSocket.
+                socketUrl: "[[${session.ws ?: '']}]",
+                // Otras propiedades de configuración pueden ir aquí
+            };
+        </script>
         <script type="text/javascript" src="../js/iw.js"></script>
+        <script src="/js/iwclient.js" type="text/javascript"></script>
 		<script type="text/javascript" src="../js/stomp.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.2/sockjs.min.js"></script>
         <script>
             document.querySelectorAll(".item").forEach(o => o.textContent = items[o.dataset.item_id]);
             const likeButton = document.querySelector(".likebutton");
@@ -163,19 +174,31 @@
                 console.log(texto);
             });
             
+            // Comentarios (websockets)
+
+            var stompClient = null;
+
+            function conectarWebSocket() {
+                socketUrl :
+                stompClient = Stomp.over(socket);
+                stompClient.connect({}, function (frame) {
+                    console.log('Conectado: ' + frame);
+                });
+            }
+
             const comentar = document.querySelector(".guiaComentar");
             comentar.addEventListener('click', function() {
                 const domain = window.location.href.split('/');
-                data = {
+
+                if (texto.trim() !== "") {
+                    conectarWebSocket();
+                    data = {
                     "contenido": texto,
                     "guia_id": domain.pop()
-                };
-                
-                go('/api/comentarguia', 'POST', data)
-                    .then(responseData => {
-                        console.log("Respuesta exitosa:", responseData);
-                    })
-                    .catch(e => console.log("ERR", e));
+                    };
+                    stompClient.send("/api/comentarguia", {}, JSON.stringify({data}));
+                    document.getElementById("texto").value = ""; // Limpiar el campo de texto después de enviar el comentario
+                }            
             });
 
         </script>
