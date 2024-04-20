@@ -1,5 +1,6 @@
 package es.ucm.fdi.iw.controller;
 
+import java.io.FileWriter;
 import java.security.Principal;
 import java.time.LocalDate;
 import java.util.List;
@@ -189,6 +190,15 @@ public class ApiController {
 
             entityManager.persist(guia);
 
+            String mdPath = "src/main/resources/md/" + guia.getId() + ".md";
+            for (int i = 0; i < 300; i++) {
+                System.out.println("asdfasdfasdf: " + mdPath);
+            }
+            
+            FileWriter writer = new FileWriter(mdPath);
+            writer.write(guia.getTexto());
+            writer.close();            
+
             return ResponseEntity.ok("Nueva guía creada con éxito");
         } catch (Exception e) {
            
@@ -232,9 +242,9 @@ public class ApiController {
 
     
 
-    @PostMapping("/comentarGuia")
-    @ResponseBody
     @Transactional
+    @PostMapping(path = "/comentarguia", produces = "application/json")
+    @ResponseBody
     public String postComentario(@RequestBody Comentario comentario, HttpSession session) 
         throws JsonProcessingException {
 
