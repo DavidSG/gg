@@ -214,12 +214,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     if (config.socketUrl) {
-        let subs = ["/topic/comentarios", "/user/queue/updates"]
+        let subs = ["/topic/comentarios", "/guia/queue/updates"]
         ws.initialize(config.socketUrl, subs);
 
-        let p = document.querySelector("#nav-unread");
+        let p = document.querySelector("#gia");
         if (p) {
-            go(`${config.rootUrl}/user/unread`, "GET").then(d => p.textContent = d.unread);
+            go(`${config.rootUrl}/guia/`, "GET").then(d => p.textContent = d.unread);
         }
     } else {
         console.log("Not opening websocket: missing config", config)

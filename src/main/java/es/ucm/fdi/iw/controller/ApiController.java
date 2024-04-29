@@ -191,9 +191,6 @@ public class ApiController {
             entityManager.persist(guia);
 
             String mdPath = "src/main/resources/md/" + guia.getId() + ".md";
-            for (int i = 0; i < 300; i++) {
-                System.out.println("asdfasdfasdf: " + mdPath);
-            }
             
             FileWriter writer = new FileWriter(mdPath);
             writer.write(guia.getTexto());
@@ -239,9 +236,6 @@ public class ApiController {
         }
     }
 
-
-    
-
     @Transactional
     @PostMapping(path = "/comentarguia", produces = "application/json")
     @ResponseBody
@@ -260,7 +254,7 @@ public class ApiController {
         String json = mapper.writeValueAsString(comentario);
 
         // Enviar el comentario a través de WebSockets
-        messagingTemplate.convertAndSend("/topic/comentarios", json);
+        messagingTemplate.convertAndSend("/guia/"+comentario.getGuia_id()+"/queue/updates", json);
         
         return "{\"resultado\": \"comentario enviado.\"}";
     }   
