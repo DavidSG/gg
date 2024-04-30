@@ -1,13 +1,16 @@
 package es.ucm.fdi.iw;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.transaction.Transactional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,7 +20,9 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 
+import es.ucm.fdi.iw.model.Guia;
 import es.ucm.fdi.iw.model.User;
+import es.ucm.fdi.iw.model.Vote;
 import es.ucm.fdi.iw.model.User.Role;
 
 /**
@@ -46,6 +51,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 	 * Called whenever a user authenticates correctly.
 	 */
 	@Override
+	@Transactional
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
 			Authentication authentication) throws IOException, ServletException {
 
@@ -83,6 +89,15 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 		}
 		session.setAttribute("url", url);
 		session.setAttribute("ws", ws);
+
+		List<String> topics = new ArrayList<>();
+		for (Vote v : u.getVotes()) {
+			if (v.getVote())
+				topics.add("" + v.getGuia().getId());
+		}
+
+		session.setAttribute("topics", "[" + String.join(",", topics) + "]");
+		log.info("LOGIN SUBS {}", session.getAttribute("topics"));
 
 		// redirects to 'admin' or 'user/{id}', depending on the user
 		String nextUrl = u.hasRole(User.Role.ADMIN) ? "admin/" : "user/" + u.getId();

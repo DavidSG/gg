@@ -7,8 +7,6 @@ INSERT INTO IWUser (id, enabled, roles, username, password)
 VALUES (2, TRUE, 'USER', 'b',
     '{bcrypt}$2a$10$2BpNTbrsarbHjNsUWgzfNubJqBRf.0Vz9924nRSHBqlbPKerkgX.W');
 
--- start id numbering from a value that is larger than any assigned above
-ALTER SEQUENCE 'PUBLIC'.'GEN' RESTART WITH 1024;
 
 
 INSERT INTO Guia (titulo, autor, fecha, puntuacion, campeon, posiciones, etiquetas, elo, hechizos, items, texto) VALUES 
@@ -24,8 +22,8 @@ INSERT INTO Guia (titulo, autor, fecha, puntuacion, campeon, posiciones, etiquet
 
 ALTER TABLE Guia ALTER COLUMN texto VARCHAR(1000000000);
 
-INSERT INTO Vote (vote, autor, guia) VALUES 
-(true, 'a', 1L);
+INSERT INTO Vote (vote, autor_id, guia_id) VALUES 
+(true, 1, 1);
 
 INSERT INTO Campeon (nombre, posiciones) VALUES 
 ('aatrox', 'top'),
@@ -410,3 +408,6 @@ INSERT INTO Item (id, nombre, etiquetas) VALUES
 ('3050', 'Convergencia de Zeke','Soporte'),
 ('3172', 'Cefiro','Bruiser'),
 ('3157', 'Reloj de arena de Zhonias','Mago');
+
+-- start id numbering from a value that is larger than any assigned above
+ALTER SEQUENCE 'GEN' RESTART WITH 10000;

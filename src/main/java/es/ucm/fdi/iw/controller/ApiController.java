@@ -1,11 +1,9 @@
 package es.ucm.fdi.iw.controller;
 
 import java.io.FileWriter;
-import java.security.Principal;
 import java.time.LocalDate;
 import java.util.List;
 
-import javax.persistence.Query;
 import javax.persistence.EntityManager;
 import javax.servlet.http.HttpSession;
 import javax.transaction.Transactional;
@@ -15,17 +13,14 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.handler.annotation.SendTo;
+
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 
 import es.ucm.fdi.iw.model.Campeon;
 import es.ucm.fdi.iw.model.Comentario;
@@ -55,7 +50,7 @@ public class ApiController {
     private EntityManager entityManager;
 
     @Autowired
-	private SimpMessagingTemplate messagingTemplate;
+    private SimpMessagingTemplate messagingTemplate;
 
     @GetMapping(path = "/campeones", produces = "application/json")
     @ResponseBody
@@ -181,26 +176,30 @@ public class ApiController {
             guia.setFecha(LocalDate.now().toString());
             guia.setPuntuacion(0);
 
-            /*Query query = entityManager.createNativeQuery("SELECT u.elo FROM User u WHERE u.user = :user");
-            query.setParameter("autor", u.getUsername());
-            Object elo = query.getSingleResult();
-            String eloString = elo.toString();*/
+            /*
+             * Query query = entityManager.
+             * createNativeQuery("SELECT u.elo FROM User u WHERE u.user = :user");
+             * query.setParameter("autor", u.getUsername());
+             * Object elo = query.getSingleResult();
+             * String eloString = elo.toString();
+             */
 
             guia.setElo("diamante");
 
             entityManager.persist(guia);
 
             String mdPath = "src/main/resources/md/" + guia.getId() + ".md";
-            
+
             FileWriter writer = new FileWriter(mdPath);
             writer.write(guia.getTexto());
-            writer.close();            
+            writer.close();
 
             return ResponseEntity.ok("Nueva guía creada con éxito");
         } catch (Exception e) {
-           
+
             e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al crear la nueva guía: " + e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error al crear la nueva guía: " + e.getMessage());
         }
     }
 
@@ -216,69 +215,76 @@ public class ApiController {
                 u = entityManager.find(User.class, u.getId());
 
                 entityManager.createQuery(
-                    "DELETE FROM Vote v WHERE v.autor = :autor AND v.guia = :guia")
-                    .setParameter("autor", u.getUsername())
-                    .setParameter("guia", vote.getGuia()) 
-                    .executeUpdate();
+                        "DELETE FROM Vote v WHERE v.autor = :autor AND v.guia = :guia")
+                        .setParameter("autor", u)
+                        .setParameter("guia", vote.getGuia())
+                        .executeUpdate();
 
                 // Si se ha seleccionado un voto, se sube uno nuevo
-                if (vote.getVote() != null){
-                    vote.setAutor(u.getUsername());
+                if (vote.getVote() != null) {
+                    vote.setAutor(u);
                     entityManager.persist(vote);
                 }
             }
 
             return ResponseEntity.ok("Nueva guía creada con éxito");
         } catch (Exception e) {
-           
+
             e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al crear la nueva guía: " + e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error al crear la nueva guía: " + e.getMessage());
         }
     }
 
     @Transactional
     @PostMapping(path = "/comentarguia", produces = "application/json")
     @ResponseBody
-    public String postComentario(@RequestBody Comentario comentario, HttpSession session) 
-        throws JsonProcessingException {
+    public String postComentario(@RequestBody Comentario comentario, HttpSession session)
+            throws JsonProcessingException {
 
         User u = (User) session.getAttribute("u");
-        
+
         // Crear y persistir el comentario en la base de datos
         comentario.setAutor_id(u.getUsername());
         entityManager.persist(comentario);
         entityManager.flush(); // Para obtener el ID antes de la confirmación
-        
+
         // Convertir el comentario a JSON
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writeValueAsString(comentario);
 
         // Enviar el comentario a través de WebSockets
-        messagingTemplate.convertAndSend("/guia/"+comentario.getGuia_id()+"/queue/updates", json);
-        
+        messagingTemplate.convertAndSend("/guia/" + comentario.getGuia_id() + "/queue/updates", json);
+
         return "{\"resultado\": \"comentario enviado.\"}";
-    }   
-    
-    /*@Transactional
-    @PostMapping(path = "/comentarguia", produces = "application/json")
-    @ResponseBody
-    public ResponseEntity<String> comentarGuia(@RequestBody Comentario comentario, HttpSession session) {
-        try {
-            User u = (User) session.getAttribute("u");
-            if (u == null) {
-                // boom!
-            } else {
-                u = entityManager.find(User.class, u.getId());
+    }
 
-                comentario.setAutor_id(u.getUsername());
-                entityManager.persist(comentario);
-            }
-
-            return ResponseEntity.ok("Nueva guía creada con éxito");
-        } catch (Exception e) {
-
-            e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al crear la nueva guía: " + e.getMessage());
-        }
-    }*/
+    /*
+     * @Transactional
+     * 
+     * @PostMapping(path = "/comentarguia", produces = "application/json")
+     * 
+     * @ResponseBody
+     * public ResponseEntity<String> comentarGuia(@RequestBody Comentario
+     * comentario, HttpSession session) {
+     * try {
+     * User u = (User) session.getAttribute("u");
+     * if (u == null) {
+     * // boom!
+     * } else {
+     * u = entityManager.find(User.class, u.getId());
+     * 
+     * comentario.setAutor_id(u.getUsername());
+     * entityManager.persist(comentario);
+     * }
+     * 
+     * return ResponseEntity.ok("Nueva guía creada con éxito");
+     * } catch (Exception e) {
+     * 
+     * e.printStackTrace();
+     * return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).
+     * body("Error al crear la nueva guía: " + e.getMessage());
+     * }
+     * }
+     */
 }

@@ -217,15 +217,8 @@ document.addEventListener("DOMContentLoaded", () => {
         let subs = ["/topic/comentarios", "/guia/queue/updates"]
         ws.initialize(config.socketUrl, subs);
 
-        let p = document.querySelector("#gia");
-        if (p) {
-            go(`${config.rootUrl}/guia/`, "GET").then(d => p.textContent = d.unread);
-        }
+        go(`${config.topicsUrl}/guia/`, "GET")
     } else {
         console.log("Not opening websocket: missing config", config)
     }
-
-    // add your after-page-loaded JS code here; or even better, call 
-    // 	 document.addEventListener("DOMContentLoaded", () => { /* your-code-here */ });
-    //   (assuming you do not care about order-of-execution, all such handlers will be called correctly)
 });

@@ -9,6 +9,7 @@
 		const config = {
 			socketUrl: "[[${session.ws}?:'']]", // empty is false, will result in no WS being opened
 			rootUrl: "[[${session.url}?:'']]",
+			topicsUrl: "[[${session.topics}?:'']]",
 			csrf: {
 				name: "[[${_csrf.parameterName}]]",
 				value: "[[${_csrf.token}]]"
@@ -35,7 +36,7 @@
 						<div class="ajustes"></div>
 					</div>
 				</a>
-				<a href="https://example.com">
+				<a href="/login">
 					<button class="login">Log In</button>
 				</a>
 			</div>
