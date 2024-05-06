@@ -1,41 +1,56 @@
 package es.ucm.fdi.iw.model;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+
 @Entity
-public class Comentario {
+@Data
+public class Comentario implements Transferable<Comentario.Transfer>{
+    
+    private static Logger log = LogManager.getLogger(Comentario.class);	
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Guia guia_id;
+    private User autor_id;
     private String contenido;
-    private Long guia_id;
-    private String autor_id;
 
-    public String getContenido() {
-        return contenido;
+    private LocalDateTime dateSent;
+	private LocalDateTime dateRead;
+    @Getter
+    @AllArgsConstructor
+	public static class Transfer {
+		long id;
+        private String from;
+        private User autor_Id;
+        private String contenido;
+        private String sent;
+        private String received;
+		public Transfer(Comentario c) {
+            this.from = c.getAutor_id().getUsername();
+            this.sent = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(c.getDateSent());
+			this.received = c.getDateRead() == null ?
+					null : DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(c.getDateRead());
+            this.id = c.getId();
+            this.contenido = c.getContenido();
+		}
+	}
+
+    @Override
+    public Transfer toTransfer() {
+        return new Transfer(this);    
     }
-
-    public void setContenido(String contenido) {
-        this.contenido = contenido;
-    }
-
-    public Long getGuia_id() {
-        return guia_id;
-    }
-
-    public void setGuia_id(Long guia_id) {
-        this.guia_id = guia_id;
-    }
-
-    public String getAutor_id() {
-        return autor_id;
-    }
-
-    public void setAutor_id(String autor_id) {
-        this.autor_id = autor_id;
-    }
-
 }
