@@ -242,7 +242,7 @@ public class ApiController {
         User u = (User) session.getAttribute("u");
 
         // Crear y persistir el comentario en la base de datos
-        comentario.setAutor_id(u.getUsername());
+        comentario.setAutor_id(u);
         entityManager.persist(comentario);
         entityManager.flush(); // Para obtener el ID antes de la confirmación
 
