@@ -57,10 +57,11 @@ public class GuiaController {
         User u = (User) session.getAttribute("u");
         if (u != null) {
             u = entityManager.find(User.class, u.getId());
-            List<Boolean> voteList = entityManager.createQuery("SELECT v.vote FROM Vote v WHERE v.autor = :autor AND v.guia = :guia",
+            List<Boolean> voteList = entityManager.createQuery(
+                    "SELECT v.vote FROM Vote v WHERE v.autor = :autor AND v.guia = :guia",
             Boolean.class)
-                .setParameter("autor", u.getUsername())
-                .setParameter("guia", id)
+                .setParameter("autor", u)
+                .setParameter("guia", g)
                 .getResultList();
             
             

@@ -216,8 +216,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (config.socketUrl) {
         let subs = ["/topic/comentarios", "/guia/queue/updates"]
         ws.initialize(config.socketUrl, subs);
-
-        go(`${config.topicsUrl}/guia/`, "GET")
     } else {
         console.log("Not opening websocket: missing config", config)
     }

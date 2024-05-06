@@ -109,7 +109,7 @@ public class RootController {
 
     @GetMapping("/items")
     public String items(Model model) {
-        List<Item> is = entityManager.createQuery("select i from Item i").getResultList();
+        List<Item> is = entityManager.createQuery("select i from Item i", Item.class).getResultList();
         model.addAttribute("items", is);
         return "items";
     }

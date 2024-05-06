@@ -9,21 +9,21 @@ VALUES (2, TRUE, 'USER', 'b',
 
 
 
-INSERT INTO Guia (titulo, autor, fecha, puntuacion, campeon, posiciones, etiquetas, elo, hechizos, items, texto) VALUES 
-('Gu�a suspicaz', 'David Alfonso', '2024-01-02', 9.8, 'aatrox', 'top', 'campeon', 'diamante', 'flash ignite', '6333 6698 3161 3302 6610 3748', 'texto generico'),
-('Gu�a excelente', 'Laura Lopez', '2021-05-01', 9.0, 'jhin', 'bot', 'campeon', 'platino', 'flash ignite', '6333 6698 3161 3302 6610 3748', 'texto generico'),
-('Gu�a vers�til', 'Carlos Rodriguez', '2023-12-02', 8.5, 'leona', 'sup', 'campeon', 'oro', 'flash teleport', '6333 6698 3161 3302 6610 3748', 'texto generico'),
-('Gu�a t�ctica para principiantes', 'a', '2023-05-02', 8.7, 'Annie', 'mid', 'campeon',  'plata', 'Teleport Flash', '6333 6698 3161 3302 6610 3748', 'Consejos y estrategias esenciales para jugadores novatos.'),
-('Dominando el juego con Jinx', 'b', '2023-10-15', 9.5, 'Jinx', 'bot', 'campeon', 'diamante', 'Flash Heal', '6333 6698 3161 3302 6610 3748', 'Aprende a jugar como un profesional con la campeona Jinx.'),
-('Gu�a suspicaz', 'b', '2023-12-12', 9.8, 'aatrox', 'top', 'campeon', 'diamante', 'flash', '6333 6698 3161 3302 6610 3748', 'texto generico'),
-('Gu�a excelente', 'b', '2023-12-15', 9.0, 'jhin', 'bot', 'campeon', 'platino', 'ignite', '6333 6698 3161 3302 6610 3748', 'texto generico'),
-('Gu�a vers�til', 'a', '2023-12-15', 8.5, 'leona', 'sup','campeon', 'oro', 'teleport', '6333 6698 3161 3302 6610 3748', 'texto generico'),
-('Gu�a furra', 'a', '2024-04-23', 10, 'yuumi', 'sup','campeon', 'bronce', 'teleport', '6333 6698 3161 3302 6610 3748', 'texto generico');
+INSERT INTO Guia (id, titulo, autor_id, fecha, puntuacion, campeon, posiciones, etiquetas, elo, hechizos, items, texto) VALUES 
+(100, 'Gu�a suspicaz', 2, '2024-01-02', 9.8, 'aatrox', 'top', 'campeon', 'diamante', 'flash ignite', '6333 6698 3161 3302 6610 3748', 'texto generico'),
+(101, 'Gu�a excelente', 2, '2021-05-01', 9.0, 'jhin', 'bot', 'campeon', 'platino', 'flash ignite', '6333 6698 3161 3302 6610 3748', 'texto generico'),
+(102, 'Gu�a vers�til', 2, '2023-12-02', 8.5, 'leona', 'sup', 'campeon', 'oro', 'flash teleport', '6333 6698 3161 3302 6610 3748', 'texto generico'),
+(103, 'Gu�a t�ctica para principiantes', 1, '2023-05-02', 8.7, 'Annie', 'mid', 'campeon',  'plata', 'Teleport Flash', '6333 6698 3161 3302 6610 3748', 'Consejos y estrategias esenciales para jugadores novatos.'),
+(105, 'Dominando el juego con Jinx', 2, '2023-10-15', 9.5, 'Jinx', 'bot', 'campeon', 'diamante', 'Flash Heal', '6333 6698 3161 3302 6610 3748', 'Aprende a jugar como un profesional con la campeona Jinx.'),
+(104, 'Gu�a suspicaz', 1, '2023-12-12', 9.8, 'aatrox', 'top', 'campeon', 'diamante', 'flash', '6333 6698 3161 3302 6610 3748', 'texto generico'),
+(106, 'Gu�a excelente', 1, '2023-12-15', 9.0, 'jhin', 'bot', 'campeon', 'platino', 'ignite', '6333 6698 3161 3302 6610 3748', 'texto generico'),
+(107, 'Gu�a vers�til', 2, '2023-12-15', 8.5, 'leona', 'sup','campeon', 'oro', 'teleport', '6333 6698 3161 3302 6610 3748', 'texto generico'),
+(108, 'Gu�a furra', 1, '2024-04-23', 10, 'yuumi', 'sup','campeon', 'bronce', 'teleport', '6333 6698 3161 3302 6610 3748', 'texto generico');
 
 ALTER TABLE Guia ALTER COLUMN texto VARCHAR(1000000000);
 
 INSERT INTO Vote (vote, autor_id, guia_id) VALUES 
-(true, 1, 1);
+(true, 1, 108);
 
 INSERT INTO Campeon (nombre, posiciones) VALUES 
 ('aatrox', 'top'),
@@ -410,4 +410,4 @@ INSERT INTO Item (id, nombre, etiquetas) VALUES
 ('3157', 'Reloj de arena de Zhonias','Mago');
 
 -- start id numbering from a value that is larger than any assigned above
-ALTER SEQUENCE 'GEN' RESTART WITH 10000;
+ALTER SEQUENCE "PUBLIC"."GEN" RESTART WITH 1024;

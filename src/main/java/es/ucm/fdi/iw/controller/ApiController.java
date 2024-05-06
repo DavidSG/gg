@@ -3,6 +3,7 @@ package es.ucm.fdi.iw.controller;
 import java.io.FileWriter;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.persistence.EntityManager;
 import javax.servlet.http.HttpSession;
@@ -27,15 +28,13 @@ import es.ucm.fdi.iw.model.Comentario;
 import es.ucm.fdi.iw.model.Guia;
 import es.ucm.fdi.iw.model.Hechizo;
 import es.ucm.fdi.iw.model.Item;
+import es.ucm.fdi.iw.model.Transferable;
 import es.ucm.fdi.iw.model.User;
 import es.ucm.fdi.iw.model.Vote;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
 
 /**
  * Non-authenticated requests only.
@@ -44,7 +43,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api")
 public class ApiController {
 
-    private static final Logger log = LogManager.getLogger(RootController.class);
+    private static final Logger log = LogManager.getLogger(ApiController.class);
 
     @Autowired
     private EntityManager entityManager;
@@ -82,8 +81,7 @@ public class ApiController {
 
     @GetMapping(path = "/guias", produces = "application/json")
     @ResponseBody
-    public List<Guia> getGuias(@RequestParam String ordenar, @RequestParam(defaultValue = "no") String usuario,
-            HttpSession session) {
+    public List<Guia.Transfer> getGuias(@RequestParam String ordenar, HttpSession session) {
         User u = (User) session.getAttribute("u");
         if (u == null) {
             // boom!
@@ -116,13 +114,13 @@ public class ApiController {
         return entityManager.createQuery(
                 "SELECT g FROM Guia g" + orderBy,
                 Guia.class)
-                .getResultList();
+                .getResultList().stream().map(Transferable::toTransfer).collect(Collectors.toList());
 
     }
 
     @GetMapping(path = "/guiasU", produces = "application/json")
     @ResponseBody
-    public List<Guia> getGuiasU(@RequestParam String ordenar, HttpSession session) {
+    public List<Guia.Transfer> getGuiasU(@RequestParam String ordenar, HttpSession session) {
         User u = (User) session.getAttribute("u");
         if (u == null) {
             // boom!
@@ -132,9 +130,9 @@ public class ApiController {
 
         String orderBy = " ORDER BY ";
         if (ordenar.charAt(0) == '1') {
-            orderBy += "g.puntuacion DESC";
+            orderBy += "g.total DESC";
         } else if (ordenar.charAt(0) == '2') {
-            orderBy += "g.puntuacion ASC";
+            orderBy += "g.total ASC";
         }
 
         if (ordenar.charAt(1) == '1') {
@@ -155,9 +153,8 @@ public class ApiController {
         return entityManager.createQuery(
                 "SELECT g FROM Guia g WHERE g.autor = :autor" + orderBy,
                 Guia.class)
-                .setParameter("autor", u.getUsername())
-                .getResultList();
-
+                .setParameter("autor", u)
+                .getResultList().stream().map(Transferable::toTransfer).collect(Collectors.toList());
     }
 
     @Transactional
@@ -172,7 +169,7 @@ public class ApiController {
                 u = entityManager.find(User.class, u.getId());
             }
 
-            guia.setAutor(u.getUsername());
+            guia.setAutor(u);
             guia.setFecha(LocalDate.now().toString());
             guia.setPuntuacion(0);
 
