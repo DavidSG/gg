@@ -18,6 +18,7 @@ import org.springframework.http.ResponseEntity;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -187,15 +188,11 @@ public class ApiController {
         }
     }
 
-    public static class VoteProxy {
-        public Boolean like;
-        public Long guia;
-    }
-
+    // Votos Guia (Likes y Dislikes) de guiaId
     @Transactional
-    @PostMapping(path = "/voteguia", produces = "application/json")
+    @PostMapping(path = "/voteguia/{guiaId}", produces = "application/json")
     @ResponseBody
-    public ResponseEntity<String> likeGuia(@RequestBody VoteProxy proxy, HttpSession session) {
+    public ResponseEntity<String> likeGuia(@PathVariable Long guiaId, @RequestBody Vote vote, HttpSession session) {
         try {
             User u = (User) session.getAttribute("u");
             if (u == null) {
@@ -203,9 +200,7 @@ public class ApiController {
             } else {
                 u = entityManager.find(User.class, u.getId());
 
-                Vote vote = new Vote();
-                vote.setVote(proxy.like);
-                vote.setGuia(entityManager.find(Guia.class, proxy.guia));
+                vote.setGuia(entityManager.find(Guia.class, guiaId));
 
                 entityManager.createQuery(
                         "DELETE FROM Vote v WHERE v.autor = :autor AND v.guia = :guia")
@@ -214,7 +209,7 @@ public class ApiController {
                         .executeUpdate();
 
                 // Si se ha seleccionado un voto, se sube uno nuevo
-                if (proxy.like != null) {
+                if (vote.getVote() != null) {
                     vote.setAutor(u);
                     entityManager.persist(vote);
                 }
@@ -229,23 +224,18 @@ public class ApiController {
         }
     }
 
-    public static class ComentarioProxy {
-        public String contenido;
-        public Long guia_id;
-    }
-
+    // Comentarios de guiaId
     @Transactional
-    @PostMapping(path = "/comentarguia", produces = "application/json")
+    @PostMapping(path = "/comentarguia/{guiaId}", produces = "application/json")
     @ResponseBody
-    public String postComentario(@RequestBody ComentarioProxy proxy, HttpSession session, Comentario comentario)
+    public String postComentario(@PathVariable Long guiaId, @RequestBody Comentario comentario, HttpSession session)
             throws JsonProcessingException {
 
         User u = (User) session.getAttribute("u");
         
         // Crear y persistir el comentario en la base de datos
         comentario.setAutor_id(u);
-        comentario.setGuia_id(entityManager.find(Guia.class, proxy.guia_id));
-        comentario.setContenido(proxy.contenido);
+        comentario.setGuia_id(entityManager.find(Guia.class, guiaId));
         comentario.setDateSent(LocalDate.now().toString());
         entityManager.persist(comentario);
         entityManager.flush(); // Para obtener el ID antes de la confirmación
@@ -254,10 +244,10 @@ public class ApiController {
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writeValueAsString(comentario.toTransfer());
 
-        log.info("Sending a message to {} with contents '{}'", comentario.getId(), json);
+        log.info("Sending a message to {} with contents '{}'", guiaId, json);
 
         // Enviar el comentario a través de WebSockets
-        messagingTemplate.convertAndSend("/guia/" + comentario.getGuia_id() + "/queue/updates", json);
+        messagingTemplate.convertAndSend("/guia/" + guiaId + "/queue/updates", json);
 
         return "{\"resultado\": \"comentario enviado.\"}";
     }

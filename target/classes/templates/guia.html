@@ -95,19 +95,22 @@
 
         <script type="text/javascript" src="../js/iw.js"></script>
 		<script type="text/javascript" src="../js/stomp.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
         <script>
             document.querySelectorAll(".item").forEach(o => o.textContent = items[o.dataset.item_id]);
             const likeButton = document.querySelector(".likebutton");
             const dislikeButton = document.querySelector(".dislikebutton");
 
+            // LIKES
             likeButton.addEventListener('click', function() {
+                //Obtiene el ID de la guia de la URL
                 const domain = window.location.href.split('/');
+                const guiaId = domain.pop(); 
                 
                 // Comprueba si ya existe un like del usuario
                 if (likeButton.classList.contains('clicked')){
                     likeButton.classList.remove('clicked');
                     data = {
-                        "guia": domain.pop(),
                     };
                 }
                 else{
@@ -116,26 +119,28 @@
                     likeButton.classList.add('clicked');
 
                     data = {
-                        "like": true,
-                        "guia": domain.pop()
+                        "vote": true,
                     };
                 }
 
-                go('/api/voteguia', 'POST', data)
+                go('/api/voteguia/' + guiaId, 'POST', data)
                     .then(responseData => {
                         console.log("Respuesta exitosa:", responseData);
                     })
                     .catch(e => console.log("ERR", e));
             });
 
+            // DISLIKES
             dislikeButton.addEventListener('click', function() {
+                //Obtiene el ID de la guia de la URL
                 const domain = window.location.href.split('/');
+                const guiaId = domain.pop(); 
 
                 // Comprueba si ya existe un dislike del usuario
                 if (dislikeButton.classList.contains('clicked')){
                     dislikeButton.classList.remove('clicked');
                     data = {
-                        "guia": domain.pop(),
+
                     };
                 }
                 else{
@@ -144,13 +149,12 @@
                     dislikeButton.classList.add('clicked');
 
                     data = {
-                        "like": false,
-                        "guia": domain.pop()
+                        "vote": false,
                     };
                     console.log(data);
                 }
 
-                go('/api/voteguia', 'POST', data)
+                go('/api/voteguia/' + guiaId, 'POST', data)
                     .then(responseData => {
                         console.log("Respuesta exitosa:", responseData);
                     })
@@ -164,17 +168,18 @@
             
             const comentar = document.querySelector(".guiaComentar");
             comentar.addEventListener('click', function() {
+                //Obtiene el ID de la guia de la URL
                 const domain = window.location.href.split('/');
-
+                const guiaId = domain.pop(); 
+                
                 // Escape de caractéres especiales
                 const textoSeguro = encodeURIComponent(texto);
 
                 data = {
                     "contenido": textoSeguro,
-                    "guia_id": domain.pop()
                 };
                 
-                go('/api/comentarguia', 'POST', data)
+                go('/api/comentarguia/' + guiaId, 'POST', data)
                     .then(responseData => {
                         console.log("Respuesta exitosa:", responseData);
                     })
@@ -183,21 +188,18 @@
 
             const comentariosContainer = document.getElementById('comentarios-container');
 
-            // Función para manejar los mensajes de comentarios recibidos
-            socket.onmessage = function(event) {
-                const comentario = JSON.parse(event.data);
-                mostrarComentario(comentario);
-            };
-
-            // Función para mostrar un comentario en la interfaz de usuario
-            function mostrarComentario(comentario) {
-                const nuevoComentario = document.createElement('div');
-                nuevoComentario.classList.add('comentario');
-                nuevoComentario.innerHTML = `
-                    <p>De: ${comentario.autor}</p>
-                    <p>${comentario.contenido}</p>
-                `;
-                comentariosContainer.appendChild(nuevoComentario);
+            if (ws.receive) {
+                const oldReceiveFn = ws.receive; // Guardar referencia al manejador anterior
+                ws.receive = (comment) => {
+                    oldReceiveFn(comment); // Llamar al manejador anterior
+                    const nuevoComentario = document.createElement('div');
+                    nuevoComentario.classList.add('comentario');
+                    nuevoComentario.innerHTML = `
+                        <p>De: ${comment.autor}</p>
+                        <p>${comment.contenido}</p>
+                    `;
+                    comentariosContainer.appendChild(nuevoComentario);
+                }
             }
         </script>
 		

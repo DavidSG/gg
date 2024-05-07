@@ -33,9 +33,9 @@ let messageDiv = document.getElementById("mensajes");
 go(config.rootUrl + "/user/received", "GET").then(ms =>
     ms.forEach(m => messageDiv.insertAdjacentHTML("beforeend", renderMsg(m))));
 
-let comentarioDiv = document.getElementById("comentarios-container");
+/*let comentarioDiv = document.getElementById("comentarios-container");
 go(config.rootUrl + "/guia/recibido", "GET").then(cm =>
-    cm.forEach(c => comentarioDiv.insertAdjacentHTML("beforeend", renderCmt(c))));
+    cm.forEach(c => comentarioDiv.insertAdjacentHTML("beforeend", renderCmt(c))));*/
     
 // y aquí pinta mensajes según van llegando
 if (ws.receive) {
@@ -45,6 +45,14 @@ if (ws.receive) {
         messageDiv.insertAdjacentHTML("beforeend", renderMsg(m));
     }
 }
+
+/*if (ws.receive) {
+    const oldFn = ws.receive; // guarda referencia a manejador anterior
+    ws.receive = (c) => {
+        oldFn(c); // llama al manejador anterior
+        comentarioDiv.insertAdjacentHTML("beforeend", renderCmt(c));
+    }
+}*/
 
 // ver https://openlibrary.org/dev/docs/api/books
 // no requieren "api key", pero necesitas 1 consulta adicional por autor

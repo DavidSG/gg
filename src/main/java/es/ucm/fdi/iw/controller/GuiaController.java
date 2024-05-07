@@ -98,13 +98,13 @@ public class GuiaController {
         return "guia";
     }
 
-    @GetMapping(path = "recibido", produces = "application/json")
+    /*@GetMapping(path = "recibido", produces = "application/json")
 	@Transactional // para no recibir resultados inconsistentes
 	@ResponseBody  // para indicar que no devuelve vista, sino un objeto (jsonizado)
 	public List<Comentario.Transfer> retrieveComments(@PathVariable long id, HttpSession session) {
         // Conseguir una lista de comentarios que hay en la
-
+        
 		return  u.getReceived().stream().map(Transferable::toTransfer).collect(Collectors.toList());
-	}	
+	}	*/
 
 }

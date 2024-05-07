@@ -242,11 +242,29 @@
     width: 30px;
 }
 
-.comentario {
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    padding: 10px;
+/* Estilo para el contenedor de comentarios */
+#comentarios-container {
+    margin-top: 20px;
 }
 
+/* Estilo para cada comentario */
+.comentario {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Estilo para el autor del comentario */
+.comentario p:first-child {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilo para el contenido del comentario */
+.comentario p:last-child {
+    margin-top: 5px;
+}
 
 
