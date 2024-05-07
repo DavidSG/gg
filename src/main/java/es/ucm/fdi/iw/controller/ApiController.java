@@ -201,14 +201,14 @@ public class ApiController {
     }
 
     public static class VoteProxy {
-        public Boolean vote;
+        public Boolean like;
         public Long guia;
     }
 
     @Transactional
     @PostMapping(path = "/voteguia", produces = "application/json")
     @ResponseBody
-    public ResponseEntity<String> likeGuia(@RequestBody VoteProxy proxy, HttpSession session) {
+    public ResponseEntity<String> likeGuia(@RequestBody VoteProxy proxy, HttpSession session, Vote vote) {
         try {
             User u = (User) session.getAttribute("u");
             if (u == null) {
@@ -216,18 +216,17 @@ public class ApiController {
             } else {
                 u = entityManager.find(User.class, u.getId());
 
-                Vote vote;
-                vote.setVote(proxy.vote);
+                vote.setVote(proxy.like);
                 vote.setGuia(entityManager.find(Guia.class, proxy.guia));
 
                 entityManager.createQuery(
                         "DELETE FROM Vote v WHERE v.autor = :autor AND v.guia = :guia")
                         .setParameter("autor", u)
-                        .setParameter("guia", proxy.guia)
+                        .setParameter("guia", vote.getGuia())
                         .executeUpdate();
 
                 // Si se ha seleccionado un voto, se sube uno nuevo
-                if (vote.getVote() != null) {
+                if (proxy.like != null) {
                     vote.setAutor(u);
                     entityManager.persist(vote);
                 }
