@@ -30,9 +30,7 @@ public class Comentario implements Transferable<Comentario.Transfer>{
     @ManyToOne
     private User autor_id;
     private String contenido;
-
-    private LocalDateTime dateSent;
-	private LocalDateTime dateRead;
+    private String dateSent;
     @Getter
     @AllArgsConstructor
 	public static class Transfer {
@@ -41,12 +39,9 @@ public class Comentario implements Transferable<Comentario.Transfer>{
         private User autor_Id;
         private String contenido;
         private String sent;
-        private String received;
 		public Transfer(Comentario c) {
             this.from = c.getAutor_id().getUsername();
-            this.sent = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(c.getDateSent());
-			this.received = c.getDateRead() == null ?
-					null : DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(c.getDateRead());
+            this.sent = c.getDateSent();
             this.id = c.getId();
             this.contenido = c.getContenido();
 		}

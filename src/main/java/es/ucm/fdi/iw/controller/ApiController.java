@@ -2,6 +2,8 @@ package es.ucm.fdi.iw.controller;
 
 import java.io.FileWriter;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -241,22 +243,32 @@ public class ApiController {
         }
     }
 
+    public static class ComentarioProxy {
+        public String contenido;
+        public Long guia_id;
+    }
+
     @Transactional
     @PostMapping(path = "/comentarguia", produces = "application/json")
     @ResponseBody
-    public String postComentario(@RequestBody Comentario comentario, HttpSession session)
+    public String postComentario(@RequestBody ComentarioProxy proxy, HttpSession session, Comentario comentario)
             throws JsonProcessingException {
 
         User u = (User) session.getAttribute("u");
 
         // Crear y persistir el comentario en la base de datos
         comentario.setAutor_id(u);
+        comentario.setGuia_id(entityManager.find(Guia.class, proxy.guia_id));
+        comentario.setContenido(proxy.contenido);
+        comentario.setDateSent(DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now()));
         entityManager.persist(comentario);
         entityManager.flush(); // Para obtener el ID antes de la confirmación
 
         // Convertir el comentario a JSON
         ObjectMapper mapper = new ObjectMapper();
-        String json = mapper.writeValueAsString(comentario);
+        String json = mapper.writeValueAsString(comentario.toTransfer());
+
+        log.info("Sending a message to {} with contents '{}'", comentario.getId(), json);
 
         // Enviar el comentario a través de WebSockets
         messagingTemplate.convertAndSend("/guia/" + comentario.getGuia_id() + "/queue/updates", json);
