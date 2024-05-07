@@ -9,10 +9,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -69,8 +70,10 @@ public class Guia implements Transferable<Guia.Transfer> {
     @Override
     public Transfer toTransfer() {
         double total = 0;
-        for (Vote v : votes) total += v.getVote() ? 1 : 0;
-        total /= (double)votes.size();
+        for (Vote v : votes) {total += v.getVote() ? 1 : 0;}
+        if (total > 0){
+            total =  (total / (double)votes.size()) * 10;
+        }
         return new Transfer(id, titulo, autor.getUsername(), 
             fecha, total, campeon, posiciones, etiquetas, elo, hechizos, items, texto);
     }
