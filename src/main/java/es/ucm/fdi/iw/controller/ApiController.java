@@ -1,6 +1,5 @@
 package es.ucm.fdi.iw.controller;
 
-import java.io.FileWriter;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -175,23 +174,9 @@ public class ApiController {
             guia.setFecha(LocalDate.now().toString());
             guia.setPuntuacion(0);
 
-            /*
-             * Query query = entityManager.
-             * createNativeQuery("SELECT u.elo FROM User u WHERE u.user = :user");
-             * query.setParameter("autor", u.getUsername());
-             * Object elo = query.getSingleResult();
-             * String eloString = elo.toString();
-             */
-
             guia.setElo("diamante");
 
             entityManager.persist(guia);
-
-            /*String mdPath = "src/main/resources/md/" + guia.getId() + ".md";
-
-            FileWriter writer = new FileWriter(mdPath);
-            writer.write(guia.getTexto());
-            writer.close();*/
 
             return ResponseEntity.ok("Nueva guía creada con éxito");
         } catch (Exception e) {
@@ -210,7 +195,7 @@ public class ApiController {
     @Transactional
     @PostMapping(path = "/voteguia", produces = "application/json")
     @ResponseBody
-    public ResponseEntity<String> likeGuia(@RequestBody VoteProxy proxy, HttpSession session, Vote vote) {
+    public ResponseEntity<String> likeGuia(@RequestBody VoteProxy proxy, HttpSession session) {
         try {
             User u = (User) session.getAttribute("u");
             if (u == null) {
@@ -218,6 +203,7 @@ public class ApiController {
             } else {
                 u = entityManager.find(User.class, u.getId());
 
+                Vote vote = new Vote();
                 vote.setVote(proxy.like);
                 vote.setGuia(entityManager.find(Guia.class, proxy.guia));
 
@@ -255,12 +241,12 @@ public class ApiController {
             throws JsonProcessingException {
 
         User u = (User) session.getAttribute("u");
-
+        
         // Crear y persistir el comentario en la base de datos
         comentario.setAutor_id(u);
         comentario.setGuia_id(entityManager.find(Guia.class, proxy.guia_id));
         comentario.setContenido(proxy.contenido);
-        comentario.setDateSent(DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now()));
+        comentario.setDateSent(LocalDate.now().toString());
         entityManager.persist(comentario);
         entityManager.flush(); // Para obtener el ID antes de la confirmación
 
@@ -275,33 +261,4 @@ public class ApiController {
 
         return "{\"resultado\": \"comentario enviado.\"}";
     }
-
-    /*
-     * @Transactional
-     * 
-     * @PostMapping(path = "/comentarguia", produces = "application/json")
-     * 
-     * @ResponseBody
-     * public ResponseEntity<String> comentarGuia(@RequestBody Comentario
-     * comentario, HttpSession session) {
-     * try {
-     * User u = (User) session.getAttribute("u");
-     * if (u == null) {
-     * // boom!
-     * } else {
-     * u = entityManager.find(User.class, u.getId());
-     * 
-     * comentario.setAutor_id(u.getUsername());
-     * entityManager.persist(comentario);
-     * }
-     * 
-     * return ResponseEntity.ok("Nueva guía creada con éxito");
-     * } catch (Exception e) {
-     * 
-     * e.printStackTrace();
-     * return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).
-     * body("Error al crear la nueva guía: " + e.getMessage());
-     * }
-     * }
-     */
 }

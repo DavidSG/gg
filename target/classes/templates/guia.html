@@ -70,12 +70,13 @@
                     
                 </div>
 
+                <div id="comentarios-container"></div>
 
-                <div class = "guiaComentario">
-                    <div th:each="comentarios : ${#strings.arraySplit(comentario, ' ')}" class="guiaComentario">
-                        <h2 class="item" th:attr="data-item_id=${'i' + item}"></h2>
+                <!--<div class = "guiaComentario">
+                    <div th:each="comentarios : ${#strings.arraySplit(comentario.contenido, ' ')}" class="guiaComentario">
+                        <h2 class="comentario" th:attr="data-comentario_id=${'i' + comentario}"></h2>
                     </div>
-                </div>
+                </div>-->
 
             </div>
 
@@ -179,6 +180,25 @@
                     })
                     .catch(e => console.log("ERR", e));
             });
+
+            const comentariosContainer = document.getElementById('comentarios-container');
+
+            // Función para manejar los mensajes de comentarios recibidos
+            socket.onmessage = function(event) {
+                const comentario = JSON.parse(event.data);
+                mostrarComentario(comentario);
+            };
+
+            // Función para mostrar un comentario en la interfaz de usuario
+            function mostrarComentario(comentario) {
+                const nuevoComentario = document.createElement('div');
+                nuevoComentario.classList.add('comentario');
+                nuevoComentario.innerHTML = `
+                    <p>De: ${comentario.autor}</p>
+                    <p>${comentario.contenido}</p>
+                `;
+                comentariosContainer.appendChild(nuevoComentario);
+            }
         </script>
 		
     </main>
