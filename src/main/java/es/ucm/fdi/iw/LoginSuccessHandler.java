@@ -91,7 +91,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 		List<String> topics = new ArrayList<>();
 		for (Vote v : u.getVotes()) {
 			if (v.getVote())
-				topics.add("" + v.getGuia().getId());
+				topics.add("" + v.getGuia());
 		}
 
 		session.setAttribute("topics", "[" + String.join(",", topics) + "]");

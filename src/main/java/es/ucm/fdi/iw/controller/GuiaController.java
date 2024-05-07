@@ -73,21 +73,12 @@ public class GuiaController {
         // INCLUIR ARCHIVO MD 
         String htmlContent = "Texto no encontrado";
         try {
-            String archivomd = g.getId() + ".md";
-            Path path = Paths.get("src", "main", "resources", "md", archivomd);
-            byte[] bytes =  Files.readAllBytes(path);
-            String mdContent = new String(bytes);
-            /*String mdContent = entityManager.createQuery("SELECT g.texto FROM Guia g WHERE g.autor = :autor AND g.id = :id",
-            String.class)
-                .setParameter("autor", u.getUsername())
-                .setParameter("id", id)
-                .getSingleResult();*/
-
+            String mdContent = g.getTexto();
             Parser parser = Parser.builder().build();
             Node document = parser.parse(mdContent);
             HtmlRenderer renderer = HtmlRenderer.builder().build();
             htmlContent = renderer.render(document);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
@@ -96,6 +87,7 @@ public class GuiaController {
         model.addAttribute("vote", vote);
         model.addAttribute("md", htmlContent);
         model.addAttribute("guia", g);
+        /*model.addAttribute("comentarios", c);*/
 
         return "guia";
     }

@@ -57,7 +57,6 @@ public class User implements Transferable<User.Transfer> {
     @OneToMany
     @JoinColumn(name = "autor_id")
     private List<Vote> votes = new ArrayList<>();
-    
     @OneToMany
     @JoinColumn(name = "autor_id")
     private List<Guia> guias = new ArrayList<>();
