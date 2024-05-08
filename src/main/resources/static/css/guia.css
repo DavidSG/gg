@@ -223,30 +223,52 @@
 /*  COMENTARIOS  */
 
 .comentarCampo {
-    margin-top: 70px; /* Establece un margen superior de 20px */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
-.guiaComentar {
-    box-sizing: content-box;
-    height: 50px;
-    width: 50px;
+.comentarCampo h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.comentarCampo textarea {
+    width: 100%;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    cursor: pointer; 
-    margin-top: 10%;
+    resize: vertical;
+    margin-bottom: 10px;
 }
 
-.guiaComentar img {
-    height: 30px;
-    width: 30px;
+.guiaComentar {
+    background-color: #6697eb;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
+
+.guiaComentar:hover {
+    background-color: #4c73b7;
+}
+
 
 /* Estilo para el contenedor de comentarios */
-#comentarios-container {
-    margin-top: 20px;
+.comentarSeccion {
+    background-color: #d9d2d2ee; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    padding: 20px; /* Espacio interno */
+    margin-bottom: 20px; /* Margen inferior para separar de otros elementos */
 }
 
+.comentarios-container {
+    margin-top: 20px;
+}
 /* Estilo para cada comentario */
 .comentario {
     border: 1px solid #ccc;
@@ -267,4 +289,21 @@
     margin-top: 5px;
 }
 
+/* Estilo para el encabezado de comentarios */
+.comentarSeccion h2 {
+    font-size: 24px;
+    color: #333; /* Color del texto */
+    margin-bottom: 15px; /* Espacio inferior */
+    text-align: center; /* Alineación centrada */
+    text-transform: uppercase; /* Convertir texto a mayúsculas */
+}
 
+.autor-hora {
+    font-style: italic;
+    color: #626060;
+    margin-bottom: 5px;
+}
+
+.autor-hora span {
+    margin-right: 10px; /* Ajusta el espacio entre el nombre del usuario y la fecha */
+}

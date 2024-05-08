@@ -26,9 +26,9 @@ public class Comentario implements Transferable<Comentario.Transfer>{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    private Guia guia_id;
+    private Guia guia;
     @ManyToOne
-    private User autor_id;
+    private User autor;
     private String contenido;
     private String dateSent;
     @Getter
@@ -40,7 +40,7 @@ public class Comentario implements Transferable<Comentario.Transfer>{
         private String contenido;
         private String sent;
 		public Transfer(Comentario c) {
-            this.from = c.getAutor_id().getUsername();
+            this.from = c.getAutor().getUsername();
             this.sent = c.getDateSent();
             this.id = c.getId();
             this.contenido = c.getContenido();

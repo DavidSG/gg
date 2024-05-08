@@ -235,8 +235,8 @@ public class ApiController {
         User u = (User) session.getAttribute("u");
         
         // Crear y persistir el comentario en la base de datos
-        comentario.setAutor_id(u);
-        comentario.setGuia_id(entityManager.find(Guia.class, guiaId));
+        comentario.setAutor(u);
+        comentario.setGuia(entityManager.find(Guia.class, guiaId));
         comentario.setDateSent(LocalDate.now().toString());
         entityManager.persist(comentario);
         entityManager.flush(); // Para obtener el ID antes de la confirmación
@@ -256,10 +256,11 @@ public class ApiController {
     @GetMapping(path = "/comentarios/{guiaId}", produces = "application/json")
 	@ResponseBody
     public List<Comentario.Transfer> obtenerComentariosPorGuia(@PathVariable Long guiaId) {
+        Guia g = (entityManager.find(Guia.class, guiaId));
         return entityManager.createQuery(
-            "SELECT c FROM Comentario c WHERE c.guia_id_id = :guiaId",
+            "SELECT c FROM Comentario c WHERE c.guia_id = :guiaId",
             Comentario.class)
-            .setParameter("guiaId", guiaId)
+            .setParameter("guiaId", g)
             .getResultList().stream().map(Transferable::toTransfer).collect(Collectors.toList());
     }
 }

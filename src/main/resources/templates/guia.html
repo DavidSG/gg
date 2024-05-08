@@ -70,27 +70,17 @@
                     
                 </div>
 
-                <div id="comentarios-container"></div>
-
-                <!--<div class = "guiaComentario">
-                    <div th:each="comentarios : ${#strings.arraySplit(comentario.contenido, ' ')}" class="guiaComentario">
-                        <h2 class="comentario" th:attr="data-comentario_id=${'i' + comentario}"></h2>
+                <div class="comentarSeccion">
+                    <h2>Comentarios</h2>
+                    <div id="comentarios-container" class="comentarios-container">
+                        <!-- Aquí se mostrarán los comentarios -->
                     </div>
-                </div>-->
-
+                    <div class="comentarCampo">
+                        <textarea type="text" id="texto" name="texto" rows="5" cols="80"></textarea>
+                        <button class="guiaComentar" onclick="enviarComentario()">Enviar</button>
+                    </div>
+                </div>
             </div>
-
-            <div class="comentarCampo">
-                <h1> Comentar </h1>
-                <textarea type="text" id="texto" name="texto" rows="8" cols="80"></textarea>
-            </div>
-
-            <button class = 'guiaComentar'>
-                <img src="https://pngimg.com/uploads/like/like_PNG60.png">
-            </button>
-
-            
-
         </div> 
 
         <script type="text/javascript" src="../js/iw.js"></script>
@@ -161,30 +151,57 @@
                     .catch(e => console.log("ERR", e));
             });
 
+            // Texto Comentarios
             var element = document.getElementById("texto");
             element.addEventListener('input', function() {
                 texto = this.value;
             });
             
             const comentar = document.querySelector(".guiaComentar");
-            comentar.addEventListener('click', function() {
-                //Obtiene el ID de la guia de la URL
+
+            // Agregar event listener para detectar la tecla "Enter" en el textarea
+            document.getElementById("texto").addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault(); // Evitar el comportamiento predeterminado de la tecla "Enter" (agregar salto de línea)
+                    if (texto != ""){
+                        enviarComentario();
+                    }  
+                }
+            });
+
+            function enviarComentario() {
+                // Obtiene el ID de la guia de la URL
                 const domain = window.location.href.split('/');
                 const guiaId = domain.pop(); 
-                
-                // Escape de caractéres especiales
+
+                // Obtener el texto del textarea
+                const texto = document.getElementById("texto").value;
+
+                // Escape de caracteres especiales
                 const textoSeguro = encodeURIComponent(texto);
 
-                data = {
-                    "contenido": textoSeguro,
+                // Reemplaza los espacios codificados con espacios
+                const textoConEspacios = textoSeguro.replace(/%20/g, ' ');
+
+                // Mantener los saltos de línea intactos
+                const textoConSaltosDeLinea = textoConEspacios.replace(/%0A/g, '\n');
+
+                // Limpiamos el textarea
+                document.getElementById("texto").value = "";
+
+                // Datos a enviar
+                const data = {
+                    "contenido": textoConSaltosDeLinea
                 };
-                
+
+                // Enviar la solicitud POST al servidor
                 go('/api/comentarguia/' + guiaId, 'POST', data)
                     .then(responseData => {
                         console.log("Respuesta exitosa:", responseData);
                     })
                     .catch(e => console.log("ERR", e));
-            });
+            }
+
 
             document.addEventListener("DOMContentLoaded", () => {
                 const domain = window.location.href.split('/');
@@ -211,28 +228,33 @@
                 const oldReceiveFn = ws.receive; // Guardar referencia al manejador anterior
                 ws.receive = (comentario) => {
                     oldReceiveFn(comentario); // Llamar al manejador anterior
-                    const nuevoComentario = document.createElement('div');
-                    nuevoComentario.classList.add('comentario');
-                    nuevoComentario.innerHTML = `
-                        <p>De: ${comentario.from} a las ${comentario.sent}</p>
-                        <p>${comentario.contenido}</p>
-                    `;
-                    comentariosContainer.appendChild(nuevoComentario);
+                    mostrarComentario(comentario);
                 }
             }
 
-            function mostrarComentarios(comentarios) {
-                const comentariosContainer = document.getElementById('comentarios-container');
-                comentarios.forEach(comentario => {
+            function mostrarComentario(comentario) {
                     const nuevoComentario = document.createElement('div');
                     nuevoComentario.classList.add('comentario');
-                    nuevoComentario.innerHTML = `
-                        <p>De: ${comentario.from} a las ${comentario.sent}</p>
-                        <p>${comentario.contenido}</p>
-                    `;
+                    
+                    const contenido = document.createElement('p');
+                    contenido.textContent = comentario.contenido;
+                    
+                    const autorHora = document.createElement('p');
+                    autorHora.classList.add('autor-hora');
+                    autorHora.innerHTML = `De: <span>${comentario.from}</span> <span>${comentario.sent}</span>`;
+                    
+                    nuevoComentario.appendChild(autorHora);
+                    nuevoComentario.appendChild(contenido);
                     comentariosContainer.appendChild(nuevoComentario);
+            }
+
+            function mostrarComentarios(comentarios) {   
+                comentarios.forEach(comentario => {
+                    mostrarComentario(comentario);
                 });
             }
+
+
         </script>
 		
     </main>

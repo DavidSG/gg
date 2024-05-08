@@ -38,13 +38,6 @@ if (ws.receive) {
     }
 }
 
-/*if (ws.receive) {
-    const oldFn = ws.receive; // guarda referencia a manejador anterior
-    ws.receive = (c) => {
-        oldFn(c); // llama al manejador anterior
-        comentarioDiv.insertAdjacentHTML("beforeend", renderCmt(c));
-    }
-}*/
 
 // ver https://openlibrary.org/dev/docs/api/books
 // no requieren "api key", pero necesitas 1 consulta adicional por autor
