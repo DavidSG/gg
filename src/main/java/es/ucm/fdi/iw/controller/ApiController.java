@@ -256,11 +256,10 @@ public class ApiController {
     @GetMapping(path = "/comentarios/{guiaId}", produces = "application/json")
 	@ResponseBody
     public List<Comentario.Transfer> obtenerComentariosPorGuia(@PathVariable Long guiaId) {
-        Guia g = (entityManager.find(Guia.class, guiaId));
         return entityManager.createQuery(
-            "SELECT c FROM Comentario c WHERE c.guia_id = :guiaId",
-            Comentario.class)
-            .setParameter("guiaId", g)
-            .getResultList().stream().map(Transferable::toTransfer).collect(Collectors.toList());
+                "SELECT c FROM Comentario c WHERE c.guia.id = :guiaId",
+                Comentario.class)
+                .setParameter("guiaId", guiaId)
+                .getResultList().stream().map(Transferable::toTransfer).collect(Collectors.toList());
     }
 }
