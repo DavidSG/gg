@@ -163,26 +163,20 @@
             document.getElementById("texto").addEventListener('keydown', function(event) {
                 if (event.key === 'Enter') {
                     event.preventDefault(); // Evitar el comportamiento predeterminado de la tecla "Enter" (agregar salto de línea)
-                    if (texto != ""){
                         enviarComentario();
-                    }  
                 }
             });
 
             function enviarComentario() {
-                // Obtiene el ID de la guia de la URL
-                const domain = window.location.href.split('/');
-                const guiaId = domain.pop(); 
-
                 // Obtener el texto del textarea
                 const texto = document.getElementById("texto").value;
+                const textoVacio = texto.replace(/ /g, '');
 
+                if (textoVacio != ""){
                 // Escape de caracteres especiales
                 const textoSeguro = encodeURIComponent(texto);
-
                 // Reemplaza los espacios codificados con espacios
                 const textoConEspacios = textoSeguro.replace(/%20/g, ' ');
-
                 // Mantener los saltos de línea intactos
                 const textoConSaltosDeLinea = textoConEspacios.replace(/%0A/g, '\n');
 
@@ -194,12 +188,17 @@
                     "contenido": textoConSaltosDeLinea
                 };
 
+                // Obtiene el ID de la guia de la URL
+                const domain = window.location.href.split('/');
+                const guiaId = domain.pop(); 
+
                 // Enviar la solicitud POST al servidor
                 go('/api/comentarguia/' + guiaId, 'POST', data)
                     .then(responseData => {
                         console.log("Respuesta exitosa:", responseData);
                     })
                     .catch(e => console.log("ERR", e));
+                }
             }
 
 
