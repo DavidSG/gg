@@ -1,8 +1,6 @@
 package es.ucm.fdi.iw.controller;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -27,7 +25,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import es.ucm.fdi.iw.model.Campeon;
 import es.ucm.fdi.iw.model.Comentario;
-import es.ucm.fdi.iw.model.Comentario.Transfer;
 import es.ucm.fdi.iw.model.Guia;
 import es.ucm.fdi.iw.model.Hechizo;
 import es.ucm.fdi.iw.model.Item;

@@ -30,6 +30,7 @@ import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBo
 import javax.persistence.EntityManager;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.swing.JOptionPane;
 import javax.transaction.Transactional;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -149,6 +150,8 @@ public class UserController {
 		if (edited.getPassword() != null) {
             if ( ! edited.getPassword().equals(pass2)) {
                 // FIXME: complain
+				JOptionPane.showMessageDialog(null, "Las contraseñas no coinciden. Por favor, verifica tus contraseñas.", 
+				"Error de contraseña", JOptionPane.ERROR_MESSAGE);
             } else {
                 // save encoded version of password
                 target.setPassword(encodePassword(edited.getPassword()));

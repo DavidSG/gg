@@ -1,43 +1,24 @@
 package es.ucm.fdi.iw.controller;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 import javax.persistence.EntityManager;
 import javax.servlet.http.HttpSession;
-import javax.transaction.Transactional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.HtmlRenderer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.commonmark.node.*;
-import org.commonmark.parser.Parser;
-import org.commonmark.renderer.html.HtmlRenderer;
 
-import java.nio.file.Path;
-
-import es.ucm.fdi.iw.model.Comentario;
 import es.ucm.fdi.iw.model.Guia;
-import es.ucm.fdi.iw.model.Message;
-import es.ucm.fdi.iw.model.Transferable;
 import es.ucm.fdi.iw.model.User;
-import es.ucm.fdi.iw.model.Vote;
 
 /**
  * Non-authenticated requests only.
@@ -93,18 +74,7 @@ public class GuiaController {
         model.addAttribute("vote", vote);
         model.addAttribute("md", htmlContent);
         model.addAttribute("guia", g);
-        /*model.addAttribute("comentarios", c);*/
 
         return "guia";
     }
-
-    /*@GetMapping(path = "recibido", produces = "application/json")
-	@Transactional // para no recibir resultados inconsistentes
-	@ResponseBody  // para indicar que no devuelve vista, sino un objeto (jsonizado)
-	public List<Comentario.Transfer> retrieveComments(@PathVariable long id, HttpSession session) {
-        // Conseguir una lista de comentarios que hay en la
-        
-		return  u.getReceived().stream().map(Transferable::toTransfer).collect(Collectors.toList());
-	}	*/
-
 }
