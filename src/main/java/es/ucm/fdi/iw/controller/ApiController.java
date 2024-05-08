@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import es.ucm.fdi.iw.model.Campeon;
 import es.ucm.fdi.iw.model.Comentario;
+import es.ucm.fdi.iw.model.Comentario.Transfer;
 import es.ucm.fdi.iw.model.Guia;
 import es.ucm.fdi.iw.model.Hechizo;
 import es.ucm.fdi.iw.model.Item;
@@ -247,8 +248,18 @@ public class ApiController {
         log.info("Sending a message to {} with contents '{}'", guiaId, json);
 
         // Enviar el comentario a través de WebSockets
-        messagingTemplate.convertAndSend("/guia/" + guiaId + "/queue/updates", json);
+        messagingTemplate.convertAndSend("/topic/comentarios/" + guiaId, json);
 
         return "{\"resultado\": \"comentario enviado.\"}";
+    }
+
+    @GetMapping(path = "/comentarios/{guiaId}", produces = "application/json")
+	@ResponseBody
+    public List<Comentario.Transfer> obtenerComentariosPorGuia(@PathVariable Long guiaId) {
+        return entityManager.createQuery(
+            "SELECT c FROM Comentario c WHERE c.guia_id_id = :guiaId",
+            Comentario.class)
+            .setParameter("guiaId", guiaId)
+            .getResultList().stream().map(Transferable::toTransfer).collect(Collectors.toList());
     }
 }

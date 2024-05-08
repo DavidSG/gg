@@ -27,7 +27,7 @@
                     </div>
 
                     <div class = "puntuacionGuia">
-                        <!--<h1 th:text="${guia.puntuacion}"></h1>-->
+                        <!--<h1 th:text="${guia.total}"></h1>-->
                         <button th:class = "${vote == 1 ? 'likebutton clicked' : 'likebutton'}">
                             <img src="https://pngimg.com/uploads/like/like_PNG60.png">
                         </button>
@@ -186,20 +186,52 @@
                     .catch(e => console.log("ERR", e));
             });
 
+            document.addEventListener("DOMContentLoaded", () => {
+                const domain = window.location.href.split('/');
+                const guiaId = domain.pop(); 
+
+                if (config.socketUrl) {
+                    let subs = ["/topic/comentarios/" + guiaId]
+                    ws.initialize(config.socketUrl, subs);
+
+                    go('/api/comentarios/' + guiaId, 'GET')
+                    .then(comentarios => {
+                        // Manejar los comentarios recibidos
+                        mostrarComentarios(comentarios);
+                    })
+                } else {
+                    console.log("Not opening websocket: missing config", config)
+                }
+            });
+
             const comentariosContainer = document.getElementById('comentarios-container');
+            
 
             if (ws.receive) {
                 const oldReceiveFn = ws.receive; // Guardar referencia al manejador anterior
-                ws.receive = (comment) => {
-                    oldReceiveFn(comment); // Llamar al manejador anterior
+                ws.receive = (comentario) => {
+                    oldReceiveFn(comentario); // Llamar al manejador anterior
                     const nuevoComentario = document.createElement('div');
                     nuevoComentario.classList.add('comentario');
                     nuevoComentario.innerHTML = `
-                        <p>De: ${comment.autor}</p>
-                        <p>${comment.contenido}</p>
+                        <p>De: ${comentario.from} a las ${comentario.sent}</p>
+                        <p>${comentario.contenido}</p>
                     `;
                     comentariosContainer.appendChild(nuevoComentario);
                 }
+            }
+
+            function mostrarComentarios(comentarios) {
+                const comentariosContainer = document.getElementById('comentarios-container');
+                comentarios.forEach(comentario => {
+                    const nuevoComentario = document.createElement('div');
+                    nuevoComentario.classList.add('comentario');
+                    nuevoComentario.innerHTML = `
+                        <p>De: ${comentario.from} a las ${comentario.sent}</p>
+                        <p>${comentario.contenido}</p>
+                    `;
+                    comentariosContainer.appendChild(nuevoComentario);
+                });
             }
         </script>
 		

@@ -211,12 +211,3 @@ document.addEventListener("DOMContentLoaded", () => {
     // 	 document.addEventListener("DOMContentLoaded", () => { /* your-code-here */ });
     //   (assuming you do not care about order-of-execution, all such handlers will be called correctly)
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-    if (config.socketUrl) {
-        let subs = ["/topic/comentarios", "/guia/queue/updates"]
-        ws.initialize(config.socketUrl, subs);
-    } else {
-        console.log("Not opening websocket: missing config", config)
-    }
-});

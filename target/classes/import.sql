@@ -7,34 +7,33 @@ INSERT INTO IWUser (id, enabled, roles, username, password)
 VALUES (2, TRUE, 'USER', 'b',
     '{bcrypt}$2a$10$2BpNTbrsarbHjNsUWgzfNubJqBRf.0Vz9924nRSHBqlbPKerkgX.W');
 
-
 ALTER TABLE Guia ALTER COLUMN texto VARCHAR(1000000000);
 
 INSERT INTO Guia (id, titulo, autor_id, fecha, puntuacion, campeon, posiciones, etiquetas, elo, hechizos, items, texto) VALUES 
-(100, 'Guí­a suspicaz', 2, '2024-01-02', 9.8, 'aatrox', 'top', 'campeon', 'diamante', 'flash ignite', '6333 6698 3161 3302 6610 3748', '
-# Guía de Aatrox: El Segador Oscuro
+(100, 'Guï¿½ï¿½a suspicaz', 2, '2024-01-02', 9.8, 'aatrox', 'top', 'campeon', 'diamante', 'flash ignite', '6333 6698 3161 3302 6610 3748', '
+# Guï¿½a de Aatrox: El Segador Oscuro
 
-¡Bienvenido a la guía de Aatrox, el Segador Oscuro!
+ï¿½Bienvenido a la guï¿½a de Aatrox, el Segador Oscuro!
 
-## Introducción
-Aatrox es un campeón de lucha cuerpo a cuerpo con gran potencial de daño y sostenibilidad en el juego. Su estilo de juego agresivo y su habilidad para regenerar vida lo convierten en una fuerza formidable en el campo de batalla.
+## Introducciï¿½n
+Aatrox es un campeï¿½n de lucha cuerpo a cuerpo con gran potencial de daï¿½o y sostenibilidad en el juego. Su estilo de juego agresivo y su habilidad para regenerar vida lo convierten en una fuerza formidable en el campo de batalla.
 
 ## Habilidades
 
 ### Pasiva: **Sangre por Sangre**
-Cada cierto tiempo, Aatrox restaura parte del daño de sus habilidades como salud y obtiene un aumento de velocidad de movimiento.
+Cada cierto tiempo, Aatrox restaura parte del daï¿½o de sus habilidades como salud y obtiene un aumento de velocidad de movimiento.
 
 ### Q: **Espada de la Oscuridad**
-Aatrox golpea el suelo con su espada, infligiendo daño y ralentizando a los enemigos en un área. Puede ser cargado para aumentar el rango y daño.
+Aatrox golpea el suelo con su espada, infligiendo daï¿½o y ralentizando a los enemigos en un ï¿½rea. Puede ser cargado para aumentar el rango y daï¿½o.
 
 ### W: **Carne a la Espada**
-Aatrox inflige daño a los enemigos en un área frente a él y se cura por un porcentaje del daño infligido. Cuanto más daño cause, más se curará.
+Aatrox inflige daï¿½o a los enemigos en un ï¿½rea frente a ï¿½l y se cura por un porcentaje del daï¿½o infligido. Cuanto mï¿½s daï¿½o cause, mï¿½s se curarï¿½.
 
-### E: **Ataque Aéreo**
-Aatrox se desplaza hacia un área y lanza una explosión de energía al aterrizar, infligiendo daño y lanzando a los enemigos por el aire.
+### E: **Ataque Aï¿½reo**
+Aatrox se desplaza hacia un ï¿½rea y lanza una explosiï¿½n de energï¿½a al aterrizar, infligiendo daï¿½o y lanzando a los enemigos por el aire.
 
 ### R: **Masacre de los Oscuros**
-Aatrox se transforma, ganando aumento de daño, aumenta su tamaño y obtiene un rango de ataque extendido. Al morir durante esta habilidad, Aatrox revive con una cantidad de salud dependiendo de la cantidad de daño que haya infligido durante la transformación.
+Aatrox se transforma, ganando aumento de daï¿½o, aumenta su tamaï¿½o y obtiene un rango de ataque extendido. Al morir durante esta habilidad, Aatrox revive con una cantidad de salud dependiendo de la cantidad de daï¿½o que haya infligido durante la transformaciï¿½n.
 
 ## Consejos de Juego
 
@@ -43,457 +42,457 @@ Aatrox se transforma, ganando aumento de daño, aumenta su tamaño y obtiene un ra
 - No subestimes el poder de tu pasiva para mantener tu salud durante los enfrentamientos prolongados.
 - Coordina tus habilidades con tu equipo para maximizar tu impacto en las peleas grupales.
 
-Con esta guía, ¡estarás listo para destrozar a tus enemigos como Aatrox en el Nexo!'),
-(101, 'Guí­a excelente', 2, '2021-05-01', 9.0, 'jhin', 'bot', 'campeon', 'platino', 'flash ignite', '6333 6698 3161 3302 6610 3748', '# Guía Avanzada de Jhin, el Virtuoso
+Con esta guï¿½a, ï¿½estarï¿½s listo para destrozar a tus enemigos como Aatrox en el Nexo!'),
+(101, 'Guï¿½ï¿½a excelente', 2, '2021-05-01', 9.0, 'jhin', 'bot', 'campeon', 'platino', 'flash ignite', '6333 6698 3161 3302 6610 3748', '# Guï¿½a Avanzada de Jhin, el Virtuoso
 
 ![Jhin Splash Art](https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jhin_0.jpg)
 
-En esta guía, exploraremos estrategias avanzadas y consejos profesionales para dominar a Jhin en League of Legends. Desde la fase de líneas hasta las peleas de equipo, aprenderás cómo maximizar el potencial de este maestro del arte mortal.
+En esta guï¿½a, exploraremos estrategias avanzadas y consejos profesionales para dominar a Jhin en League of Legends. Desde la fase de lï¿½neas hasta las peleas de equipo, aprenderï¿½s cï¿½mo maximizar el potencial de este maestro del arte mortal.
 
 ## Tabla de Contenidos
 
-1. [Introducción a Jhin](#introducción-a-jhin)
+1. [Introducciï¿½n a Jhin](#introducciï¿½n-a-jhin)
 2. [Habilidades de Jhin](#habilidades-de-jhin)
-3. [Construcción de Objetos](#construcción-de-objetos)
-4. [Fase de Línea](#fase-de-línea)
+3. [Construcciï¿½n de Objetos](#construcciï¿½n-de-objetos)
+4. [Fase de Lï¿½nea](#fase-de-lï¿½nea)
 5. [Peleas de Equipo](#peleas-de-equipo)
 6. [Consejos Avanzados](#consejos-avanzados)
 
-## Introducción a Jhin
+## Introducciï¿½n a Jhin
 
-Jhin es un tirador único que canaliza el arte a través de sus ataques. Con una jugabilidad centrada en la precisión y el posicionamiento, es capaz de infligir daño masivo en un solo golpe.
+Jhin es un tirador ï¿½nico que canaliza el arte a travï¿½s de sus ataques. Con una jugabilidad centrada en la precisiï¿½n y el posicionamiento, es capaz de infligir daï¿½o masivo en un solo golpe.
 
 ## Habilidades de Jhin
 
 ### Pasiva - Susurro de la Pistola
 
-La pasiva de Jhin, *Susurro de la Pistola*, le otorga un ataque crítico aumentado y daño adicional en función de la velocidad de ataque adicional.
+La pasiva de Jhin, *Susurro de la Pistola*, le otorga un ataque crï¿½tico aumentado y daï¿½o adicional en funciï¿½n de la velocidad de ataque adicional.
 
-**Consejo Profesional:** Aprovecha al máximo tu cuarto disparo, ya que inflige daño adicional basado en el porcentaje de vida faltante del objetivo.
+**Consejo Profesional:** Aprovecha al mï¿½ximo tu cuarto disparo, ya que inflige daï¿½o adicional basado en el porcentaje de vida faltante del objetivo.
 
 ### Q - Danza de Granada
 
-*Jhin lanza una granada que inflige daño y rebota sobre los enemigos. Cada rebote inflige daño reducido.*
+*Jhin lanza una granada que inflige daï¿½o y rebota sobre los enemigos. Cada rebote inflige daï¿½o reducido.*
 
-**Consejo Profesional:** Utiliza *Danza de Granada* para limpiar oleadas de súbditos y aplicar presión en la línea.
+**Consejo Profesional:** Utiliza *Danza de Granada* para limpiar oleadas de sï¿½bditos y aplicar presiï¿½n en la lï¿½nea.
 
 ### W - Florescencia Mortal
 
-*Jhin lanza una trampa de raíz que inflige daño y ralentiza al primer enemigo que la activa.*
+*Jhin lanza una trampa de raï¿½z que inflige daï¿½o y ralentiza al primer enemigo que la activa.*
 
-**Consejo Profesional:** Coloca *Florescencia Mortal* en puntos estratégicos para atrapar a los enemigos desprevenidos o para asegurar escapadas.
+**Consejo Profesional:** Coloca *Florescencia Mortal* en puntos estratï¿½gicos para atrapar a los enemigos desprevenidos o para asegurar escapadas.
 
-### E - Visión de Flores
+### E - Visiï¿½n de Flores
 
-*Jhin despliega un florero que otorga visión del área. Si es destruido por un campeón enemigo, explota y ralentiza a los enemigos cercanos.*
+*Jhin despliega un florero que otorga visiï¿½n del ï¿½rea. Si es destruido por un campeï¿½n enemigo, explota y ralentiza a los enemigos cercanos.*
 
-**Consejo Profesional:** Usa *Visión de Flores* para controlar áreas importantes del mapa y proporcionar visión para tu equipo.
+**Consejo Profesional:** Usa *Visiï¿½n de Flores* para controlar ï¿½reas importantes del mapa y proporcionar visiï¿½n para tu equipo.
 
-### R - Cánon de Castigo
+### R - Cï¿½non de Castigo
 
-*Jhin despliega su rifle y realiza cuatro tiros de gran alcance, el último de los cuales es una bala crítica que inflige daño masivo.*
+*Jhin despliega su rifle y realiza cuatro tiros de gran alcance, el ï¿½ltimo de los cuales es una bala crï¿½tica que inflige daï¿½o masivo.*
 
-**Consejo Profesional:** Usa *Cánon de Castigo* para iniciar o asegurar peleas de equipo, o para eliminar objetivos de alto valor a distancia.
+**Consejo Profesional:** Usa *Cï¿½non de Castigo* para iniciar o asegurar peleas de equipo, o para eliminar objetivos de alto valor a distancia.
 
-## Construcción de Objetos
+## Construcciï¿½n de Objetos
 
-La construcción de objetos es crucial para optimizar el desempeño de Jhin en diferentes etapas del juego. Aquí hay una construcción típica para Jhin:
+La construcciï¿½n de objetos es crucial para optimizar el desempeï¿½o de Jhin en diferentes etapas del juego. Aquï¿½ hay una construcciï¿½n tï¿½pica para Jhin:
 
 1. **Espada del Rey Arruinado**
 2. **Sombra de la Luchona**
-3. **Ídolo Prohibido**
+3. **ï¿½dolo Prohibido**
 4. **Hoja del Verdugo**
 5. **Baile Mortal**
-6. **Último Suspiro**
+6. **ï¿½ltimo Suspiro**
 
-**Consejo Profesional:** Adaptar tu construcción de objetos según la composición enemiga y la fase del juego es esencial para maximizar el impacto de Jhin.
+**Consejo Profesional:** Adaptar tu construcciï¿½n de objetos segï¿½n la composiciï¿½n enemiga y la fase del juego es esencial para maximizar el impacto de Jhin.
 
-## Fase de Línea
+## Fase de Lï¿½nea
 
-Durante la fase de líneas, Jhin debe enfocarse en farmear de manera segura mientras castiga a los enemigos con su alcance y habilidades.
+Durante la fase de lï¿½neas, Jhin debe enfocarse en farmear de manera segura mientras castiga a los enemigos con su alcance y habilidades.
 
-**Consejo Profesional:** Utiliza *Danza de Granada* para castigar a los enemigos que se agrupan y para limpiar oleadas de súbditos bajo la torre enemiga.
+**Consejo Profesional:** Utiliza *Danza de Granada* para castigar a los enemigos que se agrupan y para limpiar oleadas de sï¿½bditos bajo la torre enemiga.
 
 ## Peleas de Equipo
 
-En las peleas de equipo, Jhin debe posicionarse de manera segura mientras inflige daño desde la retaguardia con su *Cánon de Castigo* y *Danza de Granada*.
+En las peleas de equipo, Jhin debe posicionarse de manera segura mientras inflige daï¿½o desde la retaguardia con su *Cï¿½non de Castigo* y *Danza de Granada*.
 
-**Consejo Profesional:** Mantén una distancia segura y espera a que los enemigos utilicen sus habilidades antes de entrar en la pelea con tu *Cánon de Castigo*.
+**Consejo Profesional:** Mantï¿½n una distancia segura y espera a que los enemigos utilicen sus habilidades antes de entrar en la pelea con tu *Cï¿½non de Castigo*.
 
 ## Consejos Avanzados
 
-1. **Posicionamiento Consciente:** Siempre mantén una distancia segura y utiliza el terreno a tu favor para evitar emboscadas enemigas.
-2. **Coordinación de Habilidades:** Coordina tus habilidades con tu equipo para asegurar objetivos importantes o para atrapar a los enemigos desprevenidos.
-3. **Conocimiento del Mapa:** Mantén una visión constante del mapa y anticipa los movimientos enemigos para evitar sorpresas desagradables.
+1. **Posicionamiento Consciente:** Siempre mantï¿½n una distancia segura y utiliza el terreno a tu favor para evitar emboscadas enemigas.
+2. **Coordinaciï¿½n de Habilidades:** Coordina tus habilidades con tu equipo para asegurar objetivos importantes o para atrapar a los enemigos desprevenidos.
+3. **Conocimiento del Mapa:** Mantï¿½n una visiï¿½n constante del mapa y anticipa los movimientos enemigos para evitar sorpresas desagradables.
 
-Con esta guía avanzada, estás preparado para dominar a Jhin y convertirte en el Virtuoso definitivo. ¡Buena suerte en la Grieta del Invocador!
+Con esta guï¿½a avanzada, estï¿½s preparado para dominar a Jhin y convertirte en el Virtuoso definitivo. ï¿½Buena suerte en la Grieta del Invocador!
 '),
-(102, 'Guí­a versátil', 2, '2023-12-02', 8.5, 'leona', 'sup', 'campeon', 'oro', 'flash teleport', '6333 6698 3161 3302 6610 3748', '# Guía Emo de Leona, el Amanecer Radiante
+(102, 'Guï¿½ï¿½a versï¿½til', 2, '2023-12-02', 8.5, 'leona', 'sup', 'campeon', 'oro', 'flash teleport', '6333 6698 3161 3302 6610 3748', '# Guï¿½a Emo de Leona, el Amanecer Radiante
 
 ![Leona Splash Art](https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leona_0.jpg)
 
-En esta guía, exploraremos el lado más oscuro y dramático de Leona, el Amanecer Radiante. Desde su estilo de juego hasta su construcción de objetos, te sumergirás en la oscuridad de la noche y la luz del amanecer con esta guía "emo".
+En esta guï¿½a, exploraremos el lado mï¿½s oscuro y dramï¿½tico de Leona, el Amanecer Radiante. Desde su estilo de juego hasta su construcciï¿½n de objetos, te sumergirï¿½s en la oscuridad de la noche y la luz del amanecer con esta guï¿½a "emo".
 
 ## Tabla de Contenidos
 
-1. [Introducción a Leona](#introducción-a-leona)
+1. [Introducciï¿½n a Leona](#introducciï¿½n-a-leona)
 2. [Habilidades de Leona](#habilidades-de-leona)
-3. [Construcción de Objetos](#construcción-de-objetos)
-4. [Fase de Línea](#fase-de-línea)
+3. [Construcciï¿½n de Objetos](#construcciï¿½n-de-objetos)
+4. [Fase de Lï¿½nea](#fase-de-lï¿½nea)
 5. [Peleas de Equipo](#peleas-de-equipo)
 6. [Consejos Emo](#consejos-emo)
 
-## Introducción a Leona
+## Introducciï¿½n a Leona
 
-Leona es una guerrera imbuida de la luz del sol, pero en esta guía, exploraremos su lado más oscuro y emocional. Con su armadura brillante y su actitud decidida, Leona puede llevar la desesperación a sus enemigos con estilo.
+Leona es una guerrera imbuida de la luz del sol, pero en esta guï¿½a, exploraremos su lado mï¿½s oscuro y emocional. Con su armadura brillante y su actitud decidida, Leona puede llevar la desesperaciï¿½n a sus enemigos con estilo.
 
 ## Habilidades de Leona
 
 ### Pasiva - Luz del Amanecer
 
-La pasiva de Leona, *Luz del Amanecer*, inflige daño adicional a los enemigos cuando son alcanzados por sus habilidades. Este daño se beneficia de la resistencia mágica de los enemigos.
+La pasiva de Leona, *Luz del Amanecer*, inflige daï¿½o adicional a los enemigos cuando son alcanzados por sus habilidades. Este daï¿½o se beneficia de la resistencia mï¿½gica de los enemigos.
 
-**Consejo Profesional:** Combina *Luz del Amanecer* con tus habilidades para maximizar tu potencial de daño.
+**Consejo Profesional:** Combina *Luz del Amanecer* con tus habilidades para maximizar tu potencial de daï¿½o.
 
 ### Q - Golpe de Sol
 
-*Leona golpea a un enemigo con su espada, infligiendo daño y otorgando un breve escudo de resistencia.*
+*Leona golpea a un enemigo con su espada, infligiendo daï¿½o y otorgando un breve escudo de resistencia.*
 
-**Consejo Profesional:** Utiliza *Golpe de Sol* para intercambios rápidos y para mitigar el daño enemigo.
+**Consejo Profesional:** Utiliza *Golpe de Sol* para intercambios rï¿½pidos y para mitigar el daï¿½o enemigo.
 
 ### W - Eclipse
 
-*Leona se envuelve en un eclipse temporal, otorgando resistencia y desencadenando una explosión de energía alrededor de ella después de un breve período.*
+*Leona se envuelve en un eclipse temporal, otorgando resistencia y desencadenando una explosiï¿½n de energï¿½a alrededor de ella despuï¿½s de un breve perï¿½odo.*
 
-**Consejo Profesional:** Activa *Eclipse* en momentos clave para absorber daño y desencadenar una explosión sorpresa en tus enemigos.
+**Consejo Profesional:** Activa *Eclipse* en momentos clave para absorber daï¿½o y desencadenar una explosiï¿½n sorpresa en tus enemigos.
 
 ### E - Filo Solar
 
-*Leona lanza su espada hacia un objetivo, infligiendo daño y ralentizando al enemigo alcanzado. Si el objetivo es un campeón, Leona puede teletransportarse hacia él.*
+*Leona lanza su espada hacia un objetivo, infligiendo daï¿½o y ralentizando al enemigo alcanzado. Si el objetivo es un campeï¿½n, Leona puede teletransportarse hacia ï¿½l.*
 
 **Consejo Profesional:** Usa *Filo Solar* para iniciar peleas o para atrapar a los enemigos que intentan huir.
 
-### R - Cárcel de Luz
+### R - Cï¿½rcel de Luz
 
-*Leona invoca un haz de luz que se estrella en el suelo, dañando y aturdieno a los enemigos dentro del área.*
+*Leona invoca un haz de luz que se estrella en el suelo, daï¿½ando y aturdieno a los enemigos dentro del ï¿½rea.*
 
-**Consejo Profesional:** Utiliza *Cárcel de Luz* para iniciar peleas de equipo o para interrumpir las habilidades enemigas clave.
+**Consejo Profesional:** Utiliza *Cï¿½rcel de Luz* para iniciar peleas de equipo o para interrumpir las habilidades enemigas clave.
 
-## Construcción de Objetos
+## Construcciï¿½n de Objetos
 
-La construcción de objetos para Leona en esta guía "emo" se centra en resistencia y utilidad, con un toque de oscuridad. Aquí tienes una construcción típica:
+La construcciï¿½n de objetos para Leona en esta guï¿½a "emo" se centra en resistencia y utilidad, con un toque de oscuridad. Aquï¿½ tienes una construcciï¿½n tï¿½pica:
 
 1. **Coraza del Solari de Hierro**
 2. **Capa de Fuego Solar**
 3. **Pergamino de las Edades Oscuras**
 4. **Aguja de la Ruina**
-5. **Guardián de las Sombras**
-6. **Filo del Vacío**
+5. **Guardiï¿½n de las Sombras**
+6. **Filo del Vacï¿½o**
 
-**Consejo Profesional:** Adaptar tu construcción de objetos según la composición enemiga y la fase del juego es esencial para maximizar el impacto de Leona.
+**Consejo Profesional:** Adaptar tu construcciï¿½n de objetos segï¿½n la composiciï¿½n enemiga y la fase del juego es esencial para maximizar el impacto de Leona.
 
-## Fase de Línea
+## Fase de Lï¿½nea
 
-Durante la fase de líneas, Leona debe buscar oportunidades para iniciar peleas y proteger a su ADC con su presencia amenazadora.
+Durante la fase de lï¿½neas, Leona debe buscar oportunidades para iniciar peleas y proteger a su ADC con su presencia amenazadora.
 
 **Consejo Profesional:** Coordina tus ataques con tu ADC y busca oportunidades para sorprender a los enemigos con tu capacidad de enganche.
 
 ## Peleas de Equipo
 
-En las peleas de equipo, Leona brilla en su máximo esplendor, protegiendo a su equipo y sumergiendo a sus enemigos en la oscuridad de la desesperación.
+En las peleas de equipo, Leona brilla en su mï¿½ximo esplendor, protegiendo a su equipo y sumergiendo a sus enemigos en la oscuridad de la desesperaciï¿½n.
 
-**Consejo Profesional:** Utiliza tu *Cárcel de Luz* de manera efectiva para iniciar peleas y proteger a tu equipo de las emboscadas enemigas.
+**Consejo Profesional:** Utiliza tu *Cï¿½rcel de Luz* de manera efectiva para iniciar peleas y proteger a tu equipo de las emboscadas enemigas.
 
 ## Consejos Emo
 
 1. **Expresa tus Sentimientos:** Deja que la oscuridad y la luz se mezclen en tu juego, mostrando tu verdadero yo emocional.
-2. **Adopta el Drama:** Sé el centro de atención en el campo de batalla, atrayendo a tus enemigos hacia tu aura de misterio y desesperación.
-3. **Sé Intenso:** No tengas miedo de enfrentarte cara a cara con tus enemigos, mostrando tu verdadera fuerza emocional.
+2. **Adopta el Drama:** Sï¿½ el centro de atenciï¿½n en el campo de batalla, atrayendo a tus enemigos hacia tu aura de misterio y desesperaciï¿½n.
+3. **Sï¿½ Intenso:** No tengas miedo de enfrentarte cara a cara con tus enemigos, mostrando tu verdadera fuerza emocional.
 
-Con esta guía "emo", estarás listo para llevar a Leona al siguiente nivel de expresión emocional en la Grieta del Invocador. ¡Buena suerte, guerrero de la oscuridad!'),
-(103, 'Guí­a táctica para principiantes', 1, '2023-05-02', 8.7, 'Annie', 'mid', 'campeon',  'plata', 'Teleport Flash', '6333 6698 3161 3302 6610 3748', '# Guía Gótica Culona de Annie, la Niña Oscura
+Con esta guï¿½a "emo", estarï¿½s listo para llevar a Leona al siguiente nivel de expresiï¿½n emocional en la Grieta del Invocador. ï¿½Buena suerte, guerrero de la oscuridad!'),
+(103, 'Guï¿½ï¿½a tï¿½ctica para principiantes', 1, '2023-05-02', 8.7, 'Annie', 'mid', 'campeon',  'plata', 'Teleport Flash', '6333 6698 3161 3302 6610 3748', '# Guï¿½a Gï¿½tica Culona de Annie, la Niï¿½a Oscura
 
 ![Annie Splash Art](https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Annie_0.jpg)
 
-En esta guía, exploraremos el lado más oscuro y encantador de Annie, la Niña Oscura. Desde su estilo de juego hasta su construcción de objetos, te sumergirás en el poder del fuego y la magia negra con esta guía gótica culona.
+En esta guï¿½a, exploraremos el lado mï¿½s oscuro y encantador de Annie, la Niï¿½a Oscura. Desde su estilo de juego hasta su construcciï¿½n de objetos, te sumergirï¿½s en el poder del fuego y la magia negra con esta guï¿½a gï¿½tica culona.
 
 ## Tabla de Contenidos
 
-1. [Introducción a Annie](#introducción-a-annie)
+1. [Introducciï¿½n a Annie](#introducciï¿½n-a-annie)
 2. [Habilidades de Annie](#habilidades-de-annie)
-3. [Construcción de Objetos](#construcción-de-objetos)
-4. [Fase de Línea](#fase-de-línea)
+3. [Construcciï¿½n de Objetos](#construcciï¿½n-de-objetos)
+4. [Fase de Lï¿½nea](#fase-de-lï¿½nea)
 5. [Peleas de Equipo](#peleas-de-equipo)
-6. [Consejos Góticos](#consejos-góticos)
+6. [Consejos Gï¿½ticos](#consejos-gï¿½ticos)
 
-## Introducción a Annie
+## Introducciï¿½n a Annie
 
-Annie es una pequeña pero poderosa hechicera que canaliza el poder del fuego y la magia oscura para destruir a sus enemigos. En esta guía, exploraremos su lado más gótico y culón, combinando estilo con poder destructivo.
+Annie es una pequeï¿½a pero poderosa hechicera que canaliza el poder del fuego y la magia oscura para destruir a sus enemigos. En esta guï¿½a, exploraremos su lado mï¿½s gï¿½tico y culï¿½n, combinando estilo con poder destructivo.
 
 ## Habilidades de Annie
 
 ### Pasiva - Pirodesgracia
 
-La pasiva de Annie, *Pirodesgracia*, inflige daño adicional con sus hechizos después de lanzarlos varias veces.
+La pasiva de Annie, *Pirodesgracia*, inflige daï¿½o adicional con sus hechizos despuï¿½s de lanzarlos varias veces.
 
-**Consejo Profesional:** Mantén un ojo en tu contador de *Pirodesgracia* para maximizar tu daño.
+**Consejo Profesional:** Mantï¿½n un ojo en tu contador de *Pirodesgracia* para maximizar tu daï¿½o.
 
 ### Q - Desintegrar
 
-*Annie lanza una bola de fuego que inflige daño a un enemigo objetivo. Si mata al enemigo, la mitad del costo de maná se devuelve y el enfriamiento se reduce a la mitad.*
+*Annie lanza una bola de fuego que inflige daï¿½o a un enemigo objetivo. Si mata al enemigo, la mitad del costo de manï¿½ se devuelve y el enfriamiento se reduce a la mitad.*
 
-**Consejo Profesional:** Usa *Desintegrar* para desgastar a tus oponentes y mantener la presión en la línea.
+**Consejo Profesional:** Usa *Desintegrar* para desgastar a tus oponentes y mantener la presiï¿½n en la lï¿½nea.
 
 ### W - Incinerar
 
-*Annie libera un cono de fuego que inflige daño a los enemigos alcanzados.*
+*Annie libera un cono de fuego que inflige daï¿½o a los enemigos alcanzados.*
 
-**Consejo Profesional:** Utiliza *Incinerar* para limpiar oleadas de súbditos rápidamente y para dañar a múltiples enemigos en peleas de equipo.
+**Consejo Profesional:** Utiliza *Incinerar* para limpiar oleadas de sï¿½bditos rï¿½pidamente y para daï¿½ar a mï¿½ltiples enemigos en peleas de equipo.
 
 ### E - Escudo Fundido
 
-*Annie envuelve a sí misma y a Tibbers en un escudo de fuego, reduciendo el daño recibido y dañando a los enemigos que la atacan.*
+*Annie envuelve a sï¿½ misma y a Tibbers en un escudo de fuego, reduciendo el daï¿½o recibido y daï¿½ando a los enemigos que la atacan.*
 
-**Consejo Profesional:** Activa *Escudo Fundido* para absorber daño y castigar a los enemigos que intentan enfocarte.
+**Consejo Profesional:** Activa *Escudo Fundido* para absorber daï¿½o y castigar a los enemigos que intentan enfocarte.
 
 ### R - Invocar: Tibbers
 
-*Annie invoca a Tibbers, su oso de peluche en llamas, infligiendo daño a los enemigos cercanos y siguiéndola como una mascota, atacando a sus enemigos.*
+*Annie invoca a Tibbers, su oso de peluche en llamas, infligiendo daï¿½o a los enemigos cercanos y siguiï¿½ndola como una mascota, atacando a sus enemigos.*
 
-**Consejo Profesional:** Usa *Invocar: Tibbers* como una herramienta de iniciación o para causar estragos en las peleas de equipo.
+**Consejo Profesional:** Usa *Invocar: Tibbers* como una herramienta de iniciaciï¿½n o para causar estragos en las peleas de equipo.
 
-## Construcción de Objetos
+## Construcciï¿½n de Objetos
 
-La construcción de objetos para Annie en esta guía gótica culona se centra en el poder mágico y la supervivencia. Aquí tienes una construcción típica:
+La construcciï¿½n de objetos para Annie en esta guï¿½a gï¿½tica culona se centra en el poder mï¿½gico y la supervivencia. Aquï¿½ tienes una construcciï¿½n tï¿½pica:
 
-1. **Sombrero Mortífero de Rabadon**
-2. **Báculo del Vacío**
+1. **Sombrero Mortï¿½fero de Rabadon**
+2. **Bï¿½culo del Vacï¿½o**
 3. **Velo de la Banshee**
 4. **Cetro Abisal**
 5. **Botas de Hechicero**
 6. **Cetro Rilay**
 
-**Consejo Profesional:** Adaptar tu construcción de objetos según la composición enemiga y la fase del juego es esencial para maximizar el impacto de Annie.
+**Consejo Profesional:** Adaptar tu construcciï¿½n de objetos segï¿½n la composiciï¿½n enemiga y la fase del juego es esencial para maximizar el impacto de Annie.
 
-## Fase de Línea
+## Fase de Lï¿½nea
 
-Durante la fase de líneas, Annie puede ser agresiva con su capacidad para infligir daño a corta distancia.
+Durante la fase de lï¿½neas, Annie puede ser agresiva con su capacidad para infligir daï¿½o a corta distancia.
 
-**Consejo Profesional:** Aprovecha tu daño temprano para mantener a raya a tus oponentes y buscar oportunidades para eliminarlos.
+**Consejo Profesional:** Aprovecha tu daï¿½o temprano para mantener a raya a tus oponentes y buscar oportunidades para eliminarlos.
 
 ## Peleas de Equipo
 
-En las peleas de equipo, Annie brilla como una estrella oscura, devastando a sus enemigos con su poder mágico.
+En las peleas de equipo, Annie brilla como una estrella oscura, devastando a sus enemigos con su poder mï¿½gico.
 
-**Consejo Profesional:** Utiliza *Invocar: Tibbers* en momentos clave para causar confusión y desatar el caos entre tus enemigos.
+**Consejo Profesional:** Utiliza *Invocar: Tibbers* en momentos clave para causar confusiï¿½n y desatar el caos entre tus enemigos.
 
-## Consejos Góticos
+## Consejos Gï¿½ticos
 
-1. **Abraza la Oscuridad:** Deja que tu lado gótico brille en el campo de batalla, mostrando tu poder mágico y tu estilo único.
+1. **Abraza la Oscuridad:** Deja que tu lado gï¿½tico brille en el campo de batalla, mostrando tu poder mï¿½gico y tu estilo ï¿½nico.
 2. **Juega con Estilo:** Adopta un estilo de juego agresivo pero elegante, combinando poder y gracia en tus movimientos.
-3. **Sé la Envidia de tus Enemigos:** Conviértete en el centro de atención con tu estilo gótico culón, dejando una impresión duradera en'),
-(105, 'Dominando el juego con Jinx', 2, '2023-10-15', 9.5, 'Jinx', 'bot', 'campeon', 'diamante', 'Flash Heal', '6333 6698 3161 3302 6610 3748', '# Guía Profesional de Jinx, la Chica de los Cañones
+3. **Sï¿½ la Envidia de tus Enemigos:** Conviï¿½rtete en el centro de atenciï¿½n con tu estilo gï¿½tico culï¿½n, dejando una impresiï¿½n duradera en'),
+(105, 'Dominando el juego con Jinx', 2, '2023-10-15', 9.5, 'Jinx', 'bot', 'campeon', 'diamante', 'Flash Heal', '6333 6698 3161 3302 6610 3748', '# Guï¿½a Profesional de Jinx, la Chica de los Caï¿½ones
 
 ![Jinx Splash Art](https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_0.jpg)
 
-En esta guía, exploraremos las estrategias avanzadas y tácticas profesionales para dominar a Jinx en League of Legends. Desde la fase de líneas hasta las peleas de equipo, aprenderás a maximizar el potencial de esta cañonera caótica.
+En esta guï¿½a, exploraremos las estrategias avanzadas y tï¿½cticas profesionales para dominar a Jinx en League of Legends. Desde la fase de lï¿½neas hasta las peleas de equipo, aprenderï¿½s a maximizar el potencial de esta caï¿½onera caï¿½tica.
 
 ## Tabla de Contenidos
 
-1. [Introducción a Jinx](#introducción-a-jinx)
+1. [Introducciï¿½n a Jinx](#introducciï¿½n-a-jinx)
 2. [Habilidades de Jinx](#habilidades-de-jinx)
-3. [Construcción de Objetos](#construcción-de-objetos)
-4. [Fase de Línea](#fase-de-línea)
+3. [Construcciï¿½n de Objetos](#construcciï¿½n-de-objetos)
+4. [Fase de Lï¿½nea](#fase-de-lï¿½nea)
 5. [Peleas de Equipo](#peleas-de-equipo)
 6. [Consejos Avanzados](#consejos-avanzados)
 
-## Introducción a Jinx
+## Introducciï¿½n a Jinx
 
-Jinx es una tiradora hiperactiva conocida por su capacidad para causar caos y destrucción en el campo de batalla. Con su arsenal de armas y su mentalidad impulsiva, puede cambiar el curso de una partida con su potencial de daño explosivo.
+Jinx es una tiradora hiperactiva conocida por su capacidad para causar caos y destrucciï¿½n en el campo de batalla. Con su arsenal de armas y su mentalidad impulsiva, puede cambiar el curso de una partida con su potencial de daï¿½o explosivo.
 
 ## Habilidades de Jinx
 
-### Pasiva - ¡Pow-Pow!
+### Pasiva - ï¿½Pow-Pow!
 
-La pasiva de Jinx, *¡Pow-Pow!*, aumenta su velocidad de ataque cada vez que ataca a un enemigo. Después de acumular suficientes ataques, Jinx entra en un frenesí de ataque, aumentando aún más su velocidad de ataque.
+La pasiva de Jinx, *ï¿½Pow-Pow!*, aumenta su velocidad de ataque cada vez que ataca a un enemigo. Despuï¿½s de acumular suficientes ataques, Jinx entra en un frenesï¿½ de ataque, aumentando aï¿½n mï¿½s su velocidad de ataque.
 
-**Consejo Profesional:** Administra tu velocidad de ataque para aprovechar al máximo el efecto de *¡Pow-Pow!* y su transformación.
+**Consejo Profesional:** Administra tu velocidad de ataque para aprovechar al mï¿½ximo el efecto de *ï¿½Pow-Pow!* y su transformaciï¿½n.
 
 ### Q - Interruptor de Armas
 
-*Jinx alterna entre su ametralladora minigun, *¡Pow-Pow!*, que inflige daño rápidamente a objetivos únicos, y su lanzacohetes, *¡Zap!*, que inflige daño en área y ralentiza a los enemigos.*
+*Jinx alterna entre su ametralladora minigun, *ï¿½Pow-Pow!*, que inflige daï¿½o rï¿½pidamente a objetivos ï¿½nicos, y su lanzacohetes, *ï¿½Zap!*, que inflige daï¿½o en ï¿½rea y ralentiza a los enemigos.*
 
-**Consejo Profesional:** Utiliza *Interruptor de Armas* en el momento adecuado para adaptarte a la situación y maximizar tu daño.
+**Consejo Profesional:** Utiliza *Interruptor de Armas* en el momento adecuado para adaptarte a la situaciï¿½n y maximizar tu daï¿½o.
 
 ### W - Lanzallamas Z
 
-*Jinx dispara un cohete que explota al impactar, infligiendo daño y revelando a los enemigos golpeados.*
+*Jinx dispara un cohete que explota al impactar, infligiendo daï¿½o y revelando a los enemigos golpeados.*
 
-**Consejo Profesional:** Usa *Lanzallamas Z* para pokear a tus enemigos en la fase de líneas y para proporcionar visión en áreas clave del mapa.
+**Consejo Profesional:** Usa *Lanzallamas Z* para pokear a tus enemigos en la fase de lï¿½neas y para proporcionar visiï¿½n en ï¿½reas clave del mapa.
 
 ### E - Encanto Mortal
 
-*Jinx lanza un conjunto de granadas que se activan al contacto con un enemigo, infligiendo daño y aturdiendo a los enemigos dentro del área de efecto.*
+*Jinx lanza un conjunto de granadas que se activan al contacto con un enemigo, infligiendo daï¿½o y aturdiendo a los enemigos dentro del ï¿½rea de efecto.*
 
-**Consejo Profesional:** Utiliza *Encanto Mortal* para controlar áreas durante las peleas de equipo y para interrumpir las habilidades enemigas importantes.
+**Consejo Profesional:** Utiliza *Encanto Mortal* para controlar ï¿½reas durante las peleas de equipo y para interrumpir las habilidades enemigas importantes.
 
 ### R - Mega Rayo Infernal
 
-*Jinx dispara un misil súper potente que atraviesa el mapa, infligiendo daño a todos los enemigos en su camino. El daño aumenta cuanto menos vida tenga el objetivo.*
+*Jinx dispara un misil sï¿½per potente que atraviesa el mapa, infligiendo daï¿½o a todos los enemigos en su camino. El daï¿½o aumenta cuanto menos vida tenga el objetivo.*
 
 **Consejo Profesional:** Utiliza *Mega Rayo Infernal* para asegurar eliminaciones desde lejos o para iniciar peleas de equipo con un golpe devastador.
 
-## Construcción de Objetos
+## Construcciï¿½n de Objetos
 
-La construcción de objetos para Jinx se centra en maximizar su potencial de daño y supervivencia. Aquí tienes una construcción típica:
+La construcciï¿½n de objetos para Jinx se centra en maximizar su potencial de daï¿½o y supervivencia. Aquï¿½ tienes una construcciï¿½n tï¿½pica:
 
 1. **Espada del Rey Arruinado**
 2. **Fervor de Batalla**
-3. **Ídolo Prohibido**
+3. **ï¿½dolo Prohibido**
 4. **Hoja del Verdugo**
 5. **Baile Mortal**
-6. **Último Suspiro**
+6. **ï¿½ltimo Suspiro**
 
-**Consejo Profesional:** Ajusta tu construcción de objetos según la composición enemiga y tu estilo de juego para maximizar tu eficacia en el juego.
+**Consejo Profesional:** Ajusta tu construcciï¿½n de objetos segï¿½n la composiciï¿½n enemiga y tu estilo de juego para maximizar tu eficacia en el juego.
 
-## Fase de Línea
+## Fase de Lï¿½nea
 
-Durante la fase de líneas, Jinx debe enfocarse en farmear de manera segura y buscar oportunidades para comerciar con el enemigo.
+Durante la fase de lï¿½neas, Jinx debe enfocarse en farmear de manera segura y buscar oportunidades para comerciar con el enemigo.
 
 **Consejo Profesional:** Utiliza tu rango para pokear a los enemigos con *Lanzallamas Z* y para castigarlos cuando se acerquen demasiado.
 
 ## Peleas de Equipo
 
-En las peleas de equipo, Jinx brilla con su potencial de daño en equipo y su capacidad para asegurar eliminaciones a distancia.
+En las peleas de equipo, Jinx brilla con su potencial de daï¿½o en equipo y su capacidad para asegurar eliminaciones a distancia.
 
-**Consejo Profesional:** Mantén una posición segura en la retaguardia y espera el momento adecuado para entrar en la pelea con *Mega Rayo Infernal*.
+**Consejo Profesional:** Mantï¿½n una posiciï¿½n segura en la retaguardia y espera el momento adecuado para entrar en la pelea con *Mega Rayo Infernal*.
 
 ## Consejos Avanzados
 
-1. **Posicionamiento Consciente:** Mantén una distancia segura de los peligros y utiliza el terreno a tu favor durante las peleas.
-2. **Coordinación de Habilidades:** Coordina tus habilidades con tu equipo para asegurar eliminaciones y controlar áreas importantes del mapa.
-3. **Conocimiento del Mapa:** Mantén una visión constante del mapa y utiliza la información para tomar decisiones tácticas inteligentes durante la partida.
+1. **Posicionamiento Consciente:** Mantï¿½n una distancia segura de los peligros y utiliza el terreno a tu favor durante las peleas.
+2. **Coordinaciï¿½n de Habilidades:** Coordina tus habilidades con tu equipo para asegurar eliminaciones y controlar ï¿½reas importantes del mapa.
+3. **Conocimiento del Mapa:** Mantï¿½n una visiï¿½n constante del mapa y utiliza la informaciï¿½n para tomar decisiones tï¿½cticas inteligentes durante la partida.
 
-Con esta guía profesional, estás preparado para dominar a Jinx y llevar a tu equipo a la victoria en la Grieta del Invocador. ¡Buena suerte, y que los cañones siempre apunten hacia arriba!'),
-(104, 'Guí­a suspicaz', 1, '2023-12-12', 9.8, 'aatrox', 'top', 'campeon', 'diamante', 'flash', '6333 6698 3161 3302 6610 3748', '# Guía Suspicaz de Aatrox, el Oscuro
+Con esta guï¿½a profesional, estï¿½s preparado para dominar a Jinx y llevar a tu equipo a la victoria en la Grieta del Invocador. ï¿½Buena suerte, y que los caï¿½ones siempre apunten hacia arriba!'),
+(104, 'Guï¿½ï¿½a suspicaz', 1, '2023-12-12', 9.8, 'aatrox', 'top', 'campeon', 'diamante', 'flash', '6333 6698 3161 3302 6610 3748', '# Guï¿½a Suspicaz de Aatrox, el Oscuro
 
 ![Aatrox Splash Art](https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg)
 
-En esta guía, exploraremos las artes oscuras y misteriosas de Aatrox, el Oscuro. Desde sus habilidades hasta su construcción de objetos, aprenderás cómo sembrar la discordia y el caos en el campo de batalla con este ser de antiguo poder.
+En esta guï¿½a, exploraremos las artes oscuras y misteriosas de Aatrox, el Oscuro. Desde sus habilidades hasta su construcciï¿½n de objetos, aprenderï¿½s cï¿½mo sembrar la discordia y el caos en el campo de batalla con este ser de antiguo poder.
 
 ## Tabla de Contenidos
 
-1. [Introducción a Aatrox](#introducción-a-aatrox)
+1. [Introducciï¿½n a Aatrox](#introducciï¿½n-a-aatrox)
 2. [Habilidades de Aatrox](#habilidades-de-aatrox)
-3. [Construcción de Objetos](#construcción-de-objetos)
-4. [Fase de Línea](#fase-de-línea)
+3. [Construcciï¿½n de Objetos](#construcciï¿½n-de-objetos)
+4. [Fase de Lï¿½nea](#fase-de-lï¿½nea)
 5. [Peleas de Equipo](#peleas-de-equipo)
 6. [Consejos Suspicaces](#consejos-suspicaces)
 
-## Introducción a Aatrox
+## Introducciï¿½n a Aatrox
 
-Aatrox es un guerrero caído que emana un aura de misterio y poder oscuro. Con su habilidad para infligir daño masivo y su capacidad para resistir castigos, Aatrox es un adversario temible en el campo de batalla.
+Aatrox es un guerrero caï¿½do que emana un aura de misterio y poder oscuro. Con su habilidad para infligir daï¿½o masivo y su capacidad para resistir castigos, Aatrox es un adversario temible en el campo de batalla.
 
 ## Habilidades de Aatrox
 
 ### Pasiva - Sed de Sangre
 
-La pasiva de Aatrox, *Sed de Sangre*, otorga vida adicional y daño de ataque aumentado basado en el porcentaje de vida que le falte.
+La pasiva de Aatrox, *Sed de Sangre*, otorga vida adicional y daï¿½o de ataque aumentado basado en el porcentaje de vida que le falte.
 
-**Consejo Profesional:** Aprovecha al máximo tu pasiva calculando cuándo entrar en combate para maximizar tu daño y supervivencia.
+**Consejo Profesional:** Aprovecha al mï¿½ximo tu pasiva calculando cuï¿½ndo entrar en combate para maximizar tu daï¿½o y supervivencia.
 
 ### Q - Espada de los Oscuros
 
-*Aatrox golpea el suelo con su espada, infligiendo daño y creando una explosión que lanza a los enemigos por el aire.*
+*Aatrox golpea el suelo con su espada, infligiendo daï¿½o y creando una explosiï¿½n que lanza a los enemigos por el aire.*
 
 **Consejo Profesional:** Utiliza *Espada de los Oscuros* para iniciar peleas de equipo o para interrumpir las habilidades enemigas importantes.
 
 ### W - Masacre de los Malditos
 
-*Aatrox inflige daño en área con su espada, curándose a sí mismo por una parte del daño infligido. Si está por debajo del umbral de vida, se activa automáticamente.*
+*Aatrox inflige daï¿½o en ï¿½rea con su espada, curï¿½ndose a sï¿½ mismo por una parte del daï¿½o infligido. Si estï¿½ por debajo del umbral de vida, se activa automï¿½ticamente.*
 
 **Consejo Profesional:** Usa *Masacre de los Malditos* para mantener tu salud alta durante las peleas prolongadas y para sorprender a los enemigos con tu supervivencia.
 
 ### E - Profanar
 
-*Aatrox dispara un proyectil que inflige daño y ralentiza a los enemigos alcanzados. Los enemigos en el centro del impacto quedan ralentizados durante más tiempo.*
+*Aatrox dispara un proyectil que inflige daï¿½o y ralentiza a los enemigos alcanzados. Los enemigos en el centro del impacto quedan ralentizados durante mï¿½s tiempo.*
 
-**Consejo Profesional:** Utiliza *Profanar* para controlar el espacio y la posición de los enemigos durante las peleas de equipo o para escapar de situaciones peligrosas.
+**Consejo Profesional:** Utiliza *Profanar* para controlar el espacio y la posiciï¿½n de los enemigos durante las peleas de equipo o para escapar de situaciones peligrosas.
 
 ### R - Ascenso de la Masacre
 
-*Aatrox se transforma, ganando un aumento de tamaño, daño adicional y la capacidad de resucitar si acumula suficiente furia durante la duración de la habilidad.*
+*Aatrox se transforma, ganando un aumento de tamaï¿½o, daï¿½o adicional y la capacidad de resucitar si acumula suficiente furia durante la duraciï¿½n de la habilidad.*
 
-**Consejo Profesional:** Activa *Ascenso de la Masacre* en el momento adecuado para aumentar tu daño y sobrevivir en las peleas más intensas.
+**Consejo Profesional:** Activa *Ascenso de la Masacre* en el momento adecuado para aumentar tu daï¿½o y sobrevivir en las peleas mï¿½s intensas.
 
-## Construcción de Objetos
+## Construcciï¿½n de Objetos
 
-La construcción de objetos para Aatrox se centra en maximizar su potencial de daño y supervivencia. Aquí tienes una construcción típica:
+La construcciï¿½n de objetos para Aatrox se centra en maximizar su potencial de daï¿½o y supervivencia. Aquï¿½ tienes una construcciï¿½n tï¿½pica:
 
 1. **Espada del Rey Arruinado**
 2. **Cuchilla Negra**
 3. **Armadura Espinosa**
-4. **Hidra Titánica**
+4. **Hidra Titï¿½nica**
 5. **Yelmo Adaptativo**
-6. **Ángel Guardián**
+6. **ï¿½ngel Guardiï¿½n**
 
-**Consejo Profesional:** Adaptar tu construcción de objetos según la composición enemiga y la fase del juego es esencial para maximizar tu eficacia en el juego.
+**Consejo Profesional:** Adaptar tu construcciï¿½n de objetos segï¿½n la composiciï¿½n enemiga y la fase del juego es esencial para maximizar tu eficacia en el juego.
 
-## Fase de Línea
+## Fase de Lï¿½nea
 
-Durante la fase de líneas, Aatrox puede ser agresivo con su capacidad para infligir daño y curarse.
+Durante la fase de lï¿½neas, Aatrox puede ser agresivo con su capacidad para infligir daï¿½o y curarse.
 
 **Consejo Profesional:** Aprovecha tu sustain con *Masacre de los Malditos* para presionar a tus oponentes y buscar oportunidades de eliminarlos.
 
 ## Peleas de Equipo
 
-En las peleas de equipo, Aatrox brilla con su capacidad para iniciar y absorber daño.
+En las peleas de equipo, Aatrox brilla con su capacidad para iniciar y absorber daï¿½o.
 
-**Consejo Profesional:** Mantén una posición delantera durante las peleas de equipo y busca oportunidades para desatar tu furia con *Ascenso de la Masacre*.
+**Consejo Profesional:** Mantï¿½n una posiciï¿½n delantera durante las peleas de equipo y busca oportunidades para desatar tu furia con *Ascenso de la Masacre*.
 
 ## Consejos Suspicaces
 
-1. **Mantén el Misterio:** Juega con un estilo impredecible, manteniendo a tus enemigos adivinando tus movimientos.
-2. **Sé Imponente:** Impón tu presencia en el campo de batalla, mostrando tu poder oscuro y tu determinación implacable.
-3. **Anticipa el Caos:** Prepárate para cualquier eventualidad y adapta tu estrategia en consecuencia, siempre un paso adelante de tus enemigos.
+1. **Mantï¿½n el Misterio:** Juega con un estilo impredecible, manteniendo a tus enemigos adivinando tus movimientos.
+2. **Sï¿½ Imponente:** Impï¿½n tu presencia en el campo de batalla, mostrando tu poder oscuro y tu determinaciï¿½n implacable.
+3. **Anticipa el Caos:** Prepï¿½rate para cualquier eventualidad y adapta tu estrategia en consecuencia, siempre un paso adelante de tus enemigos.
 
-Con esta guía suspicaz, estarás preparado para sembrar la discordia y la destrucción como Aatrox, el Oscuro. ¡Que la oscuridad siempre esté de tu lado!'),
-(106, 'Guí­a excelente', 1, '2023-12-15', 9.0, 'jhin', 'bot', 'campeon', 'platino', 'ignite', '6333 6698 3161 3302 6610 3748', 'texto generico'),
-(107, 'Guía versátil', 2, '2023-12-15', 8.5, 'leona', 'sup','campeon', 'oro', 'teleport', '6333 6698 3161 3302 6610 3748', 'texto generico'),
-(108, 'Guí­a furra', 1, '2024-04-23', 10, 'yuumi', 'sup','campeon', 'bronce', 'teleport', '6333 6698 3161 3302 6610 3748', '### Yuumi, la Gata Mágica: Guía Pijamística
+Con esta guï¿½a suspicaz, estarï¿½s preparado para sembrar la discordia y la destrucciï¿½n como Aatrox, el Oscuro. ï¿½Que la oscuridad siempre estï¿½ de tu lado!'),
+(106, 'Guï¿½ï¿½a excelente', 1, '2023-12-15', 9.0, 'jhin', 'bot', 'campeon', 'platino', 'ignite', '6333 6698 3161 3302 6610 3748', 'texto generico'),
+(107, 'Guï¿½a versï¿½til', 2, '2023-12-15', 8.5, 'leona', 'sup','campeon', 'oro', 'teleport', '6333 6698 3161 3302 6610 3748', 'texto generico'),
+(108, 'Guï¿½ï¿½a furra', 1, '2024-04-23', 10, 'yuumi', 'sup','campeon', 'bronce', 'teleport', '6333 6698 3161 3302 6610 3748', '### Yuumi, la Gata Mï¿½gica: Guï¿½a Pijamï¿½stica
 
-¡Hola, invocadores! Si estás buscando una experiencia de juego peluda y llena de diversión, Yuumi es la elección perfecta. Con su estilo único y su adorable diseño, ¡preparaos para una aventura mágica y peluda en la Grieta del Invocador!
+ï¿½Hola, invocadores! Si estï¿½s buscando una experiencia de juego peluda y llena de diversiï¿½n, Yuumi es la elecciï¿½n perfecta. Con su estilo ï¿½nico y su adorable diseï¿½o, ï¿½preparaos para una aventura mï¿½gica y peluda en la Grieta del Invocador!
 
 #### Habilidades de Yuumi
 
 1. **Pasiva - Colega Curioso:**
-   - Yuumi acumula Escudos cuando lanza habilidades. ¡Es como si estuviera tejiendo un pijama protector para su aliado! Cuando sale de su aliado, pierde el escudo, pero ¡no te preocupes! Se regenera con el tiempo, ¡igual que una siesta de gato!
+   - Yuumi acumula Escudos cuando lanza habilidades. ï¿½Es como si estuviera tejiendo un pijama protector para su aliado! Cuando sale de su aliado, pierde el escudo, pero ï¿½no te preocupes! Se regenera con el tiempo, ï¿½igual que una siesta de gato!
 
 2. **Q - Disparo Pijama:**
-   - Yuumi lanza un misil que daña y marca a los enemigos. Si atrapas a un enemigo marcado, les haces cosquillas adicionales y los ralentizas. ¡Hora de una fiesta de cosquillas!
+   - Yuumi lanza un misil que daï¿½a y marca a los enemigos. Si atrapas a un enemigo marcado, les haces cosquillas adicionales y los ralentizas. ï¿½Hora de una fiesta de cosquillas!
 
 3. **W - Atadura de Amistad:**
-   - Yuumi se une a un aliado y se vuelve inalcanzable. ¡Es como llevar tu propio compañero de peluche a todas partes! Mientras estás unido, puedes lanzar todas tus habilidades desde la espalda de tu amigo.
+   - Yuumi se une a un aliado y se vuelve inalcanzable. ï¿½Es como llevar tu propio compaï¿½ero de peluche a todas partes! Mientras estï¿½s unido, puedes lanzar todas tus habilidades desde la espalda de tu amigo.
 
 4. **E - Refugio y Mascarada:**
-   - Yuumi cura a su aliado y les da un impulso de velocidad. ¡Es como una caja de galletas mágicas para tu aliado! Si estás unido a ellos, también te das un caprichito y te curas.
+   - Yuumi cura a su aliado y les da un impulso de velocidad. ï¿½Es como una caja de galletas mï¿½gicas para tu aliado! Si estï¿½s unido a ellos, tambiï¿½n te das un caprichito y te curas.
 
-5. **R - ¡Enfurecimiento Místico!:**
-   - Yuumi canaliza un ataque de onda expansiva que daña y aturde a los enemigos. Cuanto más tiempo canalices, más daño haces y más tiempo los aturdes. ¡Es como un festival de purr-nes!
+5. **R - ï¿½Enfurecimiento Mï¿½stico!:**
+   - Yuumi canaliza un ataque de onda expansiva que daï¿½a y aturde a los enemigos. Cuanto mï¿½s tiempo canalices, mï¿½s daï¿½o haces y mï¿½s tiempo los aturdes. ï¿½Es como un festival de purr-nes!
 
-#### Estrategias de Juego Pijamísticas
+#### Estrategias de Juego Pijamï¿½sticas
 
-- **Abraza a tu aliado:** Yuumi es más feliz cuando está pegada a un amigo. Elige un compañero que disfrute de tu compañía y sepa cómo sacarle el máximo provecho a tus abrazos peludos.
+- **Abraza a tu aliado:** Yuumi es mï¿½s feliz cuando estï¿½ pegada a un amigo. Elige un compaï¿½ero que disfrute de tu compaï¿½ï¿½a y sepa cï¿½mo sacarle el mï¿½ximo provecho a tus abrazos peludos.
 
-- **Escudos para todos:** Tus habilidades generan escudos, ¡así que úsalos sabiamente para proteger a tus amigos! Un gato feliz es un gato protegido.
+- **Escudos para todos:** Tus habilidades generan escudos, ï¿½asï¿½ que ï¿½salos sabiamente para proteger a tus amigos! Un gato feliz es un gato protegido.
 
-- **Muévete como un gato ágil:** Estar pegado a alguien no significa que no puedas moverte con gracia felina. Aprovecha tu movilidad para esquivar habilidades enemigas y seguir apoyando a tu equipo.
+- **Muï¿½vete como un gato ï¿½gil:** Estar pegado a alguien no significa que no puedas moverte con gracia felina. Aprovecha tu movilidad para esquivar habilidades enemigas y seguir apoyando a tu equipo.
 
-- **Comunicación con estilo:** ¡Atrévete a comunicarte con tu equipo con purrs y maullidos! No solo será adorable, ¡también mantendrá el ánimo alto en el equipo!
+- **Comunicaciï¿½n con estilo:** ï¿½Atrï¿½vete a comunicarte con tu equipo con purrs y maullidos! No solo serï¿½ adorable, ï¿½tambiï¿½n mantendrï¿½ el ï¿½nimo alto en el equipo!
 
-- **Compra pijamas a juego:** Prioriza los ítems de apoyo que resalten tu estilo pijamístico, ¡como los que brillan en la oscuridad o tienen patrones de estrellas! Recuerda, ¡el pijama es clave para la victoria!
+- **Compra pijamas a juego:** Prioriza los ï¿½tems de apoyo que resalten tu estilo pijamï¿½stico, ï¿½como los que brillan en la oscuridad o tienen patrones de estrellas! Recuerda, ï¿½el pijama es clave para la victoria!
 
-Con esta guía pijamística, ¡estás listo para abrazar a tus amigos y desatar el poder de Yuumi en la Grieta del Invocador! ¡Buena suerte y que tus sueños estén llenos de dulces y cosquillas! ???');
+Con esta guï¿½a pijamï¿½stica, ï¿½estï¿½s listo para abrazar a tus amigos y desatar el poder de Yuumi en la Grieta del Invocador! ï¿½Buena suerte y que tus sueï¿½os estï¿½n llenos de dulces y cosquillas! ???');
 
 
 
@@ -746,7 +745,7 @@ INSERT INTO Item (id, nombre, etiquetas) VALUES
 ('1011', 'Cinturon del gigante',''),
 ('3024', 'Broquel glacial',''),
 ('3147', 'Disfraz encantado',''),
-('3051', 'Hacha hogareï??a',''),
+('3051', 'Hacha hogareï¿½??a',''),
 ('3155', 'Sorbemaleficios',''),
 ('3145', 'Alternador hextech',''),
 ('3067', 'Gema avivadora',''),
@@ -793,7 +792,7 @@ INSERT INTO Item (id, nombre, etiquetas) VALUES
 ('3742', 'Coraza del muerto','Tanque'),
 ('6333', 'Baile de la muerte','Bruiser'),
 ('3128', 'Tenaza de la muerte ignea','Mago'),
-('3870', 'Tejesueï??os','Soporte'),
+('3870', 'Tejesueï¿½??os','Soporte'),
 ('6620', 'Gritos de la ciudad agonica','Soporte'),
 ('6692', 'Eclipse','Asesino'),
 ('3814', 'Filo de la noche','Asesino'),
@@ -823,7 +822,7 @@ INSERT INTO Item (id, nombre, etiquetas) VALUES
 ('3100', 'Perdicion de Liche','Mago'),
 ('3190', 'Medallon de Solari','Soporte'),
 ('3036', 'Recuerdos de Lord Dominik','Tirador'),
-('6655', 'Compaï??ero de Luudens','Mago'),
+('6655', 'Compaï¿½??ero de Luudens','Mago'),
 ('3118', 'Malignidad','Mago'),
 ('3004', 'Manamune','Tirador'),
 ('3156', 'Fauces del Malmortius','Tirador'),
@@ -841,7 +840,7 @@ INSERT INTO Item (id, nombre, etiquetas) VALUES
 ('6698', 'Hidra profana','Bruiser'),
 ('3089', 'Sombrero Mortal de Rabadon','Mago'),
 ('3143', 'Presagio de Randuin','Tanque'),
-('3094', 'Caï??on de fuego rapido','Tirador'),
+('3094', 'Caï¿½??on de fuego rapido','Tirador'),
 ('3074', 'Hidra voraz','Bruiser'),
 ('3107', 'Redencion','Soporte'),
 ('4633', 'Creagrietas','Mago'),
@@ -856,7 +855,7 @@ INSERT INTO Item (id, nombre, etiquetas) VALUES
 ('3161', 'Determinacion de Shojin','Bruiser'),
 ('3065', 'Rostro espiritual','Tanque'),
 ('6616', 'Baston de aguas fluidas','Soporte'),
-('3087', 'Puï??al de static','Tirador'),
+('3087', 'Puï¿½??al de static','Tirador'),
 ('3053', 'Calibrador de Sterak','Tanque'),
 ('3095', 'Navaja de asalto','Tirador'),
 ('4646', 'Sobrecarga tormentosa','Mago'),
