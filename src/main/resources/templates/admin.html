@@ -13,8 +13,8 @@
         <div class="container">
             <h1 class="mt-5">Administración</h1>
             
-            <h2>Crear Nuevo Usuario</h2>
-            <form action="/user/agregar-usuario" method="post">
+            <th:block th:if="${session.u.hasRole('ADMIN')}">
+                <h2>Crear Nuevo Usuario</h2>
                 <div>
                     <label for="username">Nombre de Usuario:</label>
                     <input type="text" id="username" name="username" required>
@@ -32,20 +32,65 @@
                     <input type="text" id="lastName" name="lastName">
                 </div>
                 <div>
-                    <label for="enabled">Habilitado:</label>
-                    <input type="checkbox" id="enabled" name="enabled" value="true">
-                </div>
-                <div>
                     <label for="roles">Roles (separados por coma):</label>
                     <input type="text" id="roles" name="roles">
                 </div>
-                <input type="submit" value="Crear Usuario">
-            </form>
+                <button type="submit" id="CrearUser">Crear Usuario</button>
+
+            </th:block>
+
             
         </div>
+
+        <script type="text/javascript" src="js/iw.js"></script>
+		<script type="text/javascript" src="js/stomp.js"></script>
+        <script>
+
+            document.getElementById("CrearUser").addEventListener('click', function() {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                var firstName = document.getElementById("firstName").value;
+                var lastName = document.getElementById("lastName").value;
+                var roles = document.getElementById("roles").value;
+
+                var usernameEncode = encodeURIComponent(username);
+                var usernameReplace = usernameEncode.replace(/%20/g, ' ');
+
+                var passwordEncode = encodeURIComponent(password);
+                var passwordReplace = passwordEncode.replace(/%20/g, ' ');
+
+                var firstNameEncode = encodeURIComponent(firstName);
+                var firstNameReplace = firstNameEncode.replace(/%20/g, ' ');
+
+                var lastNameEncode = encodeURIComponent(lastName);
+                var lastNameReplace = lastNameEncode.replace(/%20/g, ' ');
+
+                var rolesEncode = encodeURIComponent(roles);
+                var rolesReplace = rolesEncode.replace(/%20/g, ' ').replace(/%2C/g, ',');
+
+                data = {
+                    "username" : usernameReplace,
+                    "password" : passwordReplace,
+                    "firstName" : firstNameReplace,
+                    "lastName" : lastNameReplace,
+                    "roles" : rolesReplace
+                }
+
+                console.log("Datos a enviar al servidor:", data);
+                go('/admin/agregar-usuario', 'POST', data)
+                    .then(responseData => {
+                        console.log("Respuesta exitosa:", responseData);
+                    })
+                    .catch(e => {
+                        console.log("ERR", e);
+                        alert("El usuario " + usernameReplace +  " ya existe");
+                    });
+            });
+
+        </script> 
     </main>
 
     <th:block th:replace="fragments/footer.html :: footer" />
 </body>
-
 </html>
+

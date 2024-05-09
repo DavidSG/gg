@@ -311,13 +311,13 @@ public class UserController {
 		return "{\"result\": \"message sent.\"}";
 	}	
 
-	@PostMapping("/agregar-usuario")
+    @PostMapping("/agregar-usuario")
 	@Transactional
     public void agregarUsuario(@RequestBody User target, HttpSession session) {
         // Aquí puedes realizar la lógica para agregar el usuario a la base de datos o a cualquier otro almacenamiento
 		User requester = (User)session.getAttribute("u");
         if (requester.hasRole(Role.ADMIN)) {
-            // create new user with random password
+            // create new user
 			target.setPassword(encodePassword(target.getPassword()));
             entityManager.persist(target);
             entityManager.flush(); // forces DB to add user & assign valid id
