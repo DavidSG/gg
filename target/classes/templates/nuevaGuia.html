@@ -140,7 +140,7 @@
             
                 </div>
 			</div>
-
+            
             <div class="nuevoCampoTexto">
                 <h1> Escribe aquí su guia </h1>
                 <textarea type="text" id="texto" name="texto" rows="8" cols="80"></textarea>
@@ -153,9 +153,7 @@
                     </a>
                 </div>
             </div>
-
-
-
+            
         </div>
 
 
@@ -458,6 +456,7 @@
             var element = document.getElementById("texto");
             element.addEventListener('input', function() {
                 texto = this.value;
+                console.log(texto);
             });
 
             // Crear Guia

@@ -10,6 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -309,4 +310,17 @@ public class UserController {
 		messagingTemplate.convertAndSend("/user/"+u.getUsername()+"/queue/updates", json);
 		return "{\"result\": \"message sent.\"}";
 	}	
+
+	@PostMapping("/agregar-usuario")
+	@Transactional
+    public void agregarUsuario(@RequestBody User target, HttpSession session) {
+        // Aquí puedes realizar la lógica para agregar el usuario a la base de datos o a cualquier otro almacenamiento
+		User requester = (User)session.getAttribute("u");
+        if (requester.hasRole(Role.ADMIN)) {
+            // create new user with random password
+			target.setPassword(encodePassword(target.getPassword()));
+            entityManager.persist(target);
+            entityManager.flush(); // forces DB to add user & assign valid id
+        }
+    }
 }

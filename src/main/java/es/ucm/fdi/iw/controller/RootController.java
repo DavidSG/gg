@@ -32,13 +32,6 @@ public class RootController {
         return "index";
     }
 
-    /*
-     * @GetMapping("/")
-     * public String index(Model model) {
-     * return "index";
-     * }
-     */
-
     @GetMapping("/login")
     public String login(Model model) {
         return "login";
@@ -109,6 +102,11 @@ public class RootController {
     @GetMapping("/miperfil")
     public String miperfil() {
         return "miperfil";
+    }
+
+    @GetMapping("/admin")
+    public String admin() {
+        return "admin";
     }
 
     @GetMapping("/matchHistory")

@@ -31,17 +31,31 @@
 					<img id = "buscaJugadorBoton" src="/img/img_general/lupa_icon.webp">
 				</div>
 			</div>
-			
-			<div class="botones">
-				<a href="miperfil">
-					<div class = "ajustesContainer">
-						<div class="ajustes"></div>
-					</div>
-				</a>
-				<a href="https://example.com">
-					<button class="login">Log In</button>
-				</a>
-			</div>
+
+			<th:block th:if="${session.u}">
+				<div class="botones">
+					<a th:href="${session.u.hasRole('ADMIN')} ? @{/admin} : @{/miperfil}">
+						<div class = "ajustesContainer">
+							<div class="ajustes"></div>
+						</div>
+					</a>
+					<form th:action="@{/logout}" method="post">
+						<button class="login">Logout</button>
+					</form>
+				</div>
+			</th:block>
+			<th:block th:unless="${session.u}">
+				<div class="botones">
+					<a href="login">
+						<div class = "ajustesContainer">
+							<div class="ajustes"></div>
+						</div>
+					</a>
+					<a href="login">
+						<button class="login">Log In</button>
+					</a>
+				</div>
+			</th:block>
 		</div>
 
 		<script>

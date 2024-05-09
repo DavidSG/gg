@@ -23,11 +23,19 @@ function renderMsg(msg) {
     return `<div>${msg.from} @${msg.sent}: ${msg.text}</div>`;
 }
 
+function renderCmt(comentario) {
+    console.log("rendering: ", comentario);
+    return `<div>${comentario.from}: ${comentario.contenido}</div>`;
+}
+
 // pinta mensajes viejos al cargarse, via AJAX
 let messageDiv = document.getElementById("mensajes");
 go(config.rootUrl + "/user/received", "GET").then(ms =>
     ms.forEach(m => messageDiv.insertAdjacentHTML("beforeend", renderMsg(m))));
 
+let comentarioDiv = document.getElementById("comentarios-container");
+go(config.rootUrl + "/guia/recibido", "GET").then(cm =>
+    cm.forEach(c => comentarioDiv.insertAdjacentHTML("beforeend", renderCmt(c))));
     
 // y aquí pinta mensajes según van llegando
 if (ws.receive) {
@@ -37,7 +45,6 @@ if (ws.receive) {
         messageDiv.insertAdjacentHTML("beforeend", renderMsg(m));
     }
 }
-
 
 // ver https://openlibrary.org/dev/docs/api/books
 // no requieren "api key", pero necesitas 1 consulta adicional por autor
