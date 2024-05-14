@@ -116,6 +116,21 @@ public class RootController {
         return "newUser";
     }
 
+    @GetMapping("/newItem")
+    public String newItem() {
+        return "newItem";
+    }
+
+    @GetMapping("/newHechizo")
+    public String newHechizo() {
+        return "newHechizo";
+    }
+
+    @GetMapping("/newCampeon")
+    public String newCampeon() {
+        return "newCampeon";
+    }
+
     @GetMapping("/listaUsers")
     public String listaUsers(Model model) {
         List<User> userList = entityManager.createQuery("select u from User u", User.class).getResultList();

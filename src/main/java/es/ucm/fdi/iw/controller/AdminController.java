@@ -21,7 +21,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import es.ucm.fdi.iw.model.Campeon;
 import es.ucm.fdi.iw.model.Guia;
+import es.ucm.fdi.iw.model.Hechizo;
+import es.ucm.fdi.iw.model.Item;
 import es.ucm.fdi.iw.model.User;
 import es.ucm.fdi.iw.model.User.Role;
 
@@ -66,6 +69,66 @@ public class AdminController {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Error al crear el usuario: " + e.getMessage());
+        }
+    }
+
+    @Transactional
+    @PostMapping(path = "/agregar-item", produces = "application/json")
+    @ResponseBody
+    public ResponseEntity<String> agregarItem(@RequestBody Item target, HttpSession session) {
+        // Aquí puedes realizar la lógica para agregar el item a la base de datos o a cualquier otro almacenamiento
+        try{
+            User requester = (User)session.getAttribute("u");
+            if (requester.hasRole(Role.ADMIN)) {
+                // create new item
+                entityManager.persist(target);
+                entityManager.flush(); // forces DB to add item & assign valid id
+            }
+            return ResponseEntity.ok("item creado con éxito");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error al crear el item: " + e.getMessage());
+        }
+    }
+
+    @Transactional
+    @PostMapping(path = "/agregar-hechizo", produces = "application/json")
+    @ResponseBody
+    public ResponseEntity<String> agregarHechizo(@RequestBody Hechizo target, HttpSession session) {
+        // Aquí puedes realizar la lógica para agregar el Hechizo a la base de datos o a cualquier otro almacenamiento
+        try{
+            User requester = (User)session.getAttribute("u");
+            if (requester.hasRole(Role.ADMIN)) {
+                // create new Hechizo
+                entityManager.persist(target);
+                entityManager.flush(); // forces DB to add Hechizo & assign valid id
+            }
+            return ResponseEntity.ok("Hechizo creado con éxito");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error al crear el Hechizo: " + e.getMessage());
+        }
+    }
+    
+    @Transactional
+    @PostMapping(path = "/agregar-campeon", produces = "application/json")
+    @ResponseBody
+    public ResponseEntity<String> agregarCampeon(@RequestBody Campeon target, HttpSession session) {
+        // Aquí puedes realizar la lógica para agregar el Campeon a la base de datos o a cualquier otro almacenamiento
+        try{
+            User requester = (User)session.getAttribute("u");
+            if (requester.hasRole(Role.ADMIN)) {
+                // create new Campeon
+                entityManager.persist(target);
+                entityManager.flush(); // forces DB to add Campeon & assign valid id
+            }
+            return ResponseEntity.ok("Campeon creado con éxito");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error al crear el Campeon: " + e.getMessage());
         }
     }
     

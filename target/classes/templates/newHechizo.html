@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="h-100" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:replace="fragments/head :: header" />
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+    <title>GG: Admin</title>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <header th:replace="fragments/nav.html :: nav"></header>
+
+    <main class="flex-shrink-0">
+        <div class="container">
+            <h1 class="mt-5">Administración</h1>
+            
+            <th:block th:if="${session.u.hasRole('ADMIN')}">
+                <h2>Crear Nuevo Usuario</h2>
+                <div>
+                    <label for="hechizo">Nombre del Hechizo:</label>
+                    <input type="text" id="hechizo" name="hechizo" required>
+                </div>
+                <a href="/admin">
+                    <button type="submit" id="CrearHechizo">Crear Hechizo</button>
+                </a>
+            </th:block>
+
+            
+        </div>
+
+        <script type="text/javascript" src="js/iw.js"></script>
+		<script type="text/javascript" src="js/stomp.js"></script>
+        <script>
+
+            document.getElementById("CrearHechizo").addEventListener('click', function() {
+                var hechizo = document.getElementById("hechizo").value;
+
+                if (hechizo == "") {
+                    event.preventDefault();
+                    alert("Por favor, complete todos los campos antes de crear el usuario.");
+                }
+                else{
+                    var hechizoEncode = encodeURIComponent(hechizo);
+                    var hechizoReplace = hechizoEncode.replace(/%20/g, ' ');
+
+                    data = {
+                        "nombre" : hechizoReplace,
+                    }
+
+                    console.log("Datos a enviar al servidor:", data);
+                    go('/admin/agregar-hechizo', 'POST', data)
+                        .then(responseData => {
+                            console.log("Respuesta exitosa:", responseData);
+                        })
+                        .catch(e => {
+                            console.log("ERR", e);
+                        });
+                    }
+            });
+
+        </script> 
+    </main>
+
+    <th:block th:replace="fragments/footer.html :: footer" />
+</body>
+</html>
+

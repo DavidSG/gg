@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="h-100" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:replace="fragments/head :: header" />
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+    <title>GG: Admin</title>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <header th:replace="fragments/nav.html :: nav"></header>
+
+    <main class="flex-shrink-0">
+        <div class="container">
+            <h1 class="mt-5">Administración</h1>
+            
+            <th:block th:if="${session.u.hasRole('ADMIN')}">
+                <h2>Crear Nuevo Usuario</h2>
+                <div>
+                    <label for="nombre">Nombre del campeon:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="posicion">Posiciones:</label>
+                    <input type="text" id="posicion" name="posicion" required>
+                </div>
+                <a href="/campeones">
+                    <button type="submit" id="CrearUser">Crear Usuario</button>
+                </a>
+            </th:block>
+
+            
+        </div>
+
+        <script type="text/javascript" src="js/iw.js"></script>
+		<script type="text/javascript" src="js/stomp.js"></script>
+        <script>
+
+            document.getElementById("CrearUser").addEventListener('click', function() {
+                var nombre = document.getElementById("nombre").value;
+                var posicion = document.getElementById("posicion").value;
+
+                if (nombre == "" || posicion == "") {
+                    event.preventDefault();
+                    alert("Por favor, complete todos los campos antes de crear el usuario.");
+                }
+                else{
+                    var nombreEncode = encodeURIComponent(nombre);
+                    var nombreReplace = nombreEncode.replace(/%20/g, ' ');
+
+                    var posicionEncode = encodeURIComponent(posicion);
+                    var posicionReplace = posicionEncode.replace(/%20/g, ' ');
+
+                    data = {
+                        "nombre" : nombreReplace,
+                        "posiciones" : posicionReplace,
+                    }
+
+                    console.log("Datos a enviar al servidor:", data);
+                    go('/admin/agregar-campeon', 'POST', data)
+                        .then(responseData => {
+                            console.log("Respuesta exitosa:", responseData);
+                        })
+                        .catch(e => {
+                            console.log("ERR", e);
+                        });
+                    }
+            });
+
+        </script> 
+    </main>
+
+    <th:block th:replace="fragments/footer.html :: footer" />
+</body>
+</html>
+
