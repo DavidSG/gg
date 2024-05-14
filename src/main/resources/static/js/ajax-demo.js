@@ -33,10 +33,6 @@ let messageDiv = document.getElementById("mensajes");
 go(config.rootUrl + "/user/received", "GET").then(ms =>
     ms.forEach(m => messageDiv.insertAdjacentHTML("beforeend", renderMsg(m))));
 
-let comentarioDiv = document.getElementById("comentarios-container");
-go(config.rootUrl + "/guia/recibido", "GET").then(cm =>
-    cm.forEach(c => comentarioDiv.insertAdjacentHTML("beforeend", renderCmt(c))));
-    
 // y aquí pinta mensajes según van llegando
 if (ws.receive) {
     const oldFn = ws.receive; // guarda referencia a manejador anterior

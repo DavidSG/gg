@@ -120,7 +120,14 @@ public class RootController {
     public String listaUsers(Model model) {
         List<User> userList = entityManager.createQuery("select u from User u", User.class).getResultList();
         model.addAttribute("userList", userList);
-        return "listaUsers"; // Nombre de la vista Thymeleaf
+        return "listaUsers"; 
+    }
+
+    @GetMapping("/listaGuias")
+    public String listaGuias(Model model) {
+        List<Guia> guideList = entityManager.createQuery("select g from Guia g", Guia.class).getResultList();
+        model.addAttribute("guideList", guideList);
+        return "listaGuias"; 
     }
 
     @GetMapping("/matchHistory")

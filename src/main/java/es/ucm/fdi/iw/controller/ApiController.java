@@ -15,6 +15,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -258,5 +259,32 @@ public class ApiController {
                 Comentario.class)
                 .setParameter("guiaId", guiaId)
                 .getResultList().stream().map(Transferable::toTransfer).collect(Collectors.toList());
+    }
+
+    @Transactional
+    @GetMapping("/{id}/deleteGuia")
+    public String eliminarGuia(@PathVariable Long id, HttpSession session) {
+        User u = (User) session.getAttribute("u");
+        Guia g = entityManager.find(Guia.class, id);
+
+        entityManager.createQuery(
+            "DELETE FROM Vote v WHERE v.autor = :usuario AND v.guia = :guia")
+            .setParameter("usuario", u)
+            .setParameter("guia", g)
+            .executeUpdate();
+
+        entityManager.createQuery(
+            "DELETE FROM Comentario c WHERE c.autor = :usuario AND c.guia = :guia")
+            .setParameter("usuario", u)
+            .setParameter("guia", g)
+            .executeUpdate();
+            
+        entityManager.createQuery(
+            "DELETE FROM Guia g WHERE g.autor = :usuario AND g.id = :guia")
+            .setParameter("usuario", u)
+            .setParameter("guia", id)
+            .executeUpdate();
+
+        return "redirect:/misGuias";
     }
 }

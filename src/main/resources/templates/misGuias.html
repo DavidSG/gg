@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{/css/guides.css}">
+    <link rel="stylesheet" th:href="@{/css/misguias.css}">
 	<link rel="stylesheet" th:href="@{/css/fragments/busqueda.css}">
     <title>Guías</title>
 </head>
@@ -278,16 +278,27 @@
 						var p = document.createElement('p');
 						p.textContent = 'Escrita por ' + json[i].autor + ' ' + json[i].fecha;
 
+						var buttonDelete = document.createElement('a');
+						buttonDelete.textContent= 'Eliminar';
+						buttonDelete.href = "/api/"+ json[i].id +"/deleteGuia"; 
+						buttonDelete.className = "button-delete";
+
 						tituloGuiaDiv.appendChild(h1);
 						tituloGuiaDiv.appendChild(p);
 
 						guiaDiv.appendChild(h2);
 						guiaDiv.appendChild(img);
 						guiaDiv.appendChild(tituloGuiaDiv);
-
+						
 						link.appendChild(guiaDiv);
 
-						guiasDiv.appendChild(link);
+						var guiaContainer = document.createElement('div');
+						guiaContainer.classList.add('guia-container');
+
+						guiaContainer.appendChild(link);
+						guiaContainer.appendChild(buttonDelete);
+
+						guiasDiv.appendChild(guiaContainer);
 					}
 				}
 			}

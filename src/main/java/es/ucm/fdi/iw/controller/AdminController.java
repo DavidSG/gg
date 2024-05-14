@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import es.ucm.fdi.iw.model.Guia;
 import es.ucm.fdi.iw.model.User;
 import es.ucm.fdi.iw.model.User.Role;
 
@@ -75,7 +76,7 @@ public class AdminController {
         if (id != admin.getId()){
             User u = entityManager.find(User.class, id);
             entityManager.createQuery(
-                "DELETE FROM Guia g WHERE g.autor = :usuario ")
+                "DELETE FROM Comentario c WHERE c.autor = :usuario ")
                 .setParameter("usuario", u)
                 .executeUpdate();
             
@@ -83,12 +84,13 @@ public class AdminController {
                 "DELETE FROM Vote v WHERE v.autor = :usuario ")
                 .setParameter("usuario", u)
                 .executeUpdate();
+    
 
             entityManager.createQuery(
-                "DELETE FROM Comentario c WHERE c.autor = :usuario ")
+                "DELETE FROM Guia g WHERE g.autor = :usuario ")
                 .setParameter("usuario", u)
                 .executeUpdate();
-
+            
             entityManager.createQuery(
                             "DELETE FROM User u WHERE u.id = :usuario ")
                             .setParameter("usuario", id)
@@ -96,5 +98,29 @@ public class AdminController {
         }
 
         return "redirect:/listaUsers";
+    }
+
+    @Transactional
+    @GetMapping("/{id}/eliminarGuia")
+    public String eliminarGuia(@PathVariable Long id, HttpSession session) {
+        User u = (User) session.getAttribute("u");
+        Guia g = entityManager.find(Guia.class, id);
+
+        entityManager.createQuery(
+            "DELETE FROM Vote v WHERE v.guia = :guia")
+            .setParameter("guia", g)
+            .executeUpdate();
+
+        entityManager.createQuery(
+            "DELETE FROM Comentario c WHERE c.guia = :guia")
+            .setParameter("guia", g)
+            .executeUpdate();
+            
+        entityManager.createQuery(
+            "DELETE FROM Guia g WHERE g.id = :guia")
+            .setParameter("guia", id)
+            .executeUpdate();
+
+        return "redirect:/listaGuias";
     }
 }

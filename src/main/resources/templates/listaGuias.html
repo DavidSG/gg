@@ -13,21 +13,19 @@
     <main class="flex-shrink-0">
         <div class="container">
             <h1 class="mt-5">Administración</h1>
-            <h1>Lista de Usuarios</h1>
+            <h1>Lista de guias</h1>
             <table>
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
-                    <th>Roles</th>
+                    <th>Autor</th>
                 </tr>
-                <tr th:each="usuario : ${userList}">
-                    <td th:text="${usuario.id}"></td>
-                    <td th:text="${usuario.username}"></td>
-                    <td th:text="${usuario.roles}"></td>
+                <tr th:each="guia : ${guideList}">
+                    <td th:text="${guia.id}"></td>
+                    <td th:text="${guia.titulo}"></td>
+                    <td th:text="${guia.autor.username}"></td>
                     <td>
-                        <th:block th:unless="${session.u.id == usuario.id}">
-                            <a th:href="@{/admin/{id}/eliminar(id=${usuario.id})}" onclick="return confirm('¿Estás seguro de eliminar este usuario?')">Eliminar</a>
-                        </th:block>
+                        <a th:href="@{/admin/{id}/eliminarGuia(id=${guia.id})}" onclick="return confirm('¿Estás seguro de eliminar este guia?')">Eliminar</a>
                     </td>
                 </tr>
             </table>
