@@ -44,12 +44,17 @@
             document.getElementById("registrar").addEventListener('click', function() {
                 var username = document.getElementById("username").value;
                 var password = document.getElementById("password").value;
+                var confirmPassword = document.getElementById("confirmPassword").value;
                 var firstName = document.getElementById("firstName").value;
                 var lastName = document.getElementById("lastName").value;
 
                 if (username == "" || password == "" || firstName == "" || lastName == "") {
                     event.preventDefault();
                     alert("Por favor, complete todos los campos antes de crear el usuario.");
+                }
+                else if (password != confirmPassword){
+                    event.preventDefault();
+                    alert("Las contraseñas no coinciden.");
                 }
                 else{
                     var usernameEncode = encodeURIComponent(username);
