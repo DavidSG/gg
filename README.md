@@ -1,4 +1,4 @@
-# GG
+# GG: Una plataforma para la comunidad de Leage of Leyends
 
 GG es una aplicación web diseñada para la comunidad de League of Legends, que facilita la búsqueda de usuarios, la visualización de su historial de partidas, y proporciona una plataforma para crear y compartir guías sobre campeones, técnicas, y estrategias del juego. Además, ofrece una extensa base de datos con información detallada sobre campeones e ítems disponibles en el juego.
 
