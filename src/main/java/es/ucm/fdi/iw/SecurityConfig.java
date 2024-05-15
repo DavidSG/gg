@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint;
 
 /**
  * Security configuration.
@@ -54,11 +55,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/api/**").permitAll()            // <-- public api access
 				.antMatchers("/admin/**").hasRole("ADMIN")	   // <-- administration
 	            .antMatchers("/user/**").hasRole("USER")	   // <-- logged-in users
+				.antMatchers("/registro", "/api/registrar-usuario").permitAll()
 	            .anyRequest().authenticated()
 	            .and()
 			.formLogin()
 				.loginPage("/login")
-				.permitAll().successHandler(loginSuccessHandler); // <-- called when login Ok; can redirect
+				.permitAll().successHandler(loginSuccessHandler);// <-- called when login Ok; can redirect
 	}
 	
 	/**

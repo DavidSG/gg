@@ -12,27 +12,74 @@
 
     <main>
         <div class="container">
-            <form class="form-signin" method="post" th:action="@{/registro}">
-                <h2 class="form-signin-heading">Register</h2>
-                <p>
-                    <label for="username" class="visually-hidden">Username</label>
-                    <input type="text" id="username" name="username" class="form-control" placeholder="Username" required="required">
-                </p>
-                <p>
-                    <label for="password" class="visually-hidden">Password</label>
-                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="required">
-                </p>
-                <p>
-                    <label for="confirmPassword" class="visually-hidden">Confirm Password</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Confirm Password" required="required">
-                </p>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
-                <p class="mt-3">Already have an account? <a href="/login">Sign in here</a></p> <!-- Añade un enlace para iniciar sesión -->
-            </form>
+            <h2 class="form-signin-heading">Register</h2>
+            <p>
+                <label for="username" class="visually-hidden">Username</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Username" required="required">
+            </p>
+            <p>
+                <label for="password" class="visually-hidden">Password</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="required">
+            </p>
+            <p>
+                <label for="confirmPassword" class="visually-hidden">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Confirm Password" required="required">
+            </p>
+            <p>
+                <label for="firstName" class="visually-hidden">Nombre:</label>
+                <input type="text" id="firstName" name="firstName" class="form-control" placeholder="firstName" required="required">
+            </p>
+            <p>
+                <label for="lastName" class="visually-hidden">Apellidos:</label>
+                <input type="text" id="lastName" name="lastName" class="form-control" placeholder="lastName" required="required">
+            </p>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" id="registrar">Register</button>
+            <p class="mt-3">Already have an account? <a href="/login">Sign in here</a></p> 
         </div>
+
+        <script type="text/javascript" src="js/iw.js"></script>
+		<script type="text/javascript" src="js/stomp.js"></script>
+        <script>
+
+            document.getElementById("registrar").addEventListener('click', function() {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                var firstName = document.getElementById("firstName").value;
+                var lastName = document.getElementById("lastName").value;
+
+                if (username == "" || password == "" || firstName == "" || lastName == "") {
+                    event.preventDefault();
+                    alert("Por favor, complete todos los campos antes de crear el usuario.");
+                }
+                else{
+                    var usernameEncode = encodeURIComponent(username);
+                    var usernameReplace = usernameEncode.replace(/%20/g, ' ');
+
+                    var passwordEncode = encodeURIComponent(password);
+                    var passwordReplace = passwordEncode.replace(/%20/g, ' ');
+
+                    var firstNameEncode = encodeURIComponent(firstName);
+                    var firstNameReplace = firstNameEncode.replace(/%20/g, ' ');
+
+                    var lastNameEncode = encodeURIComponent(lastName);
+                    var lastNameReplace = lastNameEncode.replace(/%20/g, ' ');
+
+                    data = {
+                        "username" : usernameReplace,
+                        "password" : passwordReplace,
+                        "firstName" : firstNameReplace,
+                        "lastName" : lastNameReplace,
+                    }
+
+                    console.log("Datos a enviar al servidor:", data);
+                    go('/api/registrar-usuario', 'POST', data)
+                        .catch(window.location.href = '/login');
+                    }
+            });
+
+        </script> 
     </main>
 
-    <!--<th:block th:replace="fragments/footer.html :: footer" />-->
 </body>
 
 </html>

@@ -36,6 +36,7 @@ import es.ucm.fdi.iw.model.Vote;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
  * Non-authenticated requests only.
@@ -50,7 +51,16 @@ public class ApiController {
     private EntityManager entityManager;
 
     @Autowired
+	private PasswordEncoder passwordEncoder;
+
+
+    @Autowired
     private SimpMessagingTemplate messagingTemplate;
+
+    public String encodePassword(String rawPassword) {
+		return passwordEncoder.encode(rawPassword);
+	}
+
 
     @GetMapping(path = "/campeones", produces = "application/json")
     @ResponseBody
@@ -286,5 +296,17 @@ public class ApiController {
             .executeUpdate();
 
         return "redirect:/misGuias";
+    }
+
+    @PostMapping("/registrar-usuario")
+	@Transactional
+    public void registrarUsuario(@RequestBody User target, HttpSession session) {
+        // Aquí puedes realizar la lógica para agregar el usuario a la base de datos o a cualquier otro almacenamiento
+		// create new user
+		target.setPassword(encodePassword(target.getPassword()));
+		target.setEnabled(true);
+		target.setRoles("USER");
+		entityManager.persist(target);
+		entityManager.flush(); // forces DB to add user & assign valid id
     }
 }
