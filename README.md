@@ -21,7 +21,7 @@ GG es una aplicación web diseñada para la comunidad de League of Legends, que 
   - Puede votar y comentar en cualquier guía.
   - Acceso a la lista completa de campeones existentes en el juego en "Campeones".
   - Acceso a la lista completa de items existenetesen el juego en "Items".
-  - Puede buscar el historial de partidas y datos correspondientes de otros usuarios Leage of Leyends.
+  - Puede buscar el historial de partidas y datos correspondientes de otros usuarios Leage of Legends.
 
 - **Administrador**:
   - Tiene control total sobre la base de datos.
